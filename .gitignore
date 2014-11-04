@@ -1,8 +1,7 @@
-# ignore package build files
+# emacs:
 elpa/
-
-# ignore any downloads
 url/
-
-# ignore auto saves
 auto-save-list/
+
+# lein:
+repl-history
