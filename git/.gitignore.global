@@ -1,0 +1,44 @@
+# compiled source#
+##################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.elc
+out/
+
+# packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.rdump
+.repl/
+
+# os generated files #
+######################
+.DS_Store
+._*
+.spotlight-v100
+.trashes
+icon?
+ehthumbs.db
+thumbs.db
+
+# emacs files #
+###############
+.tags
+.#*
