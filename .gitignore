@@ -1,0 +1,8 @@
+# ignore package build files
+elpa/
+
+# ignore any downloads
+url/
+
+# ignore auto saves
+auto-save-list/
