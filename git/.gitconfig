@@ -3,3 +3,5 @@
 	email = zonotope@gmail.com
 [core]
 	excludesfile = /home/zonotope/.gitignore.global
+[push]
+	default = simple
