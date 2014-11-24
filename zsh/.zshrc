@@ -80,10 +80,6 @@ alias -s GIF=show
 alias -s pdf=read
 alias -s ps=read
 
-# ruby and rvm stuff:
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export JRUBY_OPTS="--1.9"
-
 # always 'ls' after any 'cd':
 function chpwd() {
     emulate -LR zsh
