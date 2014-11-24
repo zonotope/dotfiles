@@ -1,0 +1,20 @@
+"dmenu_run"
+    m:0x40 + c:36
+    Mod4 + Return
+
+"uxterm"
+    m:0x40 + c:54
+    Mod4 + c
+
+# Lower the volume with amixer
+"amixer -c 0 set Master 1dB-"
+    XF86AudioLowerVolume
+"amixer -c 0 set Master 1dB+"
+    XF86AudioRaiseVolume
+
+
+# Controll the brightness
+"xbacklight -dec 5"
+  XF86MonBrightnessDown
+"xbacklight -inc 5"
+  XF86MonBrightnessUp
