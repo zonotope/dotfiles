@@ -5,3 +5,4 @@ auto-save-list/
 
 # lein:
 repl-history
+/lein/.lein/self-installs/
