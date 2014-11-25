@@ -2,6 +2,6 @@
 	name = ben lamothe
 	email = zonotope@gmail.com
 [core]
-	excludesfile = /home/zonotope/.gitignore.global
+	excludesfile = /home/$USER/.gitignore.global
 [push]
 	default = simple
