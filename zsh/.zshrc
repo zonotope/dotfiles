@@ -40,11 +40,13 @@ source $ZSH/oh-my-zsh.sh
 
 ## path additions:
 
-# MacPorts
-PATH=/opt/local/bin:/opt/local/sbin:$PATH
-
 # npm
 PATH=/usr/local/share/npm/bin:$PATH
+
+# rbenv
+PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
 # personal commands:
 PATH=$HOME/.bin:$PATH
 
