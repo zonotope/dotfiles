@@ -1,10 +1,10 @@
-"dmenu_run"
-    m:0x40 + c:36
-    Mod4 + Return
+# "dmenu_run"
+#     m:0x40 + c:36
+#     Mod4 + Return
 
-"uxterm"
-    m:0x40 + c:54
-    Mod4 + c
+# "uxterm"
+#     m:0x40 + c:54
+#     Mod4 + c
 
 # Lower the volume with amixer
 "amixer -c 0 set Master 1dB-"

@@ -14,9 +14,9 @@ fi
 xrdb -merge ~/.Xresources
 xkbcomp ~/.Xkeymap $DISPLAY &
 xbindkeys
-compton -cCb --config ~/.config/compton.conf
-feh --bg-scale pics/wallpapers/mekong.JPG
-conky &
-tint2 &
-exec openbox
-# exec i3
+# compton -cCb --config ~/.config/compton.conf
+feh --bg-scale pics/wallpapers/black.jpg
+# conky &
+# tint2 &
+# exec openbox
+exec i3

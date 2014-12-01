@@ -1,8 +1,8 @@
 ## size/placement
-alignment tl
+alignment top_right
 maximum_width 20000000
 minimum_size 1400 24
-gap_x 17
+gap_x 23
 gap_y 5
 
 background yes
@@ -33,13 +33,13 @@ draw_graph_borders no
 
 ## window
 own_window yes
+own_window_type panel
 own_window_transparent yes
-own_window_type desktop
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_colour white
 
 ## colors
-default_color black
+default_color lightgray
 color1 ff0000
 color2 ff8000
 color3 ffff00
