@@ -16,7 +16,8 @@ xkbcomp ~/.Xkeymap $DISPLAY &
 xbindkeys
 # compton -cCb --config ~/.config/compton.conf
 feh --bg-scale pics/wallpapers/black.jpg
-# conky &
+conky &
 # tint2 &
 # exec openbox
-exec i3
+# exec i3
+exec stumpwm
