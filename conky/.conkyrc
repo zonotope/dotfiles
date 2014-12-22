@@ -33,13 +33,13 @@ draw_graph_borders no
 
 ## window
 own_window yes
-own_window_type panel
-own_window_transparent yes
+own_window_type desktop
+own_window_transparent no
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_colour white
+own_window_colour 2d2d2d
 
 ## colors
-default_color lightgray
+default_color gray
 color1 ff0000
 color2 ff8000
 color3 ffff00
@@ -47,9 +47,6 @@ color4 80ff00
 color5 00ff00
 color6 00ff80
 color7 00ffff
-
-allgood 3fb836
-caution
 
 ##############################################
 #  Output

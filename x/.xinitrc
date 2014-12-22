@@ -15,8 +15,8 @@ xrdb -merge ~/.Xresources
 xkbcomp ~/.Xkeymap $DISPLAY &
 xbindkeys
 # compton -cCb --config ~/.config/compton.conf
-feh --bg-scale pics/wallpapers/black.jpg
-conky &
+# feh --bg-scale pics/wallpapers/IMG_3015.jpg
+# conky &
 # tint2 &
 # exec openbox
 # exec i3
