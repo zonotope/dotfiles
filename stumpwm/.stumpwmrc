@@ -35,28 +35,20 @@
 ;; use chromium for web
 (setq *browser* "chromium")
 
-;; prompt the user for an interactive command. The first arg is an
-;; optional initial contents.
-(defcommand colon1 (&optional (initial "")) (:rest)
-  (let ((cmd (read-one-line (current-screen) ": " :initial-input initial)))
-    (when cmd
-      (eval-command cmd t))))
-
-
 ;; ;; start a swank server so emacs can connect
 ;; TODO: figure out how to load swank with quicklist instead of the brittle path.
-(load "/usr/local/share/sbcl/dists/quicklisp/software/slime-2.11/swank-loader.lisp")
-(swank-loader:init)
+;; (load "/usr/local/share/sbcl/dists/quicklisp/software/slime-2.11/swank-loader.lisp")
+;; (swank-loader:init)
 
-;; fire up a swank server
-(defcommand swank () ()
-  (swank:create-server :port 4005
-                       :style swank:*communication-style*
-                       :dont-close t)
-  (echo-string (current-screen)
-	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
+;; ;; fire up a swank server
+;; (defcommand swank () ()
+;;   (swank:create-server :port 4005
+;;                        :style swank:*communication-style*
+;;                        :dont-close t)
+;;   (echo-string (current-screen)
+;; 	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
 
-(swank)
+;; (swank)
 
 
 ;; give conky enough space
