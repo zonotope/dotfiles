@@ -20,7 +20,7 @@
 (setf *timeout-wait* 10)
 
 ;; tight window borders
-(setf *window-border-style* :tight) ;; :none, :thick, :thin, :tight
+(setf *window-border-style* :thin) ;; :none, :thick, :thin, :tight
 
 ;;;; bindings:
 ;; change the prefix key to something else
