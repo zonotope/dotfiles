@@ -5,7 +5,6 @@ xterm*vt100*geometry:   85x25
 xterm*saveLines:        2500
 xterm*boldMode:         false
 
-! dmz mouse cursor theme
 Xcursor.theme: jimmac
 
 !TomorrowNightEighties
