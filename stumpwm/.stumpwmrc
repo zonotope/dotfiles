@@ -1,80 +1,60 @@
 ;; -*-lisp-*-
-;;
-;; Here is a sample .stumpwmrc file
 
 (in-package :stumpwm)
 
-;;;; looks:
 (set-focus-color "dimgray")
 (set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
+(setf *hidden-window-color* "^6*")
+(setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
+
+(setf *message-window-gravity* :center) ; :top-left :top-right :bottom-left
+                                        ; :bottom-right :center
+
+(setf *input-window-gravity* :center) ; :top-left :top-right :bottom-left
+                                      ; :bottom-right :center
+
+;; mode line
+(setf *mode-line-position* :top)
 (setf *window-format* "[%m%s%n: %c (%20t...)]")
 (setf *screen-mode-line-format* "%v")
-(setf *hidden-window-color* "^6*")
-
-
-;;;; behavior
-;; message window gravity
-;; :top-left :top-right :bottom-left :bottom-right :center
-(setf *message-window-gravity* :center)
-
-;; input window gravity
-;; :top-left :top-right :bottom-left :bottom-right :center
-(setf *input-window-gravity* :center)
-
-;; in seconds, how long a message will appear for. This must be an integer.
-(setf *timeout-wait* 10)
-
-;; tight window borders
-(setf *window-border-style* :thin) ;; :none, :thick, :thin, :tight
-
-;; tell me where
-(setf *frame-indicator-text* " here! ")
-
-;; small frames
-(setf *min-frame-height* 20)
-
-;;;; bindings:
-;; change the prefix key to something else
-(set-prefix-key (kbd "C-t"))
+(if (not (head-mode-line (current-head)))
+    (toggle-mode-line (current-screen) (current-head)))
 
 ;; set the mouse policy to focus follows mouse;
-(setf *mouse-focus-policy* :sloppy) ;; :click, :ignore, :sloppy
+(setf *mouse-focus-policy* :sloppy) ; :click, :ignore, :sloppy
 
-;; use uxterm for the terminal
+;; in seconds, how long a message will appear for.
+(setf *timeout-wait* 5)
+
+;; what shows up in the middle of a newly focused frame
+(setf *frame-indicator-text* " here! ")
+
+(setf *min-frame-height* 20)
+
+
+;;;; bindings:
+(set-prefix-key (kbd "C-t"))
+
+(define-key *root-map* (kbd "b") "exec chromium")
+
+
 (setq *terminal* "uxterm")
-
-;; use chromium for web
 (setq *browser* "chromium")
 
-;; ;; start a swank server so emacs can connect
+;;;; start a swank server so emacs can connect
+
+;; load swank
 ;; TODO: figure out how to load swank with quicklist instead of the brittle path.
 (load "/usr/local/share/sbcl/dists/quicklisp/software/slime-2.11/swank-loader.lisp")
 (swank-loader:init)
 
-;; fire up a swank server
 (defcommand swank () ()
   (swank:create-server :port 4005
                        :style swank:*communication-style*
                        :dont-close t)
   (echo-string (current-screen)
 	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
-
 (swank)
-
-
-;; give conky enough space
-;; (resize-head 0 0 25 2560 1415)
-
-;; Read some doc
-(define-key *root-map* (kbd "d") "exec evince")
-;; Browse somewhere
-(define-key *root-map* (kbd "b") "exec chromium")
-
-;; mode line
-(setf *mode-line-position* :top)
-(if (not (head-mode-line (current-head)))
-     (toggle-mode-line (current-screen) (current-head)))
-
 
 ;;; Define window placement policy...
 
