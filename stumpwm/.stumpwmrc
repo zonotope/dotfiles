@@ -4,8 +4,13 @@
 
 (in-package :stumpwm)
 
-;;;; colors:
+;;;; looks:
 (set-focus-color "dimgray")
+(set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
+(setf *window-format* "[%m%s%n: %c (%20t...)]")
+(setf *screen-mode-line-format* "%v")
+(setf *hidden-window-color* "^6*")
+
 
 ;;;; behavior
 ;; message window gravity
@@ -25,6 +30,9 @@
 ;; tell me where
 (setf *frame-indicator-text* " here! ")
 
+;; small frames
+(setf *min-frame-height* 20)
+
 ;;;; bindings:
 ;; change the prefix key to something else
 (set-prefix-key (kbd "C-t"))
@@ -40,18 +48,18 @@
 
 ;; ;; start a swank server so emacs can connect
 ;; TODO: figure out how to load swank with quicklist instead of the brittle path.
-;; (load "/usr/local/share/sbcl/dists/quicklisp/software/slime-2.11/swank-loader.lisp")
-;; (swank-loader:init)
+(load "/usr/local/share/sbcl/dists/quicklisp/software/slime-2.11/swank-loader.lisp")
+(swank-loader:init)
 
-;; ;; fire up a swank server
-;; (defcommand swank () ()
-;;   (swank:create-server :port 4005
-;;                        :style swank:*communication-style*
-;;                        :dont-close t)
-;;   (echo-string (current-screen)
-;; 	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
+;; fire up a swank server
+(defcommand swank () ()
+  (swank:create-server :port 4005
+                       :style swank:*communication-style*
+                       :dont-close t)
+  (echo-string (current-screen)
+	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
 
-;; (swank)
+(swank)
 
 
 ;; give conky enough space
@@ -62,17 +70,8 @@
 ;; Browse somewhere
 (define-key *root-map* (kbd "b") "exec chromium")
 
-;; Message window font
-(set-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-15")
-
-;;;; Window format
-(setf *window-format* "%m%s%n %c %15t...|")
-
-(setf *screen-mode-line-format* "%v")
-
-(setf *mode-line-position* :bottom)
-
 ;; mode line
+(setf *mode-line-position* :top)
 (if (not (head-mode-line (current-head)))
      (toggle-mode-line (current-screen) (current-head)))
 
