@@ -15,7 +15,7 @@
 
 ;; mode line
 (setf *mode-line-position* :top)
-(setf *window-format* "[%m%s%n: %c (%20t...)]")
+(setf *window-format* "[%m%s%n: %c (%20t..)]")
 (setf *screen-mode-line-format* "%v")
 (if (not (head-mode-line (current-head)))
     (toggle-mode-line (current-screen) (current-head)))
@@ -27,7 +27,7 @@
 (setf *timeout-wait* 5)
 
 ;; what shows up in the middle of a newly focused frame
-(setf *frame-indicator-text* " here! ")
+(setf *frame-indicator-text* " boom! ")
 
 (setf *min-frame-height* 20)
 
@@ -36,6 +36,9 @@
 (set-prefix-key (kbd "C-t"))
 
 (define-key *root-map* (kbd "b") "exec chromium")
+
+;; dmenu is a better launcher than the built in
+(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*\"")
 
 
 (setq *terminal* "uxterm")
