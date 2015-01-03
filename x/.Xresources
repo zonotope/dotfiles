@@ -1,16 +1,28 @@
-! xterm config
-xterm*faceName:         inconsolata:size=14
+! xterm
+xterm*faceName:         xft:Inconsolata-g:size=14
 xterm*loginShell:       true
 xterm*vt100*geometry:   85x25
 xterm*saveLines:        2500
-xterm*boldMode:         false
+xterm*boldMode:         true
 
+! urxvt
+URxvt*cursorColor:       #f2777a
+URxvt*font:              xft:Inconsolata-g:size=14
+URxvt*loginShell:        True
+URxvt*scrollBar:         False
+URxvt*scrollTtyOutput:   True
+URxvt*saveLines:         2500
+URxvt*cursorUnderline:   True
+URxvt*pointerBlank:      True
+URxvt*perl-ext-common:   tabbed
+
+! mouse
 Xcursor.theme: jimmac
 
-!TomorrowNightEighties
-#define t_background        #2d2d2d
-#define t_current_line      #393939
-#define t_selection      	#515151
+! color theme: TomorrowNightEighties
+#define t_background            #2d2d2d
+#define t_current_line          #393939
+#define t_selection            	#515151
 #define t_foreground      	#cccccc
 #define t_comment	     	#999999
 #define t_red		     	#f2777a
