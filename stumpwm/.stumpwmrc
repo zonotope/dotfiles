@@ -2,6 +2,13 @@
 
 (in-package :stumpwm)
 
+(run-shell-command "xsetroot -cursor_name left_ptr")
+(clear-window-placement-rules)
+(restore-from-file "~/.stumpwm.d/basic.desk")
+(define-frame-preference "main"
+    (1 nil nil :class "Conky" :role nil))
+
+
 (set-focus-color "dimgray")
 (set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
 (setf *hidden-window-color* "^6*")
@@ -31,7 +38,6 @@
 
 (setf *min-frame-height* 20)
 
-
 ;;;; bindings:
 (set-prefix-key (kbd "C-t"))
 
@@ -59,11 +65,10 @@
 	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
 (swank)
 
+(run-shell-command "conky")
 ;;; Define window placement policy...
 
 ;; Clear rules
-(clear-window-placement-rules)
-
 ;; Last rule to match takes precedence!
 ;; TIP: if the argument to :title or :role begins with an ellipsis, a substring
 ;; match is performed.

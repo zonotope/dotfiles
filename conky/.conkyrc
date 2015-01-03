@@ -1,9 +1,9 @@
 ## size/placement
-alignment top_right
+alignment bottom_right
 maximum_width 20000000
 minimum_size 1400 24
-gap_x 23
-gap_y 5
+gap_x 10
+gap_y 10
 
 background yes
 
@@ -21,7 +21,7 @@ cpu_avg_samples 2
 override_utf8_locale no
 
 uppercase no
-pad_percents 2d
+pad_percents 3d
 use_spacer left
 short_units
 
@@ -52,7 +52,7 @@ color7 00ffff
 #  Output
 ##############################################
 TEXT
-${alignr}cpu0: ${voffset 1}${color indianred}${cpugraph cpu1 20,130}${color}${voffset -1}${cpu cpu1}% | cpu1: ${voffset 1}${color indianred}${cpugraph cpu2 20,130}${color}${voffset -1}${cpu cpu2}% | cpu2: ${voffset 1}${color indianred}${cpugraph cpu3 20,130}${color}${voffset -1}${cpu cpu3}% | cpu3: ${voffset 1}${color indianred}${cpugraph cpu4 20,130}${color}${voffset -1}${cpu cpu4}% | \
+${alignr}cpu0: ${voffset 1}${color indianred}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | cpu1: ${voffset 1}${color indianred}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | cpu2: ${voffset 1}${color indianred}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | cpu3: ${voffset 1}${color indianred}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
 ram: \
 ${if_match ${memperc}<50}${color forestgreen}\
 ${else}${if_match ${memperc}>=80}${color darkred}\
@@ -60,7 +60,7 @@ ${else}${if_match ${memperc}<80}${color gold}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${membar 7,130}${voffset -1}${color} ${memperc}% | \
+${voffset 1}${membar 7,125}${voffset -1}${color} ${memperc}% | \
 /: \
 ${if_match ${fs_used_perc}<50}${color forestgreen}\
 ${else}${if_match ${fs_used_perc}>=80}${color darkred}\
@@ -68,9 +68,9 @@ ${else}${if_match ${fs_used_perc}<80}${color gold}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${fs_bar 7,130 /}${voffset -1}${color} ${fs_used_perc /}% | \
-up: ${color steelblue}${upspeedgraph wlp3s0 20,130}${color} ${upspeed wlp3s0} | \
-down: ${color steelblue}${downspeedgraph wlp3s0 20,130}${color} ${downspeed wlp3s0} | \
+${voffset 1}${fs_bar 7,125 /}${voffset -1}${color} ${fs_used_perc /}% | \
+up: ${color steelblue}${upspeedgraph wlp3s0 20,125}${color} ${upspeed wlp3s0} | \
+down: ${color steelblue}${downspeedgraph wlp3s0 20,125}${color} ${downspeed wlp3s0} | \
 bat: \
 ${if_match ${battery_percent}>60}${color forestgreen}\
 ${else}${if_match ${battery_percent}>=20}${color gold}\
@@ -78,5 +78,5 @@ ${else}${if_match ${battery_percent}<20}${color darkred}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${battery_bar 7,130}${voffset -1} ${color}${battery_percent}% | \
-${font Inconsolata:bold:size=15}${time %a, %b %d %Y. %l:%M%P}
+${voffset 1}${battery_bar 7,125}${voffset -1} ${color}${battery_percent}% | \
+${font Inconsolata:bold:size=15}${time %a %b %d %Y. %l:%M%P}
