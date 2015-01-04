@@ -45,7 +45,7 @@ ZSH_CUSTOM=$HOME/.zsh.d/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem gitfast github history jsontools lein lol pj rand-quote rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search zsh-syntax-highlighting)
+plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem gitfast github history jsontools lein pj rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search zsh-syntax-highlighting)
 
 ### User configuration
 
