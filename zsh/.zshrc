@@ -1,35 +1,46 @@
 # antigen should be in the same directory
 source .antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
+# from oh my zsh:
 antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle archlinux
+antigen bundle battery
 antigen bundle bundler
+antigen bundle colored-man
+antigen bundle colorize
+antigen bundle compleat
+antigen bundle cp
 antigen bundle dirhistory
 antigen bundle fasd
 antigen bundle gem
 antigen bundle gitfast
-antigen bundle gitextras
-antigen bundle git_remote_branch
 antigen bundle github
+antigen bundle history
 antigen bundle jsontools
-antigen bundle last-working-dir
 antigen bundle lein
 antigen bundle lol
-antigen bundle rails3
+antigen bundle pj
+antigen bundle rand-quote
+antigen bundle rails
+antigen bundle rbenv
 antigen bundle ruby
+antigen bundle safe-paste
 antigen bundle ssh-agent
 antigen bundle systemd
+antigen bundle themes
 antigen bundle urltools
 antigen bundle web-search
 
-# Syntax highlighting bundle.
+# from zsh-users
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Load the theme.
+
+
 antigen theme af-magic
 
-# Tell antigen that you're done.
 antigen apply
+
+echo
+fortune
+echo
