@@ -45,16 +45,24 @@ ZSH_CUSTOM=$HOME/.zsh.d/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem gitfast github history jsontools lein lol pj rand-quote rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search)
+plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem gitfast github history jsontools lein lol pj rand-quote rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search zsh-syntax-highlighting)
 
-# User configuration
+### User configuration
 
 export LANG=en_US.UTF-8
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=emacs
 
+## set the path, and additions
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# rbenv
+PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
+# my shit:
+PATH=$HOME/.bin:$PATH
+
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -63,7 +71,7 @@ export ARCHFLAGS="-arch x86_64"
 alias edit=$EDITOR
 alias play='mplayer -idx'
 alias show='feh -ZF'
-alias read='open -a Preview'
+alias read='evince'
 
 alias -s txt=edit
 alias -s tex=edit
