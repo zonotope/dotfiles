@@ -13,3 +13,6 @@
 [submodule "zsh/.zsh.d/custom/zsh-syntax-highlighting"]
 	path = zsh/.zsh.d/custom/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.zsh.d/oh-my-zsh"]
+	path = zsh/.zsh.d/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
