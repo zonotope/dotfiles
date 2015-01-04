@@ -2,6 +2,9 @@
 
 (in-package :stumpwm)
 
+(setq *terminal* "uxterm")
+(setq *browser* "chromium")
+
 (run-shell-command "xsetroot -cursor_name left_ptr")
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
@@ -11,9 +14,6 @@
 
 (set-focus-color "dimgray")
 (set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
-(setq *terminal* "uxterm")
-(setq *browser* "chromium")
-
 (setf *hidden-window-color* "^6*")
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 
