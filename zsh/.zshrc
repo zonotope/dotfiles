@@ -71,7 +71,7 @@ export ARCHFLAGS="-arch x86_64"
 alias edit=$EDITOR
 alias play='mplayer -idx'
 alias show='feh -ZF'
-alias read='evince'
+alias read='zathura'
 
 alias -s txt=edit
 alias -s tex=edit
