@@ -51,7 +51,7 @@
 (define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
 
 ;; dmenu is a better launcher than the built in
-(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*\"")
+(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-14\"")
 
 ;;;; start a swank server so emacs can connect
 
