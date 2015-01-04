@@ -11,6 +11,9 @@
 
 (set-focus-color "dimgray")
 (set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
+(setq *terminal* "uxterm")
+(setq *browser* "chromium")
+
 (setf *hidden-window-color* "^6*")
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 
@@ -41,14 +44,14 @@
 ;;;; bindings:
 (set-prefix-key (kbd "C-t"))
 
-(define-key *root-map* (kbd "b") "exec chromium")
+;; b is for browser!
+(define-key *root-map* (kbd "b") (concatenate 'string "exec " *browser*))
+
+;; c is for console!
+(define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
 
 ;; dmenu is a better launcher than the built in
 (define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*\"")
-
-
-(setq *terminal* "uxterm")
-(setq *browser* "chromium")
 
 ;;;; start a swank server so emacs can connect
 
