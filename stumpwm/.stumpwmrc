@@ -2,7 +2,7 @@
 
 (in-package :stumpwm)
 
-(setq *terminal* "uxterm")
+(setq *terminal* "urxvt")
 (setq *browser* "chromium")
 
 (run-shell-command "xsetroot -cursor_name left_ptr")
