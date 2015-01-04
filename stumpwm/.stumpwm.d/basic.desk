@@ -8,26 +8,26 @@
                                         :NUMBER 0
                                         :X 0
                                         :Y 0
-                                        :WIDTH 1680
+                                        :WIDTH 1670
                                         :HEIGHT 1403)
                                      (#S(FDUMP
                                          :NUMBER 3
-                                         :X 1680
+                                         :X 1670
                                          :Y 0
-                                         :WIDTH 880
-                                         :HEIGHT 701)
+                                         :WIDTH 890
+                                         :HEIGHT 691)
                                       #S(FDUMP
                                          :NUMBER 2
-                                         :X 1680
-                                         :Y 701
-                                         :WIDTH 880
-                                         :HEIGHT 702)))
+                                         :X 1670
+                                         :Y 691
+                                         :WIDTH 890
+                                         :HEIGHT 712)))
                                     #S(FDUMP
                                        :NUMBER 1
                                        :X 0
                                        :Y 1403
                                        :WIDTH 2560
                                        :HEIGHT 37)))
-                            :CURRENT 3))
+                            :CURRENT 0))
                 :CURRENT 1))
    :CURRENT 0)
