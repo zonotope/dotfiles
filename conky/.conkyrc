@@ -52,7 +52,7 @@ color7 00ffff
 #  Output
 ##############################################
 TEXT
-${alignr}cpu0: ${voffset 1}${color indianred}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | cpu1: ${voffset 1}${color indianred}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | cpu2: ${voffset 1}${color indianred}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | cpu3: ${voffset 1}${color indianred}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
+${alignr}cpu0: ${voffset 1}${color coral}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | cpu1: ${voffset 1}${color coral}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | cpu2: ${voffset 1}${color coral}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | cpu3: ${voffset 1}${color coral}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
 ram: \
 ${if_match ${memperc}<50}${color forestgreen}\
 ${else}${if_match ${memperc}>=80}${color darkred}\
