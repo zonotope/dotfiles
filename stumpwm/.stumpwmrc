@@ -13,6 +13,7 @@
 
 
 (set-focus-color "dimgray")
+(set-border-color "CornflowerBlue")
 (set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
 (setf *hidden-window-color* "^6*")
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
