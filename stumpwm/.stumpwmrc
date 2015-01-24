@@ -2,16 +2,18 @@
 
 (in-package :stumpwm)
 
+;; default apps
 (setq *terminal* "urxvt")
 (setq *browser* "chromium")
 
+;; setup the desktop
 (run-shell-command "xsetroot -cursor_name left_ptr")
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
 (define-frame-preference "main"
     (1 nil nil :class "Conky" :role nil))
 
-
+;; appearance
 (set-focus-color "dimgray")
 (set-fg-color "#cccccc")
 (set-bg-color "#2d2d2d")
@@ -19,16 +21,18 @@
 (set-font "-*-liberation mono-*-r-*-*-*-*-100-100-*-*-*-*")
 (setf *hidden-window-color* "^6*")
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
+(setq *message-window-padding* 5)
 
+;; behavior
 (setf *message-window-gravity* :center) ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
 (setf *input-window-gravity* :center) ; :top-left :top-right :bottom-left
-                                      ; :bottom-right :center
+                                        ; :bottom-right :center
 
 ;; mode line
 (setf *mode-line-position* :top)
-(setf *window-format* "[%m%s%n: %c (%20t..)]")
+(setf *window-format* "[%m%s%n: (%25t..)]")
 (setf *screen-mode-line-format* "%v")
 (if (not (head-mode-line (current-head)))
     (toggle-mode-line (current-screen) (current-head)))
@@ -47,6 +51,7 @@
 ;;;; bindings:
 (set-prefix-key (kbd "C-t"))
 
+
 ;; b is for browser!
 (define-key *root-map* (kbd "b") (concatenate 'string "exec " *browser*))
 
@@ -56,6 +61,9 @@
 ;; dmenu is a better launcher than the built in
 (define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-14\"")
 
+;; w is a better key for the window list
+(define-key *root-map* (kbd "w") "windowlist")
+
 ;;;; start a swank server so emacs can connect
 
 ;; load swank
@@ -64,11 +72,11 @@
 (swank-loader:init)
 
 (defcommand swank () ()
-  (swank:create-server :port 4005
-                       :style swank:*communication-style*
-                       :dont-close t)
-  (echo-string (current-screen)
-	       "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
+            (swank:create-server :port 4005
+                                 :style swank:*communication-style*
+                                 :dont-close t)
+            (echo-string (current-screen)
+                         "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
 (swank)
 
 (run-shell-command "conky")
