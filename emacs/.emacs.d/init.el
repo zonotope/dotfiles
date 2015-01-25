@@ -65,6 +65,7 @@
    find-things-fast          ; find files and strings in projects
    flx-ido                   ; better flex matching for ido
    ido-vertical-mode         ; show ido-results vertically
+   lua-mode                  ; major mode for lua
    magit                     ; git interface
    markdown-mode             ; major mode for markdown
    php-mode                  ; major mode for php
