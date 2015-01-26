@@ -32,7 +32,7 @@
 
 ;; mode line
 (setf *mode-line-position* :top)
-(setf *window-format* "[%m%s%n: (%25t..)]")
+(setf *window-format* "[%m%s%n: %c-(%25t..)]")
 (setf *screen-mode-line-format* "%v")
 (if (not (head-mode-line (current-head)))
     (toggle-mode-line (current-screen) (current-head)))
