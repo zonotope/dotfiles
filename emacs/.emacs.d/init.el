@@ -61,6 +61,7 @@
    coffee-mode               ; major mode for coffeescript
    color-theme-solarized     ; solarized color themes
    css-mode                  ; major mode for css
+   dired-details             ; clean up dired
    diminish                  ; declutter the mode line
    find-things-fast          ; find files and strings in projects
    flx-ido                   ; better flex matching for ido
