@@ -158,9 +158,6 @@
 ;;; mail mode when called from mutt
 (add-to-list 'auto-mode-alist '("mutt-" . mail-mode))
 
-;;; html mode for EndDash templates
-(add-to-list 'auto-mode-alist '(".js.ed" . html-mode))
-
 ;;;; keybindings
 
 ;;; don't delete the provided char in a zap forward.
