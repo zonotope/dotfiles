@@ -179,6 +179,10 @@
 (require 'comments)
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 
+;;;; C-x C-r to rename the buffer and the file it's visiting
+(require 'renaming)
+(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
 ;;; M-n and M-p to scroll by a single line
 (global-set-key (kbd "M-n") 'scroll-up-line)
 (global-set-key (kbd "M-p") 'scroll-down-line)
