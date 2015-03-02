@@ -64,6 +64,9 @@
 ;; w is a better key for the window list
 (define-key *root-map* (kbd "w") "windowlist")
 
+;; F for fullscreen
+(define-key *root-map* (kbd "F") "fullscreen")
+
 ;;;; start a swank server so emacs can connect
 
 ;; load swank
