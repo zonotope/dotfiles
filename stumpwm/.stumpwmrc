@@ -31,11 +31,11 @@
                                         ; :bottom-right :center
 
 ;; mode line
-(setf *mode-line-position* :top)
-(setf *window-format* "[%m%s%n: %c-(%25t..)]")
-(setf *screen-mode-line-format* "%v")
-(if (not (head-mode-line (current-head)))
-    (toggle-mode-line (current-screen) (current-head)))
+;; (setf *mode-line-position* :top)
+;; (setf *window-format* "[%m%s%n: %c-(%25t..)]")
+;; (setf *screen-mode-line-format* "%v")
+;; (if (not (head-mode-line (current-head)))
+;;     (toggle-mode-line (current-screen) (current-head)))
 
 ;; set the mouse policy to focus follows mouse;
 (setf *mouse-focus-policy* :sloppy) ; :click, :ignore, :sloppy
