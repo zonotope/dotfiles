@@ -1,3 +1,4 @@
+(require 'ruby-mode)
 (autoload 'ruby-mode "ruby-mode" nil t)
 
 ;;; all the files to start ruby mode for

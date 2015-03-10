@@ -6,3 +6,4 @@ auto-save-list/
 # lein:
 repl-history
 /lein/.lein/self-installs/
+/emacs/.emacs.d/ido.last
