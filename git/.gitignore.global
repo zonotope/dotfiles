@@ -8,6 +8,7 @@
 *.so
 *.elc
 out/
+bin/
 
 # packages #
 ############
