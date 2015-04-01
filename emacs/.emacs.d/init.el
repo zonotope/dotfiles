@@ -141,7 +141,9 @@
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;;; pretty symbols
-(global-prettify-symbols-mode +1)
+
+(if (fboundp 'menu-bar-mode)
+    (global-prettify-symbols-mode +1))
 
 ;;; build code tags
 (setq ctags-path "/usr/local/bin/ctags")
