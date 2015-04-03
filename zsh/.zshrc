@@ -35,6 +35,9 @@ plugins=(archlinux battery bundler colored-man colorize compleat cp fasd gem git
 
 ### user configuration
 
+# set the syntax highligters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
+
 export LANG=en_US.UTF-8
 export EDITOR=emacs
 
