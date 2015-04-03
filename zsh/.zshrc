@@ -59,6 +59,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
+#bundler
+PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
+
 # my shit:
 PATH=$HOME/.bin:$PATH
 
@@ -109,5 +112,5 @@ echo -e -n "\x1b[\x33 q"
 
 # gimme a fortune when i log in:
 echo
-fortune
+fortune -a
 echo
