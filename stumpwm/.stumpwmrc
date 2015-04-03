@@ -30,9 +30,10 @@
 (setf *input-window-gravity* :center)   ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
+(setf *window-format* "[%m%s%n: %c-(%25t..)]")
+
 ;; mode line
 ;; (setf *mode-line-position* :top)
-;; (setf *window-format* "[%m%s%n: %c-(%25t..)]")
 ;; (setf *screen-mode-line-format* "%v")
 ;; (if (not (head-mode-line (current-head)))
 ;;     (toggle-mode-line (current-screen) (current-head)))
