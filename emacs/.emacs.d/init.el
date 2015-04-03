@@ -47,8 +47,10 @@
 (color-theme-tomorrow-night-eighties)
 
 ;;;; load the slime helper and sbcl for stumpwm
-;; (load (expand-file-name "/usr/local/share/sbcl/slime-helper.el"))
-;; (setq inferior-lisp-program "sbcl")
+(setq slime-helper "/usr/local/share/sbcl/slime-helper.el")
+(if (file-exists-p slime-helper)
+    (load (expand-file-name slime-helper)))
+(setq inferior-lisp-program "sbcl")
 
 ;;;; install some packages
 (require 'packages)
