@@ -1,13 +1,13 @@
-# Path to your oh-my-zsh installation.
+# oh-my-zsh installation.
 export ZSH=$HOME/.zsh.d/oh-my-zsh
+
+# custom code directory
+ZSH_CUSTOM=$HOME/.zsh.d/custom
 
 # theme name. look in $ZSH/themes/
 # optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="af-magic"
-
-# case-sensitive completion?
-CASE_SENSITIVE="true"
 
 # disable bi-weekly auto-update checks?
 # DISABLE_AUTO_UPDATE="true"
@@ -18,14 +18,17 @@ CASE_SENSITIVE="true"
 # enable command auto-correction?
 # ENABLE_CORRECTION="true"
 
+# load experimental completions
+fpath=($ZSH_CUSTOM/zsh-completions/src $fpath)
+
+# case-sensitive completion?
+CASE_SENSITIVE="true"
+
 # red dots while waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
 # history timestamp format
 HIST_STAMPS="yyyy-mm-dd" # valid formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-
-# custom code directory
-ZSH_CUSTOM=$HOME/.zsh.d/custom
 
 # plugins load. (plugins can be found in $ZSH/plugins/*) Custom plugins may
 # be added to $ZSH_CUSTOM/plugins/

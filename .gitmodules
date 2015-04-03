@@ -22,3 +22,6 @@
 [submodule "zsh/.zsh.d/custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/.zsh.d/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.zsh.d/custom/zsh-completions"]
+	path = zsh/.zsh.d/custom/zsh-completions
+	url = git://github.com/zsh-users/zsh-completions.git
