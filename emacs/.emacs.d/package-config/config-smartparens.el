@@ -9,7 +9,7 @@
 ;; works shitily with this turned on
 (setq blink-matching-paren nil)
 
-;; looks a lil better with solarized
+;; looks a lil better with tomorrow night eighties
 (set-face-attribute 'sp-show-pair-match-face nil
                     :background "darkslategray")
 

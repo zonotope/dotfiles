@@ -47,8 +47,8 @@
 (color-theme-tomorrow-night-eighties)
 
 ;;;; load the slime helper and sbcl for stumpwm
-(load (expand-file-name "/usr/local/share/sbcl/slime-helper.el"))
-(setq inferior-lisp-program "sbcl")
+;; (load (expand-file-name "/usr/local/share/sbcl/slime-helper.el"))
+;; (setq inferior-lisp-program "sbcl")
 
 ;;;; install some packages
 (require 'packages)
@@ -142,7 +142,9 @@
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;;; pretty symbols
-(global-prettify-symbols-mode +1)
+
+(if (fboundp 'menu-bar-mode)
+    (global-prettify-symbols-mode +1))
 
 ;;; build code tags
 (setq ctags-path "/usr/local/bin/ctags")
