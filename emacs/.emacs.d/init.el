@@ -1,4 +1,4 @@
-;;;; adjust the interface
+;;;; interface
 
 ;;; set the window size
 (add-to-list 'default-frame-alist '(height . 50))
