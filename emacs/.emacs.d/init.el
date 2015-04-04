@@ -60,6 +60,7 @@
    ace-jump-mode             ; jump around in buffers
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
+   clojurescript-mode        ; major mode for clojurescript
    coffee-mode               ; major mode for coffeescript
    color-theme-solarized     ; solarized color themes
    css-mode                  ; major mode for css
