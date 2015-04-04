@@ -34,12 +34,10 @@
                                "emacs"))
 
 ;;;; load all my shit
-(setq site-lisp-dir
-      (expand-file-name "site-lisp" user-emacs-directory))
+(setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
 (add-to-list 'load-path site-lisp-dir)
 
-(setq theme-dir
-      (expand-file-name "themes" user-emacs-directory))
+(setq theme-dir (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'load-path theme-dir)
 
 ;;;; set the color theme
@@ -88,7 +86,7 @@
    ))
 
 
-;;;; now configure the rest
+;;;; behavior
 
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
@@ -122,7 +120,7 @@
 (setq standard-indent 2)
 
 ;;; wrap lines at 80 characters
-(setq-default fill-column 75)
+(setq-default fill-column 80)
 
 ;;; ido mode everywhere
 (setq ido-enable-flex-matching t)
