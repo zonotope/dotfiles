@@ -54,8 +54,7 @@
 (require 'packages)
 
 (use-packages
- '(auto-indent-mode          ; indent as text is typed
-   ace-jump-mode             ; jump around in buffers
+ '(ace-jump-mode             ; jump around in buffers
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
