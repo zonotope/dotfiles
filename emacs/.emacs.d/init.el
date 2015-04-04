@@ -147,15 +147,6 @@
 (if (fboundp 'menu-bar-mode)
     (global-prettify-symbols-mode +1))
 
-;;; build code tags
-(setq ctags-path "/usr/local/bin/ctags")
-(defun build-tags (dir-name)
-  "build code lookup tags file for supplied directory."
-  (interactive "DDirectory: ")
-  (shell-command
-   (format "%s -f %s/.tags -e -R %s"
-           ctags-path dir-name (directory-file-name dir-name))))
-
 ;;; garbage collect every 20MB
 (setq gc-cons-threshold 20000000)
 
