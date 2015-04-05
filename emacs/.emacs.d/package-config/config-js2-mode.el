@@ -8,3 +8,6 @@
 
 ;; strict warnings are kind of annoying
 (setq js2-mode-show-strict-warnings nil)
+
+;; use 2 spaces
+(setq-default js2-basic-offset 2)
