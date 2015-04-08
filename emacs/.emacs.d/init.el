@@ -60,7 +60,6 @@
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
    coffee-mode               ; major mode for coffeescript
-   color-theme-solarized     ; solarized color themes
    css-mode                  ; major mode for css
    dired-details             ; clean up dired
    diminish                  ; declutter the mode line
