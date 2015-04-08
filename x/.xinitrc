@@ -14,10 +14,5 @@ fi
 xrdb -merge ~/.Xresources
 xkbcomp ~/.Xkeymap $DISPLAY &
 xbindkeys
-# compton -cCb --config ~/.config/compton.conf
-# feh --bg-scale pics/wallpapers/IMG_3015.jpg
-# conky &
-# tint2 &
-# exec openbox
-# exec i3
+feh --bg-scale pics/wallpapers/john_b_gordon_classroom.jpg
 exec stumpwm
