@@ -113,8 +113,9 @@
 ;;; always end a file with a newline
 (setq require-final-newline t)
 
-;;; don't ever split the window horizontally for a pop-up buffer
+;;; don't ever split the window for a pop-up buffer
 (setq split-width-threshold nil)
+(setq split-height-threshold nil)
 
 ;;; no tabs. use 2 spaces instead.
 (setq-default indent-tabs-mode nil)
