@@ -30,7 +30,7 @@
 (setf *input-window-gravity* :center)   ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
-(setf *window-format* "[%m%s%n: %c-(%25t..)]")
+(setf *window-format* "%m%s%n: %c (%25t..)")
 
 ;; mode line
 ;; (setf *mode-line-position* :top)
