@@ -18,7 +18,7 @@
 (set-fg-color "#cccccc")
 (set-bg-color "#2d2d2d")
 (set-border-color "#6699cc")
-(set-font "-*-dejavu sans-*-r-*-*-*-120-*-*-*-*-*-*")
+(set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
 (setf *hidden-window-color* "^6*")
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 (setq *message-window-padding* 5)
