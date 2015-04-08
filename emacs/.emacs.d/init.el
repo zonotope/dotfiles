@@ -74,6 +74,7 @@
    markdown-mode             ; major mode for markdown
    php-mode                  ; major mode for php
    pixie-mode                ; major mode for pixie
+   puppet-mode               ; major mode for puppet manifests
    ruby-mode                 ; major mode for ruby
    ruby-tools                ; more ruby mode extras
    rust-mode                 ; major mode for rust.
