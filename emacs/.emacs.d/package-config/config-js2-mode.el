@@ -1,6 +1,5 @@
-;; use for all js and json files, and node scripts
+;; use for all js and node scripts
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 ;; make js2-mode respect my color theme
