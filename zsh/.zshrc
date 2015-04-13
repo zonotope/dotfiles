@@ -45,7 +45,7 @@ export LANG=en_US.UTF-8
 export EDITOR=emacs
 
 ## set the path, and additions
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.bin:/usr/local/bin:$PATH
 
 # rbenv
 PATH=$HOME/.rbenv/bin:$PATH
