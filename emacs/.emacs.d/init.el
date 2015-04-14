@@ -163,6 +163,10 @@
 
 ;;;; keybindings
 
+;;; get rid of the '@' for hide/show bindings
+(global-set-key (kbd "C-c C-h") 'hs-hide-block)
+(global-set-key (kbd "C-c C-s") 'hs-show-block)
+
 ;;; don't delete the provided char in a zap forward.
 (autoload 'zap-up-to-char "misc"
   "Kill up to, but not including ARGth occurrence of CHAR. \(fn arg char)"
