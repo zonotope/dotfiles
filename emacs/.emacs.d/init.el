@@ -8,7 +8,7 @@
 (set-default 'cursor-type 'hbar)
 
 ;;; set the font to inconsolata
-(set-default-font "Inconsolata-g-12")
+(set-default-font "Inconsolata-14")
 
 ;;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
@@ -162,10 +162,6 @@
 (add-to-list 'auto-mode-alist '("mutt-" . mail-mode))
 
 ;;;; keybindings
-
-;;; get rid of the '@' for hide/show bindings
-(global-set-key (kbd "C-c C-h") 'hs-hide-block)
-(global-set-key (kbd "C-c C-s") 'hs-show-block)
 
 ;;; don't delete the provided char in a zap forward.
 (autoload 'zap-up-to-char "misc"
