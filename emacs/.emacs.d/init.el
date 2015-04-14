@@ -89,8 +89,10 @@
 
 ;;;; behavior
 
-;;; enable hide/show for all programming modes
+;;; enable hide/show for all programming modes, but not in the mode line
 (add-hook 'prog-mode-hook #'hs-minor-mode)
+(require 'diminish)
+(diminish 'hs-minor-mode)
 
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
