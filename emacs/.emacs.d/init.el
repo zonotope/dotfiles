@@ -8,7 +8,7 @@
 (set-default 'cursor-type 'hbar)
 
 ;;; set the font to inconsolata
-(set-default-font "Inconsolata-g-12")
+(set-default-font "Inconsolata-14")
 
 ;;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
@@ -129,13 +129,11 @@
 ;;; wrap lines at 80 characters
 (setq-default fill-column 80)
 
-;;; ido mode everywhere
+;;; ido mode everywhere and display ido results vertically
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
-(ido-mode 1)
-
-;;; display ido results vertically
 (ido-vertical-mode 1)
+(ido-mode 1)
 
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
