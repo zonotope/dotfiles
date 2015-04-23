@@ -8,7 +8,7 @@
 (set-default 'cursor-type 'hbar)
 
 ;;; set the font to inconsolata
-(set-default-font "Inconsolata-g-12")
+(set-default-font "Inconsolata-14")
 
 ;;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
@@ -60,7 +60,6 @@
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
    coffee-mode               ; major mode for coffeescript
-   color-theme-solarized     ; solarized color themes
    css-mode                  ; major mode for css
    dired-details             ; clean up dired
    diminish                  ; declutter the mode line
@@ -68,7 +67,8 @@
    find-things-fast          ; find files and strings in projects
    flx-ido                   ; better flex matching for ido
    ido-vertical-mode         ; show ido-results vertically
-   js2-mode                  ; javascript ide
+   js2-mode                  ; major mode/ide for javascript
+   json-mode                 ; major mode for json
    lua-mode                  ; major mode for lua
    magit                     ; git interface
    markdown-mode             ; major mode for markdown
@@ -88,6 +88,9 @@
 
 
 ;;;; behavior
+
+;;; enable hide/show for all programming modes, but not in the mode line
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
@@ -113,8 +116,9 @@
 ;;; always end a file with a newline
 (setq require-final-newline t)
 
-;;; don't ever split the window horizontally for a pop-up buffer
+;;; don't ever split the window for a pop-up buffer
 (setq split-width-threshold nil)
+(setq split-height-threshold nil)
 
 ;;; no tabs. use 2 spaces instead.
 (setq-default indent-tabs-mode nil)
@@ -123,13 +127,11 @@
 ;;; wrap lines at 80 characters
 (setq-default fill-column 80)
 
-;;; ido mode everywhere
+;;; ido mode everywhere and display ido results vertically
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
-(ido-mode 1)
-
-;;; display ido results vertically
 (ido-vertical-mode 1)
+(ido-mode 1)
 
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
