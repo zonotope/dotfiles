@@ -55,7 +55,7 @@ Xcursor.theme: jimmac
 !!!! apps:
 
 !! xterm
-xterm*faceName:         xft:Inconsolata-g:size=14
+xterm*faceName:         xft:Inconsolata-g:size=12
 xterm*loginShell:       true
 xterm*vt100*geometry:   85x25
 xterm*saveLines:        2500
@@ -63,7 +63,7 @@ xterm*boldMode:         true
 
 !! urxvt
 URxvt*cursorColor:       t_orange
-URxvt*font:              xft:Inconsolata-g:size=14
+URxvt*font:              xft:Inconsolata-g:size=12
 URxvt*loginShell:        True
 URxvt*scrollBar:         False
 URxvt*scrollTtyOutput:   True
