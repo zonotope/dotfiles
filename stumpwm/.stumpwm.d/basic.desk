@@ -2,32 +2,48 @@
    :SCREENS (#S(SDUMP
                 :NUMBER 0
                 :GROUPS (#S(GDUMP
-                            :NUMBER 1
+                            :NUMBER 2
                             :NAME "main"
                             :TREE (((#S(FDUMP
-                                        :NUMBER 0
+                                        :NUMBER 1
                                         :X 0
                                         :Y 0
-                                        :WIDTH 1670
-                                        :HEIGHT 1403)
+                                        :WIDTH 1330
+                                        :HEIGHT 1403
+                                        :WINDOWS NIL
+                                        :CURRENT NIL)
                                      (#S(FDUMP
-                                         :NUMBER 3
-                                         :X 1670
-                                         :Y 0
-                                         :WIDTH 890
-                                         :HEIGHT 681)
-                                      #S(FDUMP
                                          :NUMBER 2
-                                         :X 1670
-                                         :Y 681
-                                         :WIDTH 890
-                                         :HEIGHT 722)))
+                                         :X 1330
+                                         :Y 0
+                                         :WIDTH 1230
+                                         :HEIGHT 941
+                                         :WINDOWS NIL
+                                         :CURRENT NIL)
+                                      (#S(FDUMP
+                                          :NUMBER 3
+                                          :X 1330
+                                          :Y 941
+                                          :WIDTH 615
+                                          :HEIGHT 462
+                                          :WINDOWS NIL
+                                          :CURRENT NIL)
+                                       #S(FDUMP
+                                          :NUMBER 4
+                                          :X 1945
+                                          :Y 941
+                                          :WIDTH 615
+                                          :HEIGHT 462
+                                          :WINDOWS NIL
+                                          :CURRENT NIL))))
                                     #S(FDUMP
-                                       :NUMBER 1
+                                       :NUMBER 0
                                        :X 0
                                        :Y 1403
                                        :WIDTH 2560
-                                       :HEIGHT 37)))
+                                       :HEIGHT 37
+                                       :WINDOWS NIL
+                                       :CURRENT NIL)))
                             :CURRENT 0))
-                :CURRENT 1))
+                :CURRENT 0))
    :CURRENT 0)
