@@ -89,6 +89,7 @@
 
 ;;;; behavior
 
+
 ;;; enable hide/show for all programming modes, but not in the mode line
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
@@ -126,6 +127,12 @@
 
 ;;; wrap lines at 80 characters
 (setq-default fill-column 80)
+
+;;; sentences can end in a single space
+(setq sentence-end-double-space nil)
+
+;;; use hippie-expand instead of dabbrev for better partial word completions
+(global-set-key (kbd "M-/") 'hippie-expand)
 
 ;;; ido mode everywhere and display ido results vertically
 (setq ido-enable-flex-matching t)
@@ -184,6 +191,9 @@
 ;;; M-n and M-p to scroll by a single line
 (global-set-key (kbd "M-n") 'scroll-up-line)
 (global-set-key (kbd "M-p") 'scroll-down-line)
+
+;;; M-SPACE to cycle through spacing at point
+(global-set-key (kbd "M-SPC") 'cycle-spacing)
 
 ;;; enable upcase region command (C-x C-u)
 (put 'upcase-region 'disabled nil)
