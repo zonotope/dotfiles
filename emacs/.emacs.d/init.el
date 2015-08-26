@@ -86,6 +86,8 @@
    yaml-mode                 ; major mode for yaml
    ))
 
+;;;; load my custom commands
+(require 'commands)
 
 ;;;; behavior
 
@@ -185,11 +187,9 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;;; M-; to comment or uncomment region or current line if no active region.
-(require 'comments)
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 
 ;;;; C-x C-r to rename the buffer and the file it's visiting
-(require 'renaming)
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
 
 ;;; M-n and M-p to scroll by a single line
@@ -206,7 +206,6 @@
 (put 'downcase-region 'disabled nil)
 
 ;;;; set bindings that should not be overridden by other modes
-(require 'pbinding)
 
 ;;; "C-j" for ace-jump-mode
 (set-permanent-key (kbd "C-j") 'ace-jump-mode)
