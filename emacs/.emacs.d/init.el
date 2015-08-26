@@ -28,7 +28,7 @@
 ;;; no splash screen
 (setq inhibit-splash-screen t)
 
-;;; "<user-name> - <buffer-name> - emacs" in the title bar
+;;; "<user-name>: <buffer-name> -- emacs" in the title bar
 (setq frame-title-format (list (getenv "USER")
                                ": %b -- "
                                "emacs"))
@@ -89,7 +89,6 @@
 
 ;;;; behavior
 
-
 ;;; enable hide/show for all programming modes, but not in the mode line
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
@@ -134,6 +133,12 @@
 ;;; use hippie-expand instead of dabbrev for better partial word completions
 (global-set-key (kbd "M-/") 'hippie-expand)
 
+;;; use aspell to spell check
+(if (executable-find "aspell")
+    (progn
+      (setq ispell-program-name "aspell")
+      (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
+
 ;;; ido mode everywhere and display ido results vertically
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
@@ -154,7 +159,6 @@
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;;; pretty symbols
-
 (if (fboundp 'menu-bar-mode)
     (global-prettify-symbols-mode +1))
 
