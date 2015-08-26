@@ -135,11 +135,19 @@
 ;;; use hippie-expand instead of dabbrev for better partial word completions
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-;;; use aspell to spell check
+;;; spelling
+
+;; use aspell to spell check
 (if (executable-find "aspell")
     (progn
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
+
+;; start flyspell for text based modes
+(add-hook 'text-mode-hook 'flyspell-mode)
+
+;; don't print messages for every mispelled word
+(setq flyspell-issue-message-flag nil)
 
 ;;; ido mode everywhere and display ido results vertically
 (setq ido-enable-flex-matching t)
