@@ -51,7 +51,7 @@
 (defun set-permanent-key (key function-name)
   (define-key permanent-bindings-mode-map key function-name))
 
-;;; set the exec path to the same one used by the shell because mac osx sux
+;;; set the exec path to the same one used by the shell because mac osx sucks
 (defun set-exec-path-from-shell-PATH ()
   (interactive)
   (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" ""
