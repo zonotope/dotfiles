@@ -1,8 +1,5 @@
 (require 'clojure-mode)
 
-;; check spelling in comments and strings
-(add-hook 'clojure-mode-hook 'flyspell-prog-mode)
-
 ;; better compojure indent
 (define-clojure-indent
   (defroutes 'defun)

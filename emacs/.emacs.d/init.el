@@ -95,9 +95,6 @@
 
 ;;;; behavior
 
-;;; enable hide/show for all programming modes, but not in the mode line
-(add-hook 'prog-mode-hook #'hs-minor-mode)
-
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
 
@@ -147,8 +144,11 @@
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
 
-;; start flyspell for text based modes
+;; check spelling everywhere for text based modes
 (add-hook 'text-mode-hook 'flyspell-mode)
+
+;; check spelling in strings and comments for programming based modes
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 ;; don't print messages for every mispelled word
 (setq flyspell-issue-message-flag nil)

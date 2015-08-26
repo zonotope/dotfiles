@@ -20,9 +20,6 @@
      ;; backward kill word
      (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)))
 
-;;; check spelling in comments
-(add-hook 'ruby-mode-hook 'flyspell-prog-mode)
-
 ;;; rake commands
 ;; completion for ssh
 (defun pcomplete/rake ()
