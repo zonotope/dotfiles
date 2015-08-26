@@ -154,8 +154,7 @@
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;;; pretty symbols
-
-(if (fboundp 'menu-bar-mode)
+(if (fboundp 'global-prettify-symbols-mode)
     (global-prettify-symbols-mode +1))
 
 ;;; garbage collect every 20MB
