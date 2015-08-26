@@ -8,7 +8,7 @@
 (set-default 'cursor-type 'hbar)
 
 ;;; set the font to inconsolata
-(set-default-font "Inconsolata-14")
+(set-default-font "Inconsolata-12")
 
 ;;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
@@ -95,7 +95,6 @@
 
 ;;;; behavior
 
->>>>>>> 0a247f65493ae9c77902279bd4ed74f4385cf78c
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
 
