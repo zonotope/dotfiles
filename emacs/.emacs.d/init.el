@@ -89,6 +89,10 @@
 ;;;; load my custom commands
 (require 'commands)
 
+;;;; set the path if this is on a mac
+(if (string-equal "darwin" (symbol-name system-type))
+    (set-exec-path-from-shell-PATH))
+
 ;;;; behavior
 
 ;;; enable hide/show for all programming modes, but not in the mode line
