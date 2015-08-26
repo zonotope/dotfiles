@@ -8,7 +8,7 @@
 (set-default 'cursor-type 'hbar)
 
 ;;; set the font to inconsolata
-(set-default-font "Inconsolata-12")
+(set-default-font "Inconsolata-14")
 
 ;;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
@@ -89,8 +89,13 @@
 ;;;; load my custom commands
 (require 'commands)
 
+;;;; set the path if this is on a mac
+(if (string-equal "darwin" (symbol-name system-type))
+    (set-exec-path-from-shell-PATH))
+
 ;;;; behavior
 
+>>>>>>> 0a247f65493ae9c77902279bd4ed74f4385cf78c
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
 
@@ -133,18 +138,21 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 ;;; spelling
-
 ;; use aspell to spell check
 (if (executable-find "aspell")
     (progn
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
 
-;; start flyspell for text based modes
+;; check spelling everywhere for text based modes
 (add-hook 'text-mode-hook 'flyspell-mode)
+
+;; check spelling only in strings and comments for programming based modes
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 ;; don't print messages for every mispelled word
 (setq flyspell-issue-message-flag nil)
+
 
 ;;; ido mode everywhere and display ido results vertically
 (setq ido-enable-flex-matching t)
@@ -166,7 +174,7 @@
 (setq uniquify-buffer-name-style 'post-forward)
 
 ;;; pretty symbols
-(if (fboundp 'menu-bar-mode)
+(if (fboundp 'global-prettify-symbols-mode)
     (global-prettify-symbols-mode +1))
 
 ;;; garbage collect every 20MB
