@@ -153,7 +153,7 @@
 (setq flyspell-issue-message-flag nil)
 
 
-;;; ido mode everywhere and display ido results vertically
+;;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-vertical-mode 1)
