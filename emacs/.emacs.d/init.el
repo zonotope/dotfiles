@@ -90,8 +90,9 @@
 (require 'commands)
 
 ;;;; set the path if this is on a mac
-(if (string-equal "darwin" (symbol-name system-type))
+(if (string-equal (symbol-name system-type) "darwin")
     (set-exec-path-from-shell-PATH))
+
 
 ;;;; behavior
 
