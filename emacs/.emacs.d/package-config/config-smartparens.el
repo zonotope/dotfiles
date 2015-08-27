@@ -86,7 +86,3 @@
 ;;; lisp modes
 (sp-with-modes sp--lisp-modes
   (sp-local-pair "(" nil :bind "C-("))
-
-;;; clean out sp from the mode line
-(require 'diminish)
-(diminish 'smartparens-mode)

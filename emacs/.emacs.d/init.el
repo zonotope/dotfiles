@@ -54,8 +54,7 @@
 (require 'packages)
 
 (use-packages
- '(auto-indent-mode          ; indent as text is typed
-   ace-jump-mode             ; jump around in buffers
+ '(ace-jump-mode             ; jump around in buffers
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
@@ -159,6 +158,7 @@
 (setq ido-everywhere t)
 (ido-vertical-mode 1)
 (ido-mode 1)
+(setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)
 
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
