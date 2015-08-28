@@ -62,6 +62,9 @@
 ;; dmenu is a better launcher than the built in
 (define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-14\"")
 
+;; = to bring up clipboard manager
+(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-14\"")
+
 ;; w is a better key for the window list
 (define-key *root-map* (kbd "w") "windowlist")
 
@@ -90,6 +93,9 @@
                     (setf server-running t)))))
 
 (define-key *root-map* (kbd "C-s") "swank")
+
+;; start clipboard manager daemon
+(run-shell-command "clipmenud")
 
 ;; run conky to start
 (run-shell-command "conky")
