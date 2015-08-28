@@ -156,12 +156,17 @@
 ;;; dired
 (require 'dired )
 
+;; enable dired-x
+(add-hook 'dired-load-hook
+          (function (lambda ()
+                      (load "dired-x"))))
+
 ;; use the same buffer to view parent and sub-directories
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
-(define-key dired-mode-map (kbd "^")
-  (lambda ()
-    (interactive)
-    (find-alternate-file "..")))
+(define-key dired-mode-map (kbd "^") (lambda ()
+                                       (interactive)
+                                       (find-alternate-file "..")))
+
 
 ;;; ido
 (setq ido-enable-flex-matching t)
