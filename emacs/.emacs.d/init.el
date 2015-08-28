@@ -55,6 +55,7 @@
 
 (use-packages
  '(ace-jump-mode             ; jump around in buffers
+   auto-indent-mode          ; automatically indent
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
@@ -163,8 +164,9 @@
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
 
-;;; auto indent lines
-(electric-indent-mode 1)
+;;; use auto-indent-mode instead of electric-indent
+(electric-indent-mode -1)
+(auto-indent-global-mode)
 
 ;;; delete trailing whitespace before every save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
