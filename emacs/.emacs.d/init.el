@@ -153,6 +153,15 @@
 ;; don't print messages for every mispelled word
 (setq flyspell-issue-message-flag nil)
 
+;;; dired
+(require 'dired )
+
+;; use the same buffer to view parent and sub-directories
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+(define-key dired-mode-map (kbd "^")
+  (lambda ()
+    (interactive)
+    (find-alternate-file "..")))
 
 ;;; ido
 (setq ido-enable-flex-matching t)
