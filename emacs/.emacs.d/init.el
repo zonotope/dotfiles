@@ -83,6 +83,7 @@
    stylus-mode               ; majore mode for stylus and jade files
    switch-window             ; visually switch windows
    toml-mode                 ; major mode for toml
+   writegood-mode            ; checks for passive voice and weasel words
    yaml-mode                 ; major mode for yaml
    ))
 
@@ -143,6 +144,9 @@
     (progn
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
+
+;; check bad writing style in text based modes
+(add-hook 'text-mode-hook 'writegood-mode)
 
 ;; check spelling everywhere for text based modes
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -230,6 +234,9 @@
 
 ;;; enable upcase region command (C-x C-u)
 (put 'upcase-region 'disabled nil)
+
+;;; enable dired-find-alternate-file to open subdirs in the same buffer
+(put 'dired-find-alternate-file 'disabled nil)
 
 ;;; enable downcase-region command (C-x C-l)
 (put 'downcase-region 'disabled nil)
