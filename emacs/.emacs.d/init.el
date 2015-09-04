@@ -83,7 +83,6 @@
    stylus-mode               ; majore mode for stylus and jade files
    switch-window             ; visually switch windows
    toml-mode                 ; major mode for toml
-   writegood-mode            ; checks for passive voice and weasel words
    yaml-mode                 ; major mode for yaml
    ))
 
@@ -144,9 +143,6 @@
     (progn
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
-
-;; check bad writing style in text based modes
-(add-hook 'text-mode-hook 'writegood-mode)
 
 ;; check spelling everywhere for text based modes
 (add-hook 'text-mode-hook 'flyspell-mode)
