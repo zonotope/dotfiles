@@ -175,6 +175,11 @@
 (ido-mode 1)
 (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)
 
+;;; magit
+
+;; don't track the parent branch by default when creating new branches
+(setq magit-branch-arguments (remove "--track" magit-branch-arguments))
+
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
 
