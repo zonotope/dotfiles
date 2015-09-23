@@ -4,7 +4,7 @@
 
 ;; default apps
 (setq *terminal* "urxvt")
-(setq *browser* "chromium")
+(setq *browser* "firefox")
 
 ;; setup the desktop
 (run-shell-command "xsetroot -cursor_name left_ptr")
@@ -30,11 +30,11 @@
 (setf *input-window-gravity* :center)   ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
-(setf *window-format* "%m%s%n: %c (%25t..)")
+(setf *window-format* "[%m%s%n: %c {%25t}]")
 
 ;; mode line
-;; (setf *mode-line-position* :top)
-;; (setf *screen-mode-line-format* "%v")
+(setf *mode-line-position* :top)
+(setf *screen-mode-line-format* "%v")
 ;; (if (not (head-mode-line (current-head)))
 ;;     (toggle-mode-line (current-screen) (current-head)))
 
