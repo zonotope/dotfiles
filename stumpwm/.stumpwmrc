@@ -4,7 +4,7 @@
 
 ;; default apps
 (setq *terminal* "urxvt")
-(setq *browser* "chromium")
+(setq *browser* "firefox")
 
 ;; setup the desktop
 (run-shell-command "xsetroot -cursor_name left_ptr")
