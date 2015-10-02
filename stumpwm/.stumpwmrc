@@ -2,18 +2,18 @@
 
 (in-package :stumpwm)
 
-;; default apps
+;;;; default apps
 (setq *terminal* "urxvt")
 (setq *browser* "firefox")
 
-;; setup the desktop
+;;;; setup the desktop
 (run-shell-command "xsetroot -cursor_name left_ptr")
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
 (define-frame-preference "main"
     (1 nil nil :class "Conky" :role nil))
 
-;; appearance
+;;;; appearance
 (set-focus-color "dimgray")
 (set-fg-color "#cccccc")
 (set-bg-color "#2d2d2d")
@@ -23,20 +23,18 @@
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 (setq *message-window-padding* 5)
 
-;; behavior
+;;;; behavior
 (setf *message-window-gravity* :center) ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
 (setf *input-window-gravity* :center)   ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
-(setf *window-format* "[%m%s%n: %c {%25t}]")
+(setf *window-format* "[%m%s%n: %c--%15t]")
 
-;; mode line
+;;; mode line
 (setf *mode-line-position* :top)
 (setf *screen-mode-line-format* "%v")
-;; (if (not (head-mode-line (current-head)))
-;;     (toggle-mode-line (current-screen) (current-head)))
 
 ;; set the mouse policy to focus follows mouse;
 (setf *mouse-focus-policy* :sloppy) ; :click, :ignore, :sloppy
@@ -70,6 +68,9 @@
 
 ;; F for fullscreen
 (define-key *root-map* (kbd "F") "fullscreen")
+
+;; C-- to toggle the mode line
+(define-key *root-map* (kbd "C--") "mode-line")
 
 ;;;; start a swank server so emacs can connect
 (ql:quickload :swank)
