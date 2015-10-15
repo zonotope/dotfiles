@@ -8,31 +8,31 @@
                                         :NUMBER 1
                                         :X 0
                                         :Y 0
-                                        :WIDTH 1330
+                                        :WIDTH 1310
                                         :HEIGHT 1403
                                         :WINDOWS NIL
                                         :CURRENT NIL)
                                      (#S(FDUMP
                                          :NUMBER 2
-                                         :X 1330
+                                         :X 1310
                                          :Y 0
-                                         :WIDTH 1230
+                                         :WIDTH 1250
                                          :HEIGHT 941
                                          :WINDOWS NIL
                                          :CURRENT NIL)
                                       (#S(FDUMP
                                           :NUMBER 3
-                                          :X 1330
+                                          :X 1310
                                           :Y 941
-                                          :WIDTH 615
+                                          :WIDTH 625
                                           :HEIGHT 462
                                           :WINDOWS NIL
                                           :CURRENT NIL)
                                        #S(FDUMP
                                           :NUMBER 4
-                                          :X 1945
+                                          :X 1935
                                           :Y 941
-                                          :WIDTH 615
+                                          :WIDTH 625
                                           :HEIGHT 462
                                           :WINDOWS NIL
                                           :CURRENT NIL))))
