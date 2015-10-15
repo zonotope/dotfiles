@@ -63,6 +63,7 @@
    css-mode                  ; major mode for css
    dired-details             ; clean up dired
    diminish                  ; declutter the mode line
+   elixir-mode               ; major mode for elixir
    feature-mode              ; major mode for cucumber feature tests
    find-things-fast          ; find files and strings in projects
    flx-ido                   ; better flex matching for ido
