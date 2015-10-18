@@ -56,11 +56,11 @@
 (use-packages
  '(ace-jump-mode             ; jump around in buffers
    auto-indent-mode          ; automatically indent
-   company                   ; complete anything
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
    coffee-mode               ; major mode for coffeescript
+   company                   ; complete anything
    css-mode                  ; major mode for css
    dired-details             ; clean up dired
    diminish                  ; declutter the mode line
