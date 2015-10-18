@@ -56,6 +56,7 @@
 (use-packages
  '(ace-jump-mode             ; jump around in buffers
    auto-indent-mode          ; automatically indent
+   company                   ; complete anything
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
@@ -182,6 +183,9 @@
 ;;; use auto-indent-mode instead of electric-indent
 (electric-indent-mode -1)
 (auto-indent-global-mode)
+
+;;; enable company-mode
+(global-company-mode)
 
 ;;; delete trailing whitespace before every save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
