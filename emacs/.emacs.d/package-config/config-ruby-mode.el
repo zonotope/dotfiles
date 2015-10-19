@@ -2,6 +2,7 @@
 (autoload 'ruby-mode "ruby-mode" nil t)
 
 ;;; all the files to start ruby mode for
+(add-to-list 'auto-mode-alist '("Berksfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
