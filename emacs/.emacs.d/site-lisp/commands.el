@@ -65,7 +65,7 @@
   `(eval-after-load ,feature
      '(progn ,@body)))
 
-;;; draw a comment box that stretches at least to the fill line.
+;;; draw a comment box that stretches close to the fill line.
 (defun wide-comment-box (b e)
   (interactive "r")
   (let ((e (copy-marker e t))
