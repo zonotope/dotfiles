@@ -59,12 +59,6 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
-;;; evaluate body after feature is loaded
-(defmacro after-load (feature &rest body)
-  (declare (indent defun))
-  `(eval-after-load ,feature
-     '(progn ,@body)))
-
 ;;; draw a comment box that stretches close to the fill line.
 (defun wide-comment-box (b e)
   (interactive "r")
