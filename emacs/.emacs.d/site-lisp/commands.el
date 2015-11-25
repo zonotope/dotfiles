@@ -59,4 +59,16 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
+;;; draw a comment box that stretches close to the fill line.
+(defun wide-comment-box (b e)
+  (interactive "r")
+  (let ((e (copy-marker e t))
+        (end-column (- fill-column 8))) ;; padding for a nicer looking "margin"
+    (goto-char b)
+    (end-of-line)
+    (insert-char ?  (- end-column (current-column)))
+    (comment-box b e 1)
+    (goto-char e)
+    (set-marker e nil)))
+
 (provide 'commands)
