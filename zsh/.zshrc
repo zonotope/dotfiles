@@ -52,7 +52,7 @@ PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 #bundler
-PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
+PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH
 
 # my own shit:
 PATH=$HOME/.bin:$PATH
