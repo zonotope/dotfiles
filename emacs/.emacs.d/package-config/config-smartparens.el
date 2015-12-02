@@ -11,7 +11,7 @@
 
 ;; looks a lil better with tomorrow night eighties
 (set-face-attribute 'sp-show-pair-match-face nil
-                    :foreground "#cccccc"
+                    :inherit nil
                     :background "darkslategray")
 
 ;; keybindings
