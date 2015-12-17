@@ -1,0 +1,9 @@
+#! /bin/sh
+
+############################################################################
+# stop X automatic screen blanking                                         #
+############################################################################
+
+xset s noblank    # don't blank the video device
+xset s off        # no screensaver
+xset -dpms        # disable energy star power management
