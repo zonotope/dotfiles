@@ -55,7 +55,7 @@
 
 (use-packages
  '(ace-jump-mode             ; jump around in buffers
-   alchemist                 ; elixir ide and repl
+   ;; alchemist                 ; elixir ide and repl
    auto-indent-mode          ; automatically indent
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
