@@ -5,3 +5,5 @@
 	excludesfile = /home/$USER/.gitignore.global
 [push]
 	default = simple
+[merge]
+	conflictstyle = diff3
