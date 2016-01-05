@@ -55,7 +55,7 @@
 
 (use-packages
  '(ace-jump-mode             ; jump around in buffers
-   alchemist                 ; elixir ide and repl
+   ;; alchemist                 ; elixir ide and repl
    auto-indent-mode          ; automatically indent
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
@@ -223,8 +223,14 @@
 ;;; M-; to comment or uncomment region or current line if no active region.
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 
-;;;; C-x C-r to rename the buffer and the file it's visiting
-(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+;;; C-c r to rename the buffer and the file it's visiting
+(global-set-key (kbd "C-c r") 'rename-current-buffer-file)
+
+;;; "C-c j" for ace-jump-mode
+(global-set-key (kbd "C-c j") 'ace-jump-mode)
+
+;;; "C-c s" to slurp absorb the next sexp: ()"some thing" -> ("some thing")
+(global-set-key (kbd "C-c s") 'sp-slurp-hybrid-sexp)
 
 ;;; M-n and M-p to scroll by a single line
 (global-set-key (kbd "M-n") 'scroll-up-line)
