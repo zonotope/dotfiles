@@ -3,7 +3,7 @@
 (in-package :stumpwm)
 
 ;;;; default apps
-(setq *terminal* "urxvt")
+(setq *terminal* "urxvtc")
 (setq *browser* "firefox")
 
 ;;;; setup the desktop
