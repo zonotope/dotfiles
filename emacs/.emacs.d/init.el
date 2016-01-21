@@ -1,4 +1,6 @@
-;;;; interface
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; interface                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; set the window size
 (add-to-list 'default-frame-alist '(height . 50))
@@ -33,24 +35,31 @@
                                ": %b -- "
                                "emacs"))
 
-;;;; load all my shit
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; load up all the shit                                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;; elisp commands
 (setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
 (add-to-list 'load-path site-lisp-dir)
 
+;;;; set the path if this is on a mac
+(if (string-equal (symbol-name system-type) "darwin")
+    (set-exec-path-from-shell-PATH))
+
+;;;; themes
 (setq theme-dir (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'load-path theme-dir)
 
-;;;; set the color theme
+;;; tomorrow-night-eighties is tha shiz
 (require 'color-theme-tomorrow)
 (color-theme-tomorrow-night-eighties)
 
-;;;; load the slime helper and sbcl for stumpwm
-(setq slime-helper "/usr/local/share/sbcl/slime-helper.el")
-(if (file-exists-p slime-helper)
-    (load (expand-file-name slime-helper)))
-(setq inferior-lisp-program "sbcl")
 
-;;;; install some packages
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; install some packages                                                    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'packages)
 
 (use-packages
@@ -88,15 +97,13 @@
    yaml-mode                 ; major mode for yaml
    ))
 
-;;;; load my custom commands
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; behavior                                                                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; load the custom elisp
 (require 'commands)
-
-;;;; set the path if this is on a mac
-(if (string-equal (symbol-name system-type) "darwin")
-    (set-exec-path-from-shell-PATH))
-
-
-;;;; behavior
 
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
@@ -201,12 +208,10 @@
 ;;; garbage collect every 20MB
 (setq gc-cons-threshold 20000000)
 
-;;;; auto modes
 
-;;; mail mode when called from mutt
-(add-to-list 'auto-mode-alist '("mutt-" . mail-mode))
-
-;;;; keybindings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; keybindings                                                              ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; don't delete the provided char in a zap forward.
 (autoload 'zap-up-to-char "misc"
@@ -252,3 +257,13 @@
 
 ;;; "C-j" for ace-jump-mode
 (set-permanent-key (kbd "C-j") 'ace-jump-mode)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; start the server                                                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'server)
+
+(unless (server-running-p)
+  (server-start))
