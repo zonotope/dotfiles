@@ -42,7 +42,11 @@ plugins=(archlinux battery bundler colored-man colorize compleat cp fasd gem git
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 
 export LANG=en_US.UTF-8
-export EDITOR=emacs
+
+## emacs config
+export EDITOR="emacsclient -n -c"
+# allows emacsclient to start a daemon if one isn't already running
+export ALTERNATE_EDITOR=""
 
 ## set the path, and additions
 export PATH=/usr/local/bin:$PATH
@@ -64,7 +68,7 @@ export ARCHFLAGS="-arch x86_64"
 
 # file handlers:
 alias edit=$EDITOR
-alias play='mplayer -idx'
+alias play='mplayer -idx -fs'
 alias show='feh -ZF'
 alias read='zathura'
 
