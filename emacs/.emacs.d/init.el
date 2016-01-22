@@ -40,7 +40,7 @@
 ;; load up all the shit                                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;; elisp commands
+;;;; custom elisp
 (setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
 (add-to-list 'load-path site-lisp-dir)
 
@@ -64,7 +64,6 @@
 
 (use-packages
  '(ace-jump-mode             ; jump around in buffers
-   ;; alchemist                 ; elixir ide and repl
    auto-indent-mode          ; automatically indent
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
@@ -102,7 +101,7 @@
 ;; behavior                                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; load the custom elisp
+;;; load the custom elisp commands
 (require 'commands)
 
 ;;; text mode as default
@@ -187,7 +186,7 @@
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
 
-;;; use auto-indent-mode instead of electric-indent
+;;; use auto-indent-mode instead of electric-indent for indent on yanking
 (electric-indent-mode -1)
 (auto-indent-global-mode)
 
