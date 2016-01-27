@@ -44,10 +44,6 @@
 (setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
 (add-to-list 'load-path site-lisp-dir)
 
-;;;; set the path if this is on a mac
-(if (string-equal (symbol-name system-type) "darwin")
-    (set-exec-path-from-shell-PATH))
-
 ;;;; themes
 (setq theme-dir (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'load-path theme-dir)
@@ -103,6 +99,11 @@
 
 ;;; load the custom elisp commands
 (require 'commands)
+
+;;;; set the path if this is on a mac
+(if (string-equal (symbol-name system-type) "darwin")
+    (set-exec-path-from-shell-PATH))
+
 
 ;;; text mode as default
 (setq default-major-mode 'text-mode)
