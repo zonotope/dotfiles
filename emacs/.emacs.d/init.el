@@ -6,11 +6,11 @@
 (add-to-list 'default-frame-alist '(height . 50))
 (add-to-list 'default-frame-alist '(width . 80))
 
-;;; horizontal line cursor
-(set-default 'cursor-type 'hbar)
-
 ;;; set the font to Inconsolata
 (add-to-list 'default-frame-alist '(font . "Inconsolata-g-10"))
+
+;;; horizontal line cursor
+(set-default 'cursor-type 'hbar)
 
 ;;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)

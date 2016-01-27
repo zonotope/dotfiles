@@ -72,29 +72,6 @@
 ;; C-- to toggle the mode line
 (define-key *root-map* (kbd "C--") "mode-line")
 
-;;;; start a swank server so emacs can connect
-(ql:quickload :swank)
-(swank-loader:init)
-
-(let ((server-running nil))
-  (defcommand swank () ()
-              (if server-running
-                  (progn
-                    (swank:stop-server 4005)
-                    (echo-string
-                     (current-screen)
-                     "stopping swank")
-                    (setf server-running nil))
-                  (progn
-                    (swank:create-server :port 4005
-                                         :style swank:*communication-style*
-                                         :dont-close t)
-                    (echo-string (current-screen)
-                                 "starting swank. M-x slime-connect RET RET, then (in-package stumpwm)..")
-                    (setf server-running t)))))
-
-(define-key *root-map* (kbd "C-s") "swank")
-
 ;; start clipboard manager daemon
 (run-shell-command "clipmenud")
 
