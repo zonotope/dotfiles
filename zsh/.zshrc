@@ -44,7 +44,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
 export LANG=en_US.UTF-8
 
 ## emacs config
-export EDITOR="emacsclient"
+
+export EDITOR="emacsclient -c"
+
 # allows emacsclient to start a daemon if one isn't already running
 export ALTERNATE_EDITOR=""
 
