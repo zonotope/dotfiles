@@ -123,6 +123,9 @@
 ;;; scroll 1 line at a time
 (setq scroll-step 1)
 
+;;; 3 line top/bottom scroll margin for the cursor
+(setq scroll-margin 3)
+
 ;;; even with the mouse wheel
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 
