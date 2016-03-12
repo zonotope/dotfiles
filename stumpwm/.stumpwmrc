@@ -43,7 +43,7 @@
 (setf *timeout-wait* 5)
 
 ;; what shows up in the middle of a newly focused frame
-(setf *frame-indicator-text* " boom! ")
+(setf *frame-indicator-text* " zapf! ")
 
 (setf *min-frame-height* 20)
 

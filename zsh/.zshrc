@@ -54,7 +54,7 @@ export ALTERNATE_EDITOR=""
 export PATH=/usr/local/bin:$PATH
 
 # rbenv
-PATH=$HOME/.rbenv/bin:$PATH
+PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
 #bundler
