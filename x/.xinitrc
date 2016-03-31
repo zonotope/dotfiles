@@ -10,36 +10,36 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 ############################################################################
-# start gnome-keyring                                                      #
-############################################################################
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-
-############################################################################
 # xsession                                                                 #
 ############################################################################
+
 xrdb -merge ~/.Xresources
-# xmodmap ~/.xmodmap &
+
 
 ############################################################################
 # keymaps                                                                  #
 ############################################################################
-xkbcomp ~/.Xkeymap $DISPLAY &
-xbindkeys
+
+# swap caps with ctrl, and kill x with ctrl + alt + bksp
+setxkbmap -option ctrl:swapcaps -option terminate:ctrl_alt_bksp
+
 
 ############################################################################
 # background                                                               #
 ############################################################################
-feh --bg-scale pics/wallpapers/john_b_gordon_classroom.jpg
+# feh --bg-scale pics/wallpapers/john_b_gordon_classroom.jpg
+
 
 ############################################################################
 # start daemons                                                            #
 ############################################################################
 
-## urxvt
+## urxvt server process
 urxvtd -q -f -o
 
+
 ############################################################################
-# start stump                                                              #
+# window manager                                                           #
 ############################################################################
+
 exec stumpwm
