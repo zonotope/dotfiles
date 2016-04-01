@@ -20,6 +20,9 @@ xrdb -merge ~/.Xresources
 # keymaps                                                                  #
 ############################################################################
 
+# bind multimedia keys
+xbindkeys
+
 # swap caps with ctrl, and kill x with ctrl + alt + bksp
 setxkbmap -option ctrl:swapcaps -option terminate:ctrl_alt_bksp
 
