@@ -69,8 +69,8 @@ ${endif}\
 ${endif}\
 ${endif}\
 ${voffset 1}${fs_bar 7,125 /}${voffset -1}${color} ${fs_used_perc /}% | \
-up: ${color steelblue}${upspeedgraph wlp3s0 20,125}${color} ${upspeed wlp3s0} | \
-down: ${color steelblue}${downspeedgraph wlp3s0 20,125}${color} ${downspeed wlp3s0} | \
+up: ${color steelblue}${upspeedgraph wlp4s0 20,125}${color} ${upspeed wlp4s0} | \
+down: ${color steelblue}${downspeedgraph wlp4s0 20,125}${color} ${downspeed wlp4s0} | \
 bat: \
 ${if_match ${battery_percent}>60}${color forestgreen}\
 ${else}${if_match ${battery_percent}>=20}${color gold}\

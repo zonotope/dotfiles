@@ -1,5 +1,5 @@
 ! mouse
-Xcursor.theme: jimmac
+Xcursor.theme: Vanilla-DMZ
 
 ! color theme: TomorrowNightEighties
 #define t_background            #2d2d2d
@@ -73,12 +73,12 @@ URxvt*pointerBlank:      True
 URxvt*perl-ext-common:   default,tabbedex,matcher
 
 ! clickable urls
-URxvt.url-launcher:      /usr/bin/chromium
+URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:    1
 URxvt.colorUL:           t_blue
 
 ! tabs
-URxvt.tabbed.autohide:  True
+URxvt.tabbed.autohide:  yes
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: -1
 URxvt.tabbed.tab-fg: 3
