@@ -59,7 +59,7 @@
 (require 'packages)
 
 (use-packages
- '(ace-jump-mode             ; jump around in buffers
+ '(avy                       ; navigate through buffers
    auto-indent-mode          ; automatically indent
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
@@ -234,8 +234,8 @@
 ;;; C-c r to rename the buffer and the file it's visiting
 (global-set-key (kbd "C-c r") 'rename-current-buffer-file)
 
-;;; "C-c j" for ace-jump-mode
-(global-set-key (kbd "C-c j") 'ace-jump-mode)
+;;; "C-c SPC" for avy
+(global-set-key (kbd "C-c SPC") 'avy-goto-char)
 
 ;;; "C-c s" to slurp absorb the next sexp: ()"some thing" -> ("some thing")
 (global-set-key (kbd "C-c s") 'sp-slurp-hybrid-sexp)
@@ -258,8 +258,8 @@
 
 ;;;; set bindings that should not be overridden by other modes
 
-;;; "C-j" for ace-jump-mode
-(set-permanent-key (kbd "C-j") 'ace-jump-mode)
+;;; "C-j" for avy
+(set-permanent-key (kbd "C-j") 'avy-goto-char)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
