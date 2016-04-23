@@ -37,7 +37,7 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; load up all the shit                                                     ;;
+;; set the load path and theme                                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;; custom elisp
@@ -80,13 +80,11 @@
    markdown-mode             ; major mode for markdown
    php-mode                  ; major mode for php
    pixie-mode                ; major mode for pixie
-   puppet-mode               ; major mode for puppet manifests
    ruby-mode                 ; major mode for ruby
    ruby-tools                ; more ruby mode extras
    rust-mode                 ; major mode for rust.
    slim-mode                 ; major mode for html slim templates
    smartparens               ; delimiter matching and highlighting
-   stylus-mode               ; majore mode for stylus and jade files
    switch-window             ; visually switch windows
    toml-mode                 ; major mode for toml
    yaml-mode                 ; major mode for yaml
