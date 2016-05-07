@@ -233,6 +233,9 @@
 ;;; "C-c SPC" for avy
 (global-set-key (kbd "C-c SPC") 'avy-goto-char)
 
+;;; "C-j" also for avy
+(global-set-key (kbd "C-j") 'avy-goto-char)
+
 ;;; "C-c s" to slurp absorb the next sexp: ()"some thing" -> ("some thing")
 (global-set-key (kbd "C-c s") 'sp-slurp-hybrid-sexp)
 
@@ -251,11 +254,6 @@
 
 ;;; enable downcase-region command (C-x C-l)
 (put 'downcase-region 'disabled nil)
-
-;;;; set bindings that should not be overridden by other modes
-
-;;; "C-j" for avy
-(set-permanent-key (kbd "C-j") 'avy-goto-char)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
