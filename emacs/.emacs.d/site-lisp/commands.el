@@ -44,10 +44,6 @@
 
 (permanent-bindings-mode 1)
 
-;;; hide the permanent-bindings-mode from the keymap
-(require 'diminish)
-(diminish 'permanent-bindings-mode)
-
 (defun set-permanent-key (key function-name)
   (define-key permanent-bindings-mode-map key function-name))
 

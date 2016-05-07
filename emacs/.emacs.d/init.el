@@ -68,7 +68,6 @@
    company                   ; complete anything
    css-mode                  ; major mode for css
    dired-details             ; clean up dired
-   diminish                  ; declutter the mode line
    elixir-mode               ; major mode for elixir
    feature-mode              ; major mode for cucumber feature tests
    find-things-fast          ; find files and strings in projects
@@ -189,13 +188,13 @@
 (global-auto-revert-mode 1)
 
 ;;; use auto-indent-mode instead for indent on yanking and whitespace cleanup
-(auto-indent-global-mode)
+;; (auto-indent-global-mode)
 
 ;;; enable company-mode
 (global-company-mode)
 
-;;; delete trailing whitespace before every save
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;;; clean up whitespace before every save
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;;; contextually uniquify buffer names
 (require 'uniquify)
