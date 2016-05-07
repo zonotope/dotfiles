@@ -188,8 +188,7 @@
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
 
-;;; use auto-indent-mode instead of electric-indent for indent on yanking
-(electric-indent-mode -1)
+;;; use auto-indent-mode instead for indent on yanking and whitespace cleanup
 (auto-indent-global-mode)
 
 ;;; enable company-mode
