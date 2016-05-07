@@ -214,6 +214,9 @@
   'interactive)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
+;;; indent on yank
+(global-set-key (kbd "C-y") 'yank-and-indent)
+
 ;;; M-D for backward-kill-word
 (global-set-key (kbd "M-D") 'backward-kill-word)
 
