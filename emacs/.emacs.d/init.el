@@ -60,7 +60,6 @@
 
 (use-packages
  '(avy                       ; navigate through buffers
-   auto-indent-mode          ; automatically indent
    cider                     ; clojure ide and repl
    clojure-mode              ; major mode for clojure
    clojurescript-mode        ; major mode for clojurescript
@@ -186,9 +185,6 @@
 
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
-
-;;; use auto-indent-mode instead for indent on yanking and whitespace cleanup
-;; (auto-indent-global-mode)
 
 ;;; enable company-mode
 (global-company-mode)
