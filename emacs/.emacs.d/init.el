@@ -46,11 +46,10 @@
 
 ;;;; themes
 (setq theme-dir (expand-file-name "themes" user-emacs-directory))
-(add-to-list 'load-path theme-dir)
+(add-to-list 'custom-theme-load-path theme-dir)
 
 ;;; tomorrow-night-eighties is tha shiz
-(require 'color-theme-tomorrow)
-(color-theme-tomorrow-night-eighties)
+(load-theme 'tomorrow-night-eighties t)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
