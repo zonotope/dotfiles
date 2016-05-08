@@ -1,80 +1,102 @@
-## size/placement
-alignment bottom_right
-maximum_width 20000000
-minimum_size 1400 24
-gap_x 10
-gap_y 10
+############################################################################
+# behavior                                                                 #
+############################################################################
 
-background yes
-
-## font
-use_xft yes
-xftfont Inconsolata:size=15
-xftalpha 1
-
-update_interval 1.0
-total_run_times 0
-double_buffer yes
-
-no_buffers yes
-cpu_avg_samples 2
+update_interval      1.0
+total_run_times      0
+cpu_avg_samples      2
+background           yes
 override_utf8_locale no
 
-uppercase no
+## buffers
+no_buffers    yes
+double_buffer yes
+
+
+## widgets/labels
 pad_percents 3
-use_spacer left
+use_spacer   left
 short_units
 
+## font
+use_xft   yes
+xftfont   Inconsolata:size=15
+xftalpha  1
+uppercase no
+
+############################################################################
+# window                                                                   #
+############################################################################
+
+own_window             yes
+own_window_type        desktop
+own_window_transparent no
+own_window_hints       undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_colour      2d2d2d
+
+## size/placement
+alignment     bottom_right
+maximum_width 20000000
+minimum_size  1400 24
+gap_x         10
+gap_y         10
+
 ## shades and borders
-draw_shades no
-draw_outline no
-draw_borders no
+draw_shades        no
+draw_outline       no
+draw_borders       no
 draw_graph_borders no
 
-## window
-own_window yes
-own_window_type desktop
-own_window_transparent no
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_colour 2d2d2d
+############################################################################
+# colors (Tomorrow Night Eighties)                                         #
+############################################################################
 
-## colors
-default_color gray
-color1 ff0000
-color2 ff8000
-color3 ffff00
-color4 80ff00
-color5 00ff00
-color6 00ff80
-color7 00ffff
+default_color  cccccc
 
-##############################################
-#  Output
-##############################################
+color0         f2777a # red
+color1         f99157 # orange
+color2         ffcc66 # yellow
+color3         55c055 # green
+color4         66cccc # aqua
+color5         6699cc # blue
+color6         cc99cc # purple
+
+############################################################################
+# Output                                                                   #
+############################################################################
+
 TEXT
-${alignr}cpu0: ${voffset 1}${color coral}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | cpu1: ${voffset 1}${color coral}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | cpu2: ${voffset 1}${color coral}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | cpu3: ${voffset 1}${color coral}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
+${alignr}\
+cpu0: \
+${voffset 1}${color1}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | \
+cpu1: \
+${voffset 1}${color1}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | \
+cpu2: \
+${voffset 1}${color1}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | \
+cpu3: \
+${voffset 1}${color1}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
 ram: \
-${if_match ${memperc}<50}${color forestgreen}\
-${else}${if_match ${memperc}>=80}${color darkred}\
-${else}${if_match ${memperc}<80}${color gold}\
+${if_match ${memperc}<50}${color3}\
+${else}${if_match ${memperc}>=80}${color0}\
+${else}${if_match ${memperc}<80}${color2}\
 ${endif}\
 ${endif}\
 ${endif}\
 ${voffset 1}${membar 7,125}${voffset -1}${color} ${memperc}% | \
 /: \
-${if_match ${fs_used_perc}<50}${color forestgreen}\
-${else}${if_match ${fs_used_perc}>=80}${color darkred}\
-${else}${if_match ${fs_used_perc}<80}${color gold}\
+${if_match ${fs_used_perc}<50}${color3}\
+${else}${if_match ${fs_used_perc}>=80}${color0}\
+${else}${if_match ${fs_used_perc}<80}${color2}\
 ${endif}\
 ${endif}\
 ${endif}\
 ${voffset 1}${fs_bar 7,125 /}${voffset -1}${color} ${fs_used_perc /}% | \
-up: ${color steelblue}${upspeedgraph wlp4s0 20,125}${color} ${upspeed wlp4s0} | \
-down: ${color steelblue}${downspeedgraph wlp4s0 20,125}${color} ${downspeed wlp4s0} | \
+up: ${color5}${upspeedgraph wlp4s0 20,125}${color} ${upspeed wlp4s0} | \
+down: ${color5}${downspeedgraph wlp4s0 20,125}${color} ${downspeed wlp4s0} | \
 bat: \
-${if_match ${battery_percent}>60}${color forestgreen}\
-${else}${if_match ${battery_percent}>=20}${color gold}\
-${else}${if_match ${battery_percent}<20}${color darkred}\
+${if_match ${battery_percent}>60}${color3}\
+${else}${if_match ${battery_percent}>=20}${color2}\
+${else}${if_match ${battery_percent}<20}${color0}\
 ${endif}\
 ${endif}\
 ${endif}\
