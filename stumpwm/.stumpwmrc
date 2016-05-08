@@ -71,6 +71,3 @@
 
 ;; C-- to toggle the mode line
 (define-key *root-map* (kbd "C--") "mode-line")
-
-;; run conky to start
-(run-shell-command "conky")
