@@ -14,7 +14,7 @@
     (1 nil nil :class "Conky" :role nil))
 
 ;;;; appearance
-(set-focus-color "dimgray")
+(set-focus-color "#515151")
 (set-fg-color "#cccccc")
 (set-bg-color "#2d2d2d")
 (set-border-color "#6699cc")
@@ -58,10 +58,10 @@
 (define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
 
 ;; dmenu is a better launcher than the built in
-(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-14\"")
+(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sb \"#6699cc\" -sf \"#393939\"")
 
 ;; = to bring up clipboard manager
-(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-14\"")
+(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sb \"#6699cc\" -sf \"#393939\"")
 
 ;; w is a better key for the window list
 (define-key *root-map* (kbd "w") "windowlist")
