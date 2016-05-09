@@ -7,22 +7,26 @@
 
 (deftheme base16-zonotope-dark)
 
-(let ((base00 "#2d2d2d")
-      (base01 "#393939")
+(let ((base00 "#2d2d2d") ;; background
+      (base01 "#393939") ;; accent
+
       (base02 "#515151")
-      (base03 "#999999")
+      (base03 "#747369") ;; comment
       (base04 "#a09f93")
-      (base05 "#d3d0c8")
-      (base06 "#e8e6df")
-      (base07 "#cccccc")
-      (base08 "#f2777a")
-      (base09 "#f99157")
-      (base0A "#ffcc66")
-      (base0B "#99cc99")
-      (base0C "#66cccc")
-      (base0D "#6699cc")
-      (base0E "#cc99cc")
-      (base0F "#d27b53"))
+      (base05 "#d3d0c8") ;; main content
+
+      (base06 "#e8e6df") ;; light accent
+      (base07 "#f2f0ec") ;; light background
+
+      (base08 "#f2777a") ;; red
+      (base09 "#f99157") ;; orange
+      (base0A "#ffcc66") ;; yellow
+      (base0B "#99cc99") ;; green
+      (base0C "#66cccc") ;; cyan
+      (base0D "#6699cc") ;; blue
+      (base0E "#cc99cc") ;; purple
+      (base0F "#d27b53") ;; brown
+      )
 
   (custom-theme-set-faces
    'base16-zonotope-dark
