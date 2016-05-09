@@ -72,10 +72,10 @@
 (define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
 
 ;; dmenu is a better launcher than the built in
-(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sb \"#6699cc\" -sf \"#393939\"")
+(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
 
 ;; = to bring up clipboard manager
-(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sb \"#6699cc\" -sf \"#393939\"")
+(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
 
 ;; w is a better key for the window list
 (define-key *root-map* (kbd "w") "windowlist")
