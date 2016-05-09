@@ -32,7 +32,6 @@ own_window             yes
 own_window_type        desktop
 own_window_transparent no
 own_window_hints       undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_colour      2d2d2d
 
 ## size/placement
 alignment     bottom_right
@@ -51,15 +50,16 @@ draw_graph_borders no
 # colors (Tomorrow Night Eighties)                                         #
 ############################################################################
 
-default_color  cccccc
+own_window_colour 2d2d2d
+default_color     cccccc
 
-color0         f2777a # red
-color1         f99157 # orange
-color2         ffcc66 # yellow
-color3         55c055 # green
-color4         66cccc # aqua
-color5         6699cc # blue
-color6         cc99cc # purple
+color0            f2777a # red
+color1            f99157 # orange
+color2            ffcc66 # yellow
+color3            99cc99 # green
+color4            66cccc # aqua
+color5            6699cc # blue
+color6            cc99cc # purple
 
 ############################################################################
 # Output                                                                   #
