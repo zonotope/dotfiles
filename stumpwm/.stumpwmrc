@@ -2,18 +2,27 @@
 
 (in-package :stumpwm)
 
-;;;; default apps
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; default apps                                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (setq *terminal* "urxvtc")
 (setq *browser* "firefox")
 
-;;;; setup the desktop
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; setup the desktop                                                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (run-shell-command "xsetroot -cursor_name left_ptr")
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
 (define-frame-preference "main"
     (1 nil nil :class "Conky" :role nil))
 
-;;;; appearance
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; appearance (Tomorrow Night Eighties)                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (set-focus-color "#515151")
 (set-fg-color "#cccccc")
 (set-bg-color "#2d2d2d")
@@ -23,33 +32,38 @@
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 (setq *message-window-padding* 5)
 
-;;;; behavior
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; behavior                                                                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setf *window-format* "[%m%s%n: %c--%15t]")
+(setf *min-frame-height* 20)
+
+;; window positioning
 (setf *message-window-gravity* :center) ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
 (setf *input-window-gravity* :center)   ; :top-left :top-right :bottom-left
                                         ; :bottom-right :center
 
-(setf *window-format* "[%m%s%n: %c--%15t]")
-
-;;; mode line
+;; mode line
 (setf *mode-line-position* :top)
 (setf *screen-mode-line-format* "%v")
 
 ;; set the mouse policy to focus follows mouse;
 (setf *mouse-focus-policy* :sloppy) ; :click, :ignore, :sloppy
 
-;; in seconds, how long a message will appear for.
+;; how long a message will appear in seconds
 (setf *timeout-wait* 5)
 
 ;; what shows up in the middle of a newly focused frame
 (setf *frame-indicator-text* " here! ")
 
-(setf *min-frame-height* 20)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; bindings                                                                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;; bindings:
 (set-prefix-key (kbd "C-t"))
-
 
 ;; b is for browser!
 (define-key *root-map* (kbd "b") (concatenate 'string "exec " *browser*))
@@ -58,10 +72,10 @@
 (define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
 
 ;; dmenu is a better launcher than the built in
-(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sb \"#6699cc\" -sf \"#393939\"")
+(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
 
 ;; = to bring up clipboard manager
-(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sb \"#6699cc\" -sf \"#393939\"")
+(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
 
 ;; w is a better key for the window list
 (define-key *root-map* (kbd "w") "windowlist")
