@@ -12,4 +12,4 @@
 (setq avy-background t)
 
 ;; use cyan as the highlighted character color
-(set-face-attribute 'avy-lead-face nil :foreground "cyan" :background nil)
+(set-face-attribute 'avy-lead-face nil :foreground "#66cccc" :background nil)
