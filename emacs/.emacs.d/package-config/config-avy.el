@@ -1,7 +1,9 @@
 (require 'avy)
 
 ;; use all letters for jump sequences
-(setq avy-keys (number-sequence ?a ?z))
+(setq avy-keys (append (number-sequence ?a ?z)
+                       (number-sequence ?\, ?\/)
+                       '(?\; ?\[ ?\] )))
 
 ;; show only one character from the jump sequence at a time
 (setq avy-style 'at)
