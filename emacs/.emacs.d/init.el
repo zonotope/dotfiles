@@ -53,39 +53,10 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; install some packages                                                    ;;
+;; install my packages                                                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'packages)
 
-(use-packages
- '(avy                       ; navigate through buffers
-   cider                     ; clojure ide and repl
-   clojure-mode              ; major mode for clojure
-   clojurescript-mode        ; major mode for clojurescript
-   coffee-mode               ; major mode for coffeescript
-   company                   ; complete anything
-   css-mode                  ; major mode for css
-   dired-details             ; clean up dired
-   elixir-mode               ; major mode for elixir
-   feature-mode              ; major mode for cucumber feature tests
-   find-things-fast          ; find files and strings in projects
-   flx-ido                   ; better flex matching for ido
-   ido-vertical-mode         ; show ido-results vertically
-   json-mode                 ; major mode for json
-   lua-mode                  ; major mode for lua
-   magit                     ; git interface
-   markdown-mode             ; major mode for markdown
-   php-mode                  ; major mode for php
-   pixie-mode                ; major mode for pixie
-   ruby-mode                 ; major mode for ruby
-   ruby-tools                ; more ruby mode extras
-   rust-mode                 ; major mode for rust.
-   slim-mode                 ; major mode for html slim templates
-   smartparens               ; delimiter matching and highlighting
-   switch-window             ; visually switch windows
-   toml-mode                 ; major mode for toml
-   yaml-mode                 ; major mode for yaml
-   ))
+(require 'packages)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -176,11 +147,9 @@
 
 
 ;;; ido
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-vertical-mode 1)
 (ido-mode 1)
-(setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
 
 ;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
@@ -227,12 +196,6 @@
 
 ;;; C-c r to rename the buffer and the file it's visiting
 (global-set-key (kbd "C-c r") 'rename-current-buffer-file)
-
-;;; "C-c SPC" for avy
-(global-set-key (kbd "C-c SPC") 'avy-goto-char)
-
-;;; "C-j" also for avy
-(global-set-key (kbd "C-j") 'avy-goto-char)
 
 ;;; "C-c s" to slurp absorb the next sexp: ()"some thing" -> ("some thing")
 (global-set-key (kbd "C-c s") 'sp-slurp-hybrid-sexp)
