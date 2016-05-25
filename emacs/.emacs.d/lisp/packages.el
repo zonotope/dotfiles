@@ -175,9 +175,14 @@
             (DELETE 2)
             (HEAD 2)
             (ANY 2)
-            (context 2)))
+            (context 2))
 
-(use-package clojurescript-mode)
+  :mode (("\\.clj\\'" . clojure-mode)
+         ("\\.cljc\\'" . clojure-mode)
+         ("\\.edn\\'" . clojure-mode)))
+
+(use-package clojurescript-mode
+  :mode (("\\.cljs\\'" . clojurescript-mode)))
 
 ;; clojure(script) ide and repl
 (use-package cider
@@ -193,7 +198,6 @@
 (use-package css-mode
   :mode (("\\.css\\'" . css-mode)
          ("\\.scss\\'" . css-mode)))
-
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -237,8 +241,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package ruby-mode
-  :bind(:map ruby-mode-map
-             ("C-M-h" . backward-kill-word))
+  :bind (:map ruby-mode-map
+              ("C-M-h" . backward-kill-word))
 
   :config (progn
             (setq ruby-deep-arglist t)
@@ -291,8 +295,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package yaml-mode
-  :mode (("\\.yml$" . yaml-mode)
-         ("\\.yaml$" . yaml-mode)))
+  :mode (("\\.yml\\'" . yaml-mode)
+         ("\\.yaml\\'" . yaml-mode)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
