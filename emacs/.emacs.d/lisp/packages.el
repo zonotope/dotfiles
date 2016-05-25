@@ -136,7 +136,11 @@
 
 ;; find-things-fast: find things, fast
 (use-package find-things-fast
-  :bind ("C-x C-/" . ftf-grepsource) ;; "C-x C-/" to grep project
+  :bind (;; "C-x C-/" to grep project
+         ("C-x C-/" . ftf-grepsource)
+
+         ;; "C-c f" to find file in project
+         ("C-c f" . ftf-find-file))
 
   :config (progn
             ;; i want to search through all the files. all of them!

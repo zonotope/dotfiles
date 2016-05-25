@@ -41,8 +41,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;; custom elisp
-(setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
-(add-to-list 'load-path site-lisp-dir)
+(setq user-lisp-dir (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path user-lisp-dir)
 
 ;;;; themes
 (setq theme-dir (expand-file-name "themes" user-emacs-directory))
