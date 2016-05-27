@@ -10,11 +10,14 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; install use-package if it isn't already                                  ;;
+;; install use-package                                                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
+
+;; always install the package if it doesn't exist
+(setq use-package-always-ensure t)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -186,7 +189,17 @@
 
 ;; clojure(script) ide and repl
 (use-package cider
-  :config (setq cider-repl-use-clojure-font-lock t))
+  :config (progn
+            (setq cider-repl-use-clojure-font-lock t)
+
+            ;; whitelist reloaded.repl and duct functions for cider
+            (add-to-list 'safe-local-variable-values
+                         '(cider-cljs-lein-repl
+                           . "(do (dev) (go) (cljs-repl))"))
+            (add-to-list 'safe-local-variable-values
+                         '(cider-refresh-after-fn . "reloaded.repl/resume"))
+            (add-to-list 'safe-local-variable-values
+                         '(cider-refresh-before-fn . "reloaded.repl/suspend"))))
 
 (use-package pixie-mode)
 
@@ -260,7 +273,7 @@
 
 
 ;;; extras for ruby mode
-(use-package ruby-tools-mode
+(use-package ruby-tools
   :config (add-hook 'ruby-mode-hook
                     (lambda ()
                       (require 'ruby-tools)
