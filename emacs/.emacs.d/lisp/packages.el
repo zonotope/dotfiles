@@ -61,6 +61,11 @@
 (use-package magit
   :bind ("C-x g" . magit-status))
 
+;; toggle start, or toggle end, of the line and text
+(use-package mwim
+  :bind (("C-a" . mwim-beginning-of-code-or-line)
+         ("C-e" . mwim-end-of-code-or-line)))
+
 ;; smartparens: structural navigation, delimiter matching, and highlighting
 (use-package smartparens
   :bind (:map sp-keymap
@@ -196,8 +201,10 @@
             (add-to-list 'safe-local-variable-values
                          '(cider-cljs-lein-repl
                            . "(do (dev) (go) (cljs-repl))"))
+
             (add-to-list 'safe-local-variable-values
                          '(cider-refresh-after-fn . "reloaded.repl/resume"))
+
             (add-to-list 'safe-local-variable-values
                          '(cider-refresh-before-fn . "reloaded.repl/suspend"))))
 
