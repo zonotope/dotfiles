@@ -34,7 +34,7 @@ HIST_STAMPS="yyyy-mm-dd" # valid formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # be added to $ZSH_CUSTOM/plugins/
 # example format: plugins=(rails git textmate ruby lighthouse)
 # add wisely. too many plugins slow down shell startup.
-plugins=(archlinux battery bundler colored-man colorize compleat cp fasd gem gitfast github history jsontools lein pj rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search zsh-syntax-highlighting)
+plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem git git-extras gitfast github history jsontools lein pj rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search zsh-syntax-highlighting)
 
 ### user configuration
 
@@ -110,5 +110,5 @@ echo -e -n "\x1b[\x33 q"
 
 # gimme a fortune when i log in:
 echo
-fortune -a
+cowsay -W 70 $(fortune -a)
 echo
