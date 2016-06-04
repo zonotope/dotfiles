@@ -110,5 +110,5 @@ echo -e -n "\x1b[\x33 q"
 
 # gimme a fortune when i log in:
 echo
-cowsay -W 70 $(fortune -a)
+fortune -a
 echo
