@@ -186,10 +186,11 @@ names to which it refers are bound."
 
      ;; Emacs interface
      (cursor ((,class (:background ,red))))
-     (fringe ((,class (:background ,current-line))))
+     (fringe ((,class (:background ,background))))
      (linum ((,class (:background ,current-line))))
      (hl-line ((,class (:background ,current-line))))
      (border ((,class (:background ,current-line))))
+     (vertical-border ((,class (:foreground ,selection))))
      (border-glyph ((,class (nil))))
      (highlight ((,class (:background ,selection))))
      (link ((,class (:foreground ,blue))))
