@@ -24,6 +24,12 @@
 ;; interface/navigation                                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; always keep code indented. always.
+(use-package aggressive-indent
+  :config (progn
+            (global-aggressive-indent-mode 1)
+            (add-to-list 'aggressive-indent-excluded-modes 'slim-mode)))
+
 ;; avy: navigate through buffers
 (use-package avy
   :bind (("C-j" . avy-goto-char)
@@ -144,11 +150,8 @@
 
 ;; find-things-fast: find things, fast
 (use-package find-things-fast
-  :bind (;; "C-x C-/" to grep project
-         ("C-x C-/" . ftf-grepsource)
-
-         ;; "C-c f" to find file in project
-         ("C-c f" . ftf-find-file))
+  :bind (("C-x C-/" . ftf-grepsource) ; "C-x C-/" to grep project
+         ("C-c f" . ftf-find-file))   ; "C-c f" to find file in project
 
   :config (progn
             ;; i want to search through all the files. all of them!
