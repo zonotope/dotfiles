@@ -24,12 +24,6 @@
 ;; interface/navigation                                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; always keep code indented. always.
-(use-package aggressive-indent
-  :config (progn
-            (global-aggressive-indent-mode 1)
-            (add-to-list 'aggressive-indent-excluded-modes 'slim-mode)))
-
 ;; avy: navigate through buffers
 (use-package avy
   :bind (("C-j" . avy-goto-char)
