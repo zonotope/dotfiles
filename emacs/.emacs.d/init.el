@@ -218,10 +218,13 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; start the server                                                         ;;
+;; start servers                                                            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; listen for emacsclient connections
 (require 'server)
-
 (unless (server-running-p)
   (server-start))
+
+;; listen for chrome text area edit connections
+(edit-server-start)
