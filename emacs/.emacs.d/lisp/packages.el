@@ -174,6 +174,14 @@
 (use-package edit-server
   :config (setq edit-server-new-frame nil))
 
+(use-package edit-server-htmlize
+  :config (progn
+            (add-hook 'edit-server-start-hook
+                      'edit-server-maybe-dehtmlize-buffer)
+
+            (add-hook 'edit-server-done-hook
+                      'edit-server-maybe-htmlize-buffer)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; clojure                                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
