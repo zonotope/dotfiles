@@ -23,10 +23,20 @@
 ;; appearance (Tomorrow Night Eighties)                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(set-focus-color "#6699cc")            ; blue
-(set-unfocus-color "#515151")          ; light gray
-(set-float-focus-color "#6699cc")      ; blue
-(set-float-unfocus-color "#515151")    ; dark gray
+(setf *colors*
+      (list "#2d2d2d"   ; 0: black
+            "#f2777a"   ; 1: red
+            "#99cc99"   ; 2: green
+            "#ffcc66"   ; 3: yellow
+            "#6699cc"   ; 4: blue
+            "#cc99cc"   ; 5: purple
+            "#66cccc"   ; 6: aqua
+            "#cccccc"   ; 7: white
+            "#515151"   ; 8: light gray
+            "#393939")) ; 9: dark gray
+
+(update-color-map (current-screen))
+
 (set-focus-color "#515151")            ; light gray
 (set-unfocus-color "#393939")          ; gray
 (set-float-focus-color "#515151")      ; light gray
@@ -66,7 +76,9 @@
 (setf *timeout-wait* 5)
 
 ;; what shows up in the middle of a newly focused frame
-(setf *frame-indicator-text* " here! ")
+;; (setf *frame-indicator-text* " here! ")
+;; TODO: Frame indicator is buggy in the latest version
+(setf *suppress-frame-indicator* t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; bindings                                                                 ;;
