@@ -183,13 +183,16 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 ;; ;;; indent on yank
-;; (global-set-key (kbd "C-y") 'yank-and-indent)
+(global-set-key (kbd "C-y") 'yank-and-indent)
 
 ;;; M-D for backward-kill-word
 (global-set-key (kbd "M-D") 'backward-kill-word)
 
 ;;; C-x g for magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;;; C-c c to wrap region in a wide comment box
+(global-set-key (kbd "C-c c") 'wide-comment-box)
 
 ;;; M-; to comment or uncomment region or current line if no active region.
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
