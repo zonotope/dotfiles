@@ -47,6 +47,12 @@
                                 :background nil)))
 
 
+;; ag: the silver searcher. grep/ack but better and faster
+(use-package ag
+  :bind (("C-x C-/" . ag-project)
+         ("C-c f" . ag-project-files)
+         ("C-c /" . ag-project-regexp)))
+
 ;; company: complete anything
 (use-package company
   :config (global-company-mode))
@@ -140,16 +146,6 @@
 ;; switch-window: visually switch windows
 (use-package switch-window
   :bind ("C-x o" . switch-window))
-
-
-;; find-things-fast: find things, fast
-(use-package find-things-fast
-  :bind (("C-x C-/" . ftf-grepsource) ; "C-x C-/" to grep project
-         ("C-c f" . ftf-find-file))   ; "C-c f" to find file in project
-
-  :config (progn
-            ;; i want to search through all the files. all of them!
-            (setq ftf-filetypes '("*.*"))))
 
 
 ;; flx-ido: better flex matching for ido
