@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; set up elpa                                                              ;;
+;; set up packages                                                          ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -7,6 +7,9 @@
                          ("melpa" . "https://melpa.org/packages/")
                          ("tromey" . "http://tromey.com/elpa/")))
 (package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
