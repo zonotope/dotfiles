@@ -67,6 +67,8 @@
 
 ;; magit: emacs git interface
 (use-package magit
+  :config (setq magit-builtin-completing-read-function
+                'magit-ido-completing-read)
   :bind ("C-x g" . magit-status))
 
 ;; toggle start, or toggle end, of the line and text
@@ -165,6 +167,11 @@
 
             ;; disable ido faces to see flx highlights.
             (setq ido-use-faces nil)))
+
+
+;; ido-ubiquitous-mode; really use ido everywhere
+(use-package ido-ubiquitous
+  :config (ido-ubiquitous-mode 1))
 
 
 ;; ido-vertical-mode: list ido matches vertically
