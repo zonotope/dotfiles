@@ -220,6 +220,7 @@
 ;; clojure(script) ide and repl
 (use-package cider
   :config (progn
+            (setq cider-repl-use-pretty-printing t)
             (setq cider-repl-use-clojure-font-lock t)
 
             ;; whitelist reloaded.repl and duct functions for cider
