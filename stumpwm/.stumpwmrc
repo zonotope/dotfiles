@@ -76,9 +76,7 @@
 (setf *timeout-wait* 5)
 
 ;; what shows up in the middle of a newly focused frame
-;; (setf *frame-indicator-text* " here! ")
-;; TODO: Frame indicator is buggy in the latest version
-(setf *suppress-frame-indicator* t)
+(setf *frame-indicator-text* " here! ")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; bindings                                                                 ;;
