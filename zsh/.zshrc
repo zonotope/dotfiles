@@ -7,7 +7,7 @@ ZSH_CUSTOM=$HOME/.zsh.d/custom
 # theme name. look in $ZSH/themes/
 # optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="af-magic"
+ZSH_THEME="zonotope"
 
 # disable bi-weekly auto-update checks?
 # DISABLE_AUTO_UPDATE="true"
@@ -39,7 +39,7 @@ plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory f
 ### user configuration
 
 # set the syntax highligters
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 export LANG=en_US.UTF-8
 
