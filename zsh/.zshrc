@@ -57,9 +57,6 @@ export PATH=/usr/local/bin:$PATH
 PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
-#bundler
-PATH=$HOME/.gem/ruby/2.3.0/bin:$PATH
-
 # my own shit:
 PATH=$HOME/.bin:$PATH
 
