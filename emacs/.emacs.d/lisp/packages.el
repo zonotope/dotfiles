@@ -200,7 +200,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package clojure-mode
-  :config (define-clojure-indent ; better compojure indent
+  :config (define-clojure-indent
+            ;; compojure
             (defroutes 'defun)
             (GET 2)
             (POST 2)
@@ -208,7 +209,10 @@
             (DELETE 2)
             (HEAD 2)
             (ANY 2)
-            (context 2))
+            (context 2)
+
+            ;; core.match
+            (match 1))
 
   :mode (("\\.clj\\'" . clojure-mode)
          ("\\.cljc\\'" . clojure-mode)
