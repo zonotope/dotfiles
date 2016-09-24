@@ -3,7 +3,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")
                          ("tromey" . "http://tromey.com/elpa/")))
 (package-initialize)
@@ -216,10 +215,8 @@
 
   :mode (("\\.clj\\'" . clojure-mode)
          ("\\.cljc\\'" . clojure-mode)
+         ("\\.cljs\\'" . clojure-mode)
          ("\\.edn\\'" . clojure-mode)))
-
-(use-package clojurescript-mode
-  :mode (("\\.cljs\\'" . clojurescript-mode)))
 
 ;; clojure(script) ide and repl
 (use-package cider
