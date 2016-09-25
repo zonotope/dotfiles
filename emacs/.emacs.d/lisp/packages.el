@@ -52,7 +52,9 @@
 ;; ag: the silver searcher. grep/ack but better and faster
 (use-package ag
   :bind (("C-x C-/" . ag-project)
-         ("C-c /" . ag-project-regexp)))
+         ("C-c /" . ag-project-regexp))
+  :config (progn
+            (setq ag-reuse-window 't)))
 
 ;; company: complete anything
 (use-package company
