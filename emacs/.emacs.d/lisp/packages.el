@@ -180,6 +180,9 @@
   :config (progn (ido-vertical-mode 1)
                  (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)))
 
+;; wgrep-ag: writable ag buffers, and apply changes to matches in files
+(use-package wgrep-ag)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; edit chrome text areas                                                   ;;
