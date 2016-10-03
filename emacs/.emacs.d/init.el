@@ -182,7 +182,7 @@
   'interactive)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
-;; ;;; indent on yank
+;;; indent on yank
 (global-set-key (kbd "C-y") 'yank-and-indent)
 
 ;;; M-D for backward-kill-word
@@ -190,6 +190,9 @@
 
 ;;; C-x g for magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;;; C-x k to kill *this* buffer
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
 
 ;;; C-c c to wrap region in a wide comment box
 (global-set-key (kbd "C-c c") 'wide-comment-box)
