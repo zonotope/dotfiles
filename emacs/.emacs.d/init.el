@@ -200,9 +200,6 @@
 ;;; M-; to comment or uncomment region or current line if no active region.
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 
-;;; C-c r to rename the buffer and the file it's visiting
-(global-set-key (kbd "C-c r") 'rename-current-buffer-file)
-
 ;;; "C-c s" to slurp absorb the next sexp: ()"some thing" -> ("some thing")
 (global-set-key (kbd "C-c s") 'sp-slurp-hybrid-sexp)
 

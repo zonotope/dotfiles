@@ -60,6 +60,17 @@
 (use-package company
   :config (global-company-mode))
 
+;; crux: a collection of ridiculously useful extensions
+(use-package crux
+  :bind (("C-c n" . crux-cleanup-buffer-or-region)
+         ("C-x 4 t" . crux-transpose-windows)
+         ("C-c D" . crux-delete-file-and-buffer)
+         ("C-c r" . crux-rename-file-and-buffer)
+         ("M-;" . comment-or-uncomment-region))
+  :config (progn
+            (crux-with-region-or-buffer indent-region)
+            (crux-with-region-or-line comment-or-uncomment-region)))
+
 ;; dired-details: clean up dired
 (use-package dired-details
   :config (progn
