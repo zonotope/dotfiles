@@ -191,9 +191,6 @@
 ;;; C-x g for magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;;; C-x k to kill *this* buffer
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
-
 ;;; C-c c to wrap region in a wide comment box
 (global-set-key (kbd "C-c c") 'wide-comment-box)
 
