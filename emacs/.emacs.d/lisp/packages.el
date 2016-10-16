@@ -231,7 +231,7 @@
 
   :mode (("\\.clj\\'" . clojure-mode)
          ("\\.cljc\\'" . clojure-mode)
-         ("\\.cljs\\'" . clojure-mode)
+         ("\\.cljs\\'" . clojurescript-mode)
          ("\\.edn\\'" . clojure-mode)))
 
 ;; clojure(script) ide and repl
