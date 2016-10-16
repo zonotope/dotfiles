@@ -1,0 +1,50 @@
+set realname = "ben lamothe"
+set editor = "emacsclient --create-frame"
+
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set uncollapse_jump = yes #jump to first unread message when a thread is uncollapsed
+
+hdr_order From To Cc Date
+alternative_order text/plain text/html *
+set send_charset="utf-8"
+set move = no # don't move read messages
+set include # include the original message in the reply
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set auto_tag = yes
+
+set imap_user = "zonotope@gmail.com"
+set imap_servernoise = no
+set from = "zonotope@gmail.com"
+set imap_check_subscribed
+set hostname = gmail.com
+
+set folder = "imaps://imap.gmail.com:993"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set smtp_url = "smtp://zonotope@smtp.gmail.com:587/"
+set spoolfile = "+INBOX"
+
+set attribution = 'on %d, %n wrote:'
+set abort_nosubject = no # don't abort the message if there isn't a subject
+set edit_headers = yes # edit the message headers with the body
+set recall = ask-no # pull up drafts when composing a new message
+
+# status date from subject.
+set index_format = "%4Z  %[%a %b %d]  %-20.20F %s"
+
+# mailbox-name mailboxes-with-new-mail messages position
+set status_format = "-----[boxes:(this:%f%?b?, new ones:%b?)]:%>-[messages:(all:%?M?%M/?%m%?n?, new:%n?%?o?, old:%o?%?d?, del:%d?%?F?, flag:%F?%?t?, tag:%t?%?p?, post:%p?)]------(%P)--"
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+
+# follow links with urlview
+macro pager \cb <pipe-entry>'urlview'<enter> 'urlview'

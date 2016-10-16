@@ -1,0 +1,4 @@
+application/pdf;       epdfview %s
+
+text/html;             links -g %s; nametemplate=%s.html
+text/html;             links -g -dump %s; nametemplate=%s.html; copiousoutput
