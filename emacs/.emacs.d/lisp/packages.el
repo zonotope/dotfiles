@@ -194,6 +194,12 @@
 ;; wgrep-ag: writable ag buffers, and apply changes to matches in files
 (use-package wgrep-ag)
 
+;; winmove: move across windows with arrow keys
+(use-package windmove
+  :ensure t
+  :config (progn
+            (windmove-default-keybindings 'super)
+            (setq windmove-wrap-around t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; edit chrome text areas                                                   ;;
