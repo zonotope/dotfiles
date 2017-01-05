@@ -236,7 +236,7 @@
             (match 1))
 
   :mode (("\\.clj\\'" . clojure-mode)
-         ("\\.cljc\\'" . clojure-mode)
+         ("\\.cljc\\'" . clojurec-mode)
          ("\\.cljs\\'" . clojurescript-mode)
          ("\\.edn\\'" . clojure-mode)))
 
@@ -255,7 +255,11 @@
                          '(cider-refresh-after-fn . "reloaded.repl/resume"))
 
             (add-to-list 'safe-local-variable-values
-                         '(cider-refresh-before-fn . "reloaded.repl/suspend"))))
+                         '(cider-refresh-before-fn . "reloaded.repl/suspend"))
+
+            ;; markdown-mode for grimoire documentation buffer
+            ;;(advice-add 'cider-grimoire :after 'cider-grimoire-markdown-mode)
+	    ))
 
 (use-package pixie-mode)
 

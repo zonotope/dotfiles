@@ -1,7 +1,7 @@
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
 
 PROMPT=$'
-%{$fg[white]%}%
+%{$fg_bold[black]%}%
 --------------------------------------------------%
 %{$reset_color%}
 %{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
@@ -11,7 +11,7 @@ $(git_prompt_info)
 
 PROMPT2="%{$fg_bold[black]%}%_> %{$reset_color%}"
 
-RPROMPT='%{$fg[white]%}[%t]%{$reset_color%}'
+RPROMPT='%{$fg_bold[black]%}[%t]%{$reset_color%}'
 
 GIT_CB="git:"
 ZSH_THEME_SCM_PROMPT_PREFIX="%{$fg[cyan]%}("

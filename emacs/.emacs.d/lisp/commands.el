@@ -44,4 +44,9 @@
   (yank)
   (call-interactively 'indent-region))
 
+(defun cider-grimoire-markdown-mode (&optional arg)
+  (when (fboundp 'markdown-mode)
+    (with-current-buffer (get-buffer cider-grimoire-buffer)
+      (markdown-mode))))
+
 (provide 'commands)
