@@ -11,7 +11,7 @@ $(git_prompt_info)
 
 PROMPT2="%{$fg_bold[black]%}%_> %{$reset_color%}"
 
-RPROMPT='%{$fg_bold[black]%}[%t]%{$reset_color%}'
+RPROMPT='%{$fg_bold[black]%}%!%{$reset_color%}'
 
 GIT_CB="git:"
 ZSH_THEME_SCM_PROMPT_PREFIX="%{$fg[cyan]%}("
