@@ -45,7 +45,7 @@ export LANG=en_US.UTF-8
 
 ## emacs config
 
-export EDITOR="emacsclient --create-frame"
+export EDITOR="emacsclient --create-frame --no-wait"
 
 # allows emacsclient to start a daemon if one isn't already running
 export ALTERNATE_EDITOR=""
@@ -67,6 +67,8 @@ export ARCHFLAGS="-arch x86_64"
 
 # file handlers:
 alias edit=$EDITOR
+alias emacs=$EDITOR
+
 alias play='mplayer -idx -fs'
 alias show='feh --auto-zoom --fulscreen'
 alias read='zathura'
