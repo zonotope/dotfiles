@@ -70,9 +70,8 @@
 (if (string-equal (symbol-name system-type) "darwin")
     (set-exec-path-from-shell-PATH))
 
-
-;;; text mode as default
-(setq default-major-mode 'text-mode)
+;;; org mode as default
+(setq default-major-mode 'org-mode)
 
 ;;; no backups
 (setq make-backup-files nil)
@@ -114,6 +113,10 @@
 
 ;;; use hippie-expand instead of dabbrev for better partial word completions
 (global-set-key (kbd "M-/") 'hippie-expand)
+
+;;; org
+;; log when todo items are closed
+(setq org-log-done t)
 
 ;;; spelling
 ;; use aspell to spell check
