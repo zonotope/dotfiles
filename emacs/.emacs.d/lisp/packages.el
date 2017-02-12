@@ -28,7 +28,8 @@
 
 ;; avy: navigate through buffers
 (use-package avy
-  :bind (("C-j" . avy-goto-char)
+  :bind (("C-'" . avy-goto-char)
+         ("C-j" . avy-goto-char)
          ("C-c SPC" . avy-goto-char))
 
   :config (progn
