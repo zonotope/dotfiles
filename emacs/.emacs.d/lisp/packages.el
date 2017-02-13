@@ -4,6 +4,8 @@
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")
+                         ("melpa-stable"
+                          . "http://melpa-stable.milkbox.net/packages/")
                          ("tromey" . "http://tromey.com/elpa/")))
 (package-initialize)
 
@@ -260,10 +262,8 @@
 
             ;; markdown-mode for grimoire documentation buffer
             ;;(advice-add 'cider-grimoire :after 'cider-grimoire-markdown-mode)
-	    ))
-
-(use-package pixie-mode)
-
+            )
+  :pin melpa-stable)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; css                                                                      ;;
