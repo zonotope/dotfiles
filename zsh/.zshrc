@@ -43,27 +43,37 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 export LANG=en_US.UTF-8
 
-## emacs config
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+############################################################################
+# editor                                                                   #
+############################################################################
 
 export EDITOR="emacsclient --create-frame --no-wait"
 
 # allows emacsclient to start a daemon if one isn't already running
 export ALTERNATE_EDITOR=""
 
-## set the path, and additions
+############################################################################
+# path                                                                     #
+############################################################################
+
+# base
 export PATH=/usr/local/bin:$PATH
+
+# my own shit:
+PATH=$HOME/.bin:$PATH
 
 # rbenv
 PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
-# my own shit:
-PATH=$HOME/.bin:$PATH
-
 source $ZSH/oh-my-zsh.sh
 
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
+############################################################################
+# aliases                                                                  #
+############################################################################
 
 # file handlers:
 alias edit=$EDITOR
@@ -71,7 +81,6 @@ alias emacs=$EDITOR
 
 alias play='mplayer -idx -fs'
 alias show='feh --auto-zoom --fulscreen'
-alias read='zathura'
 
 alias -s txt=edit
 alias -s tex=edit
@@ -91,9 +100,6 @@ alias -s png=show
 alias -s gif=show
 alias -s GIF=show
 
-alias -s pdf=read
-alias -s ps=read
-
 # always 'ls' after any 'cd':
 function chpwd() {
     emulate -LR zsh
@@ -103,6 +109,10 @@ function chpwd() {
 # move and rename multiple files
 autoload -U zmv
 alias mmv='noglob zmv -W'
+
+############################################################################
+# startup                                                                  #
+############################################################################
 
 # xterm cursor: blinking underscore
 echo -e -n "\x1b[\x33 q"
