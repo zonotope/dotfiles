@@ -255,6 +255,10 @@
                            . "(do (dev) (go) (cljs-repl))"))
 
             (add-to-list 'safe-local-variable-values
+                         '(cider-cljs-lein-repl
+                           . "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))"))
+
+            (add-to-list 'safe-local-variable-values
                          '(cider-refresh-after-fn . "reloaded.repl/resume"))
 
             (add-to-list 'safe-local-variable-values
