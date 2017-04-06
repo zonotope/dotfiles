@@ -46,36 +46,7 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-############################################################################
-# editor                                                                   #
-############################################################################
-
-export EDITOR="emacsclient --create-frame --no-wait"
-
-# allows emacsclient to start a daemon if one isn't already running
-export ALTERNATE_EDITOR=""
-
-############################################################################
-# path                                                                     #
-############################################################################
-
-# base
-export PATH=/usr/local/bin:$PATH
-
-# my own shit:
-export PATH=$HOME/.bin:$PATH
-
-# go
-export GOROOT=/user/lib/go
-export GOPATH=$HOME/.go
-
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
-
-# rbenv
-export PATH=$HOME/.rbenv/shims:$PATH
-eval "$(rbenv init -)"
-
+#load zsh config framework
 source $ZSH/oh-my-zsh.sh
 
 ############################################################################
@@ -116,15 +87,3 @@ function chpwd() {
 # move and rename multiple files
 autoload -U zmv
 alias mmv='noglob zmv -W'
-
-############################################################################
-# startup                                                                  #
-############################################################################
-
-# xterm cursor: blinking underscore
-echo -e -n "\x1b[\x33 q"
-
-# gimme a fortune when i log in:
-echo
-fortune -a
-echo
