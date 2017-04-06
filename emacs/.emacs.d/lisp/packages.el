@@ -265,7 +265,7 @@
                          '(cider-refresh-before-fn . "reloaded.repl/suspend"))
 
             ;; markdown-mode for grimoire documentation buffer
-            ;;(advice-add 'cider-grimoire :after 'cider-grimoire-markdown-mode)
+            (advice-add 'cider-grimoire :after 'cider-grimoire-markdown-mode)
             )
   :pin melpa-stable)
 
@@ -284,6 +284,30 @@
 
 (use-package feature-mode)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; go                                                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(use-package go-mode
+  :config (progn
+            (add-hook 'before-save-hook 'gofmt-before-save)
+            (local-set-key (kbd "M-.") 'godef-jump)
+            (local-set-key (kbd "M-*") 'pop-tag-mark)
+            ())
+  :mode   (("\\.go\\'" . go-mode)))
+
+(use-package company-go
+  :config (add-hook 'go-mode-hook
+                    (lambda ()
+                      (set (make-local-variable 'company-backends
+                                                '(company-go)))
+                      (company-mode))))
+
+(use-package go-guru
+  :config (go-guru-hl-identifier-mode))
+
+(use-package go-playground)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; json                                                                     ;;

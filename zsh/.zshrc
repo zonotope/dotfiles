@@ -63,10 +63,17 @@ export ALTERNATE_EDITOR=""
 export PATH=/usr/local/bin:$PATH
 
 # my own shit:
-PATH=$HOME/.bin:$PATH
+export PATH=$HOME/.bin:$PATH
+
+# go
+export GOROOT=/user/lib/go
+export GOPATH=$HOME/.go
+
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 
 # rbenv
-PATH=$HOME/.rbenv/shims:$PATH
+export PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
