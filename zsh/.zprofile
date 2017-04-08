@@ -3,20 +3,23 @@
 ############################################################################
 
 # base
-export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/bin
 
 # my stuff
 export PATH=$HOME/.bin:$PATH
 
+# rust
+export CARGO_HOME=$HOME/.cargo
+export PATH=$PATH:$CARGO_HOME/bin
+
 # go
 export GOROOT=/user/lib/go
 export GOPATH=$HOME/.go
-
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
 # rbenv
-export PATH=$HOME/.rbenv/shims:$PATH
+export PATH=$PATH:$HOME/.rbenv/shims
 eval "$(rbenv init -)"
 
 ############################################################################
