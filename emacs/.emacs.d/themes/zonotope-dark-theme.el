@@ -298,6 +298,7 @@
    `(org-upcoming-deadline ((t (:foreground ,orange))))
    `(org-warning ((t (:weight bold :foreground ,red))))
 
+
    `(markdown-url-face ((t (:inherit link))))
    `(markdown-link-face ((t (:foreground ,blue :underline t))))
 
@@ -493,6 +494,10 @@
    `(ansi-term-color-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,cyan
-                  ,foreground])))
+                  ,foreground])
+   `(org-priority-faces
+     '((?A . (:foreground ,yellow :weight bold))
+       (?B . (:foreground ,green))
+       (?C . (:foreground ,blue))))))
 
 (provide-theme 'zonotope-dark)

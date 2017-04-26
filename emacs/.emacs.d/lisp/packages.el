@@ -256,18 +256,18 @@
 
             (add-to-list 'safe-local-variable-values
                          '(cider-cljs-lein-repl
-                           . "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))"))
+                           . (concat "(do (use 'figwheel-sidecar.repl-api)"
+                                     "    (start-figwheel!) (cljs-repl))")))
 
             (add-to-list 'safe-local-variable-values
                          '(cider-refresh-after-fn . "reloaded.repl/resume"))
 
             (add-to-list 'safe-local-variable-values
-                         '(cider-refresh-before-fn . "reloaded.repl/suspend"))
+                         '(cider-refresh-before-fn . "reloaded.repl/suspend")))
 
-            ;; markdown-mode for grimoire documentation buffer
-            (advice-add 'cider-grimoire :after 'cider-grimoire-markdown-mode)
-            )
   :pin melpa-stable)
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; css                                                                      ;;
@@ -293,8 +293,7 @@
   :config (progn
             (add-hook 'before-save-hook 'gofmt-before-save)
             (local-set-key (kbd "M-.") 'godef-jump)
-            (local-set-key (kbd "M-*") 'pop-tag-mark)
-            ())
+            (local-set-key (kbd "M-*") 'pop-tag-mark))
   :mode   (("\\.go\\'" . go-mode)))
 
 (use-package company-go
