@@ -59,6 +59,9 @@
 ;; install packages
 (require 'packages)
 
+;; set up org mode
+(require 'org-config)
+
 
 ;; load the custom elisp commands
 (require 'commands)
@@ -188,8 +191,8 @@
 ;; C-x g for magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;; C-c c to wrap region in a wide comment box
-(global-set-key (kbd "C-c c") 'wide-comment-box)
+;; C-c b to wrap region in a wide comment box
+(global-set-key (kbd "C-c b") 'wide-comment-box)
 
 ;; M-; to comment or uncomment region or current line if no active region.
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
