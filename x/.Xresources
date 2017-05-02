@@ -37,9 +37,9 @@ Xcursor.theme: Paper
 *.color2:       t_green
 *.color10:      #9ec400
 
-! Yellow (Orange) + Bright Yellow (Yellow)
-*.color3:       t_orange
-*.color11:      t_yellow
+! Yellow + Bright Yellow (Orange)
+*.color3:       t_yellow
+*.color11:      t_orange
 
 ! Blue + Bright Blue
 *.color4:       t_blue
@@ -62,7 +62,7 @@ Xcursor.theme: Paper
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !! xterm
-xterm*faceName:         xft:Inconsolata-g:size=12
+xterm*faceName:         xft:Inconsolata_g:size=12
 xterm*loginShell:       true
 xterm*vt100*geometry:   85x25
 xterm*saveLines:        2500
