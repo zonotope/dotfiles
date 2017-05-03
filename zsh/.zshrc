@@ -34,7 +34,7 @@ HIST_STAMPS="yyyy-mm-dd" # valid formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # be added to $ZSH_CUSTOM/plugins/
 # example format: plugins=(rails git textmate ruby lighthouse)
 # add wisely. too many plugins slow down shell startup.
-plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem git git-extras gitfast github history jsontools lein pj rails rbenv ruby safe-paste ssh-agent systemd themes urltools web-search zsh-syntax-highlighting)
+plugins=(archlinux battery bundler colored-man colorize compleat cp dirhistory fasd gem git git-extras gitfast github history jsontools lein pj rails rbenv ruby safe-paste ssh-agent systemd urltools web-search zsh-syntax-highlighting)
 
 ### user configuration
 
@@ -58,11 +58,12 @@ alias edit=$EDITOR
 alias emacs=$EDITOR
 
 alias play='mplayer -idx -fs'
-alias show='feh --auto-zoom --fulscreen'
+alias show='feh --auto-zoom --fullscreen'
 
-alias -s txt=edit
-alias -s tex=edit
 alias -s conf=edit
+alias -s org=edit
+alias -s tex=edit
+alias -s txt=edit
 
 alias -s avi=play
 alias -s mpg=play
