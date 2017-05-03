@@ -1,0 +1,63 @@
+;; Example mail config. Replace the account info and mailbox paths sections and
+;; rename this file `mail-config.el`
+
+(require 'mu4e)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; account info                                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq user-mail-address "rshackleford@example.com")
+(setq mu4e-reply-to-address "rshackleford@example.com")
+(setq user-full-name "Rusty Shackleford")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; mailbox paths                                                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq mu4e-maildir "~/.maildir/example.com/rshackleford")
+(setq mu4e-sent-folder "/[Example].Sent Mail")
+(setq mu4e-drafts-folder "/[Example].Drafts")
+(setq mu4e-trash-folder "/[Example].Trash")
+(setq mu4e-refile-folder "/[Example].All Mail")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; interface                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; headers
+(setq mu4e-headers-fields '((:flags . 6)
+                            (:human-date . 15)
+                            (:from . 18)
+                            (:thread-subject . nil)))
+
+(setq mu4e-headers-date-format "%a %b %d '%y")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; behavior                                                                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; re-index every 60 seconds
+(setq mu4e-update-interval 60)
+
+;; send with postfix
+(setq send-mail-function 'sendmail-send-it)
+(setq message-send-mail-function 'message-send-mail-with-sendmail)
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+
+;; don't include duplicates in search results
+(setq mu4e-headers-skip-duplicates t)
+
+;; jump to specific maildirs; access them with 'j' ('jump')
+(setq mu4e-maildir-shortcuts
+      '(("/INBOX"               . ?i)
+        ("/[Example].All Mail"  . ?a)
+        ("/[Example].Drafts"    . ?d)
+        ("/[Example].Sent Mail" . ?s)))
+
+;; use w3m for html
+(setq mu4e-html2text-command "w3m -I utf8 -O utf8 -T text/html")
+
+(provide 'mail-config)

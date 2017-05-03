@@ -8,3 +8,4 @@ repl-history
 /lein/.lein/self-installs/
 /emacs/.emacs.d/ido.last
 /emacs/.emacs.d/bookmarks
+/emacs/.emacs.d/lisp/mail-config.el

@@ -48,7 +48,7 @@
 (setq theme-dir (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'custom-theme-load-path theme-dir)
 
-;;;; use my zonotope theme
+;;;; my theme is my favorite theme
 (load-theme 'zonotope-dark t)
 
 
@@ -62,6 +62,8 @@
 ;; set up org mode
 (require 'org-config)
 
+;; set up email
+(require 'mail-config)
 
 ;; load the custom elisp commands
 (require 'commands)
