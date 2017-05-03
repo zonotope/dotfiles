@@ -47,5 +47,5 @@ echo -e -n "\x1b[\x33 q"
 
 # print a fortune on log in:
 echo
-fortune -a
+fortune
 echo

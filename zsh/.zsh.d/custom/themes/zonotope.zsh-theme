@@ -13,7 +13,7 @@ PROMPT=$'
 %{$fg_bold[black]%}%
 --------------------------------------------------%
 %{$reset_color%}
-%{$fg_bold[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
+%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
 %{$fg[blue]%}%~/%{$reset_color%} %
 $(git_prompt_info)
 %{$fg_bold[black]%}%# >%{$reset_color%} '
