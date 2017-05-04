@@ -5,57 +5,53 @@
 Xcursor.theme: Paper
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! color theme: TomorrowNightEighties                                       !
+! color palate                                                             !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-#define t_background    #2d2d2d
-#define t_current_line  #393939
-#define t_selection     #515151
-#define t_foreground    #cccccc
-#define t_comment       #999999
-#define t_red           #f2777a
-#define t_orange        #f99157
-#define t_yellow        #ffcc66
-#define t_green         #99cc99
-#define t_aqua          #66cccc
-#define t_blue          #6699cc
-#define t_purple        #cc99cc
+#define color_red            #f2777a
+#define color_orange         #f99157
+#define color_yellow         #ffcc66
+#define color_green          #99cc99
+#define color_cyan           #66cccc
+#define color_blue           #6699cc
+#define color_magenta        #cc99cc
 
-*.foreground:   t_foreground
-*.background:   t_background
-*.cursorColor:  t_orange
+#define color_bright_red     #FF3334
+#define color_bright_cyan    #54ced6
+#define color_bright_green   #9ec400
+#define color_bright_magenta #b777e0
 
-! Black / Grey
-*.color0:       t_background
-*.color8:       #666666
+#define color_black          #2d2d2d
+#define color_dark_grey      #393939
+#define color_grey           #666666
 
-! Red / Bright Red
-*.color1:       t_red
-*.color9:       #FF3334
+#define color_white          #cccccc
+#define color_light_grey     #515151
+#define color_bright_grey    #999999
 
-! Green + Bright Green
-*.color2:       t_green
-*.color10:      #9ec400
+!! app colors
+*.cursorColor:  color_red
 
-! Yellow + Bright Yellow (Orange)
-*.color3:       t_yellow
-*.color11:      t_orange
+*.foreground:   color_white
+*.background:   color_black
 
-! Blue + Bright Blue
-*.color4:       t_blue
-*.color12:      t_blue
+*.color0:       color_dark_grey
+*.color1:       color_red
+*.color2:       color_green
+*.color3:       color_yellow
+*.color4:       color_blue
+*.color5:       color_magenta
+*.color6:       color_cyan
+*.color7:       color_grey
 
-! Magenta (Purple) + Bright Magenta
-*.color5:       t_purple
-*.color13:      #b777e0
-
-! Cyan (Aqua) + Bright Cyan
-*.color6:       t_aqua
-*.color14:      #54ced6
-
-! Light Grey (Selection) + White (Current Line)
-*.color7:       t_selection
-*.color15:      t_current_line
+*.color8:       color_light_grey
+*.color9:       color_bright_red
+*.color10:      color_bright_green
+*.color11:      color_orange
+*.color12:      color_blue
+*.color13:      color_bright_magenta
+*.color14:      color_bright_cyan
+*.color15:      color_bright_grey
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! apps:                                                                    !
@@ -68,8 +64,9 @@ xterm*vt100*geometry:   85x25
 xterm*saveLines:        2500
 xterm*boldMode:         true
 
+
 !! urxvt
-URxvt*font:              xft:Inconsolata-g:size=12
+URxvt*font:              xft:Inconsolata:size=12
 URxvt*loginShell:        True
 URxvt*scrollBar:         False
 URxvt*scrollTtyOutput:   True
@@ -81,7 +78,7 @@ URxvt*perl-ext-common:   default,tabbedex,matcher
 ! clickable urls
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:    1
-URxvt.colorUL:           t_blue
+URxvt.colorUL:           color_blue
 
 ! tabs
 URxvt.tabbed.autohide:  yes
