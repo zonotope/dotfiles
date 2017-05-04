@@ -16,9 +16,9 @@ PROMPT=$'
 %{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
 %{$fg[blue]%}%~/%{$reset_color%} %
 $(git_prompt_info)
-%{$fg_bold[black]%}%# >%{$reset_color%} '
+%{$fg_bold[grey]%}%# >%{$reset_color%} '
 
-PROMPT2="%{$fg_bold[black]%}%_> %{$reset_color%}"
+PROMPT2="%{$fg_bold[grey]%}%_> %{$reset_color%}"
 
 # right prompt. eg: [12:59PM]
 RPROMPT='%{$fg_bold[black]%}[%t]%{$reset_color%}'
