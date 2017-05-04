@@ -58,9 +58,9 @@ Xcursor.theme: Paper
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !! xterm
-xterm*faceName:         xft:Inconsolata_g:size=12
+xterm*faceName:         xft:Inconsolata:size=12
 xterm*loginShell:       true
-xterm*vt100*geometry:   85x25
+xterm*vt100*geometry:   80x20
 xterm*saveLines:        2500
 xterm*boldMode:         true
 
@@ -76,7 +76,7 @@ URxvt*pointerBlank:      True
 URxvt*perl-ext-common:   default,tabbedex,matcher
 
 ! clickable urls
-URxvt.url-launcher:      /usr/bin/firefox
+URxvt.url-launcher:      /usr/bin/chromium
 URxvt.matcher.button:    1
 URxvt.colorUL:           color_blue
 
