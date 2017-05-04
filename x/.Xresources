@@ -8,50 +8,50 @@ Xcursor.theme: Paper
 ! color palate                                                             !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-#define color_red            #f2777a
-#define color_orange         #f99157
-#define color_yellow         #ffcc66
-#define color_green          #99cc99
-#define color_cyan           #66cccc
-#define color_blue           #6699cc
-#define color_magenta        #cc99cc
+#define red            #f2777a
+#define orange         #f99157
+#define yellow         #ffcc66
+#define green          #99cc99
+#define cyan           #66cccc
+#define blue           #6699cc
+#define magenta        #cc99cc
 
-#define color_bright_red     #FF3334
-#define color_bright_cyan    #54ced6
-#define color_bright_green   #9ec400
-#define color_bright_magenta #b777e0
+#define bright_red     #FF3334
+#define bright_cyan    #54ced6
+#define bright_green   #9ec400
+#define bright_magenta #b777e0
 
-#define color_black          #2d2d2d
-#define color_dark_grey      #393939
-#define color_grey           #666666
+#define black          #2d2d2d
+#define dark_grey      #393939
+#define grey           #666666
 
-#define color_white          #cccccc
-#define color_light_grey     #515151
-#define color_bright_grey    #999999
+#define white          #cccccc
+#define light_grey     #515151
+#define bright_grey    #999999
 
 !! app colors
-*.cursorColor:  color_red
+*.cursorColor:  red
 
-*.foreground:   color_white
-*.background:   color_black
+*.foreground:   white
+*.background:   black
 
-*.color0:       color_dark_grey
-*.color1:       color_red
-*.color2:       color_green
-*.color3:       color_yellow
-*.color4:       color_blue
-*.color5:       color_magenta
-*.color6:       color_cyan
-*.color7:       color_grey
+*.color0:       dark_grey
+*.color1:       red
+*.color2:       green
+*.color3:       yellow
+*.color4:       blue
+*.color5:       magenta
+*.color6:       cyan
+*.color7:       grey
 
-*.color8:       color_light_grey
-*.color9:       color_bright_red
-*.color10:      color_bright_green
-*.color11:      color_orange
-*.color12:      color_blue
-*.color13:      color_bright_magenta
-*.color14:      color_bright_cyan
-*.color15:      color_bright_grey
+*.color8:       light_grey
+*.color9:       bright_red
+*.color10:      bright_green
+*.color11:      orange
+*.color12:      blue
+*.color13:      bright_magenta
+*.color14:      bright_cyan
+*.color15:      bright_grey
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! apps:                                                                    !
@@ -78,7 +78,7 @@ URxvt*perl-ext-common:   default,tabbedex,matcher
 ! clickable urls
 URxvt.url-launcher:      /usr/bin/chromium
 URxvt.matcher.button:    1
-URxvt.colorUL:           color_blue
+URxvt.colorUL:           blue
 
 ! tabs
 URxvt.tabbed.autohide:  yes
