@@ -22,12 +22,10 @@ Xcursor.theme: Paper
 #define bright_magenta #b777e0
 
 #define black          #2d2d2d
-#define dark_grey      #393939
+#define dark_grey      #515151
 #define grey           #666666
-
-#define white          #cccccc
-#define light_grey     #515151
 #define bright_grey    #999999
+#define white          #cccccc
 
 !! app colors
 *.cursorColor:  red
@@ -35,16 +33,16 @@ Xcursor.theme: Paper
 *.foreground:   white
 *.background:   black
 
-*.color0:       dark_grey
+*.color0:       black
 *.color1:       red
 *.color2:       green
 *.color3:       yellow
 *.color4:       blue
 *.color5:       magenta
 *.color6:       cyan
-*.color7:       grey
+*.color7:       dark_grey
 
-*.color8:       light_grey
+*.color8:       grey
 *.color9:       bright_red
 *.color10:      bright_green
 *.color11:      orange
