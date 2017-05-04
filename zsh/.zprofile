@@ -2,43 +2,48 @@
 # path                                                                     #
 ############################################################################
 
-# base
+## base
 export PATH=$PATH:/usr/local/bin
 
-# my stuff
+## custom scripts
 export PATH=$HOME/.bin:$PATH
 
-# rust
-export CARGO_HOME=$HOME/.cargo
-export PATH=$PATH:$CARGO_HOME/bin
-
-# go
+## go
 export GOROOT=/user/lib/go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
-# rbenv
+## rbenv
 export PATH=$PATH:$HOME/.rbenv/shims
 eval "$(rbenv init -)"
 
+## rust
+export CARGO_HOME=$HOME/.cargo
+export PATH=$PATH:$CARGO_HOME/bin
+
 ############################################################################
-# editor                                                                   #
+# default apps                                                             #
 ############################################################################
 
-# use emacsclient
+## editor
 export EDITOR="emacsclient --create-frame --no-wait"
+export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
+                           # already running
 
-# allows emacsclient to start a daemon if one isn't already running
-export ALTERNATE_EDITOR=""
+## browser
+if [ -n "$DISPLAY" ]; then
+    export BROWSER="chromium"
+else
+    export BROWSER="w3m"
+fi
 
 ############################################################################
 # startup                                                                  #
 ############################################################################
 
 # start the x server if we're on linux and it isn't started already
-if [ "$(uname)" = "Linux" ] && [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]
-then
+if [ "$(uname)" = "Linux" ] && [ -z "$DISPLAY" ] && ["$(fgconsole)" -eq 1]; then
   exec startx
 fi
 
