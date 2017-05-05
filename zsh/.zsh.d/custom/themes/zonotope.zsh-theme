@@ -10,7 +10,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # main prompt
 PROMPT=$'
-%{$fg_bold[black]%}%
+%{$fg_bold[grey]%}%
 --------------------------------------------------%
 %{$reset_color%}
 %{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
@@ -21,7 +21,7 @@ $(git_prompt_info)
 PROMPT2="%{$fg_bold[grey]%}%_> %{$reset_color%}"
 
 # right prompt. eg: [12:59PM]
-RPROMPT='%{$fg_bold[black]%}[%t]%{$reset_color%}'
+RPROMPT='%{$fg_bold[grey]%}[%t]%{$reset_color%}'
 
 # reset the prompt on <enter> for accurate command start times
 function _reset-prompt-and-accept-line {
