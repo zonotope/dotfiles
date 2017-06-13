@@ -252,6 +252,8 @@
   :config (progn
             (setq cider-repl-use-pretty-printing t)
             (setq cider-repl-use-clojure-font-lock t)
+            (setq cider-repl-history-file
+                  (expand-file-name "cider.history" user-emacs-directory))
 
             ;; whitelist reloaded.repl and duct functions for cider
             (add-to-list 'safe-local-variable-values
