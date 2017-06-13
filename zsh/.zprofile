@@ -43,7 +43,7 @@ fi
 ############################################################################
 
 # start the x server if we're on linux and it isn't started already
-if [ "$(uname)" = "Linux" ] && [ -z "$DISPLAY" ] && ["$(fgconsole)" -eq 1]; then
+if [ "$(uname)" = "Linux" ] && [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
   exec startx
 fi
 

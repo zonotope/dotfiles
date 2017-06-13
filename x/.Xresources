@@ -17,8 +17,8 @@ Xcursor.theme: Paper
 #define magenta        #cc99cc
 
 #define bright_red     #FF3334
-#define bright_cyan    #54ced6
 #define bright_green   #9ec400
+#define bright_cyan    #54ced6
 #define bright_magenta #b777e0
 
 #define black          #2d2d2d
