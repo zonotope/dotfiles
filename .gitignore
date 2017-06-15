@@ -10,3 +10,4 @@ repl-history
 /emacs/.emacs.d/bookmarks
 /emacs/.emacs.d/lisp/mail-config.el
 /emacs/.emacs.d/network-security.data
+/emacs/.emacs.d/cider.history
