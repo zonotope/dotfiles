@@ -57,7 +57,8 @@
   :bind (("C-x C-/" . ag-project)
          ("C-c /" . ag-project-regexp))
   :config (progn
-            (setq ag-reuse-window 't)))
+            (setq ag-highlight-search t)
+            (setq ag-reuse-buffers t)))
 
 ;; company: complete anything
 (use-package company
