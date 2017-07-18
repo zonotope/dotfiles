@@ -11,7 +11,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 # main prompt
 PROMPT=$'
 %{$fg_bold[grey]%}%
-------------------------------------------------------------%
+-------------------------------------------------------%
 %{$reset_color%}
 %{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
 %{$fg[blue]%}%~/%{$reset_color%} %
