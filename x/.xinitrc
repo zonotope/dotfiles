@@ -49,7 +49,7 @@ clipmenud &
 conky &
 urxvtc &
 emacs &
-firefox &
+chromium &
 
 ############################################################################
 # window manager                                                           #
