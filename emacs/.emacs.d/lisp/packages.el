@@ -81,9 +81,6 @@
             (setq-default dired-details-hidden-string "--- ")
             (dired-details-install)))
 
-;; set the exec path directly from the shell (but only on a mac)
-(use-package exec-path-from-shell
-  :init (exec-path-from-shell-initialize))
 
 ;; magit: emacs git interface
 (use-package magit
