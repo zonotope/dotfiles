@@ -188,12 +188,6 @@
             ;; disable ido faces to see flx highlights.
             (setq ido-use-faces nil)))
 
-
-;; ido-ubiquitous-mode; really use ido everywhere
-(use-package ido-ubiquitous
-  :config (ido-ubiquitous-mode 1))
-
-
 ;; ido-vertical-mode: list ido matches vertically
 (use-package ido-vertical-mode
   :config (progn (ido-vertical-mode 1)
