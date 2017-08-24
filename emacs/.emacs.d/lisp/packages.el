@@ -201,6 +201,28 @@
             (setq windmove-wrap-around t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ivy                                                                      ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; counsel: ivy-fied versions of basic emacs commands
+(use-package counsel
+  :bind (("C-c k" . counsel-ag)))
+
+(use-package ivy
+  :bind ("C-c C-r" . ivy-resume)
+  :config (progn
+            (ivy-mode 1)
+            (setq ivy-use-virtual-buffers t)
+            (setq ivy-count-format "(%d/%d) ")
+            (setq ivy-wrap t)
+            (setq ivy-height 16)))
+
+(use-package swiper
+  :bind ("C-s" . swiper))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; edit chrome text areas                                                   ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
