@@ -227,6 +227,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package edit-server
+  :if window-system
+  :init (add-hook 'after-init-hook 'edit-server-start t)
   :config (setq edit-server-new-frame nil))
 
 (use-package edit-server-htmlize
