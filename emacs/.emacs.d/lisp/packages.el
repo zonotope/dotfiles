@@ -168,6 +168,15 @@
           ;; enable the default config
           (require 'smartparens-config)))
 
+;; swiper: search with preview
+(use-package swiper
+  :bind (("C-c k" . counsel-ag)
+         ("C-c C-r" . ivy-resume)
+         ("C-s" . swiper))
+  :config (progn
+            (setq ivy-count-format "(%d/%d) ")
+            (setq ivy-height 16)
+            (setq ivy-use-virtual-buffers t)))
 
 ;; switch-window: visually switch windows
 (use-package switch-window
@@ -204,38 +213,6 @@
   :config (progn
             (windmove-default-keybindings 'super)
             (setq windmove-wrap-around t)))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ivy                                                                      ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; counsel: ivy-fied versions of basic emacs commands
-(use-package counsel
-  :bind (("M-x" . counsel-M-x)
-         ("C-x C-f" . counsel-find-file)
-         ("<f1> f" . counsel-describe-function)
-         ("<f1> v" . counsel-describe-variable)
-         ("<f1> l" . counsel-load-library)
-         ("<f2> i" . counsel-info-lookup-symbol)
-         ("<f2> u" . counsel-unicode-char)
-         ("C-c g" . counsel-git)
-         ("C-c j" . counsel-git-grep)
-         ("C-c k" . counsel-ag)
-         ("C-x l" . counsel-locate)))
-
-(use-package ivy
-  :bind ("C-c C-r" . ivy-resume)
-  :config (progn
-            (ivy-mode 1)
-            (setq ivy-use-virtual-buffers t)
-            (setq ivy-count-format "(%d/%d) ")
-            (setq ivy-wrap t)
-            (setq ivy-height 16)))
-
-(use-package swiper
-  :bind ("C-s" . swiper))
-
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; edit chrome text areas                                                   ;;
