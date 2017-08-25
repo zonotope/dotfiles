@@ -265,7 +265,10 @@
    `(grep-match-face ((t (:foreground nil :background nil :inherit match))))
 
    `(regex-tool-matched-face ((t (:foreground nil :background nil
-                                             :inherit match))))
+                                              :inherit match))))
+
+   ;; Ag
+   `(ag-match-face ((t (:foreground ,orange :background ,current-line))))
 
    ;; mark-multiple
    `(mm/master-face ((t (:inherit region :foreground nil :background nil))))
