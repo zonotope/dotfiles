@@ -103,6 +103,9 @@
 (setq split-width-threshold nil)
 (setq split-height-threshold nil)
 
+;; save window configuration so changes can be undone
+(winner-mode 1)
+
 ;; no tabs. use 2 spaces instead.
 (setq-default indent-tabs-mode nil)
 (setq standard-indent 2)

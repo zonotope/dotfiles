@@ -93,7 +93,7 @@
                 'magit-ido-completing-read)
   :bind ("C-x g" . magit-status))
 
-;; toggle start, or toggle end, of the line and text
+;; mwim: toggle start, or toggle end, of the line and text
 (use-package mwim
   :bind (("C-a" . mwim-beginning-of-code-or-line)
          ("C-e" . mwim-end-of-code-or-line)))
@@ -204,7 +204,7 @@
   :config (progn (ido-vertical-mode 1)
                  (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)))
 
-;; wgrep-ag: writable ag buffers, and apply changes to matches in files
+;; wgrep-ag: writable ag and rg buffers, and apply changes to matches in files
 (use-package wgrep-ag)
 
 ;; winmove: move across windows with arrow keys
