@@ -44,12 +44,7 @@
             (setq avy-style 'at)
 
             ;; dim the background
-            (setq avy-background t)
-
-            ;; use cyan as the highlighted character color
-            (set-face-attribute 'avy-lead-face nil
-                                :foreground "cyan"
-                                :background nil)))
+            (setq avy-background t)))
 
 
 ;; ag: the silver searcher. grep/ack but better and faster
@@ -159,11 +154,6 @@
 
           ;; works shitily with this turned on
           (setq blink-matching-paren nil)
-
-          ;; looks a lil better with tomorrow night eighties
-          (set-face-attribute 'sp-show-pair-match-face nil
-                              :inherit nil
-                              :background "darkslategrey")
 
           ;; enable the default config
           (require 'smartparens-config)))
