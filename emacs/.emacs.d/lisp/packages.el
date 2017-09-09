@@ -166,7 +166,8 @@
   :config (progn
             (setq ivy-count-format "(%d/%d) ")
             (setq ivy-height 16)
-            (setq ivy-use-virtual-buffers t)))
+            (setq ivy-use-virtual-buffers t)
+            (setq ivy-wrap t)))
 
 ;; switch-window: visually switch windows
 (use-package switch-window
