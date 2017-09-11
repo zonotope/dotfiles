@@ -7,7 +7,7 @@
 (add-to-list 'default-frame-alist '(width . 80))
 
 ;; set the font to Inconsolata
-(add-to-list 'default-frame-alist '(font . "Inconsolata_g-10"))
+(add-to-list 'default-frame-alist '(font . "Inconsolata_g-12"))
 
 ;; horizontal line cursor
 (set-default 'cursor-type 'hbar)
@@ -63,7 +63,7 @@
 (require 'org-config)
 
 ;; set up email
-(require 'mail-config)
+;; (require 'mail-config)
 
 ;; load the custom elisp commands
 (require 'commands)
@@ -118,6 +118,11 @@
 
 ;; use hippie-expand instead of dabbrev for better partial word completions
 (global-set-key (kbd "M-/") 'hippie-expand)
+
+;; set the command key to meta on macs
+(if (memq window-system '(mac ns))
+    (setq mac-command-modifier 'meta
+          mac-command-key-is-meta t))
 
 ;; spelling
 
@@ -189,6 +194,7 @@
 
 ;; indent on yank
 (global-set-key (kbd "C-y") 'yank-and-indent)
+(global-set-key (kbd "C-y") 'yank)
 
 ;; M-D for backward-kill-word
 (global-set-key (kbd "M-D") 'backward-kill-word)
@@ -252,7 +258,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ripgrep yaml-mode wgrep-ag use-package toml-mode switch-window smartparens slim-mode rust-mode ruby-tools php-mode mwim markdown-mode magit json-mode ido-vertical-mode ido-ubiquitous go-playground go-guru flx-ido find-things-fast feature-mode edit-server-htmlize dockerfile-mode dired-details crux company-go cider avy ag))))
+    (ripgrep exec-path-from-shell dockerfile-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode ido-ubiquitous flx-ido find-things-fast switch-window smartparens mwim magit dired-details crux company ag avy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
