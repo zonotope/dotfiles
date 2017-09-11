@@ -87,6 +87,9 @@
    `(whitespace-tab ((t (:background ,selection :foreground ,comment))))
    `(whitespace-trailing ((t (:background ,red :foreground ,yellow))))
 
+   ;; Avy
+   `(avy-lead-face ((t (:foreground ,cyan :background nil))))
+
    ;; Flymake
    `(flymake-warnline ((t (:underline ,orange :background ,background))))
    `(flymake-errline ((t (:underline ,red :background ,background))))
@@ -106,6 +109,9 @@
    `(clojure-double-quote ((t (:foreground ,cyan :background nil))))
    `(clojure-special ((t (:foreground ,blue))))
    `(clojure-java-call ((class (:foreground ,purple))))
+
+   ;; Smartparens
+   `(sp-show-pair-match-face ((t (:background ,selection))))
 
    ;; Rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,purple))))
