@@ -1,3 +1,4 @@
-remove Lock = Caps_Lock
-keysym Caps_Lock = Control_L
-add Control = Control_L
+remove Control = Control_R
+keycode 0x69 = Return
+keycode 0x24 = Control_R
+add Control = Control_R

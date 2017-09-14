@@ -27,9 +27,13 @@ xbindkeys
 # swap caps with ctrl, and kill x with ctrl + alt + bksp
 setxkbmap -option ctrl:swapcaps -option terminate:ctrl_alt_bksp
 
+xmodmap ~/.xmodmap
+xcape -t 10000 -e "Control_R=Return"
+
 ############################################################################
 # wallpaper                                                                #
 ############################################################################
+
 feh --bg-scale pics/wallpapers/john_b_gordon_classroom.jpg
 
 ############################################################################
