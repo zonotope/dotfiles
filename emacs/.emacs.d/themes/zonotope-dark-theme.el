@@ -274,7 +274,7 @@
                                               :inherit match))))
 
    ;; Ag
-   `(ag-match-face ((t (:foreground ,purple :background ,current-line))))
+   `(ag-match-face ((t (:foreground ,orange :background ,current-line))))
 
    ;; mark-multiple
    `(mm/master-face ((t (:inherit region :foreground nil :background nil))))
