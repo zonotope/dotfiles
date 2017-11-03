@@ -87,6 +87,10 @@
 ;; follow version controlled symlinks without asking
 (setq vc-follow-symlinks t)
 
+;; use shift + arrow keys for window navigation
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 ;; scroll 1 line at a time
 (setq scroll-step 1)
 
