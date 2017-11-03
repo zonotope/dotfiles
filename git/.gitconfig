@@ -9,3 +9,5 @@
 	conflictstyle = diff3
 [pull]
 	rebase = true
+[magit]
+	hideCampaign = true
