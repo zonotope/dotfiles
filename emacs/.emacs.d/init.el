@@ -7,7 +7,7 @@
 (add-to-list 'default-frame-alist '(width . 80))
 
 ;; set the font to Inconsolata
-(add-to-list 'default-frame-alist '(font . "Inconsolata_g-12"))
+(add-to-list 'default-frame-alist '(font . "Inconsolata_g-10"))
 
 ;; horizontal line cursor
 (set-default 'cursor-type 'hbar)
