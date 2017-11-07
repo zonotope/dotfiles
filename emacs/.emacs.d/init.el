@@ -128,6 +128,9 @@
     (setq mac-command-modifier 'meta
           mac-command-key-is-meta t))
 
+;; quickly cycle through the mark ring with C-u C-<SPC> and then C-<SPC>
+(setq set-mark-command-repeat-pop t)
+
 ;; spelling
 
 ;;;; use aspell to spell check
