@@ -225,6 +225,9 @@
 ;; M-SPACE to cycle through spacing at point
 (global-set-key (kbd "M-SPC") 'cycle-spacing)
 
+;; use ibuffer instead of buffer-list
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 ;; enable upcase region command (C-x C-u)
 (put 'upcase-region 'disabled nil)
 
