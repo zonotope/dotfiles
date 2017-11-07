@@ -22,6 +22,15 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; tags                                                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq org-tag-alist '(("NOTE" . ?n)))
+
+;; set individual tags without the menu
+(setq org-fast-tag-selection-single-key 'expert)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; agenda                                                                   ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -60,11 +69,20 @@
 ;; templates
 (setq org-capture-templates
 
-      ;; capture todo items and record scheduled time with C-c c t.
-      `(("t" "todo" entry (file+headline ,refile-path "Tasks")
-         ,(concat "* TODO [#B] %?\n"
-                  "SCHEDULED: "
-                  "%(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n"))))
+      (let ((today "%(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
+        `(
+          ; n: capture notes, recording time and current file
+          ("n" "note" entry (file+headline ,refile-path "Notes")
+           ,(concat "\n"
+                    "* %? :NOTE:\n"
+                    "%U\n"
+                    "%a\n"))
+
+          ; t: capture todo items and record scheduled date.
+          ("t" "todo" entry (file+headline ,refile-path "Tasks")
+           ,(concat "\n"
+                    "* TODO [#B] %?\n"
+                    "  SCHEDULED: " today "\n")))))
 
 ;; C-c c for org capture
 (global-set-key (kbd "C-c c") 'org-capture)
