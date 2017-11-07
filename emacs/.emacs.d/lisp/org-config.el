@@ -25,7 +25,12 @@
 ;; tags                                                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq org-tag-alist '(("NOTE" . ?n)))
+(setq org-tag-alist '((:startgroup)
+                      ("@work" . ?w)
+                      ("@errand" . ?e)
+                      ("@me" . ?m)
+                      (:endgroup)
+                      ("NOTE" . ?n)))
 
 ;; set individual tags without the menu
 (setq org-fast-tag-selection-single-key 'expert)
