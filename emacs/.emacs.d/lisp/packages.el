@@ -83,8 +83,16 @@
 
 ;; magit: emacs git interface
 (use-package magit
-  :config (setq magit-builtin-completing-read-function
-                'magit-ido-completing-read)
+  :config (progn
+            ;; use ido for magit completions
+            (setq magit-builtin-completing-read-function
+                  'magit-ido-completing-read)
+
+            ;; don't show the 'recent commits' section
+            (magit-add-section-hook 'magit-status-sections-hook
+                                    'magit-insert-unpushed-to-upstream
+                                    'magit-insert-unpushed-to-upstream-or-recent
+                                    'replace))
   :bind ("C-x g" . magit-status))
 
 ;; mwim: toggle start, or toggle end, of the line and text

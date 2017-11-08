@@ -64,9 +64,6 @@
 ;; capture                                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; C-c c for org capture
-(global-set-key (kbd "C-c c") 'org-capture)
-
 ;; save captured tasks in `refile.org'
 (setq refile-path (concat org-directory "/refile.org"))
 (setq org-default-notes-file refile-path)
@@ -78,15 +75,13 @@
         `(
           ; n: capture notes, recording time and current file
           ("n" "note" entry (file+headline ,refile-path "Notes")
-           ,(concat "\n"
-                    "* %? :NOTE:\n"
+           ,(concat "* %? :NOTE:\n"
                     "%U\n"
                     "%a\n"))
 
           ; t: capture todo items and record scheduled date.
           ("t" "todo" entry (file+headline ,refile-path "Tasks")
-           ,(concat "\n"
-                    "* TODO [#B] %?\n"
+           ,(concat "* TODO [#B] %?\n"
                     "  SCHEDULED: " today "\n")))))
 
 ;; C-c c for org capture
