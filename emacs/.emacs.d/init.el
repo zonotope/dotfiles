@@ -268,7 +268,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ripgrep exec-path-from-shell dockerfile-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode ido-ubiquitous flx-ido find-things-fast switch-window smartparens mwim magit dired-details crux company ag avy use-package))))
+    (swiper ripgrep exec-path-from-shell dockerfile-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode ido-ubiquitous flx-ido find-things-fast switch-window smartparens mwim magit dired-details crux company ag avy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
