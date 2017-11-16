@@ -12,17 +12,24 @@
 (setq org-default-priority ?B)
 (setq org-lowest-priority ?C)
 
-;; log when todo items are closed
-(setq org-log-done t)
-
-;;warn me of any deadlines in next 3 days
+;; warn me of any deadlines in next 3 days
 (setq org-deadline-warning-days 3)
+
+;; log when todo items are closed
+(setq org-log-done 'time)
+
+;; log every time i kick the can down the road
+(setq org-log-redeadline 'time)
+(setq org-log-reschedule 'time)
 
 ;; C-c l to save a link to the current file position
 (global-set-key (kbd "C-c l") 'org-store-link)
 
 ;; auto-fill paragraphs in org buffers
 (add-hook 'org-mode-hook 'auto-fill-mode)
+
+;; add new line before a new heading or plain list item
+(setq org-blank-before-new-entry '((heading) (plain-list-item)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tags                                                                     ;;
