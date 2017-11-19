@@ -27,6 +27,19 @@
 (setq org-special-ctrl-a/e t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; archiving                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; archive sub-trees in the "/archive" subdir with the same original filename
+;; under a datetree
+(setq org-archive-location (concat org-directory "/archive/%s::datetree/"))
+
+;; metadata to keep track of when archiving as 'ARCHIVE_' prefixed properties on
+;; the subtree. keep track of the category, file, inherited and local tasks,
+;; outline path, and archive time
+(setq org-archive-save-context-info '(category file itags ltags olpath time))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tags                                                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
