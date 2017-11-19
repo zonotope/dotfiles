@@ -7,21 +7,6 @@
 ;; use ido in org too
 (setq org-completion-use-ido t)
 
-;; 3 priorities: A, B, and C
-(setq org-highest-priority ?A)
-(setq org-default-priority ?B)
-(setq org-lowest-priority ?C)
-
-;; warn me of any deadlines in next 3 days
-(setq org-deadline-warning-days 3)
-
-;; log when todo items are closed
-(setq org-log-done 'time)
-
-;; log every time i kick the can down the road
-(setq org-log-redeadline 'time)
-(setq org-log-reschedule 'time)
-
 ;; C-c l to save a link to the current file position
 (global-set-key (kbd "C-c l") 'org-store-link)
 
@@ -54,6 +39,32 @@
 
 ;; set individual tags without the menu
 (setq org-fast-tag-selection-single-key 'expert)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; todo                                                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; log when todo items are closed
+(setq org-log-done 'time)
+
+;; [todo -> (started | blocked) -> (done | cancelled)] as the todo state
+;; sequence. log when tasks are marked started and done, and log with notes
+;; whenever they're marked done or canceled.
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STARTED(s!)" "BLOCKED(b@/!)" "|"
+                  "DONE(d)" "CANCELED(c@)")))
+
+;; log every time i kick the can down the road
+(setq org-log-redeadline 'time)
+(setq org-log-reschedule 'time)
+
+;; log state change time stamps in the 'LOGBOOK' drawer.
+(setq org-log-into-drawer t)
+
+;; 3 priorities: A, B, and C
+(setq org-highest-priority ?A)
+(setq org-default-priority ?B)
+(setq org-lowest-priority ?C)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; agenda                                                                   ;;
