@@ -75,8 +75,8 @@
 (setq org-agenda-files `(,org-directory
                          ,(concat org-directory "/work")))
 
-;; open agenda in current window
-(setq org-agenda-window-setup 'current-window)
+;; open agenda in the other window
+(setq org-agenda-window-setup 'other-window)
 
 ;; show me tasks scheduled or due in next two weeks
 (setq org-agenda-span 'fortnight)
@@ -87,6 +87,12 @@
         (todo priority-down category-keep)
         (tags priority-down category-keep)
         (search category-keep)))
+
+;; warn me of any deadlines in next 3 days
+(setq org-deadline-warning-days 3)
+
+;; skip any deadlines for tasks that are already done
+(setq org-agenda-skip-deadline-if-done t)
 
 ;; C-c a to bring the agenda up
 (global-set-key (kbd "C-c a") 'org-agenda)
