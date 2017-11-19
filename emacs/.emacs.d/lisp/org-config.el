@@ -28,8 +28,18 @@
 ;; auto-fill paragraphs in org buffers
 (add-hook 'org-mode-hook 'auto-fill-mode)
 
-;; add new line before a new heading or plain list item
-(setq org-blank-before-new-entry '((heading) (plain-list-item)))
+;; add new line before a new heading or plain list item, if the other
+;; surrounding headings/items also have newlines
+(setq org-blank-before-new-entry '((heading . auto)
+                                   (plain-list-item . auto)))
+
+;; show only headings when opening an org file for the first time
+(setq org-startup-folded 'content)
+
+;; jump to the beginning/end of *content* (ignoring stars, tags, or todo
+;; keywords) with the first C-a/C-e, then the true beginning/end of the line
+;; with the next.
+(setq org-special-ctrl-a/e t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tags                                                                     ;;
