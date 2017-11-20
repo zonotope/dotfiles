@@ -26,6 +26,11 @@
 ;; with the next.
 (setq org-special-ctrl-a/e t)
 
+;; set C-k to kill folded sub-trees when killing a heading, only kill up to the
+;; tags when the cursor is in the middle of heading text, and only the tags if
+;; the cursor is after the heading text
+(setq org-special-ctrl-k t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; archiving                                                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
