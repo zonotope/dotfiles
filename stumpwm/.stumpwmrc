@@ -7,7 +7,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq *terminal* "urxvtc")
-(setq *browser* "chromium")
+(setq *browser* "firefox")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; setup the desktop                                                        ;;
@@ -17,7 +17,7 @@
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
 (define-frame-preference "main"
-    (1 nil nil :class "Conky" :role nil))
+  (1 nil nil :class "Conky" :role nil))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; appearance (Tomorrow Night Eighties)                                     ;;
