@@ -31,6 +31,9 @@
 ;; the cursor is after the heading text
 (setq org-special-ctrl-k t)
 
+;; highlight inline latex so it stands out
+(setq org-highlight-latex-and-related '(latex script entities))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; archiving                                                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
