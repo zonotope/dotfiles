@@ -228,6 +228,9 @@
 ;; use ibuffer instead of buffer-list
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; just kill the current buffer with 'C-x k' instead of prompting for one.
+(global-set-key (kbd "C-x k") 'bl/kill-this-buffer)
+
 ;; enable upcase region command (C-x C-u)
 (put 'upcase-region 'disabled nil)
 
@@ -236,7 +239,6 @@
 
 ;; enable downcase-region command (C-x C-l)
 (put 'downcase-region 'disabled nil)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; start servers                                                            ;;

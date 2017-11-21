@@ -49,4 +49,9 @@
     (with-current-buffer (get-buffer cider-grimoire-buffer)
       (markdown-mode))))
 
+(defun bl/kill-this-buffer ()
+  "kill the current buffer without prompting (unless there are unsaved changes)"
+  (interactive)
+  (kill-buffer (current-buffer)))
+
 (provide 'commands)
