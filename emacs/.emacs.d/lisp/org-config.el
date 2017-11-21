@@ -106,8 +106,8 @@
         (tags priority-down category-keep)
         (search category-keep)))
 
-;; warn me of any deadlines in next day
-(setq org-deadline-warning-days 1)
+;; don't warn me of upcoming deadlines in the agenda. i'll see them anyway.
+(setq org-deadline-warning-days 0)
 
 ;; skip any deadlines for tasks that are already done
 (setq org-agenda-skip-deadline-if-done t)
