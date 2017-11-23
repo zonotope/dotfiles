@@ -94,6 +94,7 @@
 ;; scan top level files under the org dir, and all files under the `work' subdir
 ;; for agenda items
 (setq org-agenda-files `(,org-directory
+                         ,(concat org-directory "/side")
                          ,(concat org-directory "/work")))
 
 ;; open agenda in the other window
