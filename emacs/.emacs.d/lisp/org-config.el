@@ -53,7 +53,7 @@
 
 (setq org-tag-alist '((:startgroup)
                       ("@errand" . ?e)
-                      ("@me" . ?m)
+                      ("@side" . ?s)
                       ("@work" . ?w)
                       (:endgroup)
                       ("NOTE" . ?n)))
@@ -103,11 +103,10 @@
 (setq org-agenda-span 'fortnight)
 
 ;; sort tasks in order of when they are due and then by priority
-(setq org-agenda-sorting-strategy
-      '((agenda deadline-up priority-down)
-        (todo priority-down category-keep)
-        (tags priority-down category-keep)
-        (search category-keep)))
+(setq org-agenda-sorting-strategy '((agenda deadline-up priority-down)
+                                    (todo priority-down category-keep)
+                                    (tags priority-down category-keep)
+                                    (search category-keep)))
 
 ;; don't warn me of upcoming deadlines in the agenda. i'll see them anyway.
 (setq org-deadline-warning-days 0)
