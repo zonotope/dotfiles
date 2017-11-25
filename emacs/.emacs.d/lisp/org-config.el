@@ -21,6 +21,9 @@
 ;; show only headings when opening an org file for the first time
 (setq org-startup-folded 'content)
 
+;; hide initial headline stars by default
+(setq org-hide-leading-stars t)
+
 ;; jump to the beginning/end of *content* (ignoring stars, tags, or todo
 ;; keywords) with the first C-a/C-e, then the true beginning/end of the line
 ;; with the next.
