@@ -7,6 +7,9 @@
 ;; use ido in org too
 (setq org-completion-use-ido t)
 
+;; set <enter> when the cursor is in a link to visit it
+(setq org-return-follows-link t)
+
 ;; C-c l to save a link to the current file position
 (global-set-key (kbd "C-c l") 'org-store-link)
 
