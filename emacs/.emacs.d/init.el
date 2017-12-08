@@ -7,7 +7,7 @@
 (add-to-list 'default-frame-alist '(width . 80))
 
 ;; set the font to Inconsolata
-(add-to-list 'default-frame-alist '(font . "Inconsolata_g-10"))
+(add-to-list 'default-frame-alist '(font . "Inconsolata_g-12"))
 
 ;; horizontal line cursor
 (set-default 'cursor-type 'hbar)
@@ -215,7 +215,7 @@
 ;; M-; to comment or uncomment region or current line if no active region.
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 
-;; "C-c s" to slurp absorb the next sexp: ()"some thing" -> ("some thing")
+;; "C-c s" to slurp absorb the next sexp: ('some) 'thing -> ('some 'thing)
 (global-set-key (kbd "C-c s") 'sp-slurp-hybrid-sexp)
 
 ;; M-n and M-p to scroll by a single line
@@ -230,6 +230,9 @@
 
 ;; just kill the current buffer with 'C-x k' instead of prompting for one.
 (global-set-key (kbd "C-x k") 'bl/kill-this-buffer)
+
+;; kill the current window with a friendlier binding than the default
+(global-set-key (kbd "C-x w") 'delete-frame)
 
 ;; enable upcase region command (C-x C-u)
 (put 'upcase-region 'disabled nil)
@@ -270,7 +273,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (swiper ripgrep exec-path-from-shell dockerfile-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode ido-ubiquitous flx-ido find-things-fast switch-window smartparens mwim magit dired-details crux company ag avy use-package))))
+    (csv-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode dockerfile-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode flx-ido find-things-fast switch-window swiper smartparens mwim magit exec-path-from-shell dired-details crux company ag avy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
