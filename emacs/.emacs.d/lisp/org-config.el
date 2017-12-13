@@ -74,6 +74,10 @@
 ;; log when todo items are closed
 (setq org-log-done 'time)
 
+;; block todo entries from being marked done until all their children are done.
+(setq org-enforce-todo-dependencies t)
+(setq org-enforce-todo-checkbox-dependencies t)
+
 ;; [todo -> (started | blocked) -> (done | cancelled)] as the todo state
 ;; sequence. log when tasks are marked started and done, and log with notes
 ;; whenever they're marked done or canceled.
@@ -114,11 +118,14 @@
                                     (tags priority-down category-keep)
                                     (search category-keep)))
 
-;; don't warn me of upcoming deadlines in the agenda. i'll see them anyway.
-(setq org-deadline-warning-days 0)
+;; warn me of upcoming deadlines in the next 3 days.
+(setq org-deadline-warning-days 3)
 
 ;; skip any deadlines for tasks that are already done
 (setq org-agenda-skip-deadline-if-done t)
+
+;; dim blocked todo items
+(setq org-agenda-dim-blocked-tasks t)
 
 ;; C-c a to bring the agenda up
 (global-set-key (kbd "C-c a") 'org-agenda)
