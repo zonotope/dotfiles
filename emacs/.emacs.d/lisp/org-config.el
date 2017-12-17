@@ -109,14 +109,16 @@
 ;; open agenda in the other window
 (setq org-agenda-window-setup 'other-window)
 
-;; show me tasks scheduled or due in next two weeks
-(setq org-agenda-span 'fortnight)
-
 ;; sort tasks in order of when they are due and then by priority
 (setq org-agenda-sorting-strategy '((agenda deadline-up priority-down)
                                     (todo priority-down category-keep)
                                     (tags priority-down category-keep)
                                     (search category-keep)))
+
+;; show me 7 days worth of stuff, starting yesterday
+(setq org-agenda-start-day "-1d")
+(setq org-agenda-span 7)
+(setq org-agenda-start-on-weekday nil)
 
 ;; warn me of upcoming deadlines in the next 3 days.
 (setq org-deadline-warning-days 3)
