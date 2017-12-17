@@ -169,7 +169,8 @@
 (use-package swiper
   :bind (("C-c k" . counsel-ag)
          ("C-c C-r" . ivy-resume)
-         ("C-s" . swiper))
+         ("C-s" . swiper)
+         ("C-r" . swiper))
   :config (progn
             (setq ivy-count-format "(%d/%d) ")
             (setq ivy-height 16)
