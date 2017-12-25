@@ -193,6 +193,10 @@
 ;; keybindings                                                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; no rg files confirmation
+;; TODO: remove when/if upstream rg.el maintainer accepts my pr adding this
+(global-set-key (kbd "C-x C-/") 'bl/rg-dwim-regexp)
+
 ;; don't delete the provided char in a zap forward.
 (autoload 'zap-up-to-char "misc"
   "Kill up to, but not including ARGth occurrence of CHAR. \(fn arg char)"
@@ -273,7 +277,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (find-file-in-project find-file-in-procject counsel csv-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode dockerfile-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode flx-ido find-things-fast switch-window swiper smartparens mwim magit exec-path-from-shell dired-details crux company ag avy use-package))))
+    (rg ivy-rich find-file-in-project find-file-in-procject counsel csv-mode yaml-mode toml-mode slim-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode dockerfile-mode feature-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag ido-vertical-mode flx-ido find-things-fast switch-window swiper smartparens mwim magit exec-path-from-shell dired-details crux company ag avy use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

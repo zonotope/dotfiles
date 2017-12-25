@@ -276,6 +276,9 @@
    ;; Ag
    `(ag-match-face ((t (:foreground ,orange :background ,current-line))))
 
+   ;; Rg
+   `(rg-match-face ((t (:foreground ,orange :background ,current-line))))
+
    ;; mark-multiple
    `(mm/master-face ((t (:inherit region :foreground nil :background nil))))
    `(mm/mirror-face ((t (:inherit region :foreground nil :background nil))))
