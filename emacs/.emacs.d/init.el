@@ -107,6 +107,9 @@
 (setq split-width-threshold nil)
 (setq split-height-threshold nil)
 
+;; always try to split/recombine windows evenly
+(setq window-combination-resize t)
+
 ;; save window configuration so changes can be undone
 (winner-mode 1)
 
@@ -162,11 +165,6 @@
                                        (interactive)
                                        (find-alternate-file "..")))
 
-
-;; ido
-(ido-mode 1)
-(setq ido-everywhere t)
-(setq ido-enable-flex-matching t)
 
 ;;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
