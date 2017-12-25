@@ -81,6 +81,10 @@
   :ensure t
   :config (exec-path-from-shell-initialize))
 
+;; find-file-in-project: does just that
+(use-package find-file-in-project
+  :bind (("C-c f" . find-file-in-project)))
+
 ;; magit: emacs git interface
 (use-package magit
   :config (progn
@@ -181,14 +185,6 @@
 (use-package switch-window
   :bind ("C-x o" . switch-window))
 
-
-;; find-things-fast: find things, fast
-(use-package find-things-fast
-  :bind (("C-c f" . ftf-find-file))   ; "C-c f" to find file in project
-
-  :config (progn
-            ;; i want to search through all the files. all of them!
-            (setq ftf-filetypes '("*.*"))))
 
 ;; flx-ido: better flex matching for ido
 (use-package flx-ido
