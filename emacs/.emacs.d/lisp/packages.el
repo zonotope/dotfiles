@@ -45,6 +45,15 @@
             ;; dim the background
             (setq avy-background t)))
 
+
+;; ag: the silver searcher. grep/ack but better and faster
+(use-package ag
+  :bind (("C-x C-/" . ag-project)
+         ("C-c /" . ag-project-regexp))
+  :config (progn
+            (setq ag-highlight-search t)
+            (setq ag-reuse-buffers t)))
+
 ;; company: complete anything
 (use-package company
   :config (global-company-mode))
@@ -171,16 +180,6 @@
             (setq ivy-height 16)
             (setq ivy-use-virtual-buffers t)
             (setq ivy-wrap t)))
-
-;; ripgrep: if the silver searcher got rusty, and that made it faster.
-(use-package rg
-  :bind (("C-x C-/" . rg-project)
-         ("C-c /" . rg-dwim))
-  :config (setq rg-group-result t
-                rg-show-columns t
-                rg-ignore-case 'smart
-                rg-custom-type-aliases '(("clojure" .
-                                          "*.clj *.cljs *.cljc *.edn"))))
 
 ;; switch-window: visually switch windows
 (use-package switch-window
