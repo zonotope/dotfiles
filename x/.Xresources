@@ -28,7 +28,7 @@ Xcursor.theme: Paper
 #define white          #cccccc
 
 !! app colors
-*.cursorColor:  red
+*.cursorColor:  yellow
 
 *.foreground:   white
 *.background:   black

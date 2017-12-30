@@ -53,7 +53,7 @@
    `(font-lock-warning-face ((t (:weight bold :foreground ,red))))
 
    ;; Emacs interface
-   `(cursor ((t (:background ,red))))
+   `(cursor ((t (:background ,yellow))))
    `(fringe ((t (:background ,background))))
    `(linum ((t (:background ,current-line))))
    `(hl-line ((t (:background ,current-line))))
