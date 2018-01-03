@@ -115,6 +115,26 @@
                                     (tags priority-down category-keep)
                                     (search category-keep)))
 
+;; 'C-c a b' to show a "block" agenda view showing
+;; (1) high priority unscheduled tasks,
+;; (2) weekly agenda
+;; (3) everything else
+(setq org-agenda-custom-commands
+      '(("b" "Weekly agenda and all unfinished tasks"
+         ((tags "PRIORITY=\"A\""
+                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo
+                                                                      'done))
+                 (org-agenda-overriding-header
+                  "High-priority unfinished tasks:")))
+          (agenda "")
+          (alltodo ""
+                   ((org-agenda-skip-function
+                     '(or (bl/org-skip-subtree-if-habit)
+                          (bl/org-skip-subtree-if-priority ?A)
+                          (org-agenda-skip-if nil '(scheduled deadline))))
+                    (org-agenda-overriding-header
+                     "Unfinished low and medium priority tasks:")))))))
+
 ;; show me 7 days worth of stuff, starting yesterday
 (setq org-agenda-start-day "-1d")
 (setq org-agenda-span 7)
