@@ -166,6 +166,11 @@
                                        (find-alternate-file "..")))
 
 
+;; ido
+(ido-mode 1)
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+
 ;;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
 
