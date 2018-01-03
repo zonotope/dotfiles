@@ -125,7 +125,7 @@
                 ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo
                                                                       'done))
                  (org-agenda-overriding-header
-                  "High-priority unfinished tasks:")))
+                  "High-priority:")))
           (agenda "")
           (alltodo ""
                    ((org-agenda-skip-function
@@ -133,7 +133,7 @@
                           (bl/org-skip-subtree-if-priority ?A)
                           (org-agenda-skip-if nil '(scheduled deadline))))
                     (org-agenda-overriding-header
-                     "Unfinished low and medium priority tasks:")))))))
+                     "Medium/Low-priority:")))))))
 
 ;; show me 7 days worth of stuff, starting yesterday
 (setq org-agenda-start-day "-1d")
