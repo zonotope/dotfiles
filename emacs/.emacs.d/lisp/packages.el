@@ -84,6 +84,7 @@
 ;; find-file-in-project: does just that
 (use-package find-file-in-project
   :bind (("C-c f" . find-file-in-project))
+  :config (setq ffip-prefer-ido-mode t)
   :pin melpa-stable)
 
 ;; magit: emacs git interface
