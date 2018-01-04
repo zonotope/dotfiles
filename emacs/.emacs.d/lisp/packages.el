@@ -173,7 +173,7 @@
 
 ;; swiper: search with preview
 (use-package swiper
-  :bind (("C-c k" . counsel-ag)
+  :bind (("C-c k" . counsel-rg)
          ("C-c C-r" . ivy-resume)
          ("C-s" . swiper)
          ("C-r" . swiper))
