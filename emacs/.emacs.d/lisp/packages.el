@@ -201,6 +201,9 @@
   :config (progn (ido-vertical-mode 1)
                  (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)))
 
+;; which-key: key binding hints in a popup
+(use-package which-key)
+
 ;; wgrep-ag: writable ag and rg buffers, and apply changes to matches in files
 (use-package wgrep-ag)
 
