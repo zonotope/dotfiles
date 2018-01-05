@@ -122,18 +122,18 @@
 (setq org-agenda-custom-commands
       '(("b" "Weekly agenda and all unfinished tasks"
          ((tags "PRIORITY=\"A\""
-                ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo
-                                                                      'done))
-                 (org-agenda-overriding-header
-                  "High-priority:")))
+                ((org-agenda-overriding-header
+                  "High-priority:")
+                 (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo
+                                                                      'done))))
           (agenda "")
           (alltodo ""
-                   ((org-agenda-skip-function
+                   ((org-agenda-overriding-header
+                     "Medium/Low-priority:")
+                    (org-agenda-skip-function
                      '(or (bl/org-skip-subtree-if-habit)
                           (bl/org-skip-subtree-if-priority ?A)
-                          (org-agenda-skip-if nil '(scheduled deadline))))
-                    (org-agenda-overriding-header
-                     "Medium/Low-priority:")))))))
+                          (org-agenda-skip-if nil '(scheduled))))))))))
 
 ;; show me 7 days worth of stuff, starting yesterday
 (setq org-agenda-start-day "-1d")
