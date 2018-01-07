@@ -74,5 +74,17 @@ PRIORITY may be one of the characters ?A, ?B, or ?C."
         subtree-end
       nil)))
 
+;; TODO: remove when/if upstream rg.el maintainer accepts my pr adding this
+(require 'rg)
+(defun bl/rg-dwim-regexp (regexp)
+  (interactive
+   (progn
+     (let* ((regexp (rg-read-pattern)))
+       (list regexp))))
+  (let ((root (rg-project-root buffer-file-name))
+        (files (car (rg-default-alias))))
+    (if root
+        (rg-run regexp files root)
+      (signal 'user-error '("No project root found")))))
 
 (provide 'commands)

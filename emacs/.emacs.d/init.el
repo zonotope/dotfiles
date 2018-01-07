@@ -196,6 +196,10 @@
 ;; keybindings                                                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; no rg files confirmation
+;; TODO: remove when/if upstream rg.el maintainer accepts my pr adding this
+(global-set-key (kbd "C-x C-/") 'bl/rg-dwim-regexp)
+
 ;; don't delete the provided char in a zap forward.
 (autoload 'zap-up-to-char "misc"
   "Kill up to, but not including ARGth occurrence of CHAR. \(fn arg char)"

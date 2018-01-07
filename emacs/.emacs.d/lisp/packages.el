@@ -45,14 +45,13 @@
             ;; dim the background
             (setq avy-background t)))
 
-
 ;; ag: the silver searcher. grep/ack but better and faster
-(use-package ag
-  :bind (("C-x C-/" . ag-project)
-         ("C-c /" . ag-project-regexp))
-  :config (progn
-            (setq ag-highlight-search t)
-            (setq ag-reuse-buffers t)))
+;; (use-package ag
+;;   :bind (("C-x C-/" . ag-project)
+;;          ("C-c /" . ag-project-regexp))
+;;   :config (progn
+;;             (setq ag-highlight-search t)
+;;             (setq ag-reuse-buffers t)))
 
 ;; company: complete anything
 (use-package company
@@ -105,6 +104,18 @@
 (use-package mwim
   :bind (("C-a" . mwim-beginning-of-code-or-line)
          ("C-e" . mwim-end-of-code-or-line)))
+
+
+;; rg: like ag, but faster (and rustier)
+(use-package rg
+  :config (progn
+            (setq rg-custom-type-aliases
+                  '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
+                  rg-group-result t
+                  rg-show-columns t
+                  rg-ignore-case 'smart
+                  rg-show-header t))
+  :hook (rg-mode . wgrep-ag-setup))
 
 ;; smartparens: structural navigation, delimiter matching, and highlighting
 (use-package smartparens
