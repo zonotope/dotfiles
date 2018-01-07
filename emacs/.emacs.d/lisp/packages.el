@@ -334,6 +334,11 @@
          ("C-c t r" . synosaurus-choose-and-replace))
   :init (setq synosaurus-backend 'synosaurus-backend-wordnet))
 
+;; wordnut: wordnet based dictionary
+(use-package wordnut
+  :bind (("C-c d s" . wordnut-search)
+         ("C-c d l" . wordnut-lookup-current-word)))
+
 ;; writegood: check for weasel words, passive voice, and reading level
 (use-package writegood-mode
   :hook (text-mode . writegood-mode))
