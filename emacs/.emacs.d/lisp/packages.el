@@ -325,6 +325,20 @@
   :mode (("Dockerfile\\'" . dockerfile-mode)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; english                                                                  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; synosaurus: emacs thesaurus
+(use-package synosaurus
+  :bind (("C-c t l" . synosaurus-lookup)
+         ("C-c t r" . synosaurus-choose-and-replace))
+  :init (setq synosaurus-backend 'synosaurus-backend-wordnet))
+
+;; writegood: check for weasel words, passive voice, and reading level
+(use-package writegood-mode
+  :hook (text-mode . writegood-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; go                                                                       ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
