@@ -45,14 +45,6 @@
             ;; dim the background
             (setq avy-background t)))
 
-;; ag: the silver searcher. grep/ack but better and faster
-;; (use-package ag
-;;   :bind (("C-x C-/" . ag-project)
-;;          ("C-c /" . ag-project-regexp))
-;;   :config (progn
-;;             (setq ag-highlight-search t)
-;;             (setq ag-reuse-buffers t)))
-
 ;; company: complete anything
 (use-package company
   :config (global-company-mode))
@@ -310,12 +302,6 @@
 (use-package csv-mode
   :mode (("\\.csv\\'" . csv-mode)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; cucumber features                                                        ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(use-package feature-mode)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; docker                                                                   ;;
@@ -432,13 +418,6 @@
 
 (use-package rust-mode
   :mode ("\\.rs\\'" . rust-mode))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; slim                                                                     ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(use-package slim-mode)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
