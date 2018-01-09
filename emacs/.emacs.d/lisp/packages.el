@@ -100,13 +100,17 @@
 
 ;; rg: like ag, but faster (and rustier)
 (use-package rg
-  :config (progn
-            (setq rg-custom-type-aliases
-                  '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
-                  rg-group-result t
-                  rg-show-columns t
-                  rg-ignore-case 'smart
-                  rg-show-header t))
+  :bind (:map rg-mode-map
+              ("M-n" . rg-next-file)
+              ("M-p" . rg-prev-file)
+              ("C-n" . compilation-next-error)
+              ("C-p" . compilation-previous-error))
+  :config (setq rg-custom-type-aliases
+                '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
+                rg-group-result t
+                rg-show-columns t
+                rg-ignore-case 'smart
+                rg-show-header t)
   :hook (rg-mode . wgrep-ag-setup))
 
 ;; smartparens: structural navigation, delimiter matching, and highlighting
