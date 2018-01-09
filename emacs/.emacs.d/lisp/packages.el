@@ -49,6 +49,10 @@
 (use-package company
   :config (global-company-mode))
 
+;; counsel: completion functions using ivy (i only use counsel-rg for now)
+(use-package counsel
+  :bind (("C-c k" . counsel-rg)))
+
 ;; crux: a collection of ridiculously useful extensions
 (use-package crux
   :bind (("C-c n" . crux-cleanup-buffer-or-region)
@@ -107,6 +111,7 @@
               ("C-p" . compilation-previous-error))
   :config (setq rg-custom-type-aliases
                 '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
+
                 rg-group-result t
                 rg-show-columns t
                 rg-ignore-case 'smart
@@ -180,8 +185,7 @@
 
 ;; swiper: search with preview
 (use-package swiper
-  :bind (("C-c k" . counsel-rg)
-         ("C-c C-r" . ivy-resume)
+  :bind (("C-c C-r" . ivy-resume)
          ("C-s" . swiper)
          ("C-r" . swiper))
   :config (progn
