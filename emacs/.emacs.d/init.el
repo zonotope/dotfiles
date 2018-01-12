@@ -104,8 +104,8 @@
 (setq require-final-newline t)
 
 ;; don't ever split the window for a pop-up buffer
-(setq split-width-threshold nil)
-(setq split-height-threshold nil)
+(setq split-width-threshold nil
+      split-height-threshold nil)
 
 ;; always try to split/recombine windows evenly
 (setq window-combination-resize t)
@@ -138,9 +138,8 @@
 
 ;;;; use aspell to spell check
 (if (executable-find "aspell")
-    (progn
-      (setq ispell-program-name "aspell")
-      (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US"))))
+    (setq ispell-program-name "aspell"
+          ispell-extra-args '("--sug-mode=ultra" "--lang=en_US")))
 
 ;;;; check spelling everywhere for text based modes
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -168,8 +167,9 @@
 
 ;; ido
 (ido-mode 1)
-(setq ido-everywhere t)
-(setq ido-enable-flex-matching t)
+(setq ido-everywhere t
+      ido-enable-flex-matching t
+      ido-use-faces t)
 
 ;;;; automatically reload open files when they change on disk
 (global-auto-revert-mode 1)
