@@ -201,11 +201,7 @@
 
 ;; flx-ido: better flex matching for ido
 (use-package flx-ido
-  :config (progn
-            (flx-ido-mode 1)
-
-            ;; disable ido faces to see flx highlights.
-            (setq ido-use-faces nil)))
+  :config (flx-ido-mode 1))
 
 ;; ido-vertical-mode: list ido matches vertically
 (use-package ido-vertical-mode
