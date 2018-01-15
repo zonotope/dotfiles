@@ -206,7 +206,8 @@
 ;; ido-vertical-mode: list ido matches vertically
 (use-package ido-vertical-mode
   :config (progn (ido-vertical-mode 1)
-                 (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down)))
+                 (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down
+                       ido-vertical-show-count t)))
 
 ;; which-key: key binding hints in a popup
 (use-package which-key)
