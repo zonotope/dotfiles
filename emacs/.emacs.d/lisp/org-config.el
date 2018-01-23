@@ -80,7 +80,7 @@
 
 ;; [todo -> (started | blocked) -> (done | cancelled)] as the todo state
 ;; sequence. log when tasks are marked started and done, and log with notes
-;; whenever they're marked done or canceled.
+;; whenever they're marked blocked or canceled.
 (setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "BLOCKED(b@/!)" "|"
                                     "DONE(d)" "CANCELED(c@)")))
 
