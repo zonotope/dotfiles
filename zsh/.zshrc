@@ -79,6 +79,9 @@ alias -s png=show
 alias -s gif=show
 alias -s GIF=show
 
+# package manager
+alias tri='trizen --noedit --noconfirm'
+
 # always 'ls' after any 'cd':
 function chpwd() {
     emulate -LR zsh
