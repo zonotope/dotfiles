@@ -9,7 +9,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$HOME/.bin:$PATH
 
 ## go
-export GOROOT=/user/lib/go
+export GOROOT=/usr/lib/go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
