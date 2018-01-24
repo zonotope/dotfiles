@@ -33,7 +33,7 @@ export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
 
 ## browser
 if [ -n "$DISPLAY" ]; then
-    export BROWSER="chromium"
+    export BROWSER="firefox"
 else
     export BROWSER="w3m"
 fi
@@ -47,7 +47,7 @@ if [ "$(uname)" = "Linux" ] && [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; th
   exec startx
 fi
 
-# xterm cursor: blinking underscore
+# term cursor: blinking underscore
 echo -e -n "\x1b[\x33 q"
 
 # print a fortune on log in:

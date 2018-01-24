@@ -55,8 +55,6 @@ source $ZSH/oh-my-zsh.sh
 
 # file handlers:
 alias edit=$EDITOR
-alias emacs=$EDITOR
-
 alias play='mplayer -idx -fs'
 alias show='feh --auto-zoom --fullscreen'
 
