@@ -84,12 +84,12 @@
 (setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "BLOCKED(b@/!)" "|"
                                     "DONE(d)" "CANCELED(c@)")))
 
+;; log state change time stamps in the 'LOGBOOK' drawer.
+(setq org-log-into-drawer t)
+
 ;; log every time i kick the can down the road
 (setq org-log-redeadline 'time)
 (setq org-log-reschedule 'time)
-
-;; log state change time stamps in the 'LOGBOOK' drawer.
-(setq org-log-into-drawer t)
 
 ;; 3 priorities: A, B, and C
 (setq org-highest-priority ?A)

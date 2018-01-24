@@ -30,6 +30,9 @@
 ;; no splash screen
 (setq inhibit-splash-screen t)
 
+;; make all confirmation dialogues 'y/n' instead of 'yes/no' because i'm lazy
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; "<user-name>: <buffer-name> -- emacs" in the title bar
 (setq frame-title-format (list (getenv "USER")
                                ": %b -- "
