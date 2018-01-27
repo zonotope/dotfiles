@@ -78,7 +78,7 @@ alias -s gif=show
 alias -s GIF=show
 
 # package manager
-alias tri='trizen --noedit --noconfirm'
+alias tri='trizen --noedit'
 
 # always 'ls' after any 'cd':
 function chpwd() {
