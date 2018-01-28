@@ -13,6 +13,9 @@
 ;; C-c l to save a link to the current file position
 (global-set-key (kbd "C-c l") 'org-store-link)
 
+;; Reserve C-' for avy
+(define-key org-mode-map (kbd "C-'") nil)
+
 ;; auto-fill paragraphs in org buffers
 (add-hook 'org-mode-hook 'auto-fill-mode)
 
