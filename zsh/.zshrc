@@ -53,6 +53,14 @@ source $ZSH/oh-my-zsh.sh
 # aliases                                                                  #
 ############################################################################
 
+# package manaagment
+
+## arch install/sync with yas
+alias yas='yaourt -S'
+
+## arch remove with yar
+alias yar='yaourt -R'
+
 # file handlers:
 alias edit=$EDITOR
 alias play='mplayer -idx -fs'
