@@ -18,7 +18,7 @@ fi
 
 ## pager
 export PAGER="less"
-export LESS="--RAW-CONTROL-CHARS --squeeze-blank-lines --quit-if-one-screen --ignore-case"
+export LESS="--RAW-CONTROL-CHARS --squeeze-blank-lines --ignore-case"
 
 ############################################################################
 # path                                                                     #
