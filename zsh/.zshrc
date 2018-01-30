@@ -41,10 +41,7 @@ plugins=(colored-man-pages colorize compleat git gitfast lein rust web-search zs
 # set the syntax highligters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-export LANG=en_US.UTF-8
 
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
 
 #load zsh config framework
 source $ZSH/oh-my-zsh.sh
