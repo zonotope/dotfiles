@@ -161,13 +161,6 @@
           (function (lambda ()
                       (load "dired-x"))))
 
-;;;; use the same buffer to view parent and sub-directories
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
-(define-key dired-mode-map (kbd "^") (lambda ()
-                                       (interactive)
-                                       (find-alternate-file "..")))
-
-
 ;; ido
 (ido-mode 1)
 (setq ido-everywhere t
@@ -275,18 +268,3 @@
 ;; You may delete these explanatory comments.
 ;;
 ;;(package-initialize)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (yaml-mode toml-mode rust-mode ruby-tools php-mode markdown-mode json-mode go-playground go-guru company-go go-mode writegood-mode wordnut synosaurus dockerfile-mode csv-mode cider clojure-mode edit-server-htmlize edit-server wgrep-ag which-key ido-vertical-mode flx-ido switch-window smartparens rg mwim magit find-file-in-project exec-path-from-shell dired-details crux counsel company avy use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
