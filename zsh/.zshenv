@@ -1,13 +1,24 @@
 ## locale (american english)
 export LANG=en_US.UTF-8
 
+############################################################################
+# shell                                                                    #
+############################################################################
+
+## main zsh configuration directory
+export ZSHD=$HOME/.zsh.d
+
+## history
+export HISTFILE=$ZSHD/history
+export HISTSIZE=10000
+export SAVEHIST=10000
+
 ## arch compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-## editor
-export EDITOR="emacsclient --create-frame --no-wait"
-export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
-                           # already running
+############################################################################
+# applications                                                             #
+############################################################################
 
 ## browser
 if [ -n "$DISPLAY" ]; then
@@ -15,6 +26,11 @@ if [ -n "$DISPLAY" ]; then
 else
     export BROWSER="w3m"
 fi
+
+## editor
+export EDITOR="emacsclient --create-frame --no-wait"
+export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
+                           # already running
 
 ## pager
 export PAGER="less"
