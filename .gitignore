@@ -13,3 +13,4 @@ repl-history
 /emacs/.emacs.d/cider.history
 /emacs/.emacs.d/recentf
 /lein/.lein/credentials.clj.gpg
+/zsh/.zsh.d/history
