@@ -11,16 +11,13 @@ export ARCHFLAGS="-arch x86_64"
 ## main zsh configuration directory
 export ZSHD=$HOME/.zsh.d
 
+## colors
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
 ## history
 export HISTFILE=$ZSHD/history
 export HISTSIZE=10000
 export SAVEHIST=10000
-
-## colors
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
-
-## alias file
-export ALIASES=$ZSHD/aliases.zsh
 
 ############################################################################
 # applications                                                             #
