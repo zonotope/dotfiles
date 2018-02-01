@@ -9,19 +9,11 @@ ZSH_CUSTOM=$HOME/.zsh.d/custom
 # time that oh-my-zsh is loaded.
 ZSH_THEME="zonotope"
 
-# disable bi-weekly auto-update checks?
-# DISABLE_AUTO_UPDATE="true"
-
-# how often to auto-update (in days)?
-# export UPDATE_ZSH_DAYS=13
-
-# enable command auto-correction?
-# ENABLE_CORRECTION="true"
-
 # load experimental completions
 fpath=($ZSH_CUSTOM/zsh-completions/src $fpath)
 
-# case-sensitive completion?
+# completion options
+## case-sensitive completion?
 CASE_SENSITIVE="true"
 
 # red dots while waiting for completion.
@@ -29,6 +21,8 @@ COMPLETION_WAITING_DOTS="true"
 
 # history timestamp format
 HIST_STAMPS="yyyy-mm-dd" # valid formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# user configuration
+## set the syntax highligters
 
 # plugins load. (plugins can be found in $ZSH/plugins/*) Custom plugins may
 # be added to $ZSH_CUSTOM/plugins/
@@ -37,11 +31,8 @@ HIST_STAMPS="yyyy-mm-dd" # valid formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 plugins=(colored-man-pages colorize compleat git gitfast lein rust web-search zsh-syntax-highlighting)
 
 ### user configuration
-
 # set the syntax highligters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-
 
 #load zsh config framework
 source $ZSH/oh-my-zsh.sh
