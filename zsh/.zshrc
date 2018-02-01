@@ -65,51 +65,6 @@ setopt HIST_NO_FUNCTIONS
 ## don't store commands that start with a space
 setopt HIST_IGNORE_SPACE
 
-############################################################################
-# aliases                                                                  #
-############################################################################
 
-## history (timestamped yyyy-mm-dd)
-alias history='fc -il 1'
-
-# package manaagment
-
-## arch install/sync with yas
-alias yas='yaourt -S'
-
-## arch remove with yar
-alias yar='yaourt -R'
-
-# file handlers:
-alias edit=$EDITOR
-alias play='mplayer -idx -fs'
-alias show='feh --auto-zoom --fullscreen'
-
-alias -s conf=edit
-alias -s org=edit
-alias -s tex=edit
-alias -s txt=edit
-
-alias -s avi=play
-alias -s mpg=play
-alias -s mp3=play
-alias -s mp4=play
-alias -s wmv=play
-
-alias -s jpg=show
-alias -s jpeg=show
-alias -s JPG=show
-alias -s JPEG=show
-alias -s png=show
-alias -s gif=show
-alias -s GIF=show
-
-# always 'ls' after any 'cd':
-function chpwd() {
-    emulate -LR zsh
-    ls
-}
-
-# move and rename multiple files
-autoload -U zmv
-alias mmv='noglob zmv -W'
+## load aliases
+source $ALIASES

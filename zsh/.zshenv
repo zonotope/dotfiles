@@ -1,6 +1,9 @@
 ## locale (american english)
 export LANG=en_US.UTF-8
 
+## arch compilation flags
+export ARCHFLAGS="-arch x86_64"
+
 ############################################################################
 # shell                                                                    #
 ############################################################################
@@ -13,8 +16,11 @@ export HISTFILE=$ZSHD/history
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-## arch compilation flags
-export ARCHFLAGS="-arch x86_64"
+## colors
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
+## alias file
+export ALIASES=$ZSHD/aliases.zsh
 
 ############################################################################
 # applications                                                             #
