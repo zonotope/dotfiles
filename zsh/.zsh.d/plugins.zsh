@@ -29,6 +29,9 @@ source $ANTIGEN
 # plugins                                                                  #
 ############################################################################
 
+# set the terminal title
+antigen bundle jreese/zsh-titles
+
 # jump back to parent directories
 antigen bundle Tarrasch/zsh-bd
 
@@ -37,9 +40,6 @@ antigen bundle twang817/zsh-clipboard
 
 # shell command completion
 antigen bundle zsh-users/zsh-completions
-
-# set the terminal title
-antigen bundle jreese/zsh-titles
 
 # oh-my-zsh libraries
 antigen bundle robbyrussell/oh-my-zsh lib/functions
@@ -58,5 +58,6 @@ antigen bundle robbyrussell/oh-my-zsh plugins/web-search
 # load these last
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
+
 
 antigen apply

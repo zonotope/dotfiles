@@ -1,11 +1,6 @@
 ## load shell options
 source $ZSHD/options.zsh
 
-## load libs
-for config_file ($ZSHD/lib/*.zsh); do
-    source $config_file
-done
-
 ## load plugins
 source $ZSHD/plugins.zsh
 
