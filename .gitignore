@@ -14,3 +14,5 @@ repl-history
 /emacs/.emacs.d/recentf
 /lein/.lein/credentials.clj.gpg
 /zsh/.zsh.d/history
+/zsh/.zsh.d/plugins.zsh.zwc
+zsh/.zsh.d/antigen/

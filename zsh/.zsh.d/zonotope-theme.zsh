@@ -90,8 +90,11 @@ PROMPT=$'
 ${vcs_info_msg_0_}
 %{$fg_bold[black]%}%# >%{$reset_color%} '
 
+## loop/multi-line command prompt
+PROMPT2="%{$fg_bold[black]%}%_> %{$reset_color%}"
+
 ## date and time in the right prompt. eg: [06/22/2013 12:59PM]
-RPROMPT="%{$fg_bold[grey]%}[%t %W]%{$reset_color%}"
+RPROMPT="%{$fg_bold[grey]%}[%T]%{$reset_color%}"
 
 ## reset the prompt on <enter> for accurate command start times
 function _reset-prompt-and-accept-line {
