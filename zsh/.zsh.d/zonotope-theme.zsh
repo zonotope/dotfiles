@@ -37,8 +37,8 @@ add-zsh-hook chpwd prompt_chpwd
 ############################################################################
 
 ## show "*" whenever there are either staged or unstaged changes
-zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}⚪%{$reset_color%}"
-zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}⚫%{$reset_color%}"
+zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}○%{$reset_color%}"
+zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}●%{$reset_color%}"
 
 ## set prompt git status message format
 zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
