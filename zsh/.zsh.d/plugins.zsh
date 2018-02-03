@@ -56,7 +56,6 @@ antigen bundle robbyrussell/oh-my-zsh plugins/rust
 antigen bundle robbyrussell/oh-my-zsh plugins/web-search
 
 # load these last
-antigen bundle zonotope/zsh-prompt
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
