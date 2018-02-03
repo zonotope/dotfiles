@@ -38,6 +38,9 @@ antigen bundle twang817/zsh-clipboard
 # shell command completion
 antigen bundle zsh-users/zsh-completions
 
+# set the terminal title
+antigen bundle jreese/zsh-titles
+
 # oh-my-zsh libraries
 antigen bundle robbyrussell/oh-my-zsh lib/functions
 antigen bundle robbyrussell/oh-my-zsh lib/spectrum
