@@ -22,8 +22,8 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 
 ## show "*" whenever there are either staged or unstaged changes
-zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}*%{$reset_color%}"
-zstyle ':vcs_info:*:*' unstagedstr "%{$fg[yellow]%}*%{$reset_color%}"
+zstyle ':vcs_info:*:*' stagedstr "%{$fg[magenta]%}●%{$reset_color%}"
+zstyle ':vcs_info:*:*' unstagedstr "%{$fg[cyan]%}●%{$reset_color%}"
 
 ## set prompt git status message format: [git:branch (unpushed/unpulled) dirty]
 zstyle ':vcs_info:git*' formats "%u%c(%{$fg[green]%}%s:%b%{$reset_color%}%m)"
