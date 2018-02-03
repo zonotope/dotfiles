@@ -1,3 +1,6 @@
+## grep: colorize, and skip git dirs
+alias grep='grep --color=auto --exclude-dir=.git'
+
 ## history (timestamped yyyy-mm-dd)
 alias history='fc -il 1'
 
