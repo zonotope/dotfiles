@@ -22,11 +22,11 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 
 ## show "*" whenever there are either staged or unstaged changes
-zstyle ':vcs_info:*:*' stagedstr "%{$fg[magenta]%}●%{$reset_color%}"
-zstyle ':vcs_info:*:*' unstagedstr "%{$fg[cyan]%}●%{$reset_color%}"
+zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}⚪%{$reset_color%}"
+zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}⚫%{$reset_color%}"
 
 ## set prompt git status message format: [git:branch (unpushed/unpulled) dirty]
-zstyle ':vcs_info:git*' formats "%u%c(%{$fg[green]%}%s:%b%{$reset_color%}%m)"
+zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
 
 
 ## show +n/-n when the local branch is ahead/behind remote HEAD
@@ -39,14 +39,14 @@ function +vi-git-st() {
         ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null |
                     wc -l)
 
-        (( $ahead )) && commits+=( "%{$fg[magenta]%}+${ahead}%{$reset_color%}" )
+        (( $ahead )) && commits+=( "%{$fg[yellow]%}↑${ahead}%{$reset_color%}" )
 
 
         # unpulled commits
         behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null |
                      wc -l)
 
-        (( $behind )) && commits+=( "%{$fg[cyan]%}-${behind}%{$reset_color%}")
+        (( $behind )) && commits+=( "%{$fg[red]%}↓${behind}%{$reset_color%}")
 
 
         # commit status
