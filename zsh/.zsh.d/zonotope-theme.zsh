@@ -36,9 +36,11 @@ add-zsh-hook chpwd prompt_chpwd
 # vcs theme                                                                #
 ############################################################################
 
+if [[ "$OSTYPE" == darwin* ]]; then US="○" SS="●"; else US="⚪" SS="⚫"; fi
+
 ## show "*" whenever there are either staged or unstaged changes
-zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}○%{$reset_color%}"
-zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}●%{$reset_color%}"
+zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}$US%{$reset_color%}"
+zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}$SS%{$reset_color%}"
 
 ## set prompt git status message format
 zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
