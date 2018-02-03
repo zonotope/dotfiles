@@ -27,7 +27,8 @@ zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}⚫%{$reset_color%}"
 
 ## set prompt git status message format: [git:branch (unpushed/unpulled) dirty]
 zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
-
+zstyle ':vcs_info:git*' actionformats "(%{$fg[green]%}%s:%b%{$reset_color%}\
+%c%u%m|%{$fg[cyan]%}%a%{$reset_color%})"
 
 ## show ↑n/↓n when the local branch is ahead/behind remote HEAD
 function +vi-git-st() {
