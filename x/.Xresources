@@ -56,7 +56,7 @@ Xcursor.theme: Paper
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !! xterm
-xterm*faceName:         xft:Inconsolata\-g:size=12
+xterm*faceName:         xft:Inconsolata\-g:size=13
 xterm*loginShell:       true
 xterm.vt100.locale:     true
 xterm*vt100*geometry:   80x20
@@ -65,8 +65,8 @@ xterm*boldMode:         true
 
 
 !! urxvt
-URxvt.letterSpace:       1
-URxvt*font:              xft:Inconsolata\-g:size=12
+URxvt.letterSpace:       0
+URxvt*font:              xft:Inconsolata\-g:size=13
 URxvt*loginShell:        True
 URxvt*scrollBar:         False
 URxvt*scrollTtyOutput:   True
