@@ -29,7 +29,7 @@ zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}⚫%{$reset_color%}"
 zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
 
 
-## show +n/-n when the local branch is ahead/behind remote HEAD
+## show ↑n/↓n when the local branch is ahead/behind remote HEAD
 function +vi-git-st() {
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]]; then
         local ahead behind
@@ -92,6 +92,9 @@ ${vcs_info_msg_0_}
 
 ## loop/multi-line command prompt
 PROMPT2="%{$fg_bold[black]%}%_> %{$reset_color%}"
+
+## selection prompt
+PROMPT3="%{$fg_bold[black]%}...> %{$reset_color%}"
 
 ## date and time in the right prompt. eg: [06/22/2013 12:59PM]
 RPROMPT="%{$fg_bold[grey]%}[%T]%{$reset_color%}"
