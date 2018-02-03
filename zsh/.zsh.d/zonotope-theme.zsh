@@ -9,7 +9,7 @@ setopt PROMPT_SUBST
 autoload -U colors && colors
 
 ############################################################################
-# vcs (only git) info                                                      #
+# initialize vcs_info (only git for now)                                   #
 ############################################################################
 
 ## load vcs_info module
@@ -21,11 +21,26 @@ zstyle ':vcs_info:*' enable git
 ## check for local changes
 zstyle ':vcs_info:*' check-for-changes true
 
+## build the status message before rendering the prompt
+precmd() {
+    vcs_info
+}
+
+# rebuild the status message when changing directories
+prompt_chpwd() {
+    FORCE_RUN_VCS_INFO=1
+}
+add-zsh-hook chpwd prompt_chpwd
+
+############################################################################
+# vcs theme                                                                #
+############################################################################
+
 ## show "*" whenever there are either staged or unstaged changes
 zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}⚪%{$reset_color%}"
 zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}⚫%{$reset_color%}"
 
-## set prompt git status message format: [git:branch (unpushed/unpulled) dirty]
+## set prompt git status message format
 zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
 zstyle ':vcs_info:git*' actionformats "(%{$fg[green]%}%s:%b%{$reset_color%}\
 %c%u%m|%{$fg[cyan]%}%a%{$reset_color%})"
@@ -59,17 +74,6 @@ function +vi-git-st() {
 
 ## set the prompt hooks
 zstyle ':vcs_info:git*+set-message:*' hooks git-st
-
-## build the status message before rendering the prompt
-precmd() {
-    vcs_info
-}
-
-# rebuild the status message when changing directories
-prompt_chpwd() {
-    FORCE_RUN_VCS_INFO=1
-}
-add-zsh-hook chpwd prompt_chpwd
 
 ############################################################################
 # prompt                                                                   #
