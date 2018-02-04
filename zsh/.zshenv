@@ -75,9 +75,11 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 # highlight source code if source-highlight is installed
-if type source-highlight-esc.sh > /dev/null ; then
-    export LESSOPEN="| source-highlight-esc.sh %s"
+SOURCE_HIGHLIGHT=$(command -v source-highlight-esc.sh 2> /dev/null)
+if [ "$TERM" != dumb ] && [ -n "$SOURCE_HIGHLIGHT" ]; then
+    export LESSOPEN="| $SOURCE_HIGHLIGHT %s"
 fi
+unset SOURCE_HIGHLIGHT
 
 ## grep highlight color (orange)
 export GREP_COLOR="1;33"
