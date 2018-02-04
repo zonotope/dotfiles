@@ -2,20 +2,23 @@
 # history                                                                  #
 ############################################################################
 
-## confirm command "!" search results before executing them
-setopt HIST_VERIFY
+## don't overwrite the history file
+setopt APPEND_HISTORY
 
 ## add to the history file as commands execute
 setopt INC_APPEND_HISTORY
 
-## use the same history file between shells
-setopt SHARE_HISTORY
-
 ## save command timing
 setopt EXTENDED_HISTORY
 
-## shoe each command only once in history searches
-setopt HIST_FIND_NO_DUPS
+## use the same history file between shells
+setopt SHARE_HISTORY
+
+## confirm command "!" search results before executing them
+setopt HIST_VERIFY
+
+## ignore any duplicate history entries
+setopt HIST_IGNORE_DUPS
 
 ## trim whitespace before writing to history
 setopt HIST_REDUCE_BLANKS
