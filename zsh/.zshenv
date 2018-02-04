@@ -5,6 +5,30 @@ export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 
 ############################################################################
+# path                                                                     #
+############################################################################
+
+## base
+export PATH=$PATH:/usr/local/bin
+
+## custom scripts
+export PATH=$HOME/.bin:$PATH
+
+## go
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
+
+## rbenv
+export PATH=$PATH:$HOME/.rbenv/shims
+eval "$(rbenv init -)"
+
+## rust
+export CARGO_HOME=$HOME/.cargo
+export PATH=$PATH:$CARGO_HOME/bin
+
+############################################################################
 # shell                                                                    #
 ############################################################################
 
@@ -35,30 +59,25 @@ export EDITOR="emacsclient --create-frame --no-wait"
 export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
                            # already running
 
-## pager
+## pager: less,
 export PAGER="less"
+
+# (RAW-CONTROL-CHARS display cotrol output (including color escape sequeces))
 export LESS="--RAW-CONTROL-CHARS --squeeze-blank-lines --ignore-case"
 
-############################################################################
-# path                                                                     #
-############################################################################
+# colorize less output
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
-## base
-export PATH=$PATH:/usr/local/bin
+# highlight source code if source-highlight is installed
+if type source-highlight-esc.sh > /dev/null ; then
+    export LESSOPEN="| source-highlight-esc.sh %s"
+fi
 
-## custom scripts
-export PATH=$HOME/.bin:$PATH
-
-## go
-export GOROOT=/usr/lib/go
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
-
-## rbenv
-export PATH=$PATH:$HOME/.rbenv/shims
-eval "$(rbenv init -)"
-
-## rust
-export CARGO_HOME=$HOME/.cargo
-export PATH=$PATH:$CARGO_HOME/bin
+## grep highlight color (orange)
+export GREP_COLOR="1;33"

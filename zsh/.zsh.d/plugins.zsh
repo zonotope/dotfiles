@@ -45,10 +45,6 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle unixorn/warhol.plugin.zsh
 
 ## oh-my-zsh plugins
-antigen bundle robbyrussell/oh-my-zsh plugins/colored-man-pages
-antigen bundle robbyrussell/oh-my-zsh plugins/colorize
-antigen bundle robbyrussell/oh-my-zsh plugins/compleat
-antigen bundle robbyrussell/oh-my-zsh plugins/gitfast
 antigen bundle robbyrussell/oh-my-zsh plugins/lein
 antigen bundle robbyrussell/oh-my-zsh plugins/rust
 antigen bundle robbyrussell/oh-my-zsh plugins/web-search
