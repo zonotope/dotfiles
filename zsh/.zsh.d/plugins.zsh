@@ -13,7 +13,7 @@ export ANTIGEN=$ANTIGEN_PATH/antigen.zsh
 
 ## install antigen if necessary
 if [[ ! -a $ANTIGEN ]]; then
-    echo "------ Installing Antigen... ------"
+    echo "Installing Antigen...."
 
     if [[ ! -d $ANTIGEN_PATH ]]; then
        mkdir --parents $ANTIGEN_PATH
@@ -26,7 +26,7 @@ fi
 source $ANTIGEN
 
 ############################################################################
-# plugins                                                                  #
+# declare plugins                                                          #
 ############################################################################
 
 # set the terminal title
@@ -35,7 +35,7 @@ antigen bundle jreese/zsh-titles
 # jump back to parent directories
 antigen bundle Tarrasch/zsh-bd
 
-# add clipboard copy/paste
+# clipboard copy/paste
 antigen bundle twang817/zsh-clipboard
 
 # shell command completion
@@ -63,8 +63,23 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 ## history search
 antigen bundle zsh-users/zsh-history-substring-search
+
+
 ############################################################################
-# finalize                                                                 #
+# finalize and load plugins                                                #
 ############################################################################
 
 antigen apply
+
+
+############################################################################
+# configuration plugin                                                     #
+############################################################################
+
+## set syntax highlighters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+## configure history search
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(fg:yellow bg:black)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
