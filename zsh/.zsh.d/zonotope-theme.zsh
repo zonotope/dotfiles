@@ -36,21 +36,19 @@ add-zsh-hook chpwd prompt_chpwd
 # vcs theme                                                                #
 ############################################################################
 
-if [[ "$OSTYPE" == darwin* ]]; then US="○" SS="●"; else US="⚪" SS="⚫"; fi
-
 ## show a marker whenever there are either staged or unstaged changes
-zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}$US%{$reset_color%}"
-zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}$SS%{$reset_color%}"
+zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}%{$reset_color%}"
+zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}%{$reset_color%}"
 
 ## set prompt git status message format
-zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
-zstyle ':vcs_info:git*' actionformats "(%{$fg[green]%}%s:%b%{$reset_color%}\
+zstyle ':vcs_info:git*' formats "(%s:%{$fg[green]%}%b%{$reset_color%}%c%u%m)"
+zstyle ':vcs_info:git*' actionformats "(%s:%{$fg[green]%}%b%{$reset_color%}\
 %c%u%m|%{$fg[cyan]%}%a%{$reset_color%})"
 
 ## show "" for git vcs
 function +vi-git-vcs() {
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]]; then
-        hook_com[vcs]=""
+        hook_com[vcs]="%{$fg[magenta]%}%{$reset_color%}"
     fi
 }
 
