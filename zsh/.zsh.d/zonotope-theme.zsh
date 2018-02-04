@@ -55,14 +55,14 @@ function +vi-git-st() {
 
         # unpushed commits
         ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null |
-                    wc -l)
+                    wc -l | tr -d '[:space:]')
 
         (( $ahead )) && commits+=( "%{$fg[yellow]%}↑${ahead}%{$reset_color%}" )
 
 
         # unpulled commits
         behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null |
-                     wc -l)
+                     wc -l | tr -d '[:space:]')
 
         (( $behind )) && commits+=( "%{$fg[red]%}↓${behind}%{$reset_color%}")
 
