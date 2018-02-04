@@ -29,9 +29,6 @@ source $ANTIGEN
 # declare plugins                                                          #
 ############################################################################
 
-## set the terminal title
-antigen bundle jreese/zsh-titles
-
 ## jump back to parent directories
 antigen bundle Tarrasch/zsh-bd
 
@@ -41,8 +38,11 @@ antigen bundle twang817/zsh-clipboard
 ## shell command completion
 antigen bundle zsh-users/zsh-completions
 
-## colorize output
-antigen bundle unixorn/warhol.plugin.zsh
+## colorize command output with grc
+antigen bundle joshuarubin/zsh-grc
+
+## set the terminal title
+antigen bundle jreese/zsh-titles
 
 ## oh-my-zsh plugins
 antigen bundle robbyrussell/oh-my-zsh plugins/lein
