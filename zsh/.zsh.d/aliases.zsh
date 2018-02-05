@@ -2,7 +2,11 @@
 alias grep='grep --color=auto --exclude-dir=.git'
 
 ## ls: colorize
-alias ls='ls --color=auto'
+if [[ "$OSTYPE" == darwin* ]]; then
+    ls -G . &>/dev/null && alias ls='ls -G'
+else
+    ls --color=auto . &>/dev/null && alias ls='ls --color=auto'
+fi
 
 ## history (timestamped yyyy-mm-dd)
 alias history='fc -il 1'

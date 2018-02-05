@@ -35,13 +35,17 @@ export PATH=$PATH:$CARGO_HOME/bin
 ## main zsh configuration directory
 export ZSHD=$HOME/.zsh.d
 
-## colors
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
-
 ## history
 export HISTFILE=$ZSHD/history
 export HISTSIZE=10000
 export SAVEHIST=10000
+
+## colors
+# Linux colors
+export LS_COLORS="di=1;34:ln=1;36:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+
+# BSD/Mac OS colors
+export LSCOLORS="ExGxcxdxbxegedabagacad"
 
 ############################################################################
 # applications                                                             #
