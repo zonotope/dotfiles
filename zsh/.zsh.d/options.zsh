@@ -31,3 +31,13 @@ setopt HIST_NO_FUNCTIONS
 
 ## don't store commands that start with a space
 setopt HIST_IGNORE_SPACE
+
+############################################################################
+# colors                                                                   #
+############################################################################
+
+# Use LS_COLORS for autocompletion
+zmodload -a colors
+zmodload -a autocomplete
+zmodload -a complist
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
