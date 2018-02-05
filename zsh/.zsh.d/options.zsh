@@ -43,4 +43,5 @@ zmodload -a complist
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # select completion candidates from a menu
+setopt auto_menu
 zstyle ':completion:*' menu select

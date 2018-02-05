@@ -29,6 +29,9 @@ source $ANTIGEN
 # declare plugins                                                          #
 ############################################################################
 
+## command suggestions based on history
+antigen bundle zsh-users/zsh-autosuggestions
+
 ## jump back to parent directories
 antigen bundle Tarrasch/zsh-bd
 
@@ -68,6 +71,9 @@ antigen apply
 ############################################################################
 # configure plugins                                                        #
 ############################################################################
+
+# fetch autosuggestions asynchronously
+ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 ## set syntax highlighters
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
