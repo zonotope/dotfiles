@@ -33,11 +33,14 @@ setopt HIST_NO_FUNCTIONS
 setopt HIST_IGNORE_SPACE
 
 ############################################################################
-# colors                                                                   #
+# completion                                                               #
 ############################################################################
 
-# Use LS_COLORS for autocompletion
+# Use LS_COLORS for autocompletion colors
 zmodload -a colors
 zmodload -a autocomplete
 zmodload -a complist
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# select completion candidates from a menu
+zstyle ':completion:*' menu select
