@@ -47,13 +47,10 @@ antigen bundle joshuarubin/zsh-grc
 ## set the terminal title
 antigen bundle jreese/zsh-titles
 
-## oh-my-zsh plugins
-antigen bundle robbyrussell/oh-my-zsh plugins/lein
-antigen bundle robbyrussell/oh-my-zsh plugins/rust
+## command line search engine interface
 antigen bundle robbyrussell/oh-my-zsh plugins/web-search
 
 ### load these plugins last
-
 ## set the prompt
 antigen bundle zonotope/zsh-prompt
 
