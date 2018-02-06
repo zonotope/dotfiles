@@ -73,7 +73,7 @@ antigen apply
 ############################################################################
 
 # initialize the completion system
-autoload -U compinit
+autoload -U compinit && compinit
 
 # fetch autosuggestions asynchronously
 ZSH_AUTOSUGGEST_USE_ASYNC=true
