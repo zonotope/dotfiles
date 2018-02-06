@@ -35,6 +35,9 @@ export PATH=$PATH:$CARGO_HOME/bin
 ## main zsh configuration directory
 export ZSHD=$HOME/.zsh.d
 
+## cache
+export ZSH_CACHE_DIR=$ZSHD/cache
+
 ## history
 export HISTFILE=$ZSHD/history
 export HISTSIZE=10000

@@ -43,11 +43,19 @@ setopt HIST_IGNORE_SPACE
 # completion                                                               #
 ############################################################################
 
-# Use LS_COLORS for autocompletion colors
+# enable completion colors, and use LS_COLORS for auto-completion.
 zmodload -a colors
 zmodload -a autocomplete
 zmodload -a complist
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# case and hyphen insensitive search
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}'\
+       'r:|=*' 'l:|=* r:|=*'
+
+# cache completions
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
 
 # move the cursor to the end of the word when a completion is inserted
 setopt ALWAYS_TO_END
