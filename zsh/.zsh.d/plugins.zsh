@@ -69,9 +69,6 @@ antigen apply
 # configure plugins                                                        #
 ############################################################################
 
-# initialize the completion system
-autoload -U compinit && compinit
-
 # fetch autosuggestions asynchronously
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
