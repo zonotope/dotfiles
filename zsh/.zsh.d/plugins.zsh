@@ -4,19 +4,19 @@
 
 ## set the antigen path
 export ADOTDIR=$ZSHD/antigen/
-export ANTIGEN=$ANTIGEN_PATH/antigen.zsh
+export ANTIGEN=$ADOTDIR/antigen.zsh
 typeset -a ANTIGEN_CHECK_FILES=($0:A)
-
-## set the antigen path
-export ANTIGEN_PATH=$ZSHD/antigen/
-export ANTIGEN=$ANTIGEN_PATH/antigen.zsh
 
 ## install antigen if necessary
 if [[ ! -a $ANTIGEN ]]; then
     echo "Installing Antigen...."
 
-    if [[ ! -d $ANTIGEN_PATH ]]; then
-       mkdir --parents $ANTIGEN_PATH
+    if [[ ! -d $ADOTDIR ]]; then
+        if [[ "$OSTYPE" == darwin* ]]; then
+            mkdir -p $ADOTDIR
+        else
+            mkdir --parents $ADOTDIR
+        fi
     fi
 
     curl --ssl --show-error --location git.io/antigen > $ANTIGEN
