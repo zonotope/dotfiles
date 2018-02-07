@@ -1,19 +1,8 @@
-# enable completion colors, and use LS_COLORS for auto-completion.
-zmodload -a colors
-zmodload -a autocomplete
-zmodload -a complist
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
-# case and hyphen insensitive search
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}'\
-       'r:|=*' 'l:|=* r:|=*'
-
-# cache completions
-zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
-
 # move the cursor to the end of the word when a completion is inserted
 setopt ALWAYS_TO_END
+
+# automatically list choices on ambiguous completion.
+setopt AUTO_LIST
 
 # pop up the menu after the second completion request
 setopt AUTO_MENU
@@ -45,9 +34,25 @@ setopt LIST_BEEP
 # display the menu efficiently
 setopt LIST_PACKED
 
-# select completion candidates from a menu
-setopt auto_menu
+# search path for command names with slashes in them corresponding to subdirs
+setopt PATH_DIRS
+
+# enable colored completion list module
+zmodload -a complist
+
+# use LS_COLORS for the completion list colors
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# case and hyphen insensitive search
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}'\
+       'r:|=*' 'l:|=* r:|=*'
+
+# completion cache
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+
+# select completions from an arrow driven menu
 zstyle ':completion:*' menu select
 
-# initialize and load the completion system
-autoload -U compinit && compinit
+# load completion system
+autoload -Uz compinit && compinit
