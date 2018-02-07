@@ -6,7 +6,7 @@ update_interval      1.0
 total_run_times      0
 cpu_avg_samples      2
 background           yes
-override_utf8_locale yes
+override_utf8_locale no
 
 ## buffers
 no_buffers    yes
@@ -20,7 +20,7 @@ short_units
 
 ## font
 use_xft   yes
-xftfont   Inconsolata\-g:size=13
+xftfont   Inconsolata:size=15
 xftalpha  1
 uppercase no
 
