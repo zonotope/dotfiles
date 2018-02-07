@@ -1,9 +1,6 @@
-# emacs:
 elpa/
 url/
 auto-save-list/
-
-# lein:
 repl-history
 /lein/.lein/self-installs/
 /emacs/.emacs.d/ido.last
@@ -13,6 +10,5 @@ repl-history
 /emacs/.emacs.d/cider.history
 /emacs/.emacs.d/recentf
 /lein/.lein/credentials.clj.gpg
-/zsh/.zsh.d/history
 /zsh/.zsh.d/plugins.zsh.zwc
 zsh/.zsh.d/antigen/

@@ -39,7 +39,7 @@ export ZSHD=$HOME/.zsh.d
 export ZSH_CACHE_DIR=$ZSHD/cache
 
 ## history
-export HISTFILE=$ZSHD/history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 
