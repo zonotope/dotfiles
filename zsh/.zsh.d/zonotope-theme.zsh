@@ -37,13 +37,12 @@ add-zsh-hook chpwd prompt_chpwd
 ############################################################################
 
 ## show a marker whenever there are either staged or unstaged changes
-zstyle ':vcs_info:*:*' unstagedstr "%{$fg_bold[yellow]%}◦%{$reset_color%}"
-zstyle ':vcs_info:*:*' stagedstr "%{$fg_bold[yellow]%}∙%{$reset_color%}"
+zstyle ':vcs_info:*:*' unstagedstr "∘"
+zstyle ':vcs_info:*:*' stagedstr "∙"
 
 ## set prompt git status message format
-zstyle ':vcs_info:git*' formats "(%{$fg[green]%}%s:%b%{$reset_color%}%c%u%m)"
-zstyle ':vcs_info:git*' actionformats "(%{$fg[green]%}%s:%b%{$reset_color%}\
-%c%u%m|%{$fg[cyan]%}%a%{$reset_color%})"
+zstyle ':vcs_info:git*' formats "(%b%c%u%m)"
+zstyle ':vcs_info:git*' actionformats "(%b%c%u%m|%a)"
 
 ## show ↑n/↓n when the local branch is ahead/behind remote HEAD
 function +vi-git-st() {
@@ -55,14 +54,14 @@ function +vi-git-st() {
         ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null |
                     wc -l | tr -d '[:space:]')
 
-        (( $ahead )) && commits+=( "%{$fg[yellow]%}↑${ahead}%{$reset_color%}" )
+        (( $ahead )) && commits+=( "↑${ahead}" )
 
 
         # unpulled commits
         behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null |
                      wc -l | tr -d '[:space:]')
 
-        (( $behind )) && commits+=( "%{$fg[red]%}↓${behind}%{$reset_color%}")
+        (( $behind )) && commits+=( "↓${behind}")
 
 
         # commit status
@@ -80,7 +79,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-st
 ############################################################################
 
 ## red username for root, yellow for everyone else
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="cyan"; fi
 
 ## main prompt. 3 lines:
 # 1. dividing line of dashes (-)
@@ -92,7 +91,7 @@ PROMPT=$'
 %{$reset_color%}
 %{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%
 %{$fg[blue]%}%~/%{$reset_color%} %
-${vcs_info_msg_0_}
+%{$fg_bold[black]%}${vcs_info_msg_0_}%{$reset_color%}
 %{$fg_bold[black]%}%# >%{$reset_color%} '
 
 ## loop/multi-line command prompt
