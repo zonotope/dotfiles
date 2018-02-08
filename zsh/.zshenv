@@ -5,30 +5,6 @@ export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 
 ############################################################################
-# path                                                                     #
-############################################################################
-
-## base
-export PATH=$PATH:/usr/local/bin
-
-## custom scripts
-export PATH=$HOME/.bin:$PATH
-
-## go
-export GOROOT=/usr/lib/go
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
-
-## rbenv
-export PATH=$PATH:$HOME/.rbenv/shims
-eval "$(rbenv init -)"
-
-## rust
-export CARGO_HOME=$HOME/.cargo
-export PATH=$PATH:$CARGO_HOME/bin
-
-############################################################################
 # shell                                                                    #
 ############################################################################
 
