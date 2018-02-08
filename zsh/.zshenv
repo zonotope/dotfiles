@@ -59,5 +59,5 @@ if [ "$TERM" != dumb ] && [ -n "$SOURCE_HIGHLIGHT" ]; then
 fi
 unset SOURCE_HIGHLIGHT
 
-## grep highlight color (orange)
+## grep: highlight color (orange)
 export GREP_COLOR="1;33"

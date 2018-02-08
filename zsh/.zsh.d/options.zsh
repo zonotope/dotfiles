@@ -5,6 +5,9 @@
 ## enable the bell
 setopt BEEP
 
+## enable comments in interactive shells
+setopt INTERACTIVE_COMMENTS
+
 ## disable flow control so "C-s" doesn't disable shell output!
 unsetopt FLOW_CONTROL
 
