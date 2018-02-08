@@ -1,7 +1,14 @@
-## don't overwrite the history file
+## history file
+export HISTFILE=$HOME/.zhistory
+
+## save the last 10000 commands
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+## don't overwrite the history file; add to the end instead
 setopt APPEND_HISTORY
 
-## add to the history file as commands execute
+## don't wait until exiting; add to the history file as commands execute
 setopt INC_APPEND_HISTORY
 
 ## save command timing
@@ -21,9 +28,6 @@ setopt HIST_REDUCE_BLANKS
 
 ## don't store history related commands in history
 setopt HIST_NO_STORE
-
-## don't store function definitions in history
-setopt HIST_NO_FUNCTIONS
 
 ## don't store commands that start with a space
 setopt HIST_IGNORE_SPACE
