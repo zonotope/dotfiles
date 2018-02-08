@@ -51,14 +51,14 @@ antigen bundle jreese/zsh-titles
 antigen bundle robbyrussell/oh-my-zsh plugins/web-search
 
 ### load these plugins last
-## set the prompt
-antigen bundle zonotope/zsh-prompt
-
 ## syntax highlighter
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 ## history search
 antigen bundle zsh-users/zsh-history-substring-search
+
+## set the prompt
+antigen bundle zonotope/zsh-prompt
 
 
 ##### finalize and load plugins
@@ -69,7 +69,7 @@ antigen apply
 # configure plugins                                                        #
 ############################################################################
 
-# fetch autosuggestions asynchronously
+## fetch autosuggestions asynchronously
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 ## set syntax highlighters
