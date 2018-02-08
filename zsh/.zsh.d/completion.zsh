@@ -19,9 +19,6 @@ setopt AUTO_PARAM_SLASH
 # and remove slashes when necessary too.
 setopt AUTO_REMOVE_SLASH
 
-# expand aliases before trying to complete them
-setopt COMPLETE_ALIASES
-
 # don't assume cursor is at the end of a word when searching for completions
 setopt COMPLETE_IN_WORD
 
