@@ -15,6 +15,9 @@ unsetopt FLOW_CONTROL
 # directories                                                              #
 ############################################################################
 
+# save the last 8 visited directories
+export DIRSTACKSIZE=8
+
 # auto change to a directory with just the name
 setopt AUTO_CD
 
