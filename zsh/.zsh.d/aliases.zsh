@@ -27,6 +27,9 @@ function chpwd() {
 autoload -U zmv
 alias mmv='noglob zmv -W'
 
+## name the current directory
+namedir () { $1=$PWD ;  : ~$1 }
+
 ############################################################################
 # file handlers                                                            #
 ############################################################################
