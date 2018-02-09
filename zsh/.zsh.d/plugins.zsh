@@ -64,7 +64,6 @@ antigen bundle zonotope/zsh-prompt
 ##### finalize and load plugins
 antigen apply
 
-
 ############################################################################
 # configure plugins                                                        #
 ############################################################################

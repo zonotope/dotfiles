@@ -30,10 +30,6 @@ alias mmv='noglob zmv -W'
 ## name the current directory
 namedir () { $1=$PWD ;  : ~$1 }
 
-############################################################################
-# file handlers                                                            #
-############################################################################
-
 ## text
 alias edit=$EDITOR
 alias -s conf=edit
