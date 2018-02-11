@@ -39,6 +39,9 @@ setopt MULTIOS
 # powerful glob pattern replacing and completion
 setopt EXTENDED_GLOB
 
+# case insensitive glob/matching
+unsetopt CASE_GLOB
+
 # don't overwrite existing files with  > and >>. require >! and >>! instead.
 unsetopt CLOBBER
 
