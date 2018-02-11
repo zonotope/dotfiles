@@ -8,6 +8,9 @@ else
     ls --color=auto . &>/dev/null && alias ls='ls --color=auto'
 fi
 
+## repeat the last command with sudo
+alias please='sudo $(fc -ln -1)'
+
 ## history (timestamped yyyy-mm-dd)
 alias history='fc -il 1'
 
