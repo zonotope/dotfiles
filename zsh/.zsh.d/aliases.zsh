@@ -26,12 +26,15 @@ function chpwd() {
     ls
 }
 
+## name the current directory
+function namedir () {
+    eval $1=$PWD
+    : $1
+}
+
 ## move and rename multiple files
 autoload -U zmv
 alias mmv='noglob zmv -W'
-
-## name the current directory
-namedir () { $1=$PWD ;  : ~$1 }
 
 ## text
 alias edit=$EDITOR
