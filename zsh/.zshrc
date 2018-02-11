@@ -24,6 +24,12 @@ setopt AUTO_CD
 # push the previous directory onto the stack after every cd
 setopt AUTO_PUSHD
 
+# powerful glob pattern replacing and completion
+setopt EXTENDED_GLOB
+
+# write to multiple files at once
+setopt MULTIOS
+
 # don't push any dupes onto the directory stack
 setopt PUSHD_IGNORE_DUPS
 
@@ -32,12 +38,6 @@ setopt PUSHD_SILENT
 
 # push home when pushd is called without arguments
 setopt PUSHD_TO_HOME
-
-# write to multiple files at once
-setopt MULTIOS
-
-# powerful glob pattern replacing and completion
-setopt EXTENDED_GLOB
 
 # case insensitive glob/matching
 unsetopt CASE_GLOB
@@ -59,29 +59,29 @@ export SAVEHIST=10000
 ## don't overwrite the history file; add to the end instead
 setopt APPEND_HISTORY
 
-## don't wait until exiting; add to the history file as commands execute
-setopt INC_APPEND_HISTORY
-
 ## save command timing
 setopt EXTENDED_HISTORY
-
-## use the same history file between shells
-setopt SHARE_HISTORY
-
-## confirm command "!" search results before executing them
-setopt HIST_VERIFY
 
 ## ignore any duplicate history entries
 setopt HIST_IGNORE_DUPS
 
-## trim whitespace before writing to history
-setopt HIST_REDUCE_BLANKS
+## don't store commands that start with a space
+setopt HIST_IGNORE_SPACE
 
 ## don't store history related commands in history
 setopt HIST_NO_STORE
 
-## don't store commands that start with a space
-setopt HIST_IGNORE_SPACE
+## trim whitespace before writing to history
+setopt HIST_REDUCE_BLANKS
+
+## confirm command "!" search results before executing them
+setopt HIST_VERIFY
+
+## don't wait until exiting; add to the history file as commands execute
+setopt INC_APPEND_HISTORY
+
+## use the same history file between shells
+setopt SHARE_HISTORY
 
 ############################################################################
 # load additional configuration                                            #
