@@ -1,3 +1,15 @@
+## always 'ls' after any 'cd':
+function chpwd() {
+    emulate -LR zsh
+    ls
+}
+
+## name the current directory
+function namedir () {
+    eval $1=$PWD
+    : $1
+}
+
 ## grep: colorize, and skip git dirs
 alias grep='grep --color=auto --exclude-dir=.git'
 
@@ -19,18 +31,6 @@ alias yas='yaourt -S'
 
 ## arch remove with yar
 alias yar='yaourt -R'
-
-## always 'ls' after any 'cd':
-function chpwd() {
-    emulate -LR zsh
-    ls
-}
-
-## name the current directory
-function namedir () {
-    eval $1=$PWD
-    : $1
-}
 
 ## move and rename multiple files
 autoload -U zmv

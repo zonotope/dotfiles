@@ -32,13 +32,10 @@ source $ANTIGEN
 ## command suggestions based on history
 antigen bundle zsh-users/zsh-autosuggestions
 
-## jump back to parent directories
-antigen bundle Tarrasch/zsh-bd
-
 ## clipboard copy/paste
 antigen bundle twang817/zsh-clipboard
 
-## shell command completion
+## extra shell command completion
 antigen bundle zsh-users/zsh-completions
 
 ## colorize command output with grc
@@ -50,18 +47,20 @@ antigen bundle jreese/zsh-titles
 ## command line search engine interface
 antigen bundle robbyrussell/oh-my-zsh plugins/web-search
 
-### load these plugins last
+
+#### load these plugins last
+
 ## syntax highlighter
 antigen bundle zsh-users/zsh-syntax-highlighting
-
-## history search
-antigen bundle zsh-users/zsh-history-substring-search
 
 ## set the prompt
 antigen bundle zonotope/zsh-prompt
 
+## history search
+antigen bundle zsh-users/zsh-history-substring-search
 
-##### finalize and load plugins
+
+#### finalize and load plugins
 antigen apply
 
 ############################################################################
@@ -75,6 +74,6 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 ## bind history substring search to up/down arrows
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(fg:yellow bg:black)
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(fg:yellow)
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
