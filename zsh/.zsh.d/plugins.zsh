@@ -12,11 +12,7 @@ if [[ ! -a $ANTIGEN ]]; then
     echo "Installing Antigen...."
 
     if [[ ! -d $ADOTDIR ]]; then
-        if [[ "$OSTYPE" == darwin* ]]; then
-            mkdir -p $ADOTDIR
-        else
-            mkdir --parents $ADOTDIR
-        fi
+        mkdir -p $ADOTDIR
     fi
 
     curl --ssl --show-error --location git.io/antigen > $ANTIGEN

@@ -1,23 +1,11 @@
-## always 'ls' after any 'cd':
-function chpwd() {
-    emulate -LR zsh
-    ls
-}
-
-## name the current directory
-function namedir () {
-    eval $1=$PWD
-    : $1
-}
-
 ## grep: colorize, and skip git dirs
 alias grep='grep --color=auto --exclude-dir=.git'
 
 ## ls: colorize
 if [[ "$OSTYPE" == darwin* ]]; then
-    ls -G . &>/dev/null && alias ls='ls -G'
+    alias ls='ls -G'
 else
-    ls --color=auto . &>/dev/null && alias ls='ls --color=auto'
+    alias ls='ls --color=auto'
 fi
 
 ## repeat the last command with sudo
@@ -57,3 +45,15 @@ alias -s jpg=show
 alias -s jpeg=show
 alias -s png=show
 alias -s gif=show
+
+## always 'ls' after any 'cd':
+function chpwd {
+    emulate -LR zsh
+    ls
+}
+
+## name the current directory
+function namedir {
+    eval $1=$PWD
+    : $1
+}
