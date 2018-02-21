@@ -12,9 +12,6 @@
 ;; make the cursor as conspicuous as possible
 (set-default 'cursor-type 'box)
 
-;; make the cursor the with of the character it's over
-(setq x-stretch-cursor t)
-
 ;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
 
