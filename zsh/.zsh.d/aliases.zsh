@@ -26,7 +26,6 @@ alias mmv='noglob zmv -W'
 
 ## text
 alias edit=$EDITOR
-alias emacs=edit
 alias -s conf=edit
 alias -s org=edit
 alias -s tex=edit
