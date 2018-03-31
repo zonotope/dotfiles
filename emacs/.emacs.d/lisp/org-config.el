@@ -138,9 +138,9 @@
                           (bl/org-skip-subtree-if-priority ?A)
                           (org-agenda-skip-if nil '(scheduled))))))))))
 
-;; show me 7 days worth of stuff, starting yesterday
-(setq org-agenda-start-day "-1d")
-(setq org-agenda-span 7)
+;; show me ten days worth of stuff, starting three days ago
+(setq org-agenda-start-day "-3d")
+(setq org-agenda-span 10)
 (setq org-agenda-start-on-weekday nil)
 
 ;; warn me of upcoming deadlines in the next 3 days.
