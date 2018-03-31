@@ -24,6 +24,7 @@
 ;; appearance (Tomorrow Night Eighties)                                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;; stumpwm
 (setf *colors*
       (list "#2d2d2d"   ; 0: black
             "#f2777a"   ; 1: red
@@ -51,6 +52,14 @@
 (set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 (setq *message-window-padding* 5)
+
+;;;; dmenu
+(setq *dmenu-theme* (concatenate 'string
+                                 "-fn \"Inconsolata-25\" "
+                                 "-nb \"#393939\" "
+                                 "-nf \"#999999\" "
+                                 "-sf \"#6699cc\" "
+                                 "-sb \"#393939\""))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior                                                                 ;;
@@ -95,10 +104,14 @@
 (define-key *root-map* (kbd "E") (concatenate 'string "exec " *inline-editor*))
 
 ;; dmenu is a better launcher than the built in
-(define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
+(define-key *root-map* (kbd "RET") (concatenate 'string
+                                                "exec dmenu_run "
+                                                *dmenu-theme*))
 
 ;; = to bring up clipboard manager
-(define-key *root-map* (kbd "=") "exec clipmenu -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
+(define-key *root-map* (kbd "=") (concatenate 'string
+                                              "exec clipmenu "
+                                              *dmenu-theme*))
 
 ;; w is a better key for the window list
 (define-key *root-map* (kbd "w") "windowlist")
