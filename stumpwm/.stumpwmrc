@@ -8,6 +8,7 @@
 
 (setq *terminal* "urxvtc")
 (setq *browser* "firefox")
+(setq *inline-editor* "~/.emacs_anywhere/bin/run")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; setup the desktop                                                        ;;
@@ -89,6 +90,9 @@
 
 ;; c is for console!
 (define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
+
+;; E to edit in emacs
+(define-key *root-map* (kbd "E") (concatenate 'string "exec " *inline-editor*))
 
 ;; dmenu is a better launcher than the built in
 (define-key *root-map* (kbd "RET") "exec dmenu_run -fn \"Inconsolata-25\" -nb \"#393939\" -nf \"#999999\" -sf \"#6699cc\" -sb \"#393939\"")
