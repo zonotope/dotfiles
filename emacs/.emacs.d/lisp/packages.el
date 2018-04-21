@@ -4,7 +4,8 @@
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa-stable"
-                          . "http://melpa-stable.milkbox.net/packages/")
+                          . "https://melpa-stable.milkbox.net/packages/")
+			 ("melpa" . "https://melpa.org/packages/")
                          ("tromey" . "http://tromey.com/elpa/")))
 (package-initialize)
 
