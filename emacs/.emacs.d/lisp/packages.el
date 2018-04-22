@@ -5,7 +5,7 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa-stable"
                           . "https://melpa-stable.milkbox.net/packages/")
-			 ("melpa" . "https://melpa.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")
                          ("tromey" . "http://tromey.com/elpa/")))
 (package-initialize)
 
@@ -63,12 +63,6 @@
   :config (progn
             (crux-with-region-or-buffer indent-region)
             (crux-with-region-or-line comment-or-uncomment-region)))
-
-;; dired-details: clean up dired
-(use-package dired-details
-  :config (progn
-            (setq-default dired-details-hidden-string "--- ")
-            (dired-details-install)))
 
 ;; set the exec path directly from the shell (but only on a mac)
 (use-package exec-path-from-shell
