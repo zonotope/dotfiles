@@ -39,3 +39,4 @@ echo -e -n "\x1b[\x33 q"
 echo
 fortune
 echo
+
