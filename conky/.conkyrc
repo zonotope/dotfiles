@@ -1,71 +1,76 @@
-############################################################################
-# behavior                                                                 #
-############################################################################
+conky.config = {
 
-update_interval      1.0
-total_run_times      0
-cpu_avg_samples      2
-background           yes
-override_utf8_locale no
+------------------------------------------------------------------------------
+-- behavior                                                                 --
+------------------------------------------------------------------------------
 
-## buffers
-no_buffers    yes
-double_buffer yes
+        update_interval = 1.0,
+        total_run_times = 0,
+        cpu_avg_samples = 2,
+        background = true,
+        override_utf8_locale = false,
+
+        -- buffers
+        no_buffers = true,
+        double_buffer = true,
 
 
-## widgets/labels
-pad_percents 3
-use_spacer   left
-short_units
+        -- widgets/labels
+        pad_percents = 3,
+        use_spacer = 'left',
+        short_units = true,
 
-## font
-use_xft   yes
-xftfont   Inconsolata:size=15
-xftalpha  1
-uppercase no
+        -- font
+        use_xft = true,
+        font = 'Inconsolata:size=15',
+        xftalpha = 1,
+        uppercase = false,
 
-############################################################################
-# window                                                                   #
-############################################################################
+------------------------------------------------------------------------------
+-- window                                                                   --
+------------------------------------------------------------------------------
 
-own_window             yes
-own_window_type        desktop
-own_window_transparent no
-own_window_hints       undecorated,below,sticky,skip_taskbar,skip_pager
+        own_window = true,
+        own_window_type = 'dock',
+        -- own_window_transparent = true,
+        -- own_window_argb_visual = true,
+        own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
-## size/placement
-alignment     bottom_right
-maximum_width 20000000
-minimum_size  1400 24
-gap_x         10
-gap_y         10
+        -- size/placement
+        alignment = 'bottom_right',
+        maximum_width = 20000000,
+        minimum_width = 1400, minimum_height = 24,
+        gap_x = 10,
+        gap_y = 10,
 
-## shades and borders
-draw_shades        no
-draw_outline       no
-draw_borders       no
-draw_graph_borders no
+        -- shades and borders
+        draw_shades = false,
+        draw_outline = false,
+        draw_borders = false,
+        draw_graph_borders = false,
 
-############################################################################
-# colors (Tomorrow Night Eighties)                                         #
-############################################################################
 
-own_window_colour 2d2d2d
-default_color     cccccc
+------------------------------------------------------------------------------
+-- colors (Tomorrow Night Eighties)                                         --
+------------------------------------------------------------------------------
 
-color0            f2777a # red
-color1            f99157 # orange
-color2            ffcc66 # yellow
-color3            99cc99 # green
-color4            66cccc # aqua
-color5            6699cc # blue
-color6            cc99cc # purple
+        own_window_colour = '#2d2d2d',
+        default_color = '#cccccc',
 
-############################################################################
-# Output                                                                   #
-############################################################################
+        color0 = '#f2777a', -- red
+        color1 = '#f99157', -- orange
+        color2 = '#ffcc66', -- yellow
+        color3 = '#99cc99', -- green
+        color4 = '#66cccc', -- aqua
+        color5 = '#6699cc', -- blue
+        color6 = '#cc99cc', -- purple
+};
 
-TEXT
+------------------------------------------------------------------------------
+-- output                                                                   --
+------------------------------------------------------------------------------
+
+conky.text = [[
 ${alignr}\
 cpu0: \
 ${voffset 1}${color1}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | \
@@ -102,3 +107,4 @@ ${endif}\
 ${endif}\
 ${voffset 1}${battery_bar 7,125}${voffset -1} ${color}${battery_percent}% | \
 ${font Inconsolata:bold:size=15}${time %a %b %d %Y. %l:%M%P}
+]];
