@@ -31,9 +31,9 @@ conky.config = {
 ------------------------------------------------------------------------------
 
         own_window = true,
-        own_window_type = 'dock',
-        -- own_window_transparent = true,
-        -- own_window_argb_visual = true,
+        own_window_type = 'panel',
+        own_window_transparent = true,
+        own_window_argb_visual = true,
         own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
         -- size/placement
@@ -54,7 +54,7 @@ conky.config = {
 -- colors (Tomorrow Night Eighties)                                         --
 ------------------------------------------------------------------------------
 
-        own_window_colour = '#2d2d2d',
+        -- own_window_colour = '#2d2d2d',
         default_color = '#cccccc',
 
         color0 = '#f2777a', -- red
