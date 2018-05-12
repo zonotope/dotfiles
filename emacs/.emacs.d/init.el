@@ -3,8 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; set the window size
-(add-to-list 'default-frame-alist '(height . 50))
 (add-to-list 'default-frame-alist '(width . 80))
+(add-to-list 'default-frame-alist '(height . 75))
 
 ;; set the font to Inconsolata
 (add-to-list 'default-frame-alist '(font . "Inconsolata\-g-10"))
