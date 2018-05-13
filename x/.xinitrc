@@ -28,7 +28,7 @@ xbindkeys
 setxkbmap -option ctrl:swapcaps -option terminate:ctrl_alt_bksp
 
 xmodmap ~/.xmodmap
-xcape -t 10000 -e "Control_R=Return"
+xcape -e "Control_R=Return"
 
 ############################################################################
 # wallpaper                                                                #
