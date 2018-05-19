@@ -14,9 +14,12 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
-## rbenv
-export PATH=$PATH:$HOME/.rbenv/shims
+## ruby (rbenv)
+export PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init -)"
+
+export GEM_HOME=$HOME/.gem
+export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
 
 ## rust
 export CARGO_HOME=$HOME/.cargo
@@ -39,4 +42,3 @@ echo -e -n "\x1b[\x33 q"
 echo
 fortune
 echo
-
