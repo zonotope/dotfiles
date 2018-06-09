@@ -1,7 +1,13 @@
+;;; packages --- Install and configure external packages
+
+;;; Commentary:
+;;; This uses use-package to manage package installation and configuration.
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; set up packages                                                          ;;
+;; set up packag.el                                                         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; Code:
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa-stable"
                           . "https://melpa-stable.milkbox.net/packages/")
@@ -114,7 +120,7 @@
 
 ;; smartparens: structural navigation, delimiter matching, and highlighting
 (use-package smartparens
-  :bind (:map sp-keymap
+  :bind (:map smartparens-mode-map
               ("C-c s" . sp-slurp-hybrid-sexp)
               ("C-M-f" . sp-forward-sexp)
               ("C-M-b" . sp-backward-sexp)
@@ -466,3 +472,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (provide 'packages)
+
+;;; packages.el ends here
