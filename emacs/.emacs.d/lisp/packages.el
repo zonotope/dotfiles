@@ -109,13 +109,19 @@
               ("M-p" . rg-prev-file)
               ("C-n" . compilation-next-error)
               ("C-p" . compilation-previous-error))
-  :config (setq rg-custom-type-aliases
-                '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
+  :config (progn
+	    (setq rg-custom-type-aliases
+                  '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
 
-                rg-group-result t
-                rg-show-columns t
-                rg-ignore-case 'smart
-                rg-show-header t)
+                  rg-group-result t
+                  rg-show-columns t
+                  rg-ignore-case 'smart
+                  rg-show-header t)
+            (rg-define-search bl/rg-regexp-project
+              :query ask
+              :format regexp
+              :files current
+              :dir project))
   :hook (rg-mode . wgrep-ag-setup))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -378,7 +384,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package json-mode
-  :config (setq js-indent-level 2))
+  :config (setq js-indent-level 2)
+  :mode (("\\.json\\'" . json-mode)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
