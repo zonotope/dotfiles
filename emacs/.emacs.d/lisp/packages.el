@@ -51,10 +51,6 @@
             ;; dim the background
             (setq avy-background t)))
 
-;; company: complete anything
-(use-package company
-  :config (global-company-mode))
-
 ;; counsel: completion functions using ivy (i only use counsel-rg for now)
 (use-package counsel
   :bind (("C-c k" . counsel-rg)))
@@ -110,7 +106,7 @@
               ("C-n" . compilation-next-error)
               ("C-p" . compilation-previous-error))
   :config (progn
-	    (setq rg-custom-type-aliases
+            (setq rg-custom-type-aliases
                   '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
 
                   rg-group-result t
@@ -124,9 +120,52 @@
               :dir project))
   :hook (rg-mode . wgrep-ag-setup))
 
+;; swiper: search with preview
+(use-package swiper
+  :bind (("C-c C-r" . ivy-resume)
+         ("C-s" . swiper)
+         ("C-r" . swiper))
+  :config (progn
+            (setq ivy-count-format "(%d/%d) ")
+            (setq ivy-height 16)
+            (setq ivy-use-virtual-buffers t)
+            (setq ivy-wrap t)))
+
+;; switch-window: visually switch windows
+(use-package switch-window
+  :bind ("C-x o" . switch-window))
+
+
+;; flx-ido: better flex matching for ido
+(use-package flx-ido
+  :config (flx-ido-mode 1))
+
+;; ido-vertical-mode: list ido matches vertically
+(use-package ido-vertical-mode
+  :config (progn (ido-vertical-mode 1)
+                 (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down
+                       ido-vertical-show-count t)))
+
+;; which-key: key binding hints in a popup
+(use-package which-key)
+
+;; wgrep-ag: writable ag and rg buffers, and apply changes to matches in files
+(use-package wgrep-ag)
+
+;; winmove: move across windows with arrow keys
+(use-package windmove
+  :ensure t
+  :config (progn
+            (windmove-default-keybindings 'super)
+            (setq windmove-wrap-around t)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ide utils                                                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; company: complete anything
+(use-package company
+  :config (global-company-mode))
 
 ;; flycheck: linter / syntax checker
 (use-package flycheck
@@ -197,45 +236,6 @@
 
           ;; enable the default config
           (require 'smartparens-config)))
-
-;; swiper: search with preview
-(use-package swiper
-  :bind (("C-c C-r" . ivy-resume)
-         ("C-s" . swiper)
-         ("C-r" . swiper))
-  :config (progn
-            (setq ivy-count-format "(%d/%d) ")
-            (setq ivy-height 16)
-            (setq ivy-use-virtual-buffers t)
-            (setq ivy-wrap t)))
-
-;; switch-window: visually switch windows
-(use-package switch-window
-  :bind ("C-x o" . switch-window))
-
-
-;; flx-ido: better flex matching for ido
-(use-package flx-ido
-  :config (flx-ido-mode 1))
-
-;; ido-vertical-mode: list ido matches vertically
-(use-package ido-vertical-mode
-  :config (progn (ido-vertical-mode 1)
-                 (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down
-                       ido-vertical-show-count t)))
-
-;; which-key: key binding hints in a popup
-(use-package which-key)
-
-;; wgrep-ag: writable ag and rg buffers, and apply changes to matches in files
-(use-package wgrep-ag)
-
-;; winmove: move across windows with arrow keys
-(use-package windmove
-  :ensure t
-  :config (progn
-            (windmove-default-keybindings 'super)
-            (setq windmove-wrap-around t)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; edit chrome text areas                                                   ;;
