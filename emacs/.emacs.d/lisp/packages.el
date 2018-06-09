@@ -354,22 +354,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package go-mode
-  :config (progn
-            (add-hook 'before-save-hook 'gofmt-before-save)
-            (local-set-key (kbd "M-.") 'godef-jump)
-            (local-set-key (kbd "M-*") 'pop-tag-mark))
+  :bind (("M-." . godef-jump)
+         ("M-*" . pop-tag-mark))
+  :config (setq gofmt-command "goimports")
+  :hook (before-save . gofmt-before-save)
   :mode   (("\\.go\\'" . go-mode)))
 
+;; go completions
 (use-package company-go
-  :config (add-hook 'go-mode-hook
-                    (lambda ()
-                      (set (make-local-variable 'company-backends
-                                                '(company-go)))
-                      (company-mode))))
+  :config (add-to-list 'company-backends 'company-go)
+  :hook (go-mode . company-mode))
 
+;; go-eldoc: display docs
+(use-package go-eldoc
+  :diminish eldoc-mode
+  :hook (go-mode . go-eldoc-setup))
+
+;; go-guru: go code analyzer
 (use-package go-guru
   :config (go-guru-hl-identifier-mode))
 
+;; go-stacktracer: jump through stacktraces
+(use-package go-stacktracer)
+
+;; go-playground: go repl-like env inside emacs
 (use-package go-playground)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
