@@ -118,6 +118,15 @@
                 rg-show-header t)
   :hook (rg-mode . wgrep-ag-setup))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ide utils                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; flycheck: linter / syntax checker
+(use-package flycheck
+  :init (global-flycheck-mode)
+  :pin melpa-stable)
+
 ;; smartparens: structural navigation, delimiter matching, and highlighting
 (use-package smartparens
   :bind (:map smartparens-mode-map
