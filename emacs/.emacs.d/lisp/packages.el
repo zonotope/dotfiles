@@ -1,13 +1,21 @@
-;;; packages --- Install and configure external packages
+;;; packages --- Install and configure zonotope's external packages
 
 ;;; Commentary:
-;;; This uses use-package to manage package installation and configuration.
+;;; Uses use-package to manage package installation and configuration.
+
+;;; Code:
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; suppress free variable assignment warning.                               ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defvar magit-builtin-completing-read-function)
+(defvar use-package-always-ensure)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; set up packag.el                                                         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; Code:
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa-stable"
                           . "https://melpa-stable.milkbox.net/packages/")
@@ -28,7 +36,6 @@
 
 ;; always install the package if it doesn't exist
 (setq use-package-always-ensure t)
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; interface/navigation                                                     ;;
