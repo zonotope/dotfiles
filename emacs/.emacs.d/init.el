@@ -194,7 +194,7 @@
 
 ;; no rg files confirmation
 ;; TODO: remove when/if upstream rg.el maintainer accepts my pr adding this
-(global-set-key (kbd "C-x C-/") 'bl/rg-dwim-regexp)
+(global-set-key (kbd "C-x C-/") 'bl/rg-regexp-project)
 
 ;; don't delete the provided char in a zap forward.
 (autoload 'zap-up-to-char "misc"

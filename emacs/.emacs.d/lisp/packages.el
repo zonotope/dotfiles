@@ -124,7 +124,8 @@
               :query ask
               :format regexp
               :files current
-              :dir project))
+              :dir project
+              :confirm never))
   :hook (rg-mode . wgrep-ag-setup))
 
 ;; swiper: search with preview
