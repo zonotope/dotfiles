@@ -33,7 +33,7 @@ else
 fi
 
 ## editor
-export EDITOR="emacsclient --no-wait --create-frame"
+export EDITOR="emacsclient --create-frame"
 export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
                            # already running
 
