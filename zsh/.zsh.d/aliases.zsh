@@ -34,7 +34,7 @@ alias -s mp4=play
 alias -s wmv=play
 
 ## images
-alias show='feh --auto-zoom --fullscreen'
+alias show='feh --auto-zoom'
 alias -s jpg=show
 alias -s jpeg=show
 alias -s png=show
