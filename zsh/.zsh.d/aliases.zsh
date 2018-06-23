@@ -14,12 +14,6 @@ alias please='sudo $(fc -ln -1)'
 ## history (timestamped yyyy-mm-dd)
 alias history='fc -il 1'
 
-## arch install/sync with yas
-alias yas='yaourt -S'
-
-## arch remove with yar
-alias yar='yaourt -R'
-
 ## move and rename multiple files
 autoload -U zmv
 alias mmv='noglob zmv -W'
