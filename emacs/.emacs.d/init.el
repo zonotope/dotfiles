@@ -97,11 +97,11 @@
 ;; scroll 1 line at a time
 (setq scroll-step 1)
 
-;; 3 line top/bottom scroll margin for the cursor
-(setq scroll-margin 3)
-
 ;; even with the mouse wheel
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+
+;; 3 line top/bottom scroll margin for the cursor
+(setq scroll-margin 3)
 
 ;; always end a file with a newline
 (setq require-final-newline t)
@@ -122,6 +122,9 @@
 
 ;; wrap lines at 80 characters
 (setq-default fill-column 80)
+
+;; display truncated long lines instead of wrapping them on the screen
+(setq-default truncate-lines t)
 
 ;; sentences can end in a single space
 (setq sentence-end-double-space nil)
