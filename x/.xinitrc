@@ -15,7 +15,7 @@ fi
 # load xresources                                                          #
 ############################################################################
 
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 ############################################################################
 # load xprofile                                                            #
