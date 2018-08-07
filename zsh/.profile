@@ -6,7 +6,11 @@
 export PATH=$PATH:/usr/local/bin
 
 ## custom scripts
-export PATH=$HOME/.bin:$PATH
+export BINPATH=$HOME/.bin
+if [[ -d $BINPATH ]]
+then
+    export PATH=$BINPATH:$PATH
+fi
 
 ## go
 export GOROOT=/usr/lib/go

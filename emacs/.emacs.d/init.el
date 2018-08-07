@@ -1,3 +1,9 @@
+;;; init.el --- the base of 732's emacs configuration
+
+;;; Commentary:
+
+;;; Code:
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; interface                                                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -271,3 +277,5 @@
 ;; You may delete these explanatory comments.
 ;;
 ;;(package-initialize)
+
+;;; init.el ends here

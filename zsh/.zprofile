@@ -1,4 +1,4 @@
-## set the path from .profile
+## explicitly load .profile
 source $HOME/.profile
 
 ############################################################################
