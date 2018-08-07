@@ -25,19 +25,27 @@ export LSCOLORS="ExGxFxDxCxDxDxhbhdacEc"
 # applications                                                             #
 ############################################################################
 
-## browser
+## grep highlight color (orange)
+export GREP_COLOR="1;33"
+
+
+#### browser: chromium
+
 if [ -n "$DISPLAY" ]; then
-    export BROWSER="firefox"
+    export BROWSER="chromium"
 else
     export BROWSER="w3m"
 fi
 
-## editor
+
+#### editor: emacs
+
 export EDITOR="emacsclient --create-frame"
 export ALTERNATE_EDITOR="" # allows emacsclient to start a daemon if one isn't
                            # already running
 
-## pager: less,
+#### pager: less
+
 export PAGER="less"
 
 # (RAW-CONTROL-CHARS display cotrol output (including color escape sequeces))
@@ -58,6 +66,3 @@ if [ "$TERM" != dumb ] && [ -n "$SOURCE_HIGHLIGHT" ]; then
     export LESSOPEN="| $SOURCE_HIGHLIGHT %s"
 fi
 unset SOURCE_HIGHLIGHT
-
-## grep: highlight color (orange)
-export GREP_COLOR="1;33"
