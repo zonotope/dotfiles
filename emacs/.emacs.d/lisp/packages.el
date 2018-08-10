@@ -1,12 +1,12 @@
 ;;; packages --- Install and configure zonotope's external packages
 
 ;;; Commentary:
-;;; Uses use-package to manage package installation and configuration.
+;;; All package installation and configuration is managed with use-package.
 
 ;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; suppress free variable assignment warning.                               ;;
+;; define necessary variables                                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar magit-builtin-completing-read-function)
