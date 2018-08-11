@@ -8,58 +8,89 @@
 
 (setq *terminal* "urxvtc")
 (setq *browser* "chromium")
+(setq *editor* "emacsclient --create-frame")
 (setq *inline-editor* "~/.emacs_anywhere/bin/run")
+(setq *screen-locker* "xset s activate")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; setup the desktop                                                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; bind multimedia and screen brightness keys
+(run-shell-command "xbindkeys")
+
+;; start the light-locker lock screen daemon
+(run-shell-command "light-locker --lock-on-suspend")
+
+;; lock the screen with light-locker when idle
+(run-shell-command (concatenate 'string
+                                "xss-lock --transfer-sleep-lock"
+                                " -- "
+                                "light-locker-command --lock"))
+
+;; set the mouse cursor
 (run-shell-command "xsetroot -cursor_name left_ptr")
+
+;; set frame layout
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
 (define-frame-preference "main"
   (1 nil nil :class "Conky" :role nil))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; appearance (Tomorrow Night Eighties)                                     ;;
+;; appearance                                                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;; stumpwm
-(setf *colors*
-      (list "#2d2d2d"   ; 0: black
-            "#f2777a"   ; 1: red
-            "#99cc99"   ; 2: green
-            "#ffcc66"   ; 3: yellow
-            "#6699cc"   ; 4: blue
-            "#cc99cc"   ; 5: purple
-            "#66cccc"   ; 6: aqua
-            "#cccccc"   ; 7: white
-            "#515151"   ; 8: light gray
-            "#393939")) ; 9: dark gray
+;; colors (Tomorrow Night Eighties)
+(defconstant red "#f2777a")
+(defconstant yellow "#ffcc66")
+(defconstant green "#99cc99")
+(defconstant aqua "#66cccc")
+(defconstant blue "#6699cc")
+(defconstant purple "#cc99cc")
 
+(defconstant white "#cccccc")
+(defconstant light-gray "#999999")
+(defconstant gray "#515151")
+(defconstant dark-gray "#393939")
+(defconstant black "#2d2d2d")
+
+(setf *colors* (list black
+                     red
+                     green
+                     yellow
+                     blue
+                     purple
+                     aqua
+                     white
+                     gray
+                     dark-gray))
 (update-color-map (current-screen))
 
-(set-focus-color "#515151")            ; light gray
-(set-unfocus-color "#393939")          ; gray
-(set-float-focus-color "#515151")      ; light gray
-(set-float-unfocus-color "#393939")    ; gray
-(set-win-bg-color "#2d2d2d")           ; black
-(set-fg-color "#cccccc")               ; white
-(set-bg-color "#2d2d2d")               ; black
-(set-border-color "#6699cc")           ; blue
-(setf *hidden-window-color* "#ffcc66") ; yellow
+(set-focus-color            gray)
+(set-unfocus-color          dark-gray)
+(set-float-focus-color      gray)
+(set-float-unfocus-color    dark-gray)
+(set-win-bg-color           black)
+(set-fg-color               white)
+(set-bg-color               black)
+(set-border-color           blue)
+(setf *hidden-window-color* yellow)
 
+;; font
 (set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
+
+;; windows
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
 (setq *message-window-padding* 5)
 
 ;;;; dmenu
 (setq *dmenu-theme* (concatenate 'string
                                  "-fn \"Inconsolata-25\" "
-                                 "-nb \"#393939\" "
-                                 "-nf \"#999999\" "
-                                 "-sf \"#6699cc\" "
-                                 "-sb \"#393939\""))
+                                 "-nb \"" dark-gray "\" "
+                                 "-nf \"" light-gray "\" "
+                                 "-sf \"" blue "\" "
+                                 "-sb \"" dark-gray "\""))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior                                                                 ;;
@@ -94,14 +125,23 @@
 
 (set-prefix-key (kbd "C-t"))
 
+(defun exec-string (command)
+  (concatenate 'string "exec " command))
+
 ;; b is for browser!
-(define-key *root-map* (kbd "b") (concatenate 'string "exec " *browser*))
+(define-key *root-map* (kbd "b") (exec-string *browser*))
 
 ;; c is for console!
-(define-key *root-map* (kbd "c") (concatenate 'string "exec " *terminal*))
+(define-key *root-map* (kbd "c") (exec-string *terminal*))
+
+;; bind emacsclient instead of standalone emacs to e
+(define-key *root-map* (kbd "e") (exec-string *editor*))
 
 ;; E to edit in emacs
-(define-key *root-map* (kbd "E") (concatenate 'string "exec " *inline-editor*))
+(define-key *root-map* (kbd "E") (exec-string *inline-editor*))
+
+;; l is for lock screen
+(define-key *root-map* (kbd "l") (exec-string *screen-locker*))
 
 ;; dmenu is a better launcher than the built in
 (define-key *root-map* (kbd "RET") (concatenate 'string
