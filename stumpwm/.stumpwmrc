@@ -16,6 +16,9 @@
 ;; setup the desktop                                                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; start the volume/brightness notification daemon
+(run-shell-command "volnoti -t 2 -a 0.25")
+
 ;; bind multimedia and screen brightness keys
 (run-shell-command "xbindkeys")
 

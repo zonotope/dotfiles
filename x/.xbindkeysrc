@@ -1,16 +1,15 @@
 ############################################################################
-# Control the volume with amixer                                           #
+# volume                                                                   #
 ############################################################################
 
-"amixer -c 0 set Master 1dB- unmute"
-    XF86AudioLowerVolume
+"volume -nwz -i 5"
+   XF86AudioRaiseVolume
 
-"amixer -c 0 set Master 1dB+ unmute"
-    XF86AudioRaiseVolume
+"volume -nwz -d 5"
+   XF86AudioLowerVolume
 
-"amixer -c 0 set Master toggle"
-     XF86AudioMute
-
+"volume -nwzm"
+   XF86AudioMute
 
 ############################################################################
 # Brightness                                                               #
