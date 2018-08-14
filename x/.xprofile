@@ -2,9 +2,6 @@
 # keymaps                                                                  #
 ############################################################################
 
-# swap caps with ctrl, and kill x with ctrl + alt + bksp
-setxkbmap -option ctrl:swapcaps -option terminate:ctrl_alt_bksp
-
 # turn enter to right control when held down
 xmodmap ~/.xmodmap
 xcape -e "Control_R=Return"
