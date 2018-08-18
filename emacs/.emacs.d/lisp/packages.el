@@ -6,13 +6,6 @@
 ;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; define necessary variables                                               ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(defvar magit-builtin-completing-read-function)
-(defvar use-package-always-ensure)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; set up packag.el                                                         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -35,6 +28,7 @@
   (package-install 'use-package))
 
 ;; always install the package if it doesn't exist
+(defvar use-package-always-ensure)
 (setq use-package-always-ensure t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -86,6 +80,7 @@
   :pin melpa-stable)
 
 ;; magit: emacs git interface
+(defvar magit-builtin-completing-read-function)
 (use-package magit
   :config (progn
             ;; use ido for magit completions
@@ -362,8 +357,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (use-package go-mode
-  :bind (("M-." . godef-jump)
-         ("M-*" . pop-tag-mark))
+  :bind (:map go-mode-map
+              ("M-." . godef-jump)
+              ("M-*" . pop-tag-mark))
   :config (setq gofmt-command "goimports")
   :hook (before-save . gofmt-before-save)
   :mode   (("\\.go\\'" . go-mode)))
@@ -384,6 +380,14 @@
 
 ;; go-stacktracer: jump through stacktraces
 (use-package go-stacktracer)
+
+;; run go tests in emacs
+(use-package gotest
+  :bind (:map go-mode-map
+              ("C-x M-f" . go-test-current-file)
+              ("C-x M-t" . go-test-current-test)
+              ("C-x M-p" . go-test-current-project)
+              ("C-x x" . go-run)))
 
 ;; go-playground: go repl-like env inside emacs
 (use-package go-playground)
