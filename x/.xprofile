@@ -10,6 +10,9 @@ xcape -e "Control_R=Return"
 # daemons                                                                  #
 ############################################################################
 
+## emacs server
+emacs --daemon
+
 ## urxvt server process
 urxvtd --quiet --fork --opendisplay
 
