@@ -59,5 +59,3 @@
 
 ;; use w3m for html
 (setq mu4e-html2text-command "w3m -I utf8 -O utf8 -T text/html")
-
-(provide 'mail-config)

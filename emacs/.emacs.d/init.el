@@ -66,16 +66,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; install packages
-(require 'packages)
+(load-library "packages")
 
 ;; set up org mode
-(require 'org-config)
+(load-library "org-config")
 
 ;; set up email
 ;; (require 'mail-config)
 
 ;; load the custom elisp commands
-(require 'commands)
+(load-library  "commands")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior                                                                 ;;

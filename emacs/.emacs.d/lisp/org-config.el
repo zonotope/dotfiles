@@ -200,6 +200,3 @@
 
 ; Use the current window for indirect buffer display
 (setq org-indirect-buffer-display 'current-window)
-
-
-(provide 'org-config)

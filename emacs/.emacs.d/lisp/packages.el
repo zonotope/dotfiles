@@ -515,6 +515,4 @@
 ;; make this package config loadable                                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(provide 'packages)
-
 ;;; packages.el ends here
