@@ -50,11 +50,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; custom elisp
-(setq user-lisp-dir (expand-file-name "lisp" user-emacs-directory))
+(defvar user-lisp-dir (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path user-lisp-dir)
 
 ;; themes
-(setq theme-dir (expand-file-name "themes" user-emacs-directory))
+(defvar theme-dir (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'custom-theme-load-path theme-dir)
 
 ;;;; my theme is my favorite theme
