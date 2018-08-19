@@ -40,7 +40,7 @@ conky.config = {
         alignment = 'bottom_left',
         maximum_width = 20000000,
         minimum_width = 1400, minimum_height = 24,
-        gap_x = 15,
+        gap_x = 0,
         gap_y = 5,
 
         -- shades and borders
@@ -54,7 +54,7 @@ conky.config = {
 -- colors (Tomorrow Night Eighties)                                         --
 ------------------------------------------------------------------------------
 
-        -- own_window_colour = '#2d2d2d',
+        own_window_colour = '#2d2d2d',
         default_color = '#cccccc',
 
         color0 = '#f2777a', -- red
@@ -72,15 +72,14 @@ conky.config = {
 
 conky.text = [[
 ${alignr}\
-| \
 cpu0: \
-${voffset 1}${color1}${cpugraph cpu1 20,185}${color}${voffset -1}${cpu cpu1}% | \
+${voffset 1}${color1}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | \
 cpu1: \
-${voffset 1}${color1}${cpugraph cpu2 20,185}${color}${voffset -1}${cpu cpu2}% | \
+${voffset 1}${color1}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | \
 cpu2: \
-${voffset 1}${color1}${cpugraph cpu3 20,185}${color}${voffset -1}${cpu cpu3}% | \
+${voffset 1}${color1}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | \
 cpu3: \
-${voffset 1}${color1}${cpugraph cpu4 20,185}${color}${voffset -1}${cpu cpu4}% | \
+${voffset 1}${color1}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
 ram: \
 ${if_match ${memperc}<50}${color3}\
 ${else}${if_match ${memperc}>=80}${color0}\
@@ -88,7 +87,7 @@ ${else}${if_match ${memperc}<80}${color2}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${membar 7,185}${voffset -1}${color} ${memperc}% | \
+${voffset 1}${membar 7,125}${voffset -1}${color} ${memperc}% | \
 /: \
 ${if_match ${fs_used_perc}<66}${color3}\
 ${else}${if_match ${fs_used_perc}>=90}${color0}\
@@ -96,16 +95,16 @@ ${else}${if_match ${fs_used_perc}<90}${color2}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${fs_bar 7,185 /}${voffset -1}${color} ${fs_used_perc /}% | \
-up: ${color5}${upspeedgraph wlp4s0 20,185}${color} ${upspeed wlp4s0} | \
-down: ${color5}${downspeedgraph wlp4s0 20,185}${color} ${downspeed wlp4s0} | \
-# bat: \
-# ${if_match ${battery_percent}>60}${color3}\
-# ${else}${if_match ${battery_percent}>=20}${color2}\
-# ${else}${if_match ${battery_percent}<20}${color0}\
-# ${endif}\
-# ${endif}\
-# ${endif}\
-# ${voffset 1}${battery_bar 7,185}${voffset -1} ${color}${battery_percent}% | \
-# ${font Inconsolata:bold:size=15}${time %a %b %d %Y. %l:%M%P}
+${voffset 1}${fs_bar 7,125 /}${voffset -1}${color} ${fs_used_perc /}% | \
+up: ${color5}${upspeedgraph wlp4s0 20,125}${color} ${upspeed wlp4s0} | \
+down: ${color5}${downspeedgraph wlp4s0 20,125}${color} ${downspeed wlp4s0} | \
+bat: \
+${if_match ${battery_percent}>60}${color3}\
+${else}${if_match ${battery_percent}>=20}${color2}\
+${else}${if_match ${battery_percent}<20}${color0}\
+${endif}\
+${endif}\
+${endif}\
+${voffset 1}${battery_bar 7,125}${voffset -1} ${color}${battery_percent}% | \
+${font Inconsolata:bold:size=15}${time %a %b %d %Y. %l:%M%P}
 ]];
