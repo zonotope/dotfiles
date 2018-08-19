@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; set up packag.el                                                         ;;
+;; set up package.el                                                         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -28,7 +28,6 @@
   (package-install 'use-package))
 
 ;; always install the package if it doesn't exist
-(defvar use-package-always-ensure)
 (setq use-package-always-ensure t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -80,7 +79,6 @@
   :pin melpa-stable)
 
 ;; magit: emacs git interface
-(defvar magit-builtin-completing-read-function)
 (use-package magit
   :config (progn
             ;; use ido for magit completions
@@ -509,10 +507,5 @@
 (use-package yaml-mode
   :mode (("\\.yml\\'" . yaml-mode)
          ("\\.yaml\\'" . yaml-mode)))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; make this package config loadable                                        ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; packages.el ends here
