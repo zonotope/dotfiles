@@ -73,7 +73,7 @@
                      dark-gray))
 (update-color-map (current-screen))
 
-(set-focus-color            gray)
+(set-focus-color            blue)
 (set-unfocus-color          dark-gray)
 (set-float-focus-color      gray)
 (set-float-unfocus-color    dark-gray)
