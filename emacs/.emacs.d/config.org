@@ -338,6 +338,10 @@ by default, so let's make it do that
 **** IDO
 
   #+BEGIN_SRC emacs-lisp
+  (defun bl/completion-use-ido ()
+    "Set the current buffer's completing read engine to IDO."
+    (setq-local completing-read-function #'ido-completing-read))
+
   (ido-mode 1)
 
   (setq ido-everywhere t
@@ -799,8 +803,8 @@ reading level. I've set it load automatically with any text-related mode.
 
   (setq org-directory "~/docs/org")
 
-  ;; use ido in org too
-  (setq org-completion-use-ido t)
+  ;; use ido completion in org mode
+  (add-hook 'org-mode-hook 'bl/completion-use-ido)
 
   ;; set <enter> when the cursor is in a link to visit it
   (setq org-return-follows-link t)
