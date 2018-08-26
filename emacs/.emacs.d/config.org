@@ -573,7 +573,65 @@ reading level. I've set it load automatically with any text-related mode.
 
 *** Programming
 
-**** css
+**** General
+There are some tweaks and settings that work in all programming environments.
+I've put those in this section.
+
+***** Comment Toggling
+The built in ~comment-or-uncomment-region~ function is essential for commenting
+and uncommenting blocks of code, but I also want to toggle commenting the
+current line of code as efficiently as possible, so I wrote a function that
+wraps ~comment-or-uncoment-region~, but toggles comment on the current line if
+no region is active. I've bound that function to "M-;" to replace the default
+commenting function.
+
+#+BEGIN_SRC emacs-lisp
+(defun bl/comment-or-uncomment-region-or-line ()
+  "Toggle comment for region, or current line if there's no active region."
+  (interactive)
+  (let ((start (line-beginning-position))
+        (end (line-end-position)))
+    (when (or (not transient-mark-mode) (region-active-p))
+      (setq start (save-excursion
+                    (goto-char (region-beginning))
+                    (beginning-of-line)
+                    (point))
+            end (save-excursion
+                  (goto-char (region-end))
+                  (end-of-line)
+                  (point))))
+    (comment-or-uncomment-region start end)))
+
+;; M-; to comment or uncomment region or current line if no active region.
+(global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
+#+END_SRC
+
+***** Organizational Comments
+Sometimes it's useful to divide code files with comment markers that divide high
+level sections of code to organize it by use, context, or purpose. Emacs ships
+with a ~comment-box~ function, but it only makes a tight border around the
+comment text. I wanted something to stretch close to the fill line characters to
+more clearly delineate the code, so I wrote a ~bl/wide-comment-box~ function and
+bound it to "C-x b"
+
+#+BEGIN_SRC emacs-lisp
+(defun bl/wide-comment-box (b e)
+  "Draw a comment box that stretches close to the fill line."
+  (interactive "r")
+  (let ((e (copy-marker e t))
+        (end-column (- fill-column 8))) ;; padding for a nicer looking "margin"
+    (goto-char b)
+    (end-of-line)
+    (insert-char ?  (- end-column (current-column)))
+    (comment-box b e 1)
+    (goto-char e)
+    (set-marker e nil)))
+
+;; C-c b to wrap region in a wide comment box
+(global-set-key (kbd "C-c b") 'bl/wide-comment-box)
+#+END_SRC
+
+**** CSS
 
  #+BEGIN_SRC emacs-lisp
  (use-package css-mode
@@ -1011,18 +1069,6 @@ reading level. I've set it load automatically with any text-related mode.
 ** Custom Elisp Commands
 
  #+BEGIN_SRC emacs-lisp
- (defun wide-comment-box (b e)
-   "draw a comment box that stretches close to the fill line."
-   (interactive "r")
-   (let ((e (copy-marker e t))
-         (end-column (- fill-column 8))) ;; padding for a nicer looking "margin"
-     (goto-char b)
-     (end-of-line)
-     (insert-char ?  (- end-column (current-column)))
-     (comment-box b e 1)
-     (goto-char e)
-     (set-marker e nil)))
-
  (defun bl/kill-this-buffer ()
    "kill the current buffer without prompting (unless there are unsaved changes)"
    (interactive)
@@ -1046,23 +1092,6 @@ reading level. I've set it load automatically with any text-related mode.
      (if (string= (org-entry-get nil "STYLE") "habit")
          subtree-end
        nil)))
-
- (defun comment-or-uncomment-region-or-line ()
-   "toggle comment for region, or current line if there's no active region."
-   (interactive)
-   (let ((start (line-beginning-position))
-         (end (line-end-position)))
-     (when (or (not transient-mark-mode) (region-active-p))
-       (setq start (save-excursion
-                     (goto-char (region-beginning))
-                     (beginning-of-line)
-                     (point))
-             end (save-excursion
-                   (goto-char (region-end))
-                   (end-of-line)
-                   (point))))
-     (comment-or-uncomment-region start end)))
-
 
  (defun set-exec-path-from-shell-PATH ()
    "set the exec path to the same one used by the shell because mac osx sucks"
@@ -1106,12 +1135,6 @@ reading level. I've set it load automatically with any text-related mode.
 
  ;; M-D for backward-kill-word
  (global-set-key (kbd "M-D") 'backward-kill-word)
-
- ;; C-c b to wrap region in a wide comment box
- (global-set-key (kbd "C-c b") 'wide-comment-box)
-
- ;; M-; to comment or uncomment region or current line if no active region.
- (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 
  ;; M-n and M-p to scroll by a single line
  (global-set-key (kbd "M-n") 'scroll-up-line)
