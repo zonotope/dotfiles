@@ -58,7 +58,7 @@ round (er square?) length, and it happens to fit my screen resolution well.
 **** Cursor
 I always lose the cursor in a screen full of text so, besides making it bright
 yellow in the color theme, I also make it a big, obvious box here. I also only
-show one cursor in the screen as another cue for which window has the focus.
+show one cursor in the screen as another queue for which window has the focus.
 
 #+BEGIN_SRC emacs-lisp
 ;; make the cursor as conspicuous as possible
@@ -311,24 +311,6 @@ by default, so let's make it do that
             (windmove-default-keybindings 'super)
             (setq windmove-wrap-around t)))
 #+END_SRC
-*** Spelling
-
- #+BEGIN_SRC emacs-lisp
- ;;;; use aspell to spell check
- (if (executable-find "aspell")
-     (setq ispell-program-name "aspell"
-           ispell-extra-args '("--sug-mode=ultra" "--lang=en_US")))
-
- ;;;; check spelling everywhere for text based modes
- (add-hook 'text-mode-hook 'flyspell-mode)
-
- ;;;; check spelling only in strings and comments for programming based modes
- (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
- ;;;; don't print messages for every mispelled word
- (setq flyspell-issue-message-flag nil)
- #+END_SRC
-
 
  #+BEGIN_SRC emacs-lisp
  ;; dired
@@ -560,9 +542,69 @@ by default, so let's make it do that
 ** Editing Environments
 
 *** English
-This is the language I use the most, so my Emacs setup has to make writing and
-editing English text easier. I use a thesaurus, dictionary, and basic style
-checker besides the [[*Spelling][spell checking configured elsewhere]].
+This is the language (either natural or programming) I use the most, so my Emacs
+setup has to optimize writing and editing English text. I use a spell checker,
+dictionary, thesaurus, and basic style checker, and I integrate these tools with
+all the editing contexts that make sense.
+
+**** Spelling
+I'm a terrible speller like most people, so I need a good spell checker. Emacs
+has good spell checking capabilities, but I first need to set the external spell
+checking executable to use and configure when and where the automatic spell
+checker activates.
+
+***** External Executable
+Emacs relies on an external spell checker to check spelling. Ispell is the
+default, but I use [[http://aspell.net/][aspell]] instead because of its superior support of UTF-8 and
+multiple dictionaries. I first check that aspell is installed and then set the
+Emacs external spell checker to aspell if it is. I also set the aspell language
+to American English, and set the suggestion mode to evenly balance speed and
+accuracy concerns.
+#+BEGIN_SRC emacs-lisp
+(if (executable-find "aspell")
+    (setq ispell-program-name "aspell"
+          ispell-extra-args '("--sug-mode=normal" "--lang=en_US")))
+
+#+END_SRC
+
+***** Automatic Spell Checker
+I use flyspell to automatically check my spelling in all the contexts that it
+makes sense.
+
+I can safely assume that any buffer where a derivative mode of ~text-mode~ is
+active consists of English text, so I want to spell check everything in them.
+The base ~flyspell-mode~ does just that, so I add it to the ~text-mode-hook~ to
+enable it automatically with any ~text-mode~ based mode.
+#+BEGIN_SRC emacs-lisp
+(add-hook 'text-mode-hook 'flyspell-mode)
+#+END_SRC
+
+Buffers where a derivative of ~prog-mode~ is active consists of code however, so
+full spell checking will yield a lot of false positives. ~flyspell-prog-mode~
+only checks comments and strings. There will still be some false positives in
+commented out lines of code, but I think checking comments and strings are the
+best heuristic because that's where English is most likely to appear in code. I
+add ~flyspell-prog-mode~ to the ~prog-mode-hook~ so that it's automatically
+loaded with any programming mode.
+#+BEGIN_SRC emacs-lisp
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+#+END_SRC
+
+Finally, flyspell sends messages to the minibuffer for every misspelled word. I
+find that annoying, and it negatively impacts performance, so I turn that off.
+#+BEGIN_SRC emacs-lisp
+(setq flyspell-issue-message-flag nil)
+#+END_SRC
+**** Style
+[[https://github.com/bnbeckwith/writegood-mode][Writegood mode]] is a basic style checker that I don't always agree with, but it's
+usually pretty good. It checks for weasel words, passive voice, and can evaluate
+reading level. I install it with ~use-package~ and set it load automatically
+with any text-related mode by adding it to the ~text-mode-hook~.
+
+#+BEGIN_SRC emacs-lisp
+(use-package writegood-mode
+  :hook (text-mode . writegood-mode))
+#+END_SRC
 
 **** Dictionary
 [[https://wordnet.princeton.edu/][WordNet]] is more than just a dictionary; it's a full-fledged, powerful lexical
@@ -585,17 +627,6 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
   :bind (("C-c t l" . synosaurus-lookup)
          ("C-c t r" . synosaurus-choose-and-replace))
   :init (setq synosaurus-backend 'synosaurus-backend-wordnet))
-#+END_SRC
-
-**** Style
-[[https://github.com/bnbeckwith/writegood-mode][Writegood mode]] is a basic file checker that I don't always agree with, but it's
-usually pretty good. It checks for weasel words, passive voice, and can evaluate
-reading level. I've set it load automatically with any text-related mode.
-
-#+BEGIN_SRC emacs-lisp
-;; writegood: check for weasel words, passive voice, and reading level
-(use-package writegood-mode
-  :hook (text-mode . writegood-mode))
 #+END_SRC
 *** Org
 
