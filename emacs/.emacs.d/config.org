@@ -247,6 +247,31 @@ by default, so let's make it do that
 ;; which-key: pop up keybinding hints
 (use-package which-key)
 
+;;;; automatically reload open files when they change on disk
+(global-auto-revert-mode 1)
+
+;; clean up whitespace before every save
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
+;; contextually uniquify buffer names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)
+
+;; pretty symbols
+(if (fboundp 'global-prettify-symbols-mode)
+    (global-prettify-symbols-mode +1))
+
+;; dired
+(require 'dired )
+
+;;;; enable dired-x
+(add-hook 'dired-load-hook
+          (function (lambda ()
+                      (load "dired-x"))))
+
+;; garbage collect every 20MB
+(setq gc-cons-threshold 20000000)
+
 ;; crux: a Collection of Ridiculously Useful eXtensions
 (use-package crux
   :bind (("C-c n" . crux-cleanup-buffer-or-region)
@@ -311,37 +336,6 @@ by default, so let's make it do that
             (windmove-default-keybindings 'super)
             (setq windmove-wrap-around t)))
 #+END_SRC
-
- #+BEGIN_SRC emacs-lisp
- ;; dired
- (require 'dired )
-
- ;;;; enable dired-x
- (add-hook 'dired-load-hook
-           (function (lambda ()
-                       (load "dired-x"))))
- #+END_SRC
-
- #+BEGIN_SRC emacs-lisp
- ;;;; automatically reload open files when they change on disk
- (global-auto-revert-mode 1)
-
- ;; clean up whitespace before every save
- (add-hook 'before-save-hook 'whitespace-cleanup)
-
- ;; contextually uniquify buffer names
- (require 'uniquify)
- (setq uniquify-buffer-name-style 'post-forward)
-
- ;; pretty symbols
- (if (fboundp 'global-prettify-symbols-mode)
-     (global-prettify-symbols-mode +1))
-
- ;; garbage collect every 20MB
- (setq gc-cons-threshold 20000000)
-
-
- #+END_SRC
 *** Completion Engines
 
 **** IDO
