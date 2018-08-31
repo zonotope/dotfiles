@@ -15,7 +15,7 @@ if [[ ! -a $ANTIGEN ]]; then
         mkdir -p $ADOTDIR
     fi
 
-    curl --ssl --show-error --location git.io/antigen > $ANTIGEN
+    curl --ssl --show-error --location https://git.io/antigen > $ANTIGEN
 fi
 
 ## load antigen
