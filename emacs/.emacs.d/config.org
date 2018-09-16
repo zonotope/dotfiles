@@ -58,7 +58,7 @@ round (er square?) length, and it happens to fit my screen resolution well.
 **** Cursor
 I always lose the cursor in a screen full of text so, besides making it bright
 yellow in the color theme, I also make it a big, obvious box here. I also only
-show one cursor in the screen as another queue for which window has the focus.
+show one cursor in the screen as another cue for which window has the focus.
 
 #+BEGIN_SRC emacs-lisp
 ;; make the cursor as conspicuous as possible
@@ -74,9 +74,7 @@ knowing the current buffer comes in handy sometimes too.
 
 #+BEGIN_SRC emacs-lisp
 ;; "<user-name>: <buffer-name> -- emacs" in the title bar
-(setq frame-title-format (list (getenv "USER")
-                               ": %b -- "
-                               "emacs"))
+(setq frame-title-format (list (getenv "USER") ": %b -- " "emacs"))
 #+END_SRC
 
 **** Decluttering
