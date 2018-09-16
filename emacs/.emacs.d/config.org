@@ -1,8 +1,8 @@
 * Emacs, 732 style
 I've been using Emacs off and on since I was a freshman taking 6.001 at MIT.
-It's one of the finest pieces of software ever made. A big reason why is that
-you can mold it to fit you work. Everything is configurable, and this is my
-configuration.
+It's one of the finest pieces of software ever written. A big reason why is that
+you can mold it to uniquely fit how you work. Everything is configurable, and
+this is my configuration.
 
 ** Initialization
 The code in this section needs to run as soon as possible after Emacs starts. It
@@ -29,11 +29,15 @@ These options control the look and feel of Emacs. I set these interface options
 early on to avoid (or at least minimize) flickering during initialization.
 
 **** Theme
-I like [[http://chriskempson.com/][Chris Kempson]]'s Tomorrow Night/Base16 Eighties color scheme. That's the
-basis of the ~zonotope-dark~ theme, but I made some tweaks to match my tastes.
+I like [[http://chriskempson.com/][Chris Kempson]]'s [[https://github.com/chriskempson/base16][Base16]] color theme framework (as well as its predecessor,
+[[https://github.com/chriskempson/tomorrow-theme][Tomorrow]]) because of how many different apps and environments have defined
+themes as well as the consistent color guidelines across programming languages.
+There are a lot of choices for which color scheme to use within the framework,
+but I think "eighties" has just the right amount of contrast.
 
 #+BEGIN_SRC emacs-lisp
-(load-theme 'zonotope-dark t)
+(use-package base16-theme
+ :config (load-theme 'base16-eighties t))
 #+END_SRC
 
 **** Font
