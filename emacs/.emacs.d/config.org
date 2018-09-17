@@ -28,18 +28,6 @@ looks whenever you try to ~load~, ~load-library~, ~load-theme~, or ~require~.
 These options control the look and feel of Emacs. I set these interface options
 early on to avoid (or at least minimize) flickering during initialization.
 
-**** Theme
-I like [[http://chriskempson.com/][Chris Kempson]]'s [[https://github.com/chriskempson/base16][Base16]] color theme framework (as well as its predecessor,
-[[https://github.com/chriskempson/tomorrow-theme][Tomorrow]]) because of how many different apps and environments have defined
-themes as well as the consistent color guidelines across programming languages.
-There are a lot of choices for which color scheme to use within the framework,
-but I think "eighties" has just the right amount of contrast.
-
-#+BEGIN_SRC emacs-lisp
-(use-package base16-theme
- :config (load-theme 'base16-eighties t))
-#+END_SRC
-
 **** Font
 I give other fonts a try once in a while, but I always come back to
 [[https://leonardo-m.livejournal.com/77079.html][Inconsolata-G]]. I think it's the fixed width font king.
@@ -103,7 +91,6 @@ anything for me, so that's gone too.
 ;; no splash screen
 (setq inhibit-splash-screen t)
 #+END_SRC
-
 *** Package Management
 One of the best things about Emacs besides the editor itself is the package
 ecosystem. There are packages out there to do pretty much anything you could
@@ -147,6 +134,25 @@ but only if it's not already installed.
 by default, so let's make it do that
 #+BEGIN_SRC emacs-lisp
 (setq use-package-always-ensure t)
+#+END_SRC
+
+***** Support packages
+~use-package~ uses a few supporting utilities if they are already installed. I
+only use ~diminish~ to clean up the mode line for now.
+#+BEGIN_SRC emacs-lisp
+(use-package diminish)
+#+END_SRC
+
+*** Theme
+I like [[http://chriskempson.com/][Chris Kempson]]'s [[https://github.com/chriskempson/base16][Base16]] color theme framework (as well as its predecessor,
+[[https://github.com/chriskempson/tomorrow-theme][Tomorrow]]) because of how many different apps and environments have defined
+themes as well as the consistent color guidelines across programming languages.
+There are a lot of choices for which color scheme to use within the framework,
+but I think "eighties" has just the right amount of contrast.
+
+#+BEGIN_SRC emacs-lisp
+(use-package base16-theme
+ :config (load-theme 'base16-eighties t))
 #+END_SRC
 
 ** Behavior
@@ -395,7 +401,8 @@ by default, so let's make it do that
   #+BEGIN_SRC emacs-lisp
   ;; company: complete anything
   (use-package company
-    :config (global-company-mode))
+    :config (global-company-mode)
+    :diminish company-mode)
 
   ;; use hippie-expand instead of dabbrev for better partial word completions
   (global-set-key (kbd "M-/") 'hippie-expand)
@@ -634,7 +641,7 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
   (setq org-directory "~/docs/org")
 
   ;; use ido completion in org mode
-  (add-hook 'org-mode-hook 'bl/completion-use-ido)
+  ;; (add-hook 'org-mode-hook 'bl/completion-use-ido)
 
   ;; set <enter> when the cursor is in a link to visit it
   (setq org-return-follows-link t)
