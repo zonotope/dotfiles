@@ -150,10 +150,29 @@ I like [[http://chriskempson.com/][Chris Kempson]]'s [[https://github.com/chrisk
 themes as well as the consistent color guidelines across programming languages.
 There are a lot of choices for which color scheme to use within the framework,
 but I think "eighties" has just the right amount of contrast.
-
 #+BEGIN_SRC emacs-lisp
 (use-package base16-theme
  :config (load-theme 'base16-eighties t))
+#+END_SRC
+
+I also use some colors later on to match the theme, and I define those here.
+#+BEGIN_SRC emacs-lisp
+(defvar black "#2d2d2d")
+(defvar dark-gray "#393939")
+(defvar gray "#515151")
+(defvar brightblack "#747369")
+(defvar color-20 "#a09f93")
+(defvar white "#d3d0c8")
+(defvar color-21 "#e8e6df")
+(defvar brightwhite "#f2f0ec")
+(defvar red "#f2777a")
+(defvar orange "#f99157")
+(defvar yellow "#ffcc66")
+(defvar green "#99cc99")
+(defvar cyan "#66cccc")
+(defvar blue "#6699cc")
+(defvar magenta "#cc99cc")
+(defvar brown "#d27b53")
 #+END_SRC
 
 ** Behavior
@@ -322,7 +341,9 @@ but I think "eighties" has just the right amount of contrast.
             (setq avy-style 'at)
 
             ;; dim the background
-            (setq avy-background t)))
+            (setq avy-background t))
+   :config (set-face-attribute 'avy-lead-face nil :foreground cyan
+                                                  :background nil))
 
 ;; mwim: toggle start, or toggle end, of the line and text
 (use-package mwim
@@ -349,27 +370,41 @@ but I think "eighties" has just the right amount of contrast.
 
 **** IDO
 
-  #+BEGIN_SRC emacs-lisp
-  (defun bl/completion-use-ido ()
-    "Set the current buffer's completing read engine to IDO."
-    (setq-local completing-read-function #'ido-completing-read))
+#+BEGIN_SRC emacs-lisp
+(defun bl/completion-use-ido ()
+  "Set the current buffer's completing read engine to IDO."
+  (setq-local completing-read-function #'ido-completing-read))
 
-  (ido-mode 1)
+(ido-mode 1)
+(ido-everywhere 1)
 
-  (setq ido-everywhere t
-        ido-enable-flex-matching t
-        ido-use-faces t)
+;; ido-completing-read+: use ido everywhere possible
+(use-package ido-completing-read+
+  :config (ido-ubiquitous-mode 1))
 
-  ;; flx-ido: better flex matching for ido
-  (use-package flx-ido
-    :config (flx-ido-mode 1))
+;; smex: better IDO M-x integration with frequency sorting
+(use-package smex
+  :bind (("M-x" . smex)
+         ("M-X" . smex-major-mode-commands)
+         ("C-c C-c M-x" . execute-extended-command)))
 
-  ;; ido-vertical-mode: list ido matches vertically
-  (use-package ido-vertical-mode
-    :config (progn (ido-vertical-mode 1)
-                   (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down
-                         ido-vertical-show-count t)))
-  #+END_SRC
+(setq ido-use-faces t)
+
+;; ido flexible matching
+
+; first turn on flex matching
+(setq ido-enable-flex-matching t)
+
+; flx-ido: better flex matching for ido
+(use-package flx-ido
+  :config (flx-ido-mode 1))
+
+;; ido-vertical-mode: list ido matches vertically
+(use-package ido-vertical-mode
+  :config (progn (ido-vertical-mode 1)
+                 (setq ido-vertical-define-keys 'C-n-and-C-p-up-and-down
+                       ido-vertical-show-count t)))
+#+END_SRC
 
 **** Ivy
   #+BEGIN_SRC emacs-lisp
@@ -447,6 +482,9 @@ but I think "eighties" has just the right amount of contrast.
          ("M-p" . rg-prev-file)
          ("C-n" . compilation-next-error)
          ("C-p" . compilation-previous-error))
+  :init (set-face-attribute 'rg-match-face nil :foreground orange
+                                               :background dark-gray
+                                               :inherit nil)
   :config (progn
             (setq rg-custom-type-aliases
                   '(("clojure" . "*.clj *.cljs *.cljc *.cljx *.edn"))
@@ -541,7 +579,11 @@ but I think "eighties" has just the right amount of contrast.
           (setq blink-matching-paren nil)
 
           ;; enable the default config
-          (require 'smartparens-config)))
+          (require 'smartparens-config))
+
+          ;; highlight matching parens with grey
+          (set-face-attribute 'sp-show-pair-match-face nil :background gray
+                                                           :foreground white))
 #+END_SRC
 ** Editing Environments
 
