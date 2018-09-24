@@ -1088,6 +1088,13 @@ bound it to "C-x b"
  (use-package handlebars-mode
    :mode (("\\.hbs\\'" . handlebars-mode)))
  #+END_SRC
+**** JavaScript
+
+#+BEGIN_SRC emacs-lisp
+(use-package js2-mode
+  :mode ("\\.js\\'" . js2-mode))
+#+END_SRC
+
 **** JSON
 
  #+BEGIN_SRC emacs-lisp
