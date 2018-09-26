@@ -305,11 +305,8 @@ I also use some colors later on to match the theme, and I define those here.
   :bind (("C-c n" . crux-cleanup-buffer-or-region)
          ("C-x 4 t" . crux-transpose-windows)
          ("C-c D" . crux-delete-file-and-buffer)
-         ("C-c r" . crux-rename-file-and-buffer)
-         ("M-;" . comment-or-uncomment-region))
-  :config (progn
-            (crux-with-region-or-buffer indent-region)
-            (crux-with-region-or-line comment-or-uncomment-region)))
+         ("C-c r" . crux-rename-file-and-buffer))
+  :config (advice-add 'indent-region #'crux-with-region-or-buffer))
 #+END_SRC
 
 *** Navigation
@@ -947,10 +944,21 @@ that function to "M-;" to replace the built in Emacs comment toggle.
 (defun bl/comment-or-uncomment-region-or-line ()
   "Toggle comment for region, or current line if there's no active region."
   (interactive)
-  (crux-with-region-or-line comment-or-uncomment-region))
+  (let ((start (line-beginning-position))
+        (end (line-end-position)))
+    (when (or (not transient-mark-mode) (region-active-p))
+      (setq start (save-excursion
+                    (goto-char (region-beginning))
+                    (beginning-of-line)
+                    (point))
+            end (save-excursion
+                  (goto-char (region-end))
+                  (end-of-line)
+                  (point))))
+    (comment-or-uncomment-region start end)))
 
 ;; M-; to comment or uncomment region or current line if no active region.
-(global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "M-;") 'bl/comment-or-uncomment-region-or-line)
 #+END_SRC
 
 ***** Organizational Comments
