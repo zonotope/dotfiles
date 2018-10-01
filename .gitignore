@@ -13,3 +13,4 @@ repl-history
 /zsh/.zsh.d/plugins.zsh.zwc
 zsh/.zsh.d/antigen/
 /emacs/.emacs.d/config.el
+/emacs/.emacs.d/smex-items
