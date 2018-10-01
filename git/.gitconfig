@@ -1,6 +1,7 @@
 [user]
         name = ben lamothe
 	email = bl@732.one
+	signingkey = 0xEF3F953B690E8060
 [core]
         excludesfile = /home/$USER/.gitignore.global
 [push]

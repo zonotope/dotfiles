@@ -28,3 +28,6 @@ export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
 ## rust
 export CARGO_HOME=$HOME/.cargo
 export PATH=$PATH:$CARGO_HOME/bin
+
+## common lisp
+export SBCL_HOME=/usr/lib/sbcl/
