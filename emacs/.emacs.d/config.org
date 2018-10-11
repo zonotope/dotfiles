@@ -502,13 +502,23 @@ I also use some colors later on to match the theme, and I define those here.
 #+END_SRC
 
 **** Linting
+I use [[http://www.flycheck.org/en/latest/][flycheck]] for linting, text analysis, and syntax checking, and I turn it on
+everywhere it can be with ~global-flycheck-mode~.
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+  :delight
+  :init (global-flycheck-mode)
+  :pin melpa-stable)
+#+END_SRC
 
-  #+BEGIN_SRC emacs-lisp
-  ;; flycheck: linter / syntax checker
-  (use-package flycheck
-    :init (global-flycheck-mode)
-    :pin melpa-stable)
-  #+END_SRC
+I also add the [[https://github.com/flycheck/flycheck-inline][flycheck-inline]] tweak to display flycheck errors and warnings in
+line instead of in the mode line.
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck-inline
+  :delight
+  :after flycheck
+  :init (flycheck-inline-mode))
+#+END_SRC
 
 **** Structural Editing
 
@@ -1160,11 +1170,31 @@ bound it to "C-x b"
  #+END_SRC
 
 **** Rust
+First, make sure the base emacs rust mode is installed, and load it
+automatically on any '*.rs' file. I also set ~rustfmt~ to run automatically on
+every save.
+#+BEGIN_SRC emacs-lisp
+(use-package rust-mode
+  :init (setq rust-format-on-save t)
+  :mode ("\\.rs\\'" . rust-mode))
+#+END_SRC
 
- #+BEGIN_SRC emacs-lisp
- (use-package rust-mode
-   :mode ("\\.rs\\'" . rust-mode))
- #+END_SRC
+[[https://github.com/racer-rust/emacs-racer][Racer]] gives me better code completion, jump to definition, and general IDE-like
+features for Rust projects. I install it here and set it to load automatically
+along with eldoc in any Rust file buffer
+#+BEGIN_SRC emacs-lisp
+(use-package racer
+  :hook ((rust-mode . racer-mode)
+         (racer-mode . eldoc-mode)))
+#+END_SRC
+
+I get Rust syntax checking from [[https://github.com/flycheck/flycheck-rust][flycheck-rust]]. I install it here and load it
+automatically with rust-mode
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck-rust
+  :hook (rust-mode . flycheck-rust-setup))
+
+#+END_SRC
 
 **** Systemd
 
