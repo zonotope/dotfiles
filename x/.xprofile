@@ -24,6 +24,6 @@ urxvtd --quiet --fork --opendisplay
 ############################################################################
 
 conky &
-# urxvtc &
-# emacsclient --create-frame &
-# chromium &
+urxvtc &
+emacsclient --create-frame --no-wait --alternate-editor="" &
+chromium &

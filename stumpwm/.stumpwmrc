@@ -61,15 +61,7 @@
 (defconstant dark-gray "#393939")
 (defconstant black "#2d2d2d")
 
-(setf *colors* (list black
-                     red
-                     green
-                     yellow
-                     blue
-                     purple
-                     aqua
-                     white
-                     gray
+(setf *colors* (list black red green yellow blue purple aqua white gray
                      dark-gray))
 (update-color-map (current-screen))
 
