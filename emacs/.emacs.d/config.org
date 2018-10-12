@@ -1187,6 +1187,13 @@ every save.
   :mode ("\\.rs\\'" . rust-mode))
 #+END_SRC
 
+I use the "cargo" package to set up bindings to run [[https://doc.rust-lang.org/cargo/][Cargo]] commands from Emacs. I
+install it here and set the mode to load automatically with rust-mode.
+#+BEGIN_SRC emacs-lisp
+(use-package cargo
+  :hook (rust-mode . cargo-minor-mode))
+#+END_SRC
+
 [[https://github.com/racer-rust/emacs-racer][Racer]] gives me better code completion, jump to definition, and general IDE-like
 features for Rust projects. I install it here and set it to load automatically
 along with eldoc in any Rust file buffer
