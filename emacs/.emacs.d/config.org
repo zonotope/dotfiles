@@ -575,6 +575,8 @@ line instead of in the mode line.
               ("H-s j" . sp-join-sexp)
               ("H-s s" . sp-split-sexp))
 
+  :delight
+
   :init (progn
           ;; smartparens everywhere
           (smartparens-global-mode 1)
@@ -683,237 +685,236 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 #+END_SRC
 *** Org
 
-  #+BEGIN_SRC emacs-lisp
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; behavior                                                                 ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#+BEGIN_SRC emacs-lisp
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; behavior                                                                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  (setq org-directory "~/docs/org")
+(setq org-directory "~/docs/org")
 
-  ;; use ido completion in org mode
-  ;; (add-hook 'org-mode-hook 'bl/completion-use-ido)
+;; use ido completion in org mode
+;; (add-hook 'org-mode-hook 'bl/completion-use-ido)
 
-  ;; set <enter> when the cursor is in a link to visit it
-  (setq org-return-follows-link t)
+;; set <enter> when the cursor is in a link to visit it
+(setq org-return-follows-link t)
 
-  ;; C-c l to save a link to the current file position
-  (global-set-key (kbd "C-c l") 'org-store-link)
+;; C-c l to save a link to the current file position
+(global-set-key (kbd "C-c l") 'org-store-link)
 
-  ;; Reserve C-' for avy
-  (define-key org-mode-map (kbd "C-'") nil)
+;; Reserve C-' for avy
+(define-key org-mode-map (kbd "C-'") nil)
 
-  ;; auto-fill paragraphs in org buffers
-  (add-hook 'org-mode-hook 'auto-fill-mode)
+;; auto-fill paragraphs in org buffers
+(add-hook 'org-mode-hook 'auto-fill-mode)
 
-  ;; add new line before a new heading or plain list item, if the other
-  ;; surrounding headings/items also have newlines
-  (setq org-blank-before-new-entry '((heading . auto)
-                                     (plain-list-item . auto)))
+;; add new line before a new heading or plain list item, if the other
+;; surrounding headings/items also have newlines
+(setq org-blank-before-new-entry '((heading . auto)
+                                   (plain-list-item . auto)))
 
-  ;; show only top-level headings when opening an org file for the first time
-  (setq org-startup-folded t)
+;; show only top-level headings when opening an org file for the first time
+(setq org-startup-folded t)
 
-  ;; jump to the beginning/end of *content* (ignoring stars, tags, or todo
-  ;; keywords) with the first C-a/C-e, then the true beginning/end of the line
-  ;; with the next.
-  (setq org-special-ctrl-a/e t)
+;; jump to the beginning/end of *content* (ignoring stars, tags, or todo
+;; keywords) with the first C-a/C-e, then the true beginning/end of the line
+;; with the next.
+(setq org-special-ctrl-a/e t)
 
-  ;; set C-k to kill folded sub-trees when killing a heading, only kill up to the
-  ;; tags when the cursor is in the middle of heading text, and only the tags if
-  ;; the cursor is after the heading text
-  (setq org-special-ctrl-k t)
+;; set C-k to kill folded sub-trees when killing a heading, only kill up to the
+;; tags when the cursor is in the middle of heading text, and only the tags if
+;; the cursor is after the heading text
+(setq org-special-ctrl-k t)
 
-  ;; syntax-highlight source code
-  (setq org-src-fontify-natively t)
+;; syntax-highlight source code
+(setq org-src-fontify-natively t)
 
-  ;; highlight inline latex so it stands out
-  (setq org-highlight-latex-and-related '(latex script entities))
+;; highlight inline latex so it stands out
+(setq org-highlight-latex-and-related '(latex script entities))
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; archiving                                                                ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; archiving                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;; archive sub-trees in the "/archive" subdir with the same original filename
-  ;; under a datetree
-  (setq org-archive-location (concat org-directory "/archive/%s::datetree/"))
+;; archive sub-trees in the "/archive" subdir with the same original filename
+;; under a datetree
+(setq org-archive-location (concat org-directory "/archive/%s::datetree/"))
 
-  ;; metadata to keep track of when archiving as 'ARCHIVE_' prefixed properties on
-  ;; the subtree. keep track of the category, file, inherited and local tasks,
-  ;; outline path, and archive time
-  (setq org-archive-save-context-info '(category file itags ltags olpath time))
+;; metadata to keep track of when archiving as 'ARCHIVE_' prefixed properties on
+;; the subtree. keep track of the category, file, inherited and local tasks,
+;; outline path, and archive time
+(setq org-archive-save-context-info '(category file itags ltags olpath time))
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; tags                                                                     ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; tags                                                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  (setq org-tag-alist '((:startgroup)
-                        ("@life" . ?l)
-                        ("@side" . ?s)
-                        ("@work" . ?w)
-                        (:endgroup)
-                        ("NOTE" . ?n)))
+(setq org-tag-alist '((:startgroup)
+                      ("@life" . ?l)
+                      ("@side" . ?s)
+                      ("@work" . ?w)
+                      (:endgroup)
+                      ("NOTE" . ?n)))
 
-  ;; set individual tags without the menu
-  (setq org-fast-tag-selection-single-key 'expert)
+;; set individual tags without the menu
+(setq org-fast-tag-selection-single-key 'expert)
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; todo                                                                     ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; todo                                                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;; log when todo items are closed
-  (setq org-log-done 'time)
+;; log when todo items are closed
+(setq org-log-done 'time)
 
-  ;; block todo entries from being marked done until all their children are done.
-  (setq org-enforce-todo-dependencies t)
-  (setq org-enforce-todo-checkbox-dependencies t)
+;; block todo entries from being marked done until all their children are done.
+(setq org-enforce-todo-dependencies t)
+(setq org-enforce-todo-checkbox-dependencies t)
 
-  ;; [todo -> (started | blocked) -> (done | cancelled)] as the todo state
-  ;; sequence. log when tasks are marked started and done, and log with notes
-  ;; whenever they're marked blocked or canceled.
-  (setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "BLOCKED(b@/!)" "|"
-                                      "DONE(d)" "CANCELED(c@)")))
+;; [todo -> (started | blocked) -> (done | cancelled)] as the todo state
+;; sequence. log when tasks are marked started and done, and log with notes
+;; whenever they're marked blocked or canceled.
+(setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "BLOCKED(b@/!)" "|"
+                                    "DONE(d)" "CANCELED(c@)")))
 
-  ;; log state change time stamps in the 'LOGBOOK' drawer.
-  (setq org-log-into-drawer t)
+;; log state change time stamps in the 'LOGBOOK' drawer.
+(setq org-log-into-drawer t)
 
-  ;; log every time i kick the can down the road
-  (setq org-log-redeadline 'time)
-  (setq org-log-reschedule 'time)
+;; log every time i kick the can down the road
+(setq org-log-redeadline 'time)
+(setq org-log-reschedule 'time)
 
-  ;; 3 priorities: A, B, and C
-  (setq org-highest-priority ?A)
-  (setq org-default-priority ?B)
-  (setq org-lowest-priority ?C)
+;; 3 priorities: A, B, and C
+(setq org-highest-priority ?A)
+(setq org-default-priority ?B)
+(setq org-lowest-priority ?C)
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; agenda                                                                   ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; agenda                                                                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;; see:
-  ;; https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html
-  (defun bl/org-skip-subtree-if-priority (priority)
-    "Skip an agenda subtree if it has a priority of PRIORITY.
-   PRIORITY may be one of the characters ?A, ?B, or ?C."
-    (let ((subtree-end (save-excursion (org-end-of-subtree t)))
-          (pri-value (* 1000 (- org-lowest-priority priority)))
-          (pri-current (org-get-priority (thing-at-point 'line t))))
-      (if (= pri-value pri-current)
-          subtree-end
-        nil)))
+;; see:
+;; https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html
+(defun bl/org-skip-subtree-if-priority (priority)
+  "Skip an agenda subtree if it has a priority of PRIORITY.
+ PRIORITY may be one of the characters ?A, ?B, or ?C."
+  (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+        (pri-value (* 1000 (- org-lowest-priority priority)))
+        (pri-current (org-get-priority (thing-at-point 'line t))))
+    (if (= pri-value pri-current)
+        subtree-end
+      nil)))
 
-  (defun bl/org-skip-subtree-if-habit ()
-    "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
-    (let ((subtree-end (save-excursion (org-end-of-subtree t))))
-      (if (string= (org-entry-get nil "STYLE") "habit")
-          subtree-end
-        nil)))
+(defun bl/org-skip-subtree-if-habit ()
+  "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
+  (let ((subtree-end (save-excursion (org-end-of-subtree t))))
+    (if (string= (org-entry-get nil "STYLE") "habit")
+        subtree-end
+      nil)))
 
-  ;; scan top level files under the org dir, and all files under the `work' subdir
-  ;; for agenda items
-  (setq org-agenda-files `(,org-directory
-                           ,(concat org-directory "/side")
-                           ,(concat org-directory "/work")))
+;; scan top level files under the org dir, and all files under the `work' subdir
+;; for agenda items
+(setq org-agenda-files `(,org-directory
+                         ,(concat org-directory "/side")
+                         ,(concat org-directory "/work")))
 
-  ;; open agenda in the other window
-  (setq org-agenda-window-setup 'other-window)
+;; open agenda in the other window
+(setq org-agenda-window-setup 'other-window)
 
-  ;; sort tasks in order of when they are due and then by priority
-  (setq org-agenda-sorting-strategy '((agenda deadline-up priority-down)
-                                      (todo priority-down category-keep)
-                                      (tags priority-down category-keep)
-                                      (search category-keep)))
+;; sort tasks in order of when they are due and then by priority
+(setq org-agenda-sorting-strategy '((agenda deadline-up priority-down)
+                                    (todo priority-down category-keep)
+                                    (tags priority-down category-keep)
+                                    (search category-keep)))
 
-  ;; 'C-c a b' to show a "block" agenda view showing
-  ;; (1) high priority unscheduled tasks,
-  ;; (2) weekly agenda
-  ;; (3) everything else
-  (setq org-agenda-custom-commands
-        '(("b" "Weekly agenda and all unfinished tasks"
-           ((tags "PRIORITY=\"A\""
-                  ((org-agenda-overriding-header
-                    "High-priority:")
-                   (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo
-                                                                        'done))))
-            (agenda "")
-            (alltodo ""
-                     ((org-agenda-overriding-header
-                       "Medium/Low-priority:")
-                      (org-agenda-skip-function
-                       '(or (bl/org-skip-subtree-if-habit)
-                            (bl/org-skip-subtree-if-priority ?A)
-                            (org-agenda-skip-if nil '(scheduled))))))))))
+;; 'C-c a b' to show a "block" agenda view showing
+;; (1) high priority unscheduled tasks,
+;; (2) weekly agenda
+;; (3) everything else
+(setq org-agenda-custom-commands
+      '(("b" "Weekly agenda and all unfinished tasks"
+         ((tags "PRIORITY=\"A\""
+                ((org-agenda-overriding-header
+                  "High-priority:")
+                 (org-agenda-skip-function '(org-agenda-skip-entry-if 'todo
+                                                                      'done))))
+          (agenda "")
+          (alltodo ""
+                   ((org-agenda-overriding-header
+                     "Medium/Low-priority:")
+                    (org-agenda-skip-function
+                     '(or (bl/org-skip-subtree-if-habit)
+                          (bl/org-skip-subtree-if-priority ?A)
+                          (org-agenda-skip-if nil '(scheduled))))))))))
 
-  ;; show me ten days worth of stuff, starting three days ago
-  (setq org-agenda-start-day "-3d")
-  (setq org-agenda-span 10)
-  (setq org-agenda-start-on-weekday nil)
+;; show me ten days worth of stuff, starting three days ago
+(setq org-agenda-start-day "-3d")
+(setq org-agenda-span 10)
+(setq org-agenda-start-on-weekday nil)
 
-  ;; warn me of upcoming deadlines in the next 3 days.
-  (setq org-deadline-warning-days 3)
+;; warn me of upcoming deadlines in the next 3 days.
+(setq org-deadline-warning-days 3)
 
-  ;; skip any deadlines for tasks that are already done
-  (setq org-agenda-skip-deadline-if-done t)
+;; skip any deadlines for tasks that are already done
+(setq org-agenda-skip-deadline-if-done t)
 
-  ;; dim blocked todo items
-  (setq org-agenda-dim-blocked-tasks t)
+;; dim blocked todo items
+(setq org-agenda-dim-blocked-tasks t)
 
-  ;; C-c a to bring the agenda up
-  (global-set-key (kbd "C-c a") 'org-agenda)
+;; C-c a to bring the agenda up
+(global-set-key (kbd "C-c a") 'org-agenda)
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; capture                                                                  ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; refile                                                                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;; save captured tasks in `refile.org'
-  (setq refile-path (concat org-directory "/refile.org"))
-  (setq org-default-notes-file refile-path)
+;; include the current file and any agenda file in the refile target list
+(setq org-refile-targets '((nil :maxlevel . 9)
+                           (org-agenda-files :maxlevel . 9)))
 
-  ;; templates
-  (setq org-capture-templates
+;; use ido for completion of the whole outline path directly
+(setq org-refile-use-outline-path t)
+(setq org-outline-path-complete-in-steps nil)
 
-        (let ((today "%(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
-          `(
-            ; n: capture notes, recording time and current file
-            ("n" "note" entry (file+headline ,refile-path "Notes")
-             ,(concat "* %? :NOTE:\n"
-                      "%U\n"
-                      "%a\n"))
+;; create parent tasks with refile
+(setq org-refile-allow-creating-parent-nodes 'confirm)
 
-            ; t: capture todo items and record scheduled date.
-            ("t" "todo" entry (file+headline ,refile-path "Tasks")
-             ,(concat "* TODO [#B] %?\n"
-                      "  SCHEDULED: " today "\n")))))
+;; Use the current window for indirect buffer display
+(setq org-indirect-buffer-display 'current-window)
 
-  ;; C-c c for org capture
-  (global-set-key (kbd "C-c c") 'org-capture)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; capture                                                                  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; refile                                                                   ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; save captured tasks in `refile.org'
+(setq refile-path (concat org-directory "/refile.org"))
+(setq org-default-notes-file refile-path)
 
-  ;; include the current file and any agenda file in the refile target list
-  (setq org-refile-targets '((nil :maxlevel . 9)
-                             (org-agenda-files :maxlevel . 9)))
+;; templates
+(setq org-capture-templates
 
+      (let ((today "%(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
+        `(
+          ; n: capture notes, recording time and current file
+          ("n" "note" entry (file+headline ,refile-path "Notes")
+           ,(concat "* %? :NOTE:\n"
+                    "%U\n"
+                    "%a\n"))
 
-  ;; use ido for completion of the whole outline path directly
-  (setq org-refile-use-outline-path t)
-  (setq org-outline-path-complete-in-steps nil)
+          ; t: capture todo items and record scheduled date.
+          ("t" "todo" entry (file+headline ,refile-path "Tasks")
+           ,(concat "* TODO [#B] %?\n"
+                    "  SCHEDULED: " today "\n")))))
 
-  ; create parent tasks with refile
-  (setq org-refile-allow-creating-parent-nodes 'confirm)
+;; C-c c for org capture
+(global-set-key (kbd "C-c c") 'org-capture)
 
-  ; Use the current window for indirect buffer display
-  (setq org-indirect-buffer-display 'current-window)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; exporters                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; exporters                                                                ;;
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-  ;; ox-hugo: org exporter for hugo based websites.
-  (use-package ox-hugo
-    :after ox)
-  #+END_SRC
+;; ox-hugo: org exporter for hugo based websites.
+(use-package ox-hugo
+  :after ox)
+#+END_SRC
 *** Documents
 
 **** CSV
@@ -1073,13 +1074,17 @@ bound it to "C-x b"
    :mode   (("\\.go\\'" . go-mode)))
 
  ;; go completions
+ ;; only use company-go back end in go mode files
  (use-package company-go
    :config (add-to-list 'company-backends 'company-go)
-   :hook (go-mode . company-mode))
+   :hook (go-mode . (lambda ()
+                      (set (make-local-variable 'company-backends)
+                           '(company-go))
+                      (company-mode))))
 
  ;; go-eldoc: display docs
  (use-package go-eldoc
-   :diminish eldoc-mode
+   :delight
    :hook (go-mode . go-eldoc-setup))
 
  ;; go-guru: go code analyzer
@@ -1088,6 +1093,9 @@ bound it to "C-x b"
 
  ;; go-stacktracer: jump through stacktraces
  (use-package go-stacktracer)
+
+ ;; go-dlv: go debugger, front end to delve
+ (use-package go-dlv)
 
  ;; run go tests in emacs
  (use-package gotest
@@ -1193,7 +1201,6 @@ automatically with rust-mode
 #+BEGIN_SRC emacs-lisp
 (use-package flycheck-rust
   :hook (rust-mode . flycheck-rust-setup))
-
 #+END_SRC
 
 **** Systemd
