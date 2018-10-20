@@ -8,7 +8,7 @@ conky.config = {
         total_run_times = 0,
         cpu_avg_samples = 2,
         background = true,
-        override_utf8_locale = false,
+        override_utf8_locale = true,
 
         -- buffers
         no_buffers = true,
@@ -22,7 +22,7 @@ conky.config = {
 
         -- font
         use_xft = true,
-        font = 'Inconsolata:size=15',
+        font = 'Inconsolata Nerd Font:size=15',
         xftalpha = 1,
         uppercase = false,
 
@@ -41,7 +41,7 @@ conky.config = {
         maximum_width = 20000000,
         minimum_width = 1400, minimum_height = 24,
         gap_x = 0,
-        gap_y = 5,
+        gap_y = 0,
 
         -- shades and borders
         draw_shades = false,
@@ -55,7 +55,7 @@ conky.config = {
 ------------------------------------------------------------------------------
 
         own_window_colour = '#2d2d2d',
-        default_color = '#cccccc',
+        default_color = '#999999',
 
         color0 = '#f2777a', -- red
         color1 = '#f99157', -- orange
@@ -64,6 +64,7 @@ conky.config = {
         color4 = '#66cccc', -- aqua
         color5 = '#6699cc', -- blue
         color6 = '#cc99cc', -- purple
+        color7 = '#515151', -- gray
 };
 
 ------------------------------------------------------------------------------
@@ -71,40 +72,50 @@ conky.config = {
 ------------------------------------------------------------------------------
 
 conky.text = [[
-${alignr}\
-cpu0: \
-${voffset 1}${color1}${cpugraph cpu1 20,125}${color}${voffset -1}${cpu cpu1}% | \
-cpu1: \
-${voffset 1}${color1}${cpugraph cpu2 20,125}${color}${voffset -1}${cpu cpu2}% | \
-cpu2: \
-${voffset 1}${color1}${cpugraph cpu3 20,125}${color}${voffset -1}${cpu cpu3}% | \
-cpu3: \
-${voffset 1}${color1}${cpugraph cpu4 20,125}${color}${voffset -1}${cpu cpu4}% | \
-ram: \
-${if_match ${memperc}<50}${color3}\
-${else}${if_match ${memperc}>=80}${color0}\
-${else}${if_match ${memperc}<80}${color2}\
+ \
+ ${color7}${voffset 1}${cpugraph cpu1 20,180}${voffset -1}${color}${cpu cpu1}% \
+| \
+ ${voffset 1}${color7}${cpugraph cpu2 20,180}${color}${voffset -1}${cpu cpu2}% \
+| \
+ ${voffset 1}${color7}${cpugraph cpu3 20,180}${color}${voffset -1}${cpu cpu3}% \
+| \
+ ${voffset 1}${color7}${cpugraph cpu4 20,180}${color}${voffset -1}${cpu cpu4}% \
+| \
+${if_match ${memperc}>=80}
+${color0}
+${endif}\
+ ${color7}${voffset 1}${membar 7,180}${voffset -1}${color} ${memperc}% \
+| \
+${if_match ${fs_used_perc}>=85}
+${color0}\
+${endif}\
+ ${color7}${voffset 1}${fs_bar 7,180 /}${voffset -1}${color} ${fs_used_perc /}% \
+| \
+ ${voffset 1}${color7}${upspeedgraph wlp4s0 20,180}${voffset -1}${color} ${upspeed wlp4s0} \
+| \
+ ${voffset 1}${color7}${downspeedgraph wlp4s0 20,180}${voffset -1}${color} ${downspeed wlp4s0} \
+| \
+${if_match ${battery_percent}>20}${color}\
+${if_match ${battery_percent}>90}\
+${else}${if_match ${battery_percent}>80}\
+${else}${if_match ${battery_percent}>70}\
+${else}${if_match ${battery_percent}>60}\
+${else}${if_match ${battery_percent}>50}\
+${else}${if_match ${battery_percent}>40}\
+${else}${if_match ${battery_percent}>30}\
+${else}${if_match ${battery_percent}>20}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${membar 7,125}${voffset -1}${color} ${memperc}% | \
-/: \
-${if_match ${fs_used_perc}<66}${color3}\
-${else}${if_match ${fs_used_perc}>=90}${color0}\
-${else}${if_match ${fs_used_perc}<90}${color2}\
 ${endif}\
 ${endif}\
 ${endif}\
-${voffset 1}${fs_bar 7,125 /}${voffset -1}${color} ${fs_used_perc /}% | \
-up: ${color5}${upspeedgraph wlp4s0 20,125}${color} ${upspeed wlp4s0} | \
-down: ${color5}${downspeedgraph wlp4s0 20,125}${color} ${downspeed wlp4s0} | \
-bat: \
-${if_match ${battery_percent}>60}${color3}\
-${else}${if_match ${battery_percent}>=20}${color2}\
-${else}${if_match ${battery_percent}<20}${color0}\
 ${endif}\
 ${endif}\
+${else}${color0}\
+${if_match ${battery_percent}>10}\
+${else}\
 ${endif}\
-${voffset 1}${battery_bar 7,125}${voffset -1} ${color}${battery_percent}% | \
-${font Inconsolata:bold:size=15}${time %a %b %d %Y. %l:%M%P}
+${endif}\
+${color7} ${voffset 1}${battery_bar 7,180}${color}${voffset -1} ${battery_percent}%
 ]];
