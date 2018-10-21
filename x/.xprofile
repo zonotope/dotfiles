@@ -11,10 +11,10 @@ xcape -e "Control_R=Return"
 ############################################################################
 
 ## emacs server
-emacs --daemon
+# emacs --daemon
 
 ## urxvt server process
-urxvtd --quiet --fork --opendisplay
+# urxvtd --quiet --fork --opendisplay
 
 ## clipboard manager
 # clipmenud &
@@ -23,7 +23,7 @@ urxvtd --quiet --fork --opendisplay
 # startup prgrams                                                          #
 ############################################################################
 
-conky &
-urxvtc &
-emacsclient --create-frame --no-wait --alternate-editor="" &
-chromium &
+# conky &
+# urxvtc &
+# emacsclient --create-frame --no-wait --alternate-editor="" &
+# chromium &

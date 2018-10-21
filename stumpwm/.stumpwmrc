@@ -13,37 +13,6 @@
 (setq *screen-locker* "xset s activate")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; desktop                                                                  ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; start the volume/brightness notification daemon
-(run-shell-command "volnoti -t 2 -a 0.25")
-
-;; bind multimedia and screen brightness keys
-(run-shell-command "xbindkeys")
-
-;; start the light-locker lock screen daemon
-(run-shell-command "light-locker --lock-on-suspend")
-
-;; lock the screen with light-locker when idle
-(run-shell-command (concatenate 'string
-                                "xss-lock --transfer-sleep-lock"
-                                " -- "
-                                "light-locker-command --lock"))
-
-;; set the wallpaper
-;; (run-shell-command "feh --bg-scale pics/wallpapers/john_b_gordon_classroom.jpg")
-
-;; set the mouse cursor
-(run-shell-command "xsetroot -cursor_name left_ptr")
-
-;; set frame layout
-(clear-window-placement-rules)
-(restore-from-file "~/.stumpwm.d/basic.desk")
-(define-frame-preference "main"
-  (1 nil nil :class "Conky" :role nil))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; appearance                                                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -159,3 +128,55 @@
 
 ;; C-- to toggle the mode line
 (define-key *root-map* (kbd "C--") "mode-line")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; desktop                                                                  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; set frame layout
+(clear-window-placement-rules)
+(restore-from-file "~/.stumpwm.d/basic.desk")
+(define-frame-preference "main"
+  (1 nil nil :class "Conky" :role nil))
+
+;; load .Xresources
+(run-shell-command "xrdb -merge ~/.Xresources")
+
+;; set the mouse cursor
+(run-shell-command "xsetroot -cursor_name left_ptr")
+
+;; set the wallpaper
+;; (run-shell-command "feh --bg-scale pics/wallpapers/john_b_gordon_classroom.jpg")
+
+;; start the volume/brightness notification daemon
+(run-shell-command "volnoti -t 2 -a 0.25")
+
+;; bind multimedia and screen brightness keys
+(run-shell-command "xbindkeys")
+
+;; start the light-locker lock screen daemon
+(run-shell-command "light-locker --lock-on-suspend")
+
+;; lock the screen with light-locker when idle
+(run-shell-command (concatenate 'string
+                                "xss-lock --transfer-sleep-lock"
+                                " -- "
+                                "light-locker-command --lock"))
+
+;; start the top status bar
+(run-shell-command "polybar primary")
+
+;; start the bottom status bar
+(run-shell-command "conky")
+
+;; start the network manager gui applet
+(run-shell-command "nm-applet")
+
+;; start the emacs daemon
+(run-shell-command "emacs --daemon")
+
+;; start the terminal emulator daemon
+(run-shell-command "urxvtd --quiet --fork --opendisplay")
+
+;; start the clipboard manager
+(run-shell-command "clipmenud")
