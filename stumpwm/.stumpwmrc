@@ -113,6 +113,7 @@
 ;; dmenu is a better launcher than the built in
 (define-key *root-map* (kbd "RET") (concatenate 'string
                                                 "exec dmenu_run "
+                                                "-p \">>\" "
                                                 *dmenu-theme*))
 
 ;; = to bring up clipboard manager
