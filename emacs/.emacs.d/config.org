@@ -1263,6 +1263,11 @@ automatically with rust-mode
    :mode ("\\.toml\\'" . toml-mode))
  #+END_SRC
 
+**** Typescript
+#+BEGIN_SRC emacs-lisp
+(use-package typescript-mode)
+#+END_SRC
+
 **** YAML
 
  #+BEGIN_SRC emacs-lisp
