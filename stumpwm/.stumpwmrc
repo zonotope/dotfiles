@@ -80,10 +80,10 @@
 ;; set the mouse policy to focus follows mouse;
 (setf *mouse-focus-policy* :sloppy) ; :click, :ignore, :sloppy
 
-;; how long a message will appear in seconds
+;; how long messages appear in seconds
 (setf *timeout-wait* 5)
 
-;; what shows up in the middle of a newly focused frame
+;; alert text in newly focused frames
 (setf *frame-indicator-text* " here! ")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
