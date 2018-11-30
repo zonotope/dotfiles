@@ -65,8 +65,8 @@ I want to be able to distinguish between root vs normal user Emacs windows, and
 knowing the current buffer comes in handy sometimes too.
 
 #+BEGIN_SRC emacs-lisp
-;; "<user-name>: <buffer-name> -- emacs" in the title bar
-(setq frame-title-format (list (getenv "USER") ": %b -- " "emacs"))
+;; "<user-name>: <buffer-name> - emacs" in the title bar
+(setq frame-title-format (list (getenv "USER") ": %b - " "emacs"))
 #+END_SRC
 
 **** Decluttering
@@ -404,11 +404,11 @@ I also use some colors later on to match the theme, and I define those here.
 #+END_SRC
 
 **** Ivy
-  #+BEGIN_SRC emacs-lisp
-  ;; counsel: completion functions using ivy (i only use counsel-rg for now)
-  (use-package counsel
-    :bind (("C-c k" . counsel-rg)))
-  #+END_SRC
+#+BEGIN_SRC emacs-lisp
+;; counsel: completion functions using ivy (i only use counsel-rg for now)
+(use-package counsel
+  :bind (("C-c C-/" . counsel-rg)))
+#+END_SRC
 *** IDE Utilities
 
 **** Version control
@@ -1064,50 +1064,84 @@ bound it to "C-x b"
 
 **** Go
 
- #+BEGIN_SRC emacs-lisp
- (use-package go-mode
-   :bind (:map go-mode-map
-               ("M-." . godef-jump)
-               ("M-," . pop-tag-mark))
-   :config (setq gofmt-command "goimports")
-   :hook (before-save . gofmt-before-save)
-   :mode   (("\\.go\\'" . go-mode)))
+***** Go Mode
+The base Emacs ~go-mode~ comes with lots of functionality out of the box. I
+install it here and configure keybindings for ~godef-jump~, it's function to
+jump to definitions. I also set ~goimports~ as my formatting command and
+configure it to run on every save. Lastly, of course, I set it to run
+automatically in any Go buffer.
+#+BEGIN_SRC emacs-lisp
+(use-package go-mode
+  :bind (:map go-mode-map
+              ("M-." . godef-jump)
+              ("M-," . pop-tag-mark))
+  :config (setq gofmt-command "goimports")
+  :hook (before-save . gofmt-before-save)
+  :mode   (("\\.go\\'" . go-mode)))
+#+END_SRC
 
- ;; go completions
- ;; only use company-go back end in go mode files
- (use-package company-go
-   :config (add-to-list 'company-backends 'company-go)
-   :hook (go-mode . (lambda ()
-                      (set (make-local-variable 'company-backends)
-                           '(company-go))
-                      (company-mode))))
+***** Completion
+Next I set up the Go back end for the company completion engine and I also claw
+back a few milliseconds by limiting the company back ends to ~company-go~ in Go
+buffers. ~
+#+BEGIN_SRC emacs-lisp
+;; go completions
+;; only use company-go back end in go mode files
+(use-package company-go
+  :config (add-to-list 'company-backends 'company-go)
+  :hook (go-mode . (lambda ()
+                     (set (make-local-variable 'company-backends)
+                          '(company-go))
+                     (company-mode))))
+#+END_SRC
 
- ;; go-eldoc: display docs
- (use-package go-eldoc
-   :delight
-   :hook (go-mode . go-eldoc-setup))
+***** Eldoc
+~go-eldoc~ hooks in to Emacs' built-in eldoc framework to show the argument list
+and types of function in the echo area as you write the function call.
 
- ;; go-guru: go code analyzer
- (use-package go-guru
-   :config (go-guru-hl-identifier-mode))
+#+BEGIN_SRC emacs-lisp
+(use-package go-eldoc
+  :delight
+  :hook (go-mode . go-eldoc-setup))
+#+END_SRC
 
- ;; go-stacktracer: jump through stacktraces
- (use-package go-stacktracer)
+***** Language Server
+~lsp-go~ is the Emacs interface to [[https://github.com/sourcegraph/go-langserver][Sourcegraph's Go language server]]. It provides
+a more powerful find-references, completion, and other ide-like features by
+hooking in to the external language server.
+#+BEGIN_SRC emacs-lisp
+(use-package lsp-go
+  :hook (go-mode . lsp-go-enable))
+#+END_SRC
 
- ;; go-dlv: go debugger, front end to delve
- (use-package go-dlv)
+***** Debugging
+#+BEGIN_SRC emacs-lisp
+;; go-dlv: go debugger, front end to delve
+(use-package go-dlv)
 
- ;; run go tests in emacs
- (use-package gotest
-   :bind (:map go-mode-map
-               ("C-x M-f" . go-test-current-file)
-               ("C-x M-t" . go-test-current-test)
-               ("C-x M-p" . go-test-current-project)
-               ("C-x x" . go-run)))
+;; go-stacktracer: jump through stacktraces
+(use-package go-stacktracer)
+#+END_SRC
 
- ;; go-playground: go repl-like env inside emacs
- (use-package go-playground)
- #+END_SRC
+#+BEGIN_SRC emacs-lisp
+;; run go tests in emacs
+(use-package gotest
+  :bind (:map go-mode-map
+              ("C-x M-f" . go-test-current-file)
+              ("C-x M-t" . go-test-current-test)
+              ("C-x M-p" . go-test-current-project)
+              ("C-x x" . go-run)))
+
+;; go-playground: go repl-like env inside emacs
+(use-package go-playground)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+;; go-guru: go code analyzer
+(use-package go-guru
+  :config (go-guru-hl-identifier-mode))
+#+END_SRC
+
 **** Handlebars
 
  #+BEGIN_SRC emacs-lisp
