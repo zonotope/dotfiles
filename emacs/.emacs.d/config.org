@@ -684,70 +684,107 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
   :init (setq synosaurus-backend 'synosaurus-backend-wordnet))
 #+END_SRC
 *** Org
+Org-mode alone is reason to use emacs. The extra power you get from combining a
+central note database with your agenda/todo tasks is multiplicative instead of
+additive from what you get with one of those things alone.
+
+I keep all my org files under a common root, so I set that root here before I
+set anything else.
 
 #+BEGIN_SRC emacs-lisp
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; behavior                                                                 ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq org-directory "~/docs/org/")
+#+END_SRC
 
-(setq org-directory "~/docs/org")
+**** Org buffer settings
+There are a lot of settings you can tweak to change the way emacs behaves in an
+org buffer.
 
-;; use ido completion in org mode
-;; (add-hook 'org-mode-hook 'bl/completion-use-ido)
-
-;; set <enter> when the cursor is in a link to visit it
+Org buffers will have links to different files, media, and web pages all over
+them. It's nice to visit that link just by hitting enter when the cursor is over
+one of them.
+#+BEGIN_SRC emacs-lisp
 (setq org-return-follows-link t)
+#+END_SRC
 
-;; C-c l to save a link to the current file position
-(global-set-key (kbd "C-c l") 'org-store-link)
+There can be /a lot/ of text in a typical org file, so I limit the what emacs
+shows at first to only the top-level headings
+#+BEGIN_SRC
+(setq org-startup-folded t)
+#+END_SRC
 
-;; Reserve C-' for avy
-(define-key org-mode-map (kbd "C-'") nil)
+***** Syntax highlighting
+Org files with spreadsheets or tables with cell formulas sometimes have embedded
+code blocks that define commands for execution. There can also be code example
+blocks embedded in documents meant just for reading. In either case, it's nice
+to have the code syntax highlighted where possible.
+#+BEGIN_SRC emacs-lisp
+(setq org-src-fontify-natively t)
+#+END_SRC
 
-;; auto-fill paragraphs in org buffers
+You can also embed LaTeX fragments in-line for finer grained control over how
+the exporter formats the text. I turn on LaTeX highlighting so those in-line
+fragments stand out.
+#+BEGIN_SRC emacs-lisp
+(setq org-highlight-latex-and-related '(latex script entities))
+#+END_SRC
+
+***** Formatting
+auto-fill-mode can be annoying in a lot of cases, but I want it 90% of the time
+I'm in an org buffer. That's past the threshold for turning it on by default.
+#+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'auto-fill-mode)
+#+END_SRC
 
-;; add new line before a new heading or plain list item, if the other
-;; surrounding headings/items also have newlines
+Outlines and lists can sometimes look cluttered if there isn't any padding
+between entries. This setting adds a new line before a new heading or plain list
+item if the other surrounding headings/items also have newlines to make the
+document more readable.
+#+BEGIN_SRC emacs-lisp
 (setq org-blank-before-new-entry '((heading . auto)
                                    (plain-list-item . auto)))
+#+END_SRC
 
-;; show only top-level headings when opening an org file for the first time
-(setq org-startup-folded t)
+***** Key bindings
+I set ~C-c l~ to save a link to the clipboard of the current file position.
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-c l") 'org-store-link)
+#+END_SRC
 
-;; jump to the beginning/end of *content* (ignoring stars, tags, or todo
-;; keywords) with the first C-a/C-e, then the true beginning/end of the line
-;; with the next.
+I use ~C-'~ for [[https://github.com/abo-abo/avy][Avy]], so I have to unset whatever Org uses it for by default.
+#+BEGIN_SRC emacs-lisp
+(define-key org-mode-map (kbd "C-'") nil)
+#+END_SRC
+
+I prefer ~C-a~ / ~C-e~ to jump to the beginning/end of *content* (ignoring
+stars, tags, or todo keywords). Luckily there's a setting for that:
+#+BEGIN_SRC emacs-lisp
 (setq org-special-ctrl-a/e t)
+#+END_SRC
 
-;; set C-k to kill folded sub-trees when killing a heading, only kill up to the
-;; tags when the cursor is in the middle of heading text, and only the tags if
-;; the cursor is after the heading text
-(setq org-special-ctrl-k t)
+**** Archiving
+Todo lists and note files can get huge over time if you don't clean out the old
+entries, but you still want to be able to pull up those entries once in a while.
+That's where archiving comes in. It let's you move entries you don't need any
+more to a different file. You don't have to see them every day, but you can
+still pull them up later if you need to.
 
-;; syntax-highlight source code
-(setq org-src-fontify-natively t)
+I archive old org sub-trees under a date-tree in files within the "/archive"
+sub-directory that have the same name as the original file.
+#+BEGIN_SRC emacs-lisp
+(setq org-archive-location (expand-file-name "/archive/%s::datetree/"
+                                             org-directory))
+#+END_SRC
 
-;; highlight inline latex so it stands out
-(setq org-highlight-latex-and-related '(latex script entities))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; archiving                                                                ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; archive sub-trees in the "/archive" subdir with the same original filename
-;; under a datetree
-(setq org-archive-location (concat org-directory "/archive/%s::datetree/"))
-
-;; metadata to keep track of when archiving as 'ARCHIVE_' prefixed properties on
-;; the subtree. keep track of the category, file, inherited and local tasks,
-;; outline path, and archive time
+The org archiver saves metadata to keep track of info about the original entry
+as 'ARCHIVE_' prefixed properties on the archived entry. I like to save the
+category, file, inherited and local tasks, outline path, and archive time.
+#+BEGIN_SRC emacs-lisp
 (setq org-archive-save-context-info '(category file itags ltags olpath time))
+#+END_SRC
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; tags                                                                     ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+**** Tags
 
+#+BEGIN_SRC emacs-lisp
 (setq org-tag-alist '((:startgroup)
                       ("@life" . ?l)
                       ("@side" . ?s)
@@ -757,11 +794,10 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 
 ;; set individual tags without the menu
 (setq org-fast-tag-selection-single-key 'expert)
+#+END_SRC
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; todo                                                                     ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+**** Todos
+#+BEGIN_SRC emacs-lisp
 ;; log when todo items are closed
 (setq org-log-done 'time)
 
@@ -786,11 +822,10 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 (setq org-highest-priority ?A)
 (setq org-default-priority ?B)
 (setq org-lowest-priority ?C)
+#+END_SRC
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; agenda                                                                   ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+**** Agenda
+#+BEGIN_SRC emacs-lisp
 ;; see:
 ;; https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html
 (defun bl/org-skip-subtree-if-priority (priority)
@@ -861,11 +896,10 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 
 ;; C-c a to bring the agenda up
 (global-set-key (kbd "C-c a") 'org-agenda)
+#+END_SRC
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; refile                                                                   ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+**** Refile
+#+BEGIN_SRC emacs-lisp
 ;; include the current file and any agenda file in the refile target list
 (setq org-refile-targets '((nil :maxlevel . 9)
                            (org-agenda-files :maxlevel . 9)))
@@ -879,11 +913,10 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 
 ;; Use the current window for indirect buffer display
 (setq org-indirect-buffer-display 'current-window)
+#+END_SRC
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; capture                                                                  ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+**** Capture
+#+BEGIN_SRC emacs-lisp
 ;; save captured tasks in `refile.org'
 (setq refile-path (concat org-directory "/refile.org"))
 (setq org-default-notes-file refile-path)
@@ -906,15 +939,15 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 
 ;; C-c c for org capture
 (global-set-key (kbd "C-c c") 'org-capture)
+#+END_SRC
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; exporters                                                                ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+**** Exporters
+#+BEGIN_SRC emacs-lisp
 ;; ox-hugo: org exporter for hugo based websites.
 (use-package ox-hugo
   :after ox)
 #+END_SRC
+
 *** Documents
 
 **** CSV
