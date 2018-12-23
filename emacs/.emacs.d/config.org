@@ -53,10 +53,7 @@ yellow in the color theme, I also make it a big, obvious box here. I also only
 show one cursor in the screen as another cue for which window has the focus.
 
 #+BEGIN_SRC emacs-lisp
-;; make the cursor as conspicuous as possible
 (set-default 'cursor-type 'box)
-
-;; no cursor in non selected windows
 (set-default 'cursor-in-non-selected-windows 'nil)
 #+END_SRC
 
@@ -339,7 +336,7 @@ I also use some colors later on to match the theme, and I define those here.
 
             ;; dim the background
             (setq avy-background t))
-   :config (set-face-attribute 'avy-lead-face nil :foreground cyan
+   :config (set-face-attribute 'avy-lead-face nil :foreground red
                                                   :background nil))
 
 ;; mwim: toggle start, or toggle end, of the line and text
