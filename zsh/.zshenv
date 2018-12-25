@@ -1,3 +1,6 @@
+## my name
+export NAME="ben lamothe"
+
 ## locale (american english)
 export LANG=en_US.UTF-8
 
