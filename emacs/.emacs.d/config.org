@@ -829,6 +829,40 @@ category, file, inherited and local tasks, outline path, and archive time.
   (setq org-lowest-priority ?C)
 #+END_SRC
 
+**** Blog
+I use Org to manage my blog (of course), and I save the org source of all of my
+posts, pages, drafts, and ideas to a single org file.
+
+#+BEGIN_SRC emacs-lisp
+  (setq blog-path (expand-file-name "blog.org" org-directory))
+#+END_SRC
+
+~ox-hugo~ exports that org file to [[https://gohugo.io/][Hugo]] flavored markdown, and
+~ox-hugo-auto-export~ takes care of keeping the exported Hugo site in sync with
+each file save.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ox-hugo
+    :after ox)
+
+  (use-package ox-hugo-auto-export)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (defun bl/capture-blog-post ()
+    "Returns `org-capture' template string for new org-hugo post."
+    (let* ((title (read-from-minibuffer "Post Title: "))
+           (export-name (org-hugo-slug title)))
+      (mapconcat #'identity
+                 `(
+                   ,(concat "* IDEA " title)
+                   ":PROPERTIES:"
+                   ,(concat ":EXPORT_FILE_NAME: " export-name)
+                   ":END:"
+                   "%?\n")
+                 "\n")))
+#+END_SRC
+
 **** Agenda
 #+BEGIN_SRC emacs-lisp
   ;; see:
@@ -920,25 +954,6 @@ category, file, inherited and local tasks, outline path, and archive time.
   (setq org-indirect-buffer-display 'current-window)
 #+END_SRC
 
-**** Blog
-I use Org to manage my blog (of course), and I save the org source of all of my
-posts, pages, drafts, and ideas to a single org file.
-
-#+BEGIN_SRC emacs-lisp
-  (setq blog-path (expand-file-name "blog.org" org-directory))
-#+END_SRC
-
-~ox-hugo~ exports that org file to [[https://gohugo.io/][Hugo]] flavored markdown, and
-~ox-hugo-auto-export~ takes care of keeping the exported Hugo site in sync with
-each file save.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package ox-hugo
-    :after ox)
-
-  (use-package ox-hugo-auto-export)
-#+END_SRC
-
 **** Capture
 
 Save captured tasks in "refile.org"
@@ -952,22 +967,24 @@ Save captured tasks in "refile.org"
   (setq org-capture-templates
         (let ((today "%(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
           `(
-            ; n: capture notes, recording time and current file
-            ("n" "note" entry (file+headline ,refile-path "Notes")
-             ,(concat "* %? :NOTE:\n"
-                      "%U\n"
-                      "%a\n"))
+            ("b" "blog post" entry (file+headline ,blog-path "Posts")
+             (function bl/capture-blog-post))
 
-            ; t: capture todo items and record scheduled date.
+            ("n" "note" entry (file+headline ,refile-path "Notes")
+             ,(mapconcat #'identity
+                         `(
+                           "* %? :NOTE:"
+                           "%U"
+                           "%a")
+                         "\n"))
+
             ("t" "todo" entry (file+headline ,refile-path "Tasks")
              ,(concat "* TODO [#B] %?\n"
                       "  SCHEDULED: " today "\n")))))
-
-  ;; C-c c for org capture
-  (global-set-key (kbd "C-c c") 'org-capture)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c c") 'org-capture)
 #+END_SRC
 
 *** Documents
