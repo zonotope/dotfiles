@@ -27,6 +27,7 @@ source $ANTIGEN
 
 ## command suggestions based on history
 antigen bundle zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=true # fetch autosuggestions asynchronously
 
 ## clipboard copy/paste
 antigen bundle twang817/zsh-clipboard
@@ -44,32 +45,24 @@ antigen bundle jreese/zsh-titles
 antigen bundle robbyrussell/oh-my-zsh plugins/web-search
 
 
-#### load these plugins last
+#### these plugins should be loaded last
 
 ## syntax highlighter
 antigen bundle zsh-users/zsh-syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets) # set syntax highlighters
 
 ## set the prompt
 antigen bundle zonotope/zsh-prompt
 
 ## history search
 antigen bundle zsh-users/zsh-history-substring-search
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(fg:yellow) # color matches yellow
+bindkey '^[[A' history-substring-search-up # up arrow key for search up
+bindkey '^[[B' history-substring-search-down # down arrow key for search down
 
 
-#### finalize and load plugins
+############################################################################
+# finalize and load plugins                                                #
+############################################################################
+
 antigen apply
-
-############################################################################
-# configure plugins                                                        #
-############################################################################
-
-## fetch autosuggestions asynchronously
-ZSH_AUTOSUGGEST_USE_ASYNC=true
-
-## set syntax highlighters
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-## bind history substring search to up/down arrows
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(fg:yellow)
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
