@@ -173,6 +173,7 @@ alias mmv='noglob zmv -W'
 ## text
 alias edit=$EDITOR
 alias -s conf=edit
+alias -s md=edit
 alias -s org=edit
 alias -s tex=edit
 alias -s txt=edit
@@ -180,6 +181,7 @@ alias -s txt=edit
 ## audio/video
 alias play='mplayer -idx -fs'
 alias -s avi=play
+alias -s mkv=play
 alias -s mpg=play
 alias -s mp3=play
 alias -s mp4=play
