@@ -336,7 +336,7 @@ I also use some colors later on to match the theme, and I define those here.
 
               ;; dim the background
               (setq avy-background t))
-     :config (set-face-attribute 'avy-lead-face nil :foreground red
+     :config (set-face-attribute 'avy-lead-face nil :foreground cyan
                                                     :background nil))
 
   ;; mwim: toggle start, or toggle end, of the line and text
