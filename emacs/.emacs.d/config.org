@@ -687,7 +687,7 @@ for Emacs.
 #+END_SRC
 
 **** Thesaurus
-[[https://github.com/hpdeifel/synosaurus][Synosaurus]] is an extensible thesaurus mode that supports configurable back ends.
+[[https://github.com/hpdeifel/synosaurus][Synosaurus]] is an extendable thesaurus mode that supports configurable back ends.
 I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
 
 #+BEGIN_SRC emacs-lisp
@@ -973,11 +973,11 @@ each file save.
 
 **** Capture
 
-Save captured tasks in "refile.org"
+Save captured tasks in "inbox.org"
 
 #+BEGIN_SRC emacs-lisp
-  (setq refile-path (expand-file-name "refile.org" org-directory))
-  (setq org-default-notes-file refile-path)
+  (setq inbox-path (expand-file-name "inbox.org" org-directory))
+  (setq org-default-notes-file inbox-path)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
@@ -987,7 +987,7 @@ Save captured tasks in "refile.org"
             ("b" "blog post" entry (file+headline ,blog-path "Posts")
              (function bl/capture-blog-post))
 
-            ("n" "note" entry (file+headline ,refile-path "Notes")
+            ("n" "note" entry (file+headline ,inbox-path "Notes")
              ,(mapconcat #'identity
                          `(
                            "* %? :NOTE:"
@@ -995,7 +995,7 @@ Save captured tasks in "refile.org"
                            "%a")
                          "\n"))
 
-            ("t" "todo" entry (file+headline ,refile-path "Tasks")
+            ("t" "todo" entry (file+headline ,inbox-path "Tasks")
              ,(concat "* TODO [#B] %?\n"
                       "  SCHEDULED: " today "\n")))))
 #+END_SRC
