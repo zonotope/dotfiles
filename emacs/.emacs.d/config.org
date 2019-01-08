@@ -1017,6 +1017,9 @@ Save captured tasks in "inbox.org"
 
 #+BEGIN_SRC emacs-lisp
   (use-package markdown-mode
+    :bind (("M-n" . nil)
+           ("M-n" . nil))
+
     :config (progn
               ;; automatically enable auto fill mode
               (add-hook 'markdown-mode-hook
