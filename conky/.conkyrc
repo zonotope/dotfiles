@@ -82,7 +82,7 @@ conky.text = [[
  ${voffset 1}${color7}${cpugraph cpu4 20,180}${color}${voffset -1}${cpu cpu4}% \
 | \
 ${if_match ${memperc}>=80}
-${color0}
+${color0}\
 ${endif}\
  ${color7}${voffset 1}${membar 7,180}${voffset -1}${color} ${memperc}% \
 | \
