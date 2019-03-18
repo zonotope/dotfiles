@@ -6,7 +6,7 @@
 ;; default apps                                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq *terminal* "urxvtc")
+(setq *terminal* "st -e /usr/bin/zsh --login")
 (setq *browser* "chromium")
 (setq *editor* "emacsclient --create-frame")
 (setq *inline-editor* "~/.emacs_anywhere/bin/run")
@@ -176,9 +176,6 @@
 
 ;; start the emacs daemon
 (run-shell-command "emacs --daemon")
-
-;; start the terminal emulator daemon
-(run-shell-command "urxvtd --quiet --fork --opendisplay")
 
 ;; start the clipboard manager
 (run-shell-command "clipmenud")
