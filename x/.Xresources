@@ -65,8 +65,11 @@ xterm*boldMode:         true
 
 
 !! urxvt
+URxvt.utf8:              true
+URxvt.locale:            true
 URxvt.letterSpace:       1
 URxvt*font:              xft:Inconsolata\-g:size=12
+
 URxvt*loginShell:        True
 URxvt*scrollBar:         False
 URxvt*scrollTtyOutput:   True
