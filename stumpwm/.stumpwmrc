@@ -164,7 +164,8 @@
                                 " -- "
                                 "light-locker-command --lock"))
 
-;; start the top status bar
+;; ;; start the top status bar
+(run-shell-command "killall polybar")
 (run-shell-command "polybar primary")
 
 ;; start the bottom status bar
