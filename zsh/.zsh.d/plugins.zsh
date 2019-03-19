@@ -146,5 +146,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets) # set syntax highlighters
 
 #### zsh history substring search
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=(fg:yellow) # color matches yellow
-bindkey '^[[A' history-substring-search-up # up arrow key for search up
+bindkey '^[[A' history-substring-search-up   # up arrow key for search up
 bindkey '^[[B' history-substring-search-down # down arrow key for search down

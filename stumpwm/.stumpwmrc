@@ -6,7 +6,7 @@
 ;; default apps                                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq *terminal* "tabbed -c -r 2 st -w '' -e zsh --login")
+(setq *terminal* "kitty")
 (setq *browser* "chromium")
 (setq *editor* "emacsclient --create-frame")
 (setq *inline-editor* "~/.emacs_anywhere/bin/run")
