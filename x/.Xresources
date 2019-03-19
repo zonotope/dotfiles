@@ -59,7 +59,7 @@ Xcursor.theme: Paper
 xterm*faceName:         xft:Inconsolata\-g:size=12
 xterm*loginShell:       true
 xterm.vt100.locale:     true
-xterm*vt100*geometry:   80x25
+xterm*vt100*geometry:   80x24
 xterm*saveLines:        2500
 xterm*boldMode:         true
 
@@ -76,7 +76,7 @@ URxvt*scrollTtyOutput:   True
 URxvt*saveLines:         2500
 URxvt*cursorUnderline:   True
 URxvt*pointerBlank:      True
-URxvt*geometry:          80x25
+URxvt*geometry:          80x24
 URxvt*perl-ext-common:   default,tabbedex,matcher
 
 ! clickable urls
