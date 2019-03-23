@@ -6,6 +6,8 @@
 ;; default apps                                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(setq *shell-program* (stumpwm::getenv "SHELL"))
+
 (setq *terminal* "kitty")
 (setq *browser* "chromium")
 (setq *editor* "emacsclient --create-frame")
