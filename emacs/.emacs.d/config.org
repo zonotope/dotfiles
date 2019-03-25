@@ -1255,6 +1255,23 @@ hooking in to the external language server.
     :mode (("\\.json\\'" . json-mode)))
 #+END_SRC
 
+**** (Common) Lisp
+Use SLIME to interact with (common) lisp environments
+#+BEGIN_SRC emacs-lisp
+(use-package slime)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package slime-company)
+
+(slime-setup '(slime-repl slime-company))
+
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(setq inferior-lisp-program "sbcl")
+#+END_SRC
+
 **** Lua
 
 #+BEGIN_SRC emacs-lisp
