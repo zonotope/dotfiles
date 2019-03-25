@@ -47,7 +47,12 @@
 (setf *hidden-window-color* yellow)
 
 ;; font
-(set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
+(load-module "ttf-fonts")
+(set-font (make-instance 'xft:font
+                         :family "Inconsolata"
+                         :subfamily "Bold"
+                         :size 16))
+;; (set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
 
 ;; windows
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
@@ -65,7 +70,7 @@
 ;; behavior                                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setf *window-format* "[%m%s%n: %c--%15t]")
+(setf *window-format* "[%n%s %c <%50t>%m]")
 (setf *min-frame-height* 20)
 
 ;; window positioning
@@ -86,7 +91,7 @@
 (setf *timeout-wait* 5)
 
 ;; alert text in newly focused frames
-(setf *frame-indicator-text* " here! ")
+(setf *frame-indicator-text* " Here! ")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; bindings                                                                 ;;
