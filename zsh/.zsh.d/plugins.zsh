@@ -140,8 +140,10 @@ SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_PROMPT_ORDER=(
     exit_code     # Exit code section
     exec_time     # Execution time
-    prompt_sep    # Dashed line to separate prompts
     time          # Time stamps section
+    line_sep      # Line break
+    prompt_sep    # Dashed line to separate prompts
+    jobs          # Background jobs indicator
     dir           # Current directory section
     git           # Git section (git_branch + git_status)
     package       # Package version
@@ -162,7 +164,6 @@ SPACESHIP_PROMPT_ORDER=(
     terraform     # Terraform workspace section
     line_sep      # Line break
     line_sep      # Line break
-    jobs          # Background jobs indicator
     char          # Prompt character
 )
 
