@@ -19,18 +19,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; colors (Tomorrow Night Eighties)
-(defconstant red "#f2777a")
+(defconstant red    "#f2777a")
 (defconstant yellow "#ffcc66")
-(defconstant green "#99cc99")
-(defconstant aqua "#66cccc")
-(defconstant blue "#6699cc")
+(defconstant green  "#99cc99")
+(defconstant aqua   "#66cccc")
+(defconstant blue   "#6699cc")
 (defconstant purple "#cc99cc")
 
-(defconstant white "#cccccc")
+(defconstant white      "#cccccc")
 (defconstant light-gray "#999999")
-(defconstant gray "#515151")
-(defconstant dark-gray "#393939")
-(defconstant black "#2d2d2d")
+(defconstant gray       "#515151")
+(defconstant dark-gray  "#393939")
+(defconstant black      "#2d2d2d")
 
 (setf *colors* (list black red green yellow blue purple aqua white gray
                      dark-gray))
@@ -47,12 +47,12 @@
 (setf *hidden-window-color* yellow)
 
 ;; font
-(load-module "ttf-fonts")
-(set-font (make-instance 'xft:font
-                         :family "Inconsolata"
-                         :subfamily "Bold"
-                         :size 16))
-;; (set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
+;; (load-module "ttf-fonts")
+;; (set-font (make-instance 'xft:font
+;;                          :family "Inconsolata"
+;;                          :subfamily "Bold"
+;;                          :size 16))
+(set-font "-*-dejavu sans mono-*-r-*-*-*-120-*-*-*-*-*-*")
 
 ;; windows
 (setf *window-border-style* :thin) ; :none, :thick, :thin, :tight
@@ -70,7 +70,9 @@
 ;; behavior                                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setf *window-format* "[%n%s %c <%50t>%m]")
+(setf *group-format* "%n%s %t")
+
+(setf *window-format* "%n%s %c <%50t>%m")
 (setf *min-frame-height* 20)
 
 ;; window positioning
@@ -144,8 +146,6 @@
 ;; set frame layout
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
-(define-frame-preference "main"
-  (1 nil nil :class "Conky" :role nil))
 
 ;; load .Xresources
 (run-shell-command "xrdb -merge ~/.Xresources")
