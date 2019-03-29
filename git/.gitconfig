@@ -1,7 +1,7 @@
 [user]
         name = ben lamothe
-	email = bl@732.one
-	signingkey = 0xEF3F953B690E8060
+        email = bl@732.one
+        signingkey = 0xEF3F953B690E8060
 [core]
         excludesfile = /home/$USER/.gitignore.global
 [push]
@@ -15,3 +15,5 @@
 [pager]
         diff = diff-so-fancy | less --tabs=1,5 -RFX
         show = diff-so-fancy | less --tabs=1,5 -RFX
+[url "ssh://git@github.com/quorumcontrol/"]
+        insteadOf = https://github.com/quorumcontrol/
