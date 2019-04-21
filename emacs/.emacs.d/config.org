@@ -659,19 +659,17 @@ with any text-related mode by adding it to the ~text-mode-hook~.
 
 [[http://proselint.com/][Proselint]] pragmatically suggests changes to English text based on rules from
 well-known writing style guides and manuals. It's a python module, but Aaron
-Jacobs [[https://unconj.ca/blog/linting-prose-in-emacs.html][published a nice integration with flycheck]]. I made a minor tweak for
-my integration though. All the buffers I would want to run proselint on will
-have a mode that derives from ~text-mode~, so that's the only mode I needed to
-specify.
+Jacobs [[https://unconj.ca/blog/linting-prose-in-emacs.html][published a nice integration with flycheck]]. I use his, but with minor
+tweaks. But it eats *a lot* of cpu.
 
 #+BEGIN_SRC emacs-lisp
-  (flycheck-define-checker proselint
-    "A linter for prose."
-    :command ("proselint" source-inplace)
-    :error-patterns ((warning line-start (file-name) ":" line ":" column ": "
-                              (id (one-or-more (not (any " "))))
-                              (message) line-end))
-    :modes (text-mode))
+;;  (flycheck-define-checker proselint
+;;    "A linter for prose."
+;;    :command ("proselint" source-inplace)
+;;    :error-patterns ((warning line-start (file-name) ":" line ":" column ": "
+;;                              (id (one-or-more (not (any " "))))
+;;                              (message) line-end))
+;;    :modes (text-mode org-mode markdown-mode))
 #+END_SRC
 
 **** Dictionary
