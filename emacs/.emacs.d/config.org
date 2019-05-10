@@ -24,6 +24,85 @@ looks whenever you try to ~load~, ~load-library~, ~load-theme~, or ~require~.
   (add-to-list 'custom-theme-load-path theme-dir)
 #+END_SRC
 
+*** Commands
+
+#+BEGIN_SRC emacs-lisp
+  (defun comment-or-uncomment-region-or-line ()
+    "toggle comment for region, or current line if there's no active region."
+    (interactive)
+    (let ((start (line-beginning-position))
+          (end (line-end-position)))
+      (when (or (not transient-mark-mode) (region-active-p))
+        (setq start (save-excursion
+                      (goto-char (region-beginning))
+                      (beginning-of-line)
+                      (point))
+              end (save-excursion
+                    (goto-char (region-end))
+                    (end-of-line)
+                    (point))))
+      (comment-or-uncomment-region start end)))
+
+
+  (defun set-exec-path-from-shell-PATH ()
+    "set the exec path to the same one used by the shell because mac osx sucks"
+    (interactive)
+    (let ((path-from-shell (replace-regexp-in-string
+                            "[ \t\n]*$" ""
+                            (shell-command-to-string
+                             "$SHELL --login -i -c 'echo $PATH'"))))
+      (setenv "PATH" path-from-shell)
+      (setq exec-path (split-string path-from-shell path-separator))))
+
+
+  (defun wide-comment-box (b e)
+    "draw a comment box that stretches close to the fill line."
+    (interactive "r")
+    (let ((e (copy-marker e t))
+          (end-column (- fill-column 8))) ;; padding for a nicer looking "margin"
+      (goto-char b)
+      (end-of-line)
+      (insert-char ?  (- end-column (current-column)))
+      (comment-box b e 1)
+      (goto-char e)
+      (set-marker e nil)))
+
+  (defun yank-and-indent ()
+    "yank and then indent the newly formed region according to mode."
+    (interactive)
+    (yank)
+    (call-interactively 'indent-region))
+
+  (defun cider-grimoire-markdown-mode (&optional arg)
+    (when (fboundp 'markdown-mode)
+      (with-current-buffer (get-buffer cider-grimoire-buffer)
+        (markdown-mode))))
+
+  (defun bl/kill-this-buffer ()
+    "Kill the current buffer without prompting (unless there are unsaved changes)."
+    (interactive)
+    (kill-buffer (current-buffer)))
+
+
+  ;; see:
+  ;; https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html
+  (defun bl/org-skip-subtree-if-priority (priority)
+    "Skip an agenda subtree if it has a priority of PRIORITY.
+  PRIORITY may be one of the characters ?A, ?B, or ?C."
+    (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+          (pri-value (* 1000 (- org-lowest-priority priority)))
+          (pri-current (org-get-priority (thing-at-point 'line t))))
+      (if (= pri-value pri-current)
+          subtree-end
+        nil)))
+
+  (defun bl/org-skip-subtree-if-habit ()
+    "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
+    (let ((subtree-end (save-excursion (org-end-of-subtree t))))
+      (if (string= (org-entry-get nil "STYLE") "habit")
+          subtree-end
+        nil)))
+#+END_SRC
 *** Interface
 These options control the look and feel of Emacs. I set these interface options
 early on to avoid (or at least minimize) flickering during initialization.
@@ -657,21 +736,6 @@ with any text-related mode by adding it to the ~text-mode-hook~.
     :hook (text-mode . writegood-mode))
 #+END_SRC
 
-[[http://proselint.com/][Proselint]] pragmatically suggests changes to English text based on rules from
-well-known writing style guides and manuals. It's a python module, but Aaron
-Jacobs [[https://unconj.ca/blog/linting-prose-in-emacs.html][published a nice integration with flycheck]]. I use his, but with minor
-tweaks. But it eats *a lot* of cpu.
-
-#+BEGIN_SRC emacs-lisp
-;;  (flycheck-define-checker proselint
-;;    "A linter for prose."
-;;    :command ("proselint" source-inplace)
-;;    :error-patterns ((warning line-start (file-name) ":" line ":" column ": "
-;;                              (id (one-or-more (not (any " "))))
-;;                              (message) line-end))
-;;    :modes (text-mode org-mode markdown-mode))
-#+END_SRC
-
 **** Dictionary
 [[https://wordnet.princeton.edu/][WordNet]] is more than just a dictionary; it's a full-fledged, powerful lexical
 database. It's a pretty good dictionary too, though. I use the [[https://github.com/gromnitsky/wordnut][Wordnut]] interface
@@ -694,22 +758,18 @@ I use it with the [[https://wordnet.princeton.edu/][WordNet]] back end.
            ("C-c t r" . synosaurus-choose-and-replace))
     :init (setq synosaurus-backend 'synosaurus-backend-wordnet))
 #+END_SRC
-*** Org
+*** Org Mode
 Org-mode alone is reason to use emacs. The extra power you get from combining a
 central note database with your agenda/todo tasks is multiplicative instead of
 additive from what you get with one of those things alone.
 
 I keep all my org files under a common root, so I set that root here before I
 set anything else.
-
 #+BEGIN_SRC emacs-lisp
   (setq org-directory "~/docs/org/")
 #+END_SRC
 
 **** Org buffer settings
-There are a lot of settings you can tweak to change the way emacs behaves in an
-org buffer.
-
 Org buffers will have links to different files, media, and web pages all over
 them. It's nice to visit that link just by hitting enter when the cursor is over
 one of them.
@@ -729,6 +789,19 @@ nice to use the native indentation for the embedded code instead of org mode's
 indentation, so I turn that on here.
 #+BEGIN_SRC emacs-lisp
   (setq org-src-tab-acts-natively t)
+#+END_SRC
+
+I inadvertently edit text in the "invisible" area within collapsed or subtrees
+and weird hijinx ensue. The following option alerts me whenever I'm trying to
+edit in an invisible area to avoid that.
+#+BEGIN_SRC emacs-lisp
+  (setq org-catch-invisible-edits 'show-and-error)
+#+END_SRC
+
+And I hate random empty lines between collapsed subtrees. This option cleans
+those up.
+#+BEGIN_SRC emacs-lisp
+  (setq org-cycle-separator-lines 0)
 #+END_SRC
 
 ***** Syntax highlighting
@@ -763,7 +836,7 @@ document more readable.
                                      (plain-list-item . auto)))
 #+END_SRC
 
-***** Key bindings
+***** General key bindings
 I set ~C-c l~ to save a link to the clipboard of the current file position.
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-c l") 'org-store-link)
@@ -817,28 +890,47 @@ category, file, inherited and local tasks, outline path, and archive time.
 #+END_SRC
 
 **** Tasks
-#+BEGIN_SRC emacs-lisp
-  ;; log when todo items are closed
-  (setq org-log-done 'time)
 
-  ;; block todo entries from being marked done until all their children are done.
+Log when I close todo items.
+#+BEGIN_SRC emacs-lisp
+  (setq org-log-done 'time)
+#+END_SRC
+
+Block me from closing todo entries done until I finish all their children.
+#+BEGIN_SRC emacs-lisp
   (setq org-enforce-todo-dependencies t)
   (setq org-enforce-todo-checkbox-dependencies t)
+#+END_SRC
 
-  ;; [todo -> (started | blocked) -> (done | cancelled)] as the todo state
-  ;; sequence. log when tasks are marked started and done, and log with notes
-  ;; whenever they're marked blocked or canceled.
-  (setq org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "BLOCKED(b@/!)" "|"
-                                      "DONE(d)" "CANCELED(c@)")))
+Set [todo -> (next | waiting) -> (done | cancelled)] as the todo state sequence.
+Also log when I mark tasks started and done, log with notes whenever they're
+marked blocked or canceled.
+#+BEGIN_SRC emacs-lisp
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "WAITING(w@/!)"
+                                      "|"
+                                      "DONE(d!)" "CANCELED(c@)")))
+#+END_SRC
 
-  ;; log state change time stamps in the 'LOGBOOK' drawer.
+Set some suitable colors for the todo state keywords
+#+BEGIN_SRC emacs-lisp
+  (setf org-todo-keyword-faces `(("TODO" . (:foreground ,red))
+                                 ("NEXT" . (:foreground ,yellow))
+                                 ("WAITING" . (:foreground ,orange))
+                                 ("DONE" . (:foreground ,green))
+                                 ("CANCELLED" . (:foreground ,gray))))
+#+END_SRC
+
+
+Log state change time stamps in the 'LOGBOOK' drawer, and log every time i kick
+the can down the road.
+#+BEGIN_SRC emacs-lisp
   (setq org-log-into-drawer t)
-
-  ;; log every time i kick the can down the road
   (setq org-log-redeadline 'time)
   (setq org-log-reschedule 'time)
+#+END_SRC
 
-  ;; 3 priorities: A, B, and C
+Finally, set 3 task priorities: A, B, and C.
+#+BEGIN_SRC emacs-lisp
   (setq org-highest-priority ?A)
   (setq org-default-priority ?B)
   (setq org-lowest-priority ?C)
@@ -879,45 +971,62 @@ each file save.
 #+END_SRC
 
 **** Agenda
+Scan top level files under the org dir, and all files under the `work' subdir
+for agenda items
 #+BEGIN_SRC emacs-lisp
-  ;; see:
-  ;; https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html
-  (defun bl/org-skip-subtree-if-priority (priority)
-    "Skip an agenda subtree if it has a priority of PRIORITY.
-   PRIORITY may be one of the characters ?A, ?B, or ?C."
-    (let ((subtree-end (save-excursion (org-end-of-subtree t)))
-          (pri-value (* 1000 (- org-lowest-priority priority)))
-          (pri-current (org-get-priority (thing-at-point 'line t))))
-      (if (= pri-value pri-current)
-          subtree-end
-        nil)))
-
-  (defun bl/org-skip-subtree-if-habit ()
-    "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
-    (let ((subtree-end (save-excursion (org-end-of-subtree t))))
-      (if (string= (org-entry-get nil "STYLE") "habit")
-          subtree-end
-        nil)))
-
-  ;; scan top level files under the org dir, and all files under the `work' subdir
-  ;; for agenda items
   (setq org-agenda-files `(,org-directory
+                           ,(concat org-directory "/blog")
                            ,(concat org-directory "/side")
                            ,(concat org-directory "/work")))
 
-  ;; open agenda in the other window
-  (setq org-agenda-window-setup 'other-window)
 
-  ;; sort tasks in order of when they are due and then by priority
+#+END_SRC
+
+Sort tasks in order of when they are due and then by priority
+#+BEGIN_SRC emacs-lisp
   (setq org-agenda-sorting-strategy '((agenda deadline-up priority-down)
                                       (todo priority-down category-keep)
                                       (tags priority-down category-keep)
                                       (search category-keep)))
+#+END_SRC
 
-  ;; 'C-c a b' to show a "block" agenda view showing
-  ;; (1) high priority unscheduled tasks,
-  ;; (2) weekly agenda
-  ;; (3) everything else
+Open agenda in the other window
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-window-setup 'other-window)
+#+END_SRC
+
+Show ten days worth of stuff, starting three days ago
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-start-day "-3d")
+  (setq org-agenda-span 10)
+  (setq org-agenda-start-on-weekday nil)
+#+END_SRC
+
+Warn me of upcoming deadlines in the next 3 days, but skip any deadlines for
+tasks that are already done.
+#+BEGIN_SRC emacs-lisp
+  (setq org-deadline-warning-days 3)
+  (setq org-agenda-skip-deadline-if-done t)
+#+END_SRC
+
+Dim blocked todo items.
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-dim-blocked-tasks t)
+#+END_SRC
+
+***** Views
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+Set C-c a to bring the agenda up. 'C-c a b' to show a "block" agenda view
+showing:
+1. high priority unscheduled tasks,
+2. weekly agenda
+3. everything else
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c a") 'org-agenda)
+
   (setq org-agenda-custom-commands
         '(("b" "Weekly agenda and all unfinished tasks"
            ((tags "PRIORITY=\"A\""
@@ -933,51 +1042,23 @@ each file save.
                        '(or (bl/org-skip-subtree-if-habit)
                             (bl/org-skip-subtree-if-priority ?A)
                             (org-agenda-skip-if nil '(scheduled))))))))))
-
-  ;; show me ten days worth of stuff, starting three days ago
-  (setq org-agenda-start-day "-3d")
-  (setq org-agenda-span 10)
-  (setq org-agenda-start-on-weekday nil)
-
-  ;; warn me of upcoming deadlines in the next 3 days.
-  (setq org-deadline-warning-days 3)
-
-  ;; skip any deadlines for tasks that are already done
-  (setq org-agenda-skip-deadline-if-done t)
-
-  ;; dim blocked todo items
-  (setq org-agenda-dim-blocked-tasks t)
-
-  ;; C-c a to bring the agenda up
-  (global-set-key (kbd "C-c a") 'org-agenda)
-#+END_SRC
-
-**** Refile
-#+BEGIN_SRC emacs-lisp
-  ;; include the current file and any agenda file in the refile target list
-  (setq org-refile-targets '((nil :maxlevel . 9)
-                             (org-agenda-files :maxlevel . 9)))
-
-  ;; use ido for completion of the whole outline path directly
-  (setq org-refile-use-outline-path t)
-  (setq org-outline-path-complete-in-steps nil)
-
-  ;; create parent tasks with refile
-  (setq org-refile-allow-creating-parent-nodes 'confirm)
-
-  ;; Use the current window for indirect buffer display
-  (setq org-indirect-buffer-display 'current-window)
 #+END_SRC
 
 **** Capture
 
-Save captured tasks in "inbox.org"
-
+Save captured tasks in "inbox.org" to refile later
 #+BEGIN_SRC emacs-lisp
   (setq inbox-path (expand-file-name "inbox.org" org-directory))
   (setq org-default-notes-file inbox-path)
 #+END_SRC
 
+***** Bindings
+C-c c for org capture.
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c c") 'org-capture)
+#+END_SRC
+
+Add templates and their bindings for blog posts, notes, and normal "todo" tasks.
 #+BEGIN_SRC emacs-lisp
   (setq org-capture-templates
         (let ((today "%(org-insert-time-stamp (org-read-date nil t \"+0d\"))"))
@@ -993,13 +1074,30 @@ Save captured tasks in "inbox.org"
                            "%a")
                          "\n"))
 
-            ("t" "todo" entry (file+headline ,inbox-path "Tasks")
+            ("t" "task" entry (file+headline ,inbox-path "Tasks")
              ,(concat "* TODO [#B] %?\n"
                       "  SCHEDULED: " today "\n")))))
 #+END_SRC
 
+**** Refile
+I want to be able to refile items pretty much anywhere the agenda can see, so
+include both the current file and any agenda files in the refile target list.
 #+BEGIN_SRC emacs-lisp
-  (global-set-key (kbd "C-c c") 'org-capture)
+  (setq org-refile-targets '((nil :maxlevel . 9)
+                             (org-agenda-files :maxlevel . 9)))
+
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  ;; use ido for completion of the whole outline path directly
+  (setq org-refile-use-outline-path t)
+  (setq org-outline-path-complete-in-steps nil)
+
+  ;; create parent tasks with refile
+  (setq org-refile-allow-creating-parent-nodes 'confirm)
+
+  ;; Use the current window for indirect buffer display
+  (setq org-indirect-buffer-display 'current-window)
 #+END_SRC
 
 *** Documents
@@ -1015,9 +1113,6 @@ Save captured tasks in "inbox.org"
 
 #+BEGIN_SRC emacs-lisp
   (use-package markdown-mode
-    :bind (("M-n" . nil)
-           ("M-n" . nil))
-
     :config (progn
               ;; automatically enable auto fill mode
               (add-hook 'markdown-mode-hook
@@ -1025,6 +1120,9 @@ Save captured tasks in "inbox.org"
                           (auto-fill-mode 1))))
 
     :mode ("\\.md\\'" . markdown-mode))
+
+;; (define-key markdown-mode-map (kbd "M-n") nil)
+;; (define-key markdown-mode-map (kbd "M-p") nil)
 #+END_SRC
 
 *** Programming
@@ -1232,6 +1330,15 @@ hooking in to the external language server.
     :config (go-guru-hl-identifier-mode))
 #+END_SRC
 
+***** Flycheck workaround
+There's a [[https://github.com/flycheck/flycheck/issues/1523][bug in flycheck]] due to changes in the go ~vet~ tool. This is a
+workaround suggested in the bug report until the fix lands in master
+#+BEGIN_SRC emacs-lisp
+(let ((govet (flycheck-checker-get 'go-vet 'command)))
+  (when (equal (cadr govet) "tool")
+    (setf (cdr govet) (cddr govet))))
+#+END_SRC
+
 **** Handlebars
 
 #+BEGIN_SRC emacs-lisp
@@ -1242,6 +1349,7 @@ hooking in to the external language server.
 
 #+BEGIN_SRC emacs-lisp
   (use-package js2-mode
+    :config (setq js2-basic-offset 2)
     :mode ("\\.js\\'" . js2-mode))
 #+END_SRC
 
