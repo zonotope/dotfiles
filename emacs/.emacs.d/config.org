@@ -863,7 +863,7 @@ still pull them up later if you need to.
 I archive old org sub-trees under a date-tree in files within the "/archive"
 sub-directory that have the same name as the original file.
 #+BEGIN_SRC emacs-lisp
-  (setq org-archive-location (expand-file-name "/archive/%s::datetree/"
+  (setq org-archive-location (expand-file-name "archive/%s::datetree/"
                                                org-directory))
 #+END_SRC
 
