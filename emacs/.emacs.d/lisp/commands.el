@@ -50,7 +50,7 @@
       (markdown-mode))))
 
 (defun bl/kill-this-buffer ()
-  "kill the current buffer without prompting (unless there are unsaved changes)"
+  "Kill the current buffer without prompting (unless there are unsaved changes)."
   (interactive)
   (kill-buffer (current-buffer)))
 

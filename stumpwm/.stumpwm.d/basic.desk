@@ -2,38 +2,38 @@
    :SCREENS (#S(SDUMP
                 :NUMBER 0
                 :GROUPS (#S(GDUMP
-                            :NUMBER 0
+                            :NUMBER 1
                             :NAME "home"
                             :TREE ((((((#S(FDUMP
                                            :NUMBER 0
                                            :X 0
                                            :Y 0
-                                           :WIDTH 695
-                                           :HEIGHT 413
+                                           :WIDTH 655
+                                           :HEIGHT 436
                                            :WINDOWS NIL
                                            :CURRENT NIL)
                                         #S(FDUMP
                                            :NUMBER 6
                                            :X 0
-                                           :Y 413
-                                           :WIDTH 695
-                                           :HEIGHT 472
+                                           :Y 436
+                                           :WIDTH 655
+                                           :HEIGHT 494
                                            :WINDOWS NIL
                                            :CURRENT NIL))
                                        #S(FDUMP
                                           :NUMBER 2
                                           :X 0
-                                          :Y 885
-                                          :WIDTH 695
-                                          :HEIGHT 525
+                                          :Y 930
+                                          :WIDTH 655
+                                          :HEIGHT 470
                                           :WINDOWS NIL
                                           :CURRENT NIL))
                                       #S(FDUMP
                                          :NUMBER 5
-                                         :X 695
+                                         :X 655
                                          :Y 0
-                                         :WIDTH 1195
-                                         :HEIGHT 1410
+                                         :WIDTH 1235
+                                         :HEIGHT 1400
                                          :WINDOWS NIL
                                          :CURRENT NIL))
                                      #S(FDUMP
@@ -41,15 +41,15 @@
                                         :X 1890
                                         :Y 0
                                         :WIDTH 670
-                                        :HEIGHT 1410
+                                        :HEIGHT 1400
                                         :WINDOWS NIL
                                         :CURRENT NIL))
                                     #S(FDUMP
                                        :NUMBER 1
                                        :X 0
-                                       :Y 1410
+                                       :Y 1400
                                        :WIDTH 2560
-                                       :HEIGHT 30
+                                       :HEIGHT 40
                                        :WINDOWS NIL
                                        :CURRENT NIL))
                                    #S(FDUMP
@@ -60,16 +60,16 @@
                                       :HEIGHT 1440
                                       :WINDOWS NIL
                                       :CURRENT NIL))
-                            :CURRENT 5)
+                            :CURRENT 0)
                          #S(GDUMP
-                            :NUMBER 1
+                            :NUMBER 2
                             :NAME "work"
                             :TREE (((#S(FDUMP
                                         :NUMBER 0
                                         :X 0
                                         :Y 0
                                         :WIDTH 1330
-                                        :HEIGHT 1410
+                                        :HEIGHT 1400
                                         :WINDOWS NIL
                                         :CURRENT NIL)
                                      (#S(FDUMP
@@ -77,31 +77,31 @@
                                          :X 1330
                                          :Y 0
                                          :WIDTH 1230
-                                         :HEIGHT 955
+                                         :HEIGHT 980
                                          :WINDOWS NIL
                                          :CURRENT NIL)
                                       (#S(FDUMP
                                           :NUMBER 3
                                           :X 1330
-                                          :Y 955
+                                          :Y 980
                                           :WIDTH 615
-                                          :HEIGHT 455
+                                          :HEIGHT 420
                                           :WINDOWS NIL
                                           :CURRENT NIL)
                                        #S(FDUMP
                                           :NUMBER 5
                                           :X 1945
-                                          :Y 955
+                                          :Y 980
                                           :WIDTH 615
-                                          :HEIGHT 455
+                                          :HEIGHT 420
                                           :WINDOWS NIL
                                           :CURRENT NIL))))
                                     #S(FDUMP
                                        :NUMBER 1
                                        :X 0
-                                       :Y 1410
+                                       :Y 1400
                                        :WIDTH 2560
-                                       :HEIGHT 30
+                                       :HEIGHT 40
                                        :WINDOWS NIL
                                        :CURRENT NIL))
                                    #S(FDUMP
@@ -112,6 +112,6 @@
                                       :HEIGHT 1440
                                       :WINDOWS NIL
                                       :CURRENT NIL))
-                            :CURRENT 0))
+                            :CURRENT 1))
                 :CURRENT 0))
    :CURRENT 0)

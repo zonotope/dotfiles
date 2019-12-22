@@ -902,11 +902,11 @@ Block me from closing todo entries done until I finish all their children.
   (setq org-enforce-todo-checkbox-dependencies t)
 #+END_SRC
 
-Set [todo -> (next | waiting) -> (done | cancelled)] as the todo state sequence.
-Also log when I mark tasks started and done, log with notes whenever they're
-marked blocked or canceled.
+Set [todo -> next (started | waiting) -> (done | cancelled)] as the todo state
+sequence. Also log when I mark tasks started and done, log with notes whenever
+they're marked blocked or canceled.
 #+BEGIN_SRC emacs-lisp
-  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "WAITING(w@/!)"
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "WAITING(w@/!)"
                                       "|"
                                       "DONE(d!)" "CANCELED(c@)")))
 #+END_SRC
@@ -915,7 +915,8 @@ Set some suitable colors for the todo state keywords
 #+BEGIN_SRC emacs-lisp
   (setf org-todo-keyword-faces `(("TODO" . (:foreground ,red))
                                  ("NEXT" . (:foreground ,yellow))
-                                 ("WAITING" . (:foreground ,orange))
+                                 ("STARTED" . (:foreground ,cyan))
+                                 ("WAITING" . (:foreground ,magenta))
                                  ("DONE" . (:foreground ,green))
                                  ("CANCELLED" . (:foreground ,gray))))
 #+END_SRC
@@ -929,11 +930,20 @@ the can down the road.
   (setq org-log-reschedule 'time)
 #+END_SRC
 
-Finally, set 3 task priorities: A, B, and C.
+Set 3 task priorities: A, B, and C.
 #+BEGIN_SRC emacs-lisp
   (setq org-highest-priority ?A)
   (setq org-default-priority ?B)
   (setq org-lowest-priority ?C)
+#+END_SRC
+
+Set up org-pomodoro to use the pomodoro technique to track tasks. The default
+shows pomodoro notifications in the echo area and messages buffer, but I set it
+to show using the systemwide libnotify process to make them more noticeable.
+#+BEGIN_SRC emacs-lisp
+  (use-package org-pomodoro
+    :ensure t
+    :commands (org-pomodoro))
 #+END_SRC
 
 **** Blog
@@ -978,7 +988,6 @@ for agenda items
                            ,(concat org-directory "/blog")
                            ,(concat org-directory "/side")
                            ,(concat org-directory "/work")))
-
 
 #+END_SRC
 
@@ -1268,6 +1277,13 @@ automatically in any Go buffer.
     :mode   (("\\.go\\'" . go-mode)))
 #+END_SRC
 
+I also use [[https://github.com/nanjj/go-mod.el][go-mod.el]] to handle ~go.mod~ and ~go.sum~ files. I've loaded the
+symlinked raw file for now until there's an official package in one of the
+repositories for it.
+#+BEGIN_SRC emacs-lisp
+  (require 'go-mod-mode)
+#+END_SRC
+
 ***** Completion
 Next I set up the Go back end for the company completion engine and I also claw
 back a few milliseconds by limiting the company back ends to ~company-go~ in Go
@@ -1294,12 +1310,24 @@ and types of function in the echo area as you write the function call.
 #+END_SRC
 
 ***** Language Server
-~lsp-go~ is the Emacs interface to [[https://github.com/sourcegraph/go-langserver][Sourcegraph's Go language server]]. It provides
-a more powerful find-references, completion, and other ide-like features by
-hooking in to the external language server.
+~lsp-mode~ has a built in [[https://github.com/golang/go/wiki/gopls#emacs][gopls]] client out of the box.
 #+BEGIN_SRC emacs-lisp
-  (use-package lsp-go
-    :hook (go-mode . lsp-go-enable))
+  (use-package lsp-mode
+    :commands (lsp lsp-deferred)
+    :config (setq lsp-enable-snippet nil)
+    :hook (go-mode . lsp-deferred))
+#+END_SRC
+
+~lsp-ui~ gives nicer overlays
+#+BEGIN_SRC emacs-lisp
+   (use-package lsp-ui
+     :commands lsp-ui-mode)
+#+END_SRC
+
+And ~company-lsp~ integrates company-mode completions with lsp-mode.
+#+BEGIN_SRC emacs-lisp
+  (use-package company-lsp
+    :commands company-lsp)
 #+END_SRC
 
 ***** Debugging
@@ -1489,24 +1517,36 @@ Then, we'll also need install the emacs typescript ide. Before we can do that
 though, we need a helper function that we can add to the typescript-mode hook
 that enables the ide.
 #+BEGIN_SRC emacs-lisp
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
-  (company-mode +1))
+  (defun setup-tide-mode ()
+    (interactive)
+    (tide-setup)
+    (flycheck-mode +1)
+    (setq flycheck-check-syntax-automatically '(save mode-enabled))
+    (eldoc-mode +1)
+    (tide-hl-identifier-mode +1)
+    ;; company is an optional dependency. You have to
+    ;; install it separately via package-install
+    ;; `M-x package-install [ret] company`
+    (company-mode +1))
+
+  (defun setup-tsx ()
+    (when (string-equal "tsx" (file-name-extension buffer-file-name))
+              (setup-tide-mode)))
 #+END_SRC
 
-Now, let's install tide
+We also want to install web-mode to edit tsx files.
+#+BEGIN_SRC emacs-lisp
+  (use-package web-mode
+    :mode (("\\.tsx\\'" . web-mode)))
+#+END_SRC
+
+Now, let's install tide, enable it in typescript files, run the formatter before
+every save, and enable web mode for tsx files
 #+BEGIN_SRC emacs-lisp
   (use-package tide
     :hook ((typescript-mode . setup-tide-mode)
-           (before-save-hook . tide-format-before-save)))
+           (before-save . tide-format-before-save)
+           (web-mode . setup-tsx)))
 #+END_SRC
 
 **** YAML

@@ -46,6 +46,11 @@
 (set-border-color           blue)
 (setf *hidden-window-color* yellow)
 
+;; (setf *grab-pointer-foreground* yellow)
+;; (setf *grab-pointer-background* red)
+;; (setf *grab-pointer-character* 64)
+;; (setf *grab-pointer-character-mask* 65)
+
 ;; font
 ;; (load-module "ttf-fonts")
 ;; (set-font (make-instance 'xft:font
@@ -70,6 +75,7 @@
 ;; behavior                                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(setf *default-group-name* "home")
 (setf *group-format* "%n%s %t")
 
 (setf *window-format* "%n%s %c <%50t>%m")
@@ -146,6 +152,8 @@
 ;; set frame layout
 (clear-window-placement-rules)
 (restore-from-file "~/.stumpwm.d/basic.desk")
+;; (define-frame-preference "main"
+;;   (1 nil nil :class "Conky" :role nil))
 
 ;; load .Xresources
 (run-shell-command "xrdb -merge ~/.Xresources")
@@ -163,13 +171,19 @@
 (run-shell-command "xbindkeys")
 
 ;; start the light-locker lock screen daemon
-(run-shell-command "light-locker --lock-on-suspend")
+;; (run-shell-command "light-locker --lock-on-suspend")
 
 ;; lock the screen with light-locker when idle
-(run-shell-command (concatenate 'string
-                                "xss-lock --transfer-sleep-lock"
-                                " -- "
-                                "light-locker-command --lock"))
+;; (run-shell-command (concatenate 'string
+;;                                 "xss-lock --transfer-sleep-lock"
+;;                                 " -- "
+;;                                 "light-locker-command --lock"))
+
+;; use xfce's power manager
+(run-shell-command "xfce4-power-manager")
+
+;; lock with xfce's screensaver
+(run-shell-command "xfce4-screensaver")
 
 ;; ;; start the top status bar
 (run-shell-command "killall polybar")
