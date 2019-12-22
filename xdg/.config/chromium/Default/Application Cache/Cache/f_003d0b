@@ -1,0 +1,1506 @@
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+@font-face {
+	font-family: "Lyon-Text";
+	src: url(/lyon-text-regular-3be84b20b1d9ff1e3456b0a220ae449b.woff) format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Lyon-Text";
+	src: url(/lyon-text-regular-italic-437d32a42fc5b8268bb4a1e0cc8b363f.woff) format("woff");
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Lyon-Text";
+	src: url(/lyon-text-semibold-acb7f110189034ff6a1afa4b730be0ed.woff) format("woff");
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Lyon-Text";
+	src: url(/lyon-text-semibold-italic-1f81a2f93060f05edd7f078ac91f25e6.woff) format("woff");
+	font-style: italic;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url(/nitti-normal-747c0f98860966043db7e3113800fb32.woff) format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url(/nitti-normal-italic-0b173945434a384ea4817b1d680326c0.woff) format("woff");
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url(/nitti-medium-90ef12e6ff208475cbd0b6ba7be9b012.woff) format("woff");
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "Nitti";
+	src: url(/nitti-medium-italic-60530f905545e0f1ede17b1995678ef1.woff) format("woff");
+	font-style: italic;
+	font-weight: 600;
+}
+.notion-frame .katex {
+	padding-right: 32px;
+}
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when hovered and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+/*pre {
+  overflow: auto;
+}*/
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: inherit;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/*
+input {
+  line-height: normal;
+}*/
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+/* ==================================================================== */
+/* Hover Feedback */
+/* ==================================================================== */
+
+/* Important to only turn on relative position on hover.
+		Otherwise could make things very slow. */
+.notion-feedback-cover-focused,
+.notion-feedback-cover-activated {
+	position: relative;
+}
+
+.notion-feedback-cover-focused:after,
+.notion-feedback-cover-activated:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgb(50, 50, 50);
+	opacity: 0.06;
+	border-radius: inherit;
+	/* Make sure doesn't block the content */
+	pointer-events: none;
+}
+.notion-dark.notion-feedback-cover-focused:after,
+.notion-dark.notion-feedback-cover-activated:after {
+	background: rgb(255, 255, 255);
+}
+
+.notion-feedback-cover-focused:after {
+	opacity: 0.06;
+}
+
+.notion-feedback-cover-activated:after {
+	opacity: 0.06;
+}
+
+.notion-feedback-background {
+	transition: background 140ms ease-in;
+}
+
+.notion-feedback-background-focused {
+	background: rgba(50, 50, 50, 0.08);
+}
+.notion-dark.notion-feedback-background-focused {
+	background: rgba(255, 255, 255, 0.07);
+}
+
+.notion-feedback-background-force {
+	transition: background 140ms ease-in;
+}
+
+.notion-feedback-background-force-focused {
+	background: rgba(50, 50, 50, 0.08) !important;
+}
+.notion-dark.notion-feedback-background-force-focused {
+	background: rgba(255, 255, 255, 0.07) !important;
+}
+
+.notion-mobile-tapping {
+	opacity: 0.6;
+}
+
+.notion-reminder:hover {
+	text-decoration: underline;
+}
+
+/* ==================================================================== */
+/* Cursor */
+/* ==================================================================== */
+
+.notion-cursor-default {
+	cursor: default;
+}
+
+.notion-cursor-pointer {
+	cursor: pointer;
+}
+
+.notion-sidebar-container,
+.notion-topbar {
+	cursor: default;
+}
+
+.notion-disable-local-cursor .notion-sidebar-container,
+.notion-disable-local-cursor .notion-topbar,
+.notion-disable-local-cursor .notion-cursor-default,
+.notion-disable-local-cursor .notion-cursor-pointer {
+	cursor: inherit;
+}
+
+#notion-app a {
+	cursor: inherit;
+}
+
+/* ==================================================================== */
+/* Animation */
+/* ==================================================================== */
+
+.notion-fadein {
+	animation: fadein ease-in 330ms;
+}
+
+.notion-fadein-fast {
+	animation: fadein ease-in 230ms;
+}
+
+.notion-fadein-slow {
+	animation: fadein ease-in 600ms;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ==================================================================== */
+/* Overwrite for CodeBlock */
+/* ==================================================================== */
+
+.line-numbers .line-numbers-rows {
+	border-right: none !important;
+}
+
+.line-numbers-rows > span:before {
+	color: #ccc !important;
+}
+
+/* ==================================================================== */
+/* Mobile.
+/* ==================================================================== */
+
+.notion-mobile * {
+	/* Remove the tap highlight */
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* - Disable the bouncy scrolling in OSX. */
+/* - Let the main scroller to handle scrolling */
+html,
+body,
+#notion-app {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.notion-app-inner {
+	height: 100%;
+}
+
+/* Front page allow the scroll bounce */
+html.notion-front-page,
+html.notion-front-page body,
+html.notion-front-page #notion-app {
+	height: initial;
+	overflow-x: initial;
+	overflow-y: initial;
+	background: #fffefc; /* Same as front bg in colors.ts */
+}
+
+/* Disable scroll */
+html.notion-front-page body.disable-scroll {
+	overflow: hidden;
+}
+
+html.notion-front-page .notion-app-inner {
+	height: initial;
+}
+
+/* ==================================================================== */
+/* Contenteditable placeholders.
+/* ==================================================================== */
+
+[contenteditable]:empty:before {
+	content: attr(placeholder);
+	display: block; /* For Firefox */
+}
+
+/* ==================================================================== */
+/* Intercom.
+/* ==================================================================== */
+
+#intercom-container {
+	z-index: 998 !important;
+}
+
+/* ==================================================================== */
+/* Prism.
+/* ==================================================================== */
+
+.token.operator.operator {
+	background: transparent;
+}
+/*!
+ * https://github.com/arqex/react-datetime
+ */
+
+.rdt {
+	position: relative;
+	-webkit-user-select: none;
+}
+
+.rdtPicker {
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin-top: 1px;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+.rdtOpen .rdtPicker {
+	display: block;
+}
+.rdtStatic .rdtPicker {
+	box-shadow: none;
+	position: static;
+}
+
+.rdtPicker .rdtTimeToggle {
+	text-align: center;
+}
+
+.rdtPicker table {
+	width: 100%;
+	margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+	text-align: center;
+	height: 28px;
+}
+
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtToday:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+	background: #eeeeee;
+	cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+	color: #999999;
+}
+.rdtPicker td.rdtToday {
+	position: relative;
+}
+.rdtPicker td.rdtToday:before {
+	content: '';
+	display: inline-block;
+	border-left: 7px solid transparent;
+	border-bottom: 7px solid #428bca;
+	border-top-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+	background-color: #428bca;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+	border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+	background: none;
+	color: #999999;
+	cursor: not-allowed;
+}
+
+.rdtPicker td span.rdtOld {
+	color: #999999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+	background: none;
+	color: #999999;
+	cursor: not-allowed;
+}
+.rdtPicker .dow {
+	width: 14.2857%;
+	border-bottom: none;
+}
+.rdtPicker th.rdtSwitch {
+	width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+	font-size: 21px;
+	vertical-align: top;
+}
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+	background: none;
+	color: #999999;
+	cursor: not-allowed;
+}
+.rdtPicker thead tr:first-child th {
+	cursor: pointer;
+}
+.rdtPicker thead tr:first-child th:hover {
+	background: #eeeeee;
+}
+
+.rdtPicker tfoot {
+	border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+.rdtPicker button:hover {
+	background-color: #eee;
+}
+
+.rdtPicker thead button {
+	width: 100%;
+	height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+	height: 50px;
+	width: 25%;
+	cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+	background: #eee;
+}
+
+.rdtCounters {
+	display: inline-block;
+}
+
+.rdtCounters > div {
+	float: left;
+}
+
+.rdtCounter {
+	height: 100px;
+}
+
+.rdtCounter {
+	width: 40px;
+}
+
+.rdtCounterSeparator {
+	line-height: 100px;
+}
+
+.rdtCounter .rdtBtn {
+	height: 40%;
+	line-height: 40px;
+	cursor: pointer;
+}
+.rdtCounter .rdtBtn:hover {
+	background: #eee;
+}
+.rdtCounter .rdtCount {
+	height: 20%;
+	font-size: 1.2em;
+}
+
+.rdtMilli {
+	vertical-align: middle;
+	padding-left: 8px;
+	width: 48px;
+}
+
+.rdtMilli input {
+	width: 100%;
+	font-size: 1.2em;
+	margin-top: 37px;
+}
+*,
+*:focus {
+	outline: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+th {
+	font-weight: 600;
+}
+
+/* Input placeholder style. Match the opacity with style/base.ts .*/
+::-webkit-input-placeholder {
+	/* Safari, Chrome and Opera */
+	color: inherit;
+	opacity: 0.375;
+}
+::-webkit-contacts-auto-fill-button {
+	visibility: hidden;
+	display: none !important;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+}
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: inherit;
+	opacity: 0.375;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: inherit;
+	opacity: 0.375;
+}
+:-ms-input-placeholder {
+	/* IE 10+ */
+	color: inherit;
+	opacity: 0.375;
+}
+::-ms-input-placeholder {
+	/* Edge */
+	color: inherit;
+	opacity: 0.375;
+}
+
+*::selection {
+	/* Notion brand blue */
+	background: rgba(45, 170, 219, 0.3);
+}
+
+#notion-app b {
+	font-weight: 600;
+}
+
+[contenteditable] {
+	-webkit-tap-highlight-color: transparent;
+}
+.TimeInput {
+	width: 100%;
+	text-align: center;
+}
+
+.TimeInput-input {
+	width: 80px;
+	text-align: center;
+	color: rgb(66, 66, 65);
+	border: 1px solid rgb(231, 230, 229);
+	background: rgb(248, 247, 246);
+	border-radius: 3px;
+	height: 30px;
+}
+@keyframes pulse-ring {
+	0% {
+		transform: scale(0.33);
+	}
+	80%,
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes pulse-dot {
+	0% {
+		transform: scale(0.8);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.8);
+	}
+}
+
+@keyframes bounce-left {
+	0% {
+		transform: translateX(-200%);
+	}
+	25% {
+		transform: translateX(-199%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+/* =============================================================================
+
+	react-day-picker.css.
+	Prefix everything with #notion-app to increase the precedence of these rules
+	so they will always override the default CSS regardless of the order in which
+	they are concatenated.
+
+// ========================================================================== */
+
+/* =============================================================================
+	Desktop Styles.
+============================================================================= */
+
+#notion-app .DayPicker-Day {
+	border-radius: 3px;
+}
+
+#notion-app .DayPicker-Day.DayPicker-Day--range {
+	border-radius: 0;
+}
+
+#notion-app .DayPicker-Day.DayPicker-Day--range.DayPicker-Day--start {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#notion-app .DayPicker-Day.DayPicker-Day--range.DayPicker-Day--end {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+#notion-app
+	.DayPicker-Day.DayPicker-Day--range.DayPicker-Day--start.DayPicker-Day--end {
+	border-radius: 3px;
+}
+
+#notion-app
+	.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside),
+#notion-app
+	.DayPicker-Day--value:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+	background: rgb(45, 170, 219); /* Notion blue */
+	color: #fff;
+}
+
+#notion-app
+	.DayPicker:not(.DayPicker--interactionDisabled)
+	.DayPicker-Day--outside:hover,
+#notion-app
+	.DayPicker:not(.DayPicker--interactionDisabled)
+	.DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--value):not(.DayPicker-Day--start):not(.DayPicker-Day--end):hover {
+	background-color: rgba(45, 156, 219, 0.2);
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#notion-app .DayPicker-Months {
+	font-size: 14px;
+}
+
+#notion-app
+	.DayPicker-Day--today:not(.DayPicker-Day--selected):not(.DayPicker-Day--value):not(.DayPicker-Day--start):not(.DayPicker-Day--end) {
+	position: relative;
+	color: white;
+	z-index: 1;
+}
+
+#notion-app .DayPicker-Day--today {
+	color: inherit;
+}
+
+#notion-app
+	.DayPicker-Day--today:not(.DayPicker-Day--selected):not(.DayPicker-Day--value):not(.DayPicker-Day--start):not(.DayPicker-Day--end)::after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 26px;
+	background: rgb(235, 87, 87);
+	border-radius: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: -1;
+}
+
+#notion-app .DayPicker-Caption > div {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+#notion-app .DayPicker-Month {
+	margin: 0;
+}
+
+#notion-app .DayPicker-wrapper {
+	padding-bottom: 0;
+}
+
+#notion-app .DayPicker-Week,
+#notion-app .DayPicker-WeekdaysRow {
+	display: flex;
+}
+
+#notion-app .DayPicker-Weekdays {
+	display: block;
+	margin-top: 0;
+}
+
+#notion-app .DayPicker-Caption {
+	margin-bottom: 8px;
+}
+
+#notion-app .DayPicker-Weekday,
+#notion-app .DayPicker-Day {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 30px;
+	line-height: 1.2;
+}
+
+/* =============================================================================
+	Mobile Styles.
+============================================================================= */
+
+@media only screen and (max-width: 600px) {
+	#notion-app .DayPicker-Months,
+	#notion-app .DayPicker-Caption > div {
+		font-size: 16px;
+	}
+
+	#notion-app .DayPicker-Month,
+	#notion-app .DayPicker {
+		width: 100%;
+	}
+
+	#notion-app .DayPicker-Weekday,
+	#notion-app .DayPicker-Day {
+		flex-grow: 1;
+	}
+
+	#notion-app .DayPicker-Weekday,
+	#notion-app .DayPicker-Day {
+		height: 44px;
+	}
+
+	#notion-app .DayPicker-Caption {
+		padding-left: 4%;
+		margin-top: 4px;
+	}
+
+	#notion-app
+		.DayPicker-Day--today:not(.DayPicker-Day--selected):not(.DayPicker-Day--value):not(.DayPicker-Day--range)::after {
+		width: 32px;
+		height: 32px;
+	}
+}
+.react-pdf__Page {
+	padding-bottom: 8px;
+}
+
+.react-pdf__Page__textContent {
+	position: absolute;
+	top: 0 !important;
+	left: 0 !important;
+	transform: none !important;
+	cursor: text;
+}
+/* DayPicker styles */
+
+.DayPicker {
+  display: inline-block;
+}
+
+.DayPicker-wrapper {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-bottom: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.DayPicker-Months {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.DayPicker-Month {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0 1rem;
+  margin-top: 1rem;
+}
+
+.DayPicker-NavBar {
+}
+
+.DayPicker-NavButton {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  right: 1.5rem;
+  margin-top: 2px;
+  color: #8b9898;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.DayPicker-NavButton:hover {
+  opacity: 0.8;
+}
+
+.DayPicker-NavButton--prev {
+  margin-right: 1.5rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAABGdBTUEAALGPC/xhBQAAAVVJREFUWAnN2G0KgjAYwPHpGfRkaZeqvgQaK+hY3SUHrk1YzNLay/OiEFp92I+/Mp2F2Mh2lLISWnflFjzH263RQjzMZ19wgs73ez0o1WmtW+dgA01VxrE3p6l2GLsnBy1VYQOtVSEH/atCCgqpQgKKqYIOiq2CBkqtggLKqQIKgqgCBjpJ2Y5CdJ+zrT9A7HHSTA1dxUdHgzCqJIEwq0SDsKsEg6iqBIEoq/wEcVRZBXFV+QJxV5mBtlDFB5VjYTaGZ2sf4R9PM7U9ZU+lLuaetPP/5Die3ToO1+u+MKtHs06qODB2zBnI/jBd4MPQm1VkY79Tb18gB+C62FdBFsZR6yeIo1YQiLJWMIiqVjQIu1YSCLNWFgijVjYIuhYYCKoWKAiiFgoopxYaKLUWOii2FgkophYp6F3r42W5A9s9OcgNvva8xQaysKXlFytoqdYmQH6tF3toSUo0INq9AAAAAElFTkSuQmCC');
+}
+
+.DayPicker-NavButton--next {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAABGdBTUEAALGPC/xhBQAAAXRJREFUWAnN119ugjAcwPHWzJ1gnmxzB/BBE0n24m4xfNkTaOL7wOtsl3AXMMb+Vjaa1BG00N8fSEibPpAP3xAKKs2yjzTPH9RAjhEo9WzPr/Vm8zgE0+gXATAxxuxtqeJ9t5tIwv5AtQAApsfT6TPdbp+kUBcgVwvO51KqVhMkXKsVJFXrOkigVhCIs1Y4iKlWZxB1rX4gwlpRIIpa8SDkWmggrFq4IIRaJKCYWnSgnrXIQV1r8YD+1Vrn+bReagysIFfLABRt31v8oBu1xEBttfRbltmfjgEcWh9snUS2kNdBK6WN1vrOWxObWsz+fjxevsxmB1GQDfINWiev83nhaoiB/CoOU438oPrhXS0WpQ9xc1ZQWxWHqUYe0I0qrKCQKjygDlXIQV2r0IF6ViEBxVTBBSFUQQNhVYkHIVeJAtkNsbQ7c1LtzP6FsObhb2rCKv7NBIGoq4SDmKoEgTirXAcJVGkFSVVpgoSrXICGUMUH/QBZNSUy5XWUhwAAAABJRU5ErkJggg==');
+}
+
+.DayPicker-NavButton--interactionDisabled {
+  display: none;
+}
+
+.DayPicker-Caption {
+  padding: 0 0.5rem;
+  display: table-caption;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.DayPicker-Caption > div {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.DayPicker-Weekdays {
+  margin-top: 1rem;
+  display: table-header-group;
+}
+
+.DayPicker-WeekdaysRow {
+  display: table-row;
+}
+
+.DayPicker-Weekday {
+  display: table-cell;
+  padding: 0.5rem;
+  font-size: 0.875em;
+  text-align: center;
+  color: #8b9898;
+}
+
+.DayPicker-Weekday abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.DayPicker-Body {
+  display: table-row-group;
+}
+
+.DayPicker-Week {
+  display: table-row;
+}
+
+.DayPicker-Day {
+  display: table-cell;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  outline: none;
+}
+
+.DayPicker-WeekNumber {
+  display: table-cell;
+  padding: 0.5rem;
+  text-align: right;
+  vertical-align: middle;
+  min-width: 1rem;
+  font-size: 0.75em;
+  cursor: pointer;
+  color: #8b9898;
+  border-right: 1px solid #eaecec;
+}
+
+.DayPicker--interactionDisabled .DayPicker-Day {
+  cursor: default;
+}
+
+.DayPicker-Footer {
+  padding-top: 0.5rem;
+}
+
+.DayPicker-TodayButton {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  color: #4a90e2;
+  font-size: 0.875em;
+}
+
+/* Default modifiers */
+
+.DayPicker-Day--today {
+  color: #d0021b;
+  font-weight: 700;
+}
+
+.DayPicker-Day--outside {
+  cursor: default;
+  color: #8b9898;
+}
+
+.DayPicker-Day--disabled {
+  color: #dce0e0;
+  cursor: default;
+  /* background-color: #eff1f1; */
+}
+
+/* Example modifiers */
+
+.DayPicker-Day--sunday {
+  background-color: #f7f8f8;
+}
+
+.DayPicker-Day--sunday:not(.DayPicker-Day--today) {
+  color: #dce0e0;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+  color: #f0f8ff;
+  background-color: #4a90e2;
+  border-radius: 100%;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: #51a0fa;
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+  background-color: #f0f8ff;
+  border-radius: 50%;
+}
+
+/* DayPickerInput */
+
+.DayPickerInput {
+  display: inline-block;
+}
+
+.DayPickerInput-OverlayWrapper {
+  position: relative;
+}
+
+.DayPickerInput-Overlay {
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+/* (ignored) *//* (ignored) *//* (ignored) *//* (ignored) *//* (ignored) *//* (ignored) *//* (ignored) *//* (ignored) */

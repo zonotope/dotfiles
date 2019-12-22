@@ -1,0 +1,60 @@
+2019/12/16-16:20:03.897 6db Reusing MANIFEST /home/zonotope/.config/chromium/Default/Sync Data/LevelDB/MANIFEST-000001
+2019/12/16-16:20:03.901 6db Recovering log #10707
+2019/12/16-16:20:03.903 6db Reusing old log /home/zonotope/.config/chromium/Default/Sync Data/LevelDB/010707.log 
+2019/12/16-17:43:39.873 9a1 Level-0 table #10711: started
+2019/12/16-17:43:39.895 9a1 Level-0 table #10711: 111127 bytes OK
+2019/12/16-17:43:39.912 9a1 Delete type=0 #10707
+2019/12/16-17:43:39.913 9a1 Compacting 4@0 + 1@1 files
+2019/12/16-17:43:39.959 9a1 Generated table #10712@0: 10709 keys, 705440 bytes
+2019/12/16-17:43:39.959 9a1 Compacted 4@0 + 1@1 files => 705440 bytes
+2019/12/16-17:43:39.972 9a1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/16-17:43:39.972 9a1 Delete type=2 #10711
+2019/12/16-17:43:39.972 9a1 Delete type=2 #10706
+2019/12/16-17:43:39.972 9a1 Delete type=2 #10708
+2019/12/16-17:43:39.972 9a1 Delete type=2 #10704
+2019/12/16-17:43:39.972 9a1 Delete type=2 #10702
+2019/12/16-18:36:31.193 9a1 Level-0 table #10714: started
+2019/12/16-18:36:31.239 9a1 Level-0 table #10714: 102271 bytes OK
+2019/12/16-18:36:31.290 9a1 Delete type=0 #10710
+2019/12/16-19:25:13.988 9a1 Level-0 table #10716: started
+2019/12/16-19:25:14.011 9a1 Level-0 table #10716: 105667 bytes OK
+2019/12/16-19:25:14.027 9a1 Delete type=0 #10713
+2019/12/16-21:40:38.140 9a1 Level-0 table #10718: started
+2019/12/16-21:40:38.167 9a1 Level-0 table #10718: 107626 bytes OK
+2019/12/16-21:40:38.180 9a1 Delete type=0 #10715
+2019/12/17-04:46:27.223 9a1 Level-0 table #10720: started
+2019/12/17-04:46:27.248 9a1 Level-0 table #10720: 100857 bytes OK
+2019/12/17-04:46:27.266 9a1 Delete type=0 #10717
+2019/12/17-04:46:27.269 9a1 Compacting 4@0 + 1@1 files
+2019/12/17-04:46:27.323 9a1 Generated table #10721@0: 10723 keys, 703878 bytes
+2019/12/17-04:46:27.323 9a1 Compacted 4@0 + 1@1 files => 703878 bytes
+2019/12/17-04:46:27.344 9a1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/17-04:46:27.344 9a1 Delete type=2 #10714
+2019/12/17-04:46:27.344 9a1 Delete type=2 #10716
+2019/12/17-04:46:27.344 9a1 Delete type=2 #10718
+2019/12/17-04:46:27.344 9a1 Delete type=2 #10720
+2019/12/17-04:46:27.344 9a1 Delete type=2 #10712
+2019/12/17-08:10:21.396 9a1 Level-0 table #10723: started
+2019/12/17-08:10:21.418 9a1 Level-0 table #10723: 98883 bytes OK
+2019/12/17-08:10:21.431 9a1 Delete type=0 #10719
+2019/12/17-11:13:58.113 9a1 Level-0 table #10725: started
+2019/12/17-11:13:58.153 9a1 Level-0 table #10725: 98384 bytes OK
+2019/12/17-11:13:58.182 9a1 Delete type=0 #10722
+2019/12/17-13:39:16.269 9a1 Level-0 table #10727: started
+2019/12/17-13:39:16.377 9a1 Level-0 table #10727: 100463 bytes OK
+2019/12/17-13:39:16.417 9a1 Delete type=0 #10724
+2019/12/17-15:45:59.450 9a1 Level-0 table #10729: started
+2019/12/17-15:45:59.477 9a1 Level-0 table #10729: 102089 bytes OK
+2019/12/17-15:45:59.494 9a1 Delete type=0 #10726
+2019/12/17-15:45:59.494 9a1 Compacting 4@0 + 1@1 files
+2019/12/17-15:45:59.586 9a1 Generated table #10730@0: 10727 keys, 705564 bytes
+2019/12/17-15:45:59.586 9a1 Compacted 4@0 + 1@1 files => 705564 bytes
+2019/12/17-15:45:59.609 9a1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/17-15:45:59.609 9a1 Delete type=2 #10723
+2019/12/17-15:45:59.609 9a1 Delete type=2 #10729
+2019/12/17-15:45:59.609 9a1 Delete type=2 #10727
+2019/12/17-15:45:59.609 9a1 Delete type=2 #10725
+2019/12/17-15:45:59.609 9a1 Delete type=2 #10721
+2019/12/17-17:05:28.832 9a1 Level-0 table #10732: started
+2019/12/17-17:05:28.863 9a1 Level-0 table #10732: 102713 bytes OK
+2019/12/17-17:05:28.880 9a1 Delete type=0 #10728

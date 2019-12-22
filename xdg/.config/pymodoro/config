@@ -1,0 +1,26 @@
+[DEFAULT]
+oneline = false
+
+[General]
+autohide = false
+session = "/home/zonotope/.cache/pomodoro_session"
+oneline = false
+
+[Labels]
+pomodoro_prefix = "P "
+pomodoro_suffix = ""
+break_prefix = "B "
+break_suffix = ""
+
+[Progress Bar]
+left_to_right = false
+total_marks = 10
+session_character = "#"
+break_character = "|"
+empty_character = "·"
+
+[Sound]
+enable = true
+tick = false
+sound_command = aplay -q %s &
+

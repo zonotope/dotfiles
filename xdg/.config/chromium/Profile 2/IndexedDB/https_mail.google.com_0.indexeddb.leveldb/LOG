@@ -1,0 +1,6 @@
+2019/12/17-17:34:31.383 9a3 Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/12/17-17:34:31.383 9a3 Recovering log #3
+2019/12/17-17:34:31.497 9a3 Reusing old log /home/zonotope/.config/chromium/Profile 2/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000003.log 
+2019/12/17-17:34:48.130 fb4 Level-0 table #5: started
+2019/12/17-17:34:48.214 fb4 Level-0 table #5: 1742261 bytes OK
+2019/12/17-17:34:48.269 fb4 Delete type=0 #3

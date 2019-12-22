@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="file_pattern" mtime="1550946367" type="string">
+		<stringvalue>%title%</stringvalue>
+	</entry>
+	<entry name="folder_pattern" mtime="1550946367" type="string">
+		<stringvalue>%author% - %book_title%</stringvalue>
+	</entry>
+	<entry name="expanded" mtime="1550946346" type="bool" value="true"/>
+</gconf>

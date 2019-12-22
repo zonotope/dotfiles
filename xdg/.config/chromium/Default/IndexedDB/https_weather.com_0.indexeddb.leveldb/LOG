@@ -1,0 +1,3 @@
+2019/06/08-00:53:38.878 3452 Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_weather.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/06/08-00:53:38.878 3452 Recovering log #3
+2019/06/08-00:53:38.893 3452 Reusing old log /home/zonotope/.config/chromium/Default/IndexedDB/https_weather.com_0.indexeddb.leveldb/000003.log 

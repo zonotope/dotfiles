@@ -1,0 +1,157 @@
+2018/06/27-22:41:48.865 6890 Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_framatube.org_0.indexeddb.leveldb/MANIFEST-000001
+2018/06/27-22:42:34.621 6927 Current memtable full; waiting...
+2018/06/27-22:42:34.621 1986 Level-0 table #5: started
+2018/06/27-22:42:34.679 1986 Level-0 table #5: 2564320 bytes OK
+2018/06/27-22:42:34.697 1986 Delete type=0 #3
+2018/06/27-22:42:34.700 1986 Level-0 table #7: started
+2018/06/27-22:42:34.700 1986 Level-0 table #7: 0 bytes OK
+2018/06/27-22:42:34.712 1986 Delete type=0 #4
+2018/06/27-22:42:34.712 1986 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2018/06/27-22:43:01.710 6927 Current memtable full; waiting...
+2018/06/27-22:43:01.710 1986 Level-0 table #9: started
+2018/06/27-22:43:01.744 1986 Level-0 table #9: 2639133 bytes OK
+2018/06/27-22:43:01.762 1986 Delete type=0 #6
+2018/06/27-22:43:01.765 1986 Level-0 table #11: started
+2018/06/27-22:43:01.765 1986 Level-0 table #11: 0 bytes OK
+2018/06/27-22:43:01.777 1986 Delete type=0 #8
+2018/06/27-22:43:01.777 1986 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2018/06/27-22:43:01.777 1986 Manual compaction at level-1 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x01\x02\x03\x00\x00\x00\x00\x00<\x96@' @ 927 : 1
+2018/06/27-22:43:01.777 1986 Compacting 1@1 + 1@2 files
+2018/06/27-22:43:01.827 1986 Generated table #12@1: 73 keys, 166081 bytes
+2018/06/27-22:43:01.827 1986 Compacted 1@1 + 1@2 files => 166081 bytes
+2018/06/27-22:43:01.837 1986 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/06/27-22:43:01.838 1986 Delete type=2 #9
+2018/06/27-22:43:01.840 1986 Delete type=2 #5
+2018/06/27-22:43:01.844 1986 Manual compaction at level-1 from '\x00\x05\x01\x02\x03\x00\x00\x00\x00\x00<\x96@' @ 927 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2018/06/27-22:43:19.667 1986 Level-0 table #14: started
+2018/06/27-22:43:19.728 1986 Level-0 table #14: 4217297 bytes OK
+2018/06/27-22:43:19.759 1986 Delete type=0 #10
+2018/06/27-22:43:29.636 1986 Level-0 table #16: started
+2018/06/27-22:43:29.724 1986 Level-0 table #16: 5402933 bytes OK
+2018/06/27-22:43:29.734 1986 Delete type=0 #13
+2018/06/27-22:43:35.636 1986 Level-0 table #18: started
+2018/06/27-22:43:35.711 1986 Level-0 table #18: 4315871 bytes OK
+2018/06/27-22:43:35.743 1986 Delete type=0 #15
+2018/06/27-22:43:41.681 1986 Level-0 table #20: started
+2018/06/27-22:43:41.766 1986 Level-0 table #20: 4414706 bytes OK
+2018/06/27-22:43:41.802 1986 Delete type=0 #17
+2018/06/27-22:43:47.603 1986 Level-0 table #22: started
+2018/06/27-22:43:47.683 1986 Level-0 table #22: 5139467 bytes OK
+2018/06/27-22:43:47.713 1986 Delete type=0 #19
+2018/06/27-22:43:47.718 1986 Compacting 4@0 + 1@1 files
+2018/06/27-22:43:47.801 1986 Generated table #23@0: 69 keys, 2108064 bytes
+2018/06/27-22:43:47.885 1986 Generated table #24@0: 64 keys, 2107613 bytes
+2018/06/27-22:43:47.968 1986 Generated table #25@0: 64 keys, 2107669 bytes
+2018/06/27-22:43:48.062 1986 Generated table #26@0: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.117 1986 Generated table #27@0: 64 keys, 2107668 bytes
+2018/06/27-22:43:48.171 1986 Generated table #28@0: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.231 1986 Generated table #29@0: 64 keys, 2107671 bytes
+2018/06/27-22:43:48.289 1986 Generated table #30@0: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.375 1986 Generated table #31@0: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.448 1986 Generated table #32@0: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.502 1986 Generated table #33@0: 64 keys, 2107671 bytes
+2018/06/27-22:43:48.521 1986 Generated table #34@0: 722 keys, 306124 bytes
+2018/06/27-22:43:48.521 1986 Compacted 4@0 + 1@1 files => 23490840 bytes
+2018/06/27-22:43:48.535 1986 compacted to: files[ 0 12 1 0 0 0 0 ]
+2018/06/27-22:43:48.536 1986 Delete type=2 #20
+2018/06/27-22:43:48.538 1986 Delete type=2 #18
+2018/06/27-22:43:48.540 1986 Delete type=2 #14
+2018/06/27-22:43:48.543 1986 Delete type=2 #16
+2018/06/27-22:43:48.545 1986 Delete type=2 #22
+2018/06/27-22:43:48.547 1986 Expanding@1 1+1 (2108064+166081 bytes) to 12+1 (23490840+166081 bytes)
+2018/06/27-22:43:48.547 1986 Compacting 12@1 + 1@2 files
+2018/06/27-22:43:48.594 1986 Generated table #35@1: 121 keys, 2125428 bytes
+2018/06/27-22:43:48.646 1986 Generated table #36@1: 64 keys, 2107613 bytes
+2018/06/27-22:43:48.685 1986 Generated table #37@1: 64 keys, 2107669 bytes
+2018/06/27-22:43:48.773 1986 Generated table #38@1: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.851 1986 Generated table #39@1: 64 keys, 2107668 bytes
+2018/06/27-22:43:48.906 1986 Generated table #40@1: 64 keys, 2107672 bytes
+2018/06/27-22:43:48.964 1986 Generated table #41@1: 64 keys, 2107671 bytes
+2018/06/27-22:43:49.048 1986 Generated table #42@1: 64 keys, 2107672 bytes
+2018/06/27-22:43:49.119 1986 Generated table #43@1: 64 keys, 2107672 bytes
+2018/06/27-22:43:49.198 1986 Generated table #44@1: 64 keys, 2107672 bytes
+2018/06/27-22:43:49.288 1986 Generated table #45@1: 64 keys, 2107671 bytes
+2018/06/27-22:43:49.317 1986 Generated table #46@1: 734 keys, 453967 bytes
+2018/06/27-22:43:49.317 1986 Compacted 12@1 + 1@2 files => 23656047 bytes
+2018/06/27-22:43:49.326 1986 compacted to: files[ 0 0 12 0 0 0 0 ]
+2018/06/27-22:43:49.326 1986 Delete type=2 #27
+2018/06/27-22:43:49.328 1986 Delete type=2 #34
+2018/06/27-22:43:49.328 1986 Delete type=2 #28
+2018/06/27-22:43:49.329 1986 Delete type=2 #24
+2018/06/27-22:43:49.330 1986 Delete type=2 #29
+2018/06/27-22:43:49.331 1986 Delete type=2 #30
+2018/06/27-22:43:49.332 1986 Delete type=2 #23
+2018/06/27-22:43:49.332 1986 Delete type=2 #26
+2018/06/27-22:43:49.334 1986 Delete type=2 #12
+2018/06/27-22:43:49.334 1986 Delete type=2 #32
+2018/06/27-22:43:49.335 1986 Delete type=2 #25
+2018/06/27-22:43:49.336 1986 Delete type=2 #31
+2018/06/27-22:43:49.338 1986 Delete type=2 #33
+2018/06/27-22:43:53.638 1986 Level-0 table #48: started
+2018/06/27-22:43:53.692 1986 Level-0 table #48: 4282928 bytes OK
+2018/06/27-22:43:53.719 1986 Delete type=0 #21
+2018/06/27-22:44:01.619 1986 Level-0 table #50: started
+2018/06/27-22:44:01.747 1986 Level-0 table #50: 5535448 bytes OK
+2018/06/27-22:44:01.771 1986 Delete type=0 #47
+2018/06/27-22:44:07.605 1986 Level-0 table #52: started
+2018/06/27-22:44:07.691 1986 Level-0 table #52: 4678252 bytes OK
+2018/06/27-22:44:07.720 1986 Delete type=0 #49
+2018/06/27-22:44:13.567 1986 Level-0 table #54: started
+2018/06/27-22:44:13.658 1986 Level-0 table #54: 4875918 bytes OK
+2018/06/27-22:44:13.681 1986 Delete type=0 #51
+2018/06/27-22:44:13.683 1986 Compacting 4@0 + 0@1 files
+2018/06/27-22:44:13.695 1986 Generated table #55@0: 5 keys, 496 bytes
+2018/06/27-22:44:13.775 1986 Generated table #56@0: 64 keys, 2107671 bytes
+2018/06/27-22:44:13.820 1986 Generated table #57@0: 64 keys, 2107671 bytes
+2018/06/27-22:44:13.868 1986 Generated table #58@0: 64 keys, 2107672 bytes
+2018/06/27-22:44:13.966 1986 Generated table #59@0: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.036 1986 Generated table #60@0: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.099 1986 Generated table #61@0: 64 keys, 2107671 bytes
+2018/06/27-22:44:14.180 1986 Generated table #62@0: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.230 1986 Generated table #63@0: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.287 1986 Generated table #64@0: 64 keys, 2107671 bytes
+2018/06/27-22:44:14.319 1986 Generated table #65@0: 600 keys, 403456 bytes
+2018/06/27-22:44:14.320 1986 Compacted 4@0 + 0@1 files => 19372996 bytes
+2018/06/27-22:44:14.329 1986 compacted to: files[ 0 11 12 0 0 0 0 ]
+2018/06/27-22:44:14.331 1986 Delete type=2 #48
+2018/06/27-22:44:14.335 1986 Delete type=2 #50
+2018/06/27-22:44:14.341 1986 Delete type=2 #54
+2018/06/27-22:44:14.345 1986 Delete type=2 #52
+2018/06/27-22:44:14.347 1986 Compacting 1@1 + 1@2 files
+2018/06/27-22:44:14.388 1986 Generated table #66@1: 1334 keys, 857286 bytes
+2018/06/27-22:44:14.389 1986 Compacted 1@1 + 1@2 files => 857286 bytes
+2018/06/27-22:44:14.401 1986 compacted to: files[ 0 10 12 0 0 0 0 ]
+2018/06/27-22:44:14.405 1986 Delete type=2 #46
+2018/06/27-22:44:14.406 1986 Delete type=2 #65
+2018/06/27-22:44:14.406 1986 Compacting 1@1 + 1@2 files
+2018/06/27-22:44:14.460 1986 Generated table #67@1: 122 keys, 2125459 bytes
+2018/06/27-22:44:14.460 1986 Compacted 1@1 + 1@2 files => 2125459 bytes
+2018/06/27-22:44:14.473 1986 compacted to: files[ 0 9 12 0 0 0 0 ]
+2018/06/27-22:44:14.474 1986 Delete type=2 #55
+2018/06/27-22:44:14.475 1986 Delete type=2 #35
+2018/06/27-22:44:14.477 1986 Expanding@1 1+2 (2107671+2964957 bytes) to 9+2 (18969044+2964957 bytes)
+2018/06/27-22:44:14.477 1986 Compacting 9@1 + 2@2 files
+2018/06/27-22:44:14.568 1986 Generated table #68@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.618 1986 Generated table #69@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.660 1986 Generated table #70@1: 64 keys, 2107671 bytes
+2018/06/27-22:44:14.749 1986 Generated table #71@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.830 1986 Generated table #72@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.909 1986 Generated table #73@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:14.987 1986 Generated table #74@1: 64 keys, 2107671 bytes
+2018/06/27-22:44:15.079 1986 Generated table #75@1: 64 keys, 2107673 bytes
+2018/06/27-22:44:15.146 1986 Generated table #76@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:15.200 1986 Generated table #77@1: 64 keys, 2107672 bytes
+2018/06/27-22:44:15.233 1986 Generated table #78@1: 1334 keys, 857285 bytes
+2018/06/27-22:44:15.233 1986 Compacted 9@1 + 2@2 files => 21934004 bytes
+2018/06/27-22:44:15.247 1986 compacted to: files[ 0 0 21 0 0 0 0 ]
+2018/06/27-22:44:15.247 1986 Delete type=2 #60
+2018/06/27-22:44:15.248 1986 Delete type=2 #64
+2018/06/27-22:44:15.248 1986 Delete type=2 #61
+2018/06/27-22:44:15.249 1986 Delete type=2 #57
+2018/06/27-22:44:15.249 1986 Delete type=2 #62
+2018/06/27-22:44:15.250 1986 Delete type=2 #45
+2018/06/27-22:44:15.251 1986 Delete type=2 #58
+2018/06/27-22:44:15.252 1986 Delete type=2 #63
+2018/06/27-22:44:15.252 1986 Delete type=2 #66
+2018/06/27-22:44:15.253 1986 Delete type=2 #59
+2018/06/27-22:44:15.254 1986 Delete type=2 #56

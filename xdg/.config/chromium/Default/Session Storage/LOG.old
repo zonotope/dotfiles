@@ -1,0 +1,21 @@
+2019/12/16-16:20:22.112 860 Reusing MANIFEST /home/zonotope/.config/chromium/Default/Session Storage/MANIFEST-000001
+2019/12/16-16:20:22.118 860 Recovering log #4090
+2019/12/16-16:20:22.118 860 Reusing old log /home/zonotope/.config/chromium/Default/Session Storage/004090.log 
+2019/12/16-17:47:41.696 bc5 Level-0 table #4094: started
+2019/12/16-17:47:41.727 bc5 Level-0 table #4094: 17025 bytes OK
+2019/12/16-17:47:41.745 bc5 Delete type=0 #4090
+2019/12/16-17:47:41.745 bc5 Compacting 4@0 + 1@1 files
+2019/12/16-17:47:41.864 bc5 Generated table #4095@0: 30426 keys, 717478 bytes
+2019/12/16-17:47:41.865 bc5 Compacted 4@0 + 1@1 files => 717478 bytes
+2019/12/16-17:47:41.882 bc5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/16-17:47:41.883 bc5 Delete type=2 #4085
+2019/12/16-17:47:41.883 bc5 Delete type=2 #4089
+2019/12/16-17:47:41.883 bc5 Delete type=2 #4094
+2019/12/16-17:47:41.883 bc5 Delete type=2 #4087
+2019/12/16-17:47:41.883 bc5 Delete type=2 #4091
+2019/12/16-19:55:17.655 bc5 Level-0 table #4097: started
+2019/12/16-19:55:17.680 bc5 Level-0 table #4097: 20434 bytes OK
+2019/12/16-19:55:17.705 bc5 Delete type=0 #4093
+2019/12/17-13:00:17.286 bc5 Level-0 table #4099: started
+2019/12/17-13:00:17.309 bc5 Level-0 table #4099: 19377 bytes OK
+2019/12/17-13:00:17.328 bc5 Delete type=0 #4096

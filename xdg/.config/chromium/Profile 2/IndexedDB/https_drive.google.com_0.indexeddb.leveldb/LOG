@@ -1,0 +1,78 @@
+2019/12/02-13:50:59.728 1e870 Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/12/02-13:50:59.728 1e870 Recovering log #368
+2019/12/02-13:50:59.728 1e870 Reusing old log /home/zonotope/.config/chromium/Profile 2/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000368.log 
+2019/12/02-13:51:08.248 8b6 Level-0 table #374: started
+2019/12/02-13:51:08.379 8b6 Level-0 table #374: 5449084 bytes OK
+2019/12/02-13:51:08.411 8b6 Delete type=0 #368
+2019/12/02-13:55:33.325 8b6 Level-0 table #376: started
+2019/12/02-13:55:33.452 8b6 Level-0 table #376: 5092051 bytes OK
+2019/12/02-13:55:33.481 8b6 Delete type=0 #373
+2019/12/02-16:20:47.206 8b6 Level-0 table #378: started
+2019/12/02-16:20:47.329 8b6 Level-0 table #378: 5182996 bytes OK
+2019/12/02-16:20:47.361 8b6 Delete type=0 #375
+2019/12/02-16:40:49.216 8b6 Level-0 table #380: started
+2019/12/02-16:40:49.349 8b6 Level-0 table #380: 5091694 bytes OK
+2019/12/02-16:40:49.376 8b6 Delete type=0 #377
+2019/12/02-16:40:49.382 8b6 Compacting 4@0 + 2@1 files
+2019/12/02-16:40:49.488 8b6 Generated table #381@0: 344 keys, 2386963 bytes
+2019/12/02-16:40:49.528 8b6 Generated table #382@0: 60 keys, 4019 bytes
+2019/12/02-16:40:49.528 8b6 Compacted 4@0 + 2@1 files => 2390982 bytes
+2019/12/02-16:40:49.554 8b6 compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/12/02-16:40:49.554 8b6 Delete type=2 #380
+2019/12/02-16:40:49.555 8b6 Delete type=2 #376
+2019/12/02-16:40:49.555 8b6 Delete type=2 #378
+2019/12/02-16:40:49.555 8b6 Delete type=2 #370
+2019/12/02-16:40:49.555 8b6 Delete type=2 #374
+2019/12/02-16:40:49.555 8b6 Delete type=2 #371
+2019/12/02-17:50:56.217 8b6 Level-0 table #384: started
+2019/12/02-17:50:56.311 8b6 Level-0 table #384: 5091690 bytes OK
+2019/12/02-17:50:56.340 8b6 Delete type=0 #379
+2019/12/02-18:51:01.264 8b6 Level-0 table #386: started
+2019/12/02-18:51:01.397 8b6 Level-0 table #386: 5174518 bytes OK
+2019/12/02-18:51:01.427 8b6 Delete type=0 #383
+2019/12/03-02:54:39.732 8b6 Level-0 table #388: started
+2019/12/03-02:54:39.861 8b6 Level-0 table #388: 5517554 bytes OK
+2019/12/03-02:54:39.887 8b6 Delete type=0 #385
+2019/12/03-10:55:20.802 8b6 Level-0 table #390: started
+2019/12/03-10:55:20.901 8b6 Level-0 table #390: 5319004 bytes OK
+2019/12/03-10:55:20.932 8b6 Delete type=0 #387
+2019/12/03-10:55:20.947 8b6 Compacting 4@0 + 2@1 files
+2019/12/03-10:55:21.121 8b6 Generated table #391@0: 516 keys, 2374766 bytes
+2019/12/03-10:55:21.163 8b6 Generated table #392@0: 60 keys, 4018 bytes
+2019/12/03-10:55:21.163 8b6 Compacted 4@0 + 2@1 files => 2378784 bytes
+2019/12/03-10:55:21.178 8b6 compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/12/03-10:55:21.178 8b6 Delete type=2 #390
+2019/12/03-10:55:21.178 8b6 Delete type=2 #386
+2019/12/03-10:55:21.178 8b6 Delete type=2 #382
+2019/12/03-10:55:21.178 8b6 Delete type=2 #384
+2019/12/03-10:55:21.178 8b6 Delete type=2 #388
+2019/12/03-10:55:21.179 8b6 Delete type=2 #381
+2019/12/03-14:05:39.714 8b6 Level-0 table #394: started
+2019/12/03-14:05:39.890 8b6 Level-0 table #394: 5229117 bytes OK
+2019/12/03-14:05:39.921 8b6 Delete type=0 #389
+2019/12/03-18:05:21.328 8b6 Level-0 table #396: started
+2019/12/03-18:05:21.561 8b6 Level-0 table #396: 5323261 bytes OK
+2019/12/03-18:05:21.594 8b6 Delete type=0 #393
+2019/12/03-22:16:21.790 8b6 Level-0 table #398: started
+2019/12/03-22:16:21.887 8b6 Level-0 table #398: 5157531 bytes OK
+2019/12/03-22:16:21.908 8b6 Delete type=0 #395
+2019/12/04-10:55:23.628 8b6 Level-0 table #400: started
+2019/12/04-10:55:23.745 8b6 Level-0 table #400: 5488687 bytes OK
+2019/12/04-10:55:23.785 8b6 Delete type=0 #397
+2019/12/04-10:55:23.785 8b6 Compacting 4@0 + 2@1 files
+2019/12/04-10:55:23.893 8b6 Generated table #401@0: 712 keys, 2376924 bytes
+2019/12/04-10:55:23.936 8b6 Generated table #402@0: 60 keys, 4020 bytes
+2019/12/04-10:55:23.936 8b6 Compacted 4@0 + 2@1 files => 2380944 bytes
+2019/12/04-10:55:24.013 8b6 compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/12/04-10:55:24.013 8b6 Delete type=2 #392
+2019/12/04-10:55:24.013 8b6 Delete type=2 #396
+2019/12/04-10:55:24.013 8b6 Delete type=2 #391
+2019/12/04-10:55:24.013 8b6 Delete type=2 #394
+2019/12/04-10:55:24.013 8b6 Delete type=2 #400
+2019/12/04-10:55:24.013 8b6 Delete type=2 #398
+2019/12/04-14:25:41.504 8b6 Level-0 table #404: started
+2019/12/04-14:25:41.665 8b6 Level-0 table #404: 5228440 bytes OK
+2019/12/04-14:25:41.698 8b6 Delete type=0 #399
+2019/12/04-15:35:48.525 8b6 Level-0 table #406: started
+2019/12/04-15:35:48.643 8b6 Level-0 table #406: 5064374 bytes OK
+2019/12/04-15:35:48.671 8b6 Delete type=0 #403

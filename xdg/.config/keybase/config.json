@@ -1,0 +1,14 @@
+{
+    "current_user": "seventhreetwo",
+    "mountdir": "/run/user/1000/keybase/kbfs",
+    "mountdirdefault": "/run/user/1000/keybase/kbfs",
+    "users": {
+        "seventhreetwo": {
+            "device": "03bce9585e5612cbfa65d91f54ca2a18",
+            "id": "458ae6cfdc8013b0960d9fea28a84d19",
+            "name": "seventhreetwo",
+            "passphrase_state": 0,
+            "salt": "4cc55999c51e9fd62a8afc005012721d"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+2019/12/16-16:20:06.104 6db Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/Local Storage/leveldb/MANIFEST-000001
+2019/12/16-16:20:06.106 6db Recovering log #3545
+2019/12/16-16:20:06.106 6db Reusing old log /home/zonotope/.config/chromium/Profile 2/Local Storage/leveldb/003545.log 
+2019/12/16-21:46:41.767 bc5 Level-0 table #3549: started
+2019/12/16-21:46:41.792 bc5 Level-0 table #3549: 16517 bytes OK
+2019/12/16-21:46:41.817 bc5 Delete type=0 #3545
+2019/12/16-21:46:41.817 bc5 Compacting 4@0 + 3@1 files
+2019/12/16-21:46:41.922 bc5 Generated table #3550@0: 6521 keys, 2145540 bytes
+2019/12/16-21:46:42.040 bc5 Generated table #3551@0: 3532 keys, 2104682 bytes
+2019/12/16-21:46:42.069 bc5 Generated table #3552@0: 80 keys, 301351 bytes
+2019/12/16-21:46:42.069 bc5 Compacted 4@0 + 3@1 files => 4551573 bytes
+2019/12/16-21:46:42.106 bc5 compacted to: files[ 0 3 1 0 0 0 0 ]
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3549
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3540
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3542
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3539
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3544
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3411
+2019/12/16-21:46:42.107 bc5 Delete type=2 #3546
+2019/12/17-00:36:49.137 bc5 Level-0 table #3554: started
+2019/12/17-00:36:49.179 bc5 Level-0 table #3554: 18240 bytes OK
+2019/12/17-00:36:49.205 bc5 Delete type=0 #3548
+2019/12/17-01:24:07.753 bc5 Level-0 table #3556: started
+2019/12/17-01:24:07.785 bc5 Level-0 table #3556: 17705 bytes OK
+2019/12/17-01:24:07.806 bc5 Delete type=0 #3553
+2019/12/17-04:12:39.296 bc5 Level-0 table #3558: started
+2019/12/17-04:12:39.326 bc5 Level-0 table #3558: 24065 bytes OK
+2019/12/17-04:12:39.349 bc5 Delete type=0 #3555
+2019/12/17-05:44:57.580 bc5 Level-0 table #3560: started
+2019/12/17-05:44:57.605 bc5 Level-0 table #3560: 24276 bytes OK
+2019/12/17-05:44:57.622 bc5 Delete type=0 #3557
+2019/12/17-05:44:57.622 bc5 Compacting 4@0 + 3@1 files
+2019/12/17-05:44:57.755 bc5 Generated table #3561@0: 6604 keys, 2148402 bytes
+2019/12/17-05:44:57.858 bc5 Generated table #3562@0: 3628 keys, 2106612 bytes
+2019/12/17-05:44:57.880 bc5 Generated table #3563@0: 81 keys, 301394 bytes
+2019/12/17-05:44:57.880 bc5 Compacted 4@0 + 3@1 files => 4556408 bytes
+2019/12/17-05:44:57.893 bc5 compacted to: files[ 0 3 1 0 0 0 0 ]
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3560
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3554
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3552
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3558
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3556
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3550
+2019/12/17-05:44:57.893 bc5 Delete type=2 #3551
+2019/12/17-08:42:21.601 bc5 Level-0 table #3565: started
+2019/12/17-08:42:21.622 bc5 Level-0 table #3565: 24019 bytes OK
+2019/12/17-08:42:21.636 bc5 Delete type=0 #3559

@@ -1,0 +1,84 @@
+2019/12/16-16:20:06.296 6e2 Reusing MANIFEST /home/zonotope/.config/chromium/Default/Local Storage/leveldb/MANIFEST-024224
+2019/12/16-16:20:06.320 6e2 Recovering log #41400
+2019/12/16-16:20:06.323 6e2 Reusing old log /home/zonotope/.config/chromium/Default/Local Storage/leveldb/041400.log 
+2019/12/16-16:21:06.523 bc5 Level-0 table #41404: started
+2019/12/16-16:21:06.551 bc5 Level-0 table #41404: 15050 bytes OK
+2019/12/16-16:21:06.569 bc5 Delete type=0 #41400
+2019/12/16-17:39:35.888 bc5 Level-0 table #41406: started
+2019/12/16-17:39:35.914 bc5 Level-0 table #41406: 16563 bytes OK
+2019/12/16-17:39:35.932 bc5 Delete type=0 #41403
+2019/12/16-18:45:02.486 bc5 Level-0 table #41408: started
+2019/12/16-18:45:02.531 bc5 Level-0 table #41408: 18684 bytes OK
+2019/12/16-18:45:02.554 bc5 Delete type=0 #41405
+2019/12/16-18:45:02.556 bc5 Compacting 4@0 + 4@1 files
+2019/12/16-18:45:02.732 bc5 Generated table #41409@0: 15069 keys, 2413155 bytes
+2019/12/16-18:45:02.943 bc5 Generated table #41410@0: 1705 keys, 2562454 bytes
+2019/12/16-18:45:03.084 bc5 Generated table #41411@0: 8566 keys, 2104410 bytes
+2019/12/16-18:45:03.174 bc5 Generated table #41412@0: 1659 keys, 2004862 bytes
+2019/12/16-18:45:03.174 bc5 Compacted 4@0 + 4@1 files => 9084881 bytes
+2019/12/16-18:45:03.187 bc5 compacted to: files[ 0 4 8 0 0 0 0 ]
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41406
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41404
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41397
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41408
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41396
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41399
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41398
+2019/12/16-18:45:03.188 bc5 Delete type=2 #41401
+2019/12/16-19:56:20.052 bc5 Level-0 table #41414: started
+2019/12/16-19:56:20.120 bc5 Level-0 table #41414: 468119 bytes OK
+2019/12/16-19:56:20.137 bc5 Delete type=0 #41407
+2019/12/16-23:12:17.010 bc5 Level-0 table #41416: started
+2019/12/16-23:12:17.047 bc5 Level-0 table #41416: 15917 bytes OK
+2019/12/16-23:12:17.068 bc5 Delete type=0 #41413
+2019/12/17-01:14:35.959 bc5 Level-0 table #41418: started
+2019/12/17-01:14:35.992 bc5 Level-0 table #41418: 13843 bytes OK
+2019/12/17-01:14:36.011 bc5 Delete type=0 #41415
+2019/12/17-06:24:35.923 bc5 Level-0 table #41420: started
+2019/12/17-06:24:35.948 bc5 Level-0 table #41420: 11910 bytes OK
+2019/12/17-06:24:35.966 bc5 Delete type=0 #41417
+2019/12/17-06:24:35.966 bc5 Compacting 4@0 + 4@1 files
+2019/12/17-06:24:36.139 bc5 Generated table #41421@0: 15085 keys, 2401058 bytes
+2019/12/17-06:24:36.302 bc5 Generated table #41422@0: 1705 keys, 2562454 bytes
+2019/12/17-06:24:36.456 bc5 Generated table #41423@0: 8566 keys, 2104410 bytes
+2019/12/17-06:24:36.542 bc5 Generated table #41424@0: 1659 keys, 2004876 bytes
+2019/12/17-06:24:36.542 bc5 Compacted 4@0 + 4@1 files => 9072798 bytes
+2019/12/17-06:24:36.557 bc5 compacted to: files[ 0 4 8 0 0 0 0 ]
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41410
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41414
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41409
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41416
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41420
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41412
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41411
+2019/12/17-06:24:36.558 bc5 Delete type=2 #41418
+2019/12/17-09:59:58.152 bc5 Level-0 table #41426: started
+2019/12/17-09:59:58.175 bc5 Level-0 table #41426: 13572 bytes OK
+2019/12/17-09:59:58.189 bc5 Delete type=0 #41419
+2019/12/17-13:10:50.212 bc5 Level-0 table #41428: started
+2019/12/17-13:10:50.243 bc5 Level-0 table #41428: 15984 bytes OK
+2019/12/17-13:10:50.261 bc5 Delete type=0 #41425
+2019/12/17-14:20:11.337 bc5 Level-0 table #41430: started
+2019/12/17-14:20:11.368 bc5 Level-0 table #41430: 12421 bytes OK
+2019/12/17-14:20:11.402 bc5 Delete type=0 #41427
+2019/12/17-15:49:22.745 bc5 Level-0 table #41432: started
+2019/12/17-15:49:22.780 bc5 Level-0 table #41432: 11627 bytes OK
+2019/12/17-15:49:22.801 bc5 Delete type=0 #41429
+2019/12/17-15:49:22.801 bc5 Compacting 4@0 + 4@1 files
+2019/12/17-15:49:22.916 bc5 Generated table #41433@0: 15091 keys, 2401004 bytes
+2019/12/17-15:49:23.084 bc5 Generated table #41434@0: 1711 keys, 2562543 bytes
+2019/12/17-15:49:23.168 bc5 Generated table #41435@0: 8566 keys, 2104410 bytes
+2019/12/17-15:49:23.235 bc5 Generated table #41436@0: 1659 keys, 2004908 bytes
+2019/12/17-15:49:23.236 bc5 Compacted 4@0 + 4@1 files => 9072865 bytes
+2019/12/17-15:49:23.253 bc5 compacted to: files[ 0 4 8 0 0 0 0 ]
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41428
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41432
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41421
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41422
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41430
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41424
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41426
+2019/12/17-15:49:23.255 bc5 Delete type=2 #41423
+2019/12/17-17:05:48.285 bc5 Level-0 table #41438: started
+2019/12/17-17:05:48.319 bc5 Level-0 table #41438: 16830 bytes OK
+2019/12/17-17:05:48.342 bc5 Delete type=0 #41431

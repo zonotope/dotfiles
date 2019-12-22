@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="expanded" mtime="1550946603" type="bool" value="true"/>
+	<entry name="library-location" mtime="1550451392" type="string">
+		<stringvalue>/home/zonotope/Podcasts</stringvalue>
+	</entry>
+</gconf>

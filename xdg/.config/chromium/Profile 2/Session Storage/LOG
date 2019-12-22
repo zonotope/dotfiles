@@ -1,0 +1,39 @@
+2019/12/17-17:33:52.220 9ca Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/Session Storage/MANIFEST-000001
+2019/12/17-17:33:52.221 9ca Recovering log #999
+2019/12/17-17:33:52.222 9ca Reusing old log /home/zonotope/.config/chromium/Profile 2/Session Storage/000999.log 
+2019/12/17-19:04:49.996 c79 Level-0 table #1003: started
+2019/12/17-19:04:50.015 c79 Level-0 table #1003: 19735 bytes OK
+2019/12/17-19:04:50.037 c79 Delete type=0 #999
+2019/12/18-00:51:17.294 c79 Level-0 table #1005: started
+2019/12/18-00:51:17.319 c79 Level-0 table #1005: 15735 bytes OK
+2019/12/18-00:51:17.337 c79 Delete type=0 #1002
+2019/12/18-00:51:17.337 c79 Compacting 4@0 + 1@1 files
+2019/12/18-00:51:17.370 c79 Generated table #1006@0: 13025 keys, 399788 bytes
+2019/12/18-00:51:17.370 c79 Compacted 4@0 + 1@1 files => 399788 bytes
+2019/12/18-00:51:17.384 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/18-00:51:17.384 c79 Delete type=2 #998
+2019/12/18-00:51:17.384 c79 Delete type=2 #1005
+2019/12/18-00:51:17.384 c79 Delete type=2 #1003
+2019/12/18-00:51:17.384 c79 Delete type=2 #996
+2019/12/18-00:51:17.384 c79 Delete type=2 #1000
+2019/12/18-14:43:14.741 c79 Level-0 table #1008: started
+2019/12/18-14:43:14.772 c79 Level-0 table #1008: 18001 bytes OK
+2019/12/18-14:43:14.792 c79 Delete type=0 #1004
+2019/12/18-14:52:19.732 c79 Level-0 table #1010: started
+2019/12/18-14:52:19.759 c79 Level-0 table #1010: 14841 bytes OK
+2019/12/18-14:52:19.780 c79 Delete type=0 #1007
+2019/12/18-15:46:15.333 c79 Level-0 table #1012: started
+2019/12/18-15:46:15.354 c79 Level-0 table #1012: 18174 bytes OK
+2019/12/18-15:46:15.368 c79 Delete type=0 #1009
+2019/12/20-01:55:58.118 c79 Level-0 table #1014: started
+2019/12/20-01:55:58.140 c79 Level-0 table #1014: 18147 bytes OK
+2019/12/20-01:55:58.162 c79 Delete type=0 #1011
+2019/12/20-01:55:58.162 c79 Compacting 4@0 + 1@1 files
+2019/12/20-01:55:58.215 c79 Generated table #1015@0: 13205 keys, 356979 bytes
+2019/12/20-01:55:58.215 c79 Compacted 4@0 + 1@1 files => 356979 bytes
+2019/12/20-01:55:58.232 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/20-01:55:58.232 c79 Delete type=2 #1008
+2019/12/20-01:55:58.232 c79 Delete type=2 #1014
+2019/12/20-01:55:58.232 c79 Delete type=2 #1012
+2019/12/20-01:55:58.232 c79 Delete type=2 #1006
+2019/12/20-01:55:58.232 c79 Delete type=2 #1010

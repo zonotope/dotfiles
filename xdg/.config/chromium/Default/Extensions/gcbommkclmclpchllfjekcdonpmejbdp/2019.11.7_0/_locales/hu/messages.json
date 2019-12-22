@@ -1,0 +1,191 @@
+{
+   "about_add_new_rule": {
+      "message": "Új szabály hozzáadás"
+   },
+   "about_ext_description": {
+      "message": "Titkosítsa a Web-et! Automatikusan használja a HTTPS titkosítást a legtöbb oldalon."
+   },
+   "about_ext_name": {
+      "message": "HTTPS Everywhere"
+   },
+   "about_rulesets_version": {
+      "message": "Szabálykészlet verziók ehhez:"
+   },
+   "about_title": {
+      "message": "A HTTPS Everywhere névjegye"
+   },
+   "about_version": {
+      "message": "Verzió"
+   },
+   "cancel_he_blocking_explainer": {
+      "message": "HTTPS Everywhere noticed you were navigating to a non-HTTPS page, and tried to send you to the HTTPS version instead. The HTTPS version is unavailable. Most likely this site does not support HTTPS, but it is also possible that an attacker is blocking the HTTPS version. If you wish to view the unencrypted version of this page, you can still do so by disabling the 'Encrypt All Sites Eligible' (EASE) option in your HTTPS Everywhere extension. Be aware that disabling this option could make your browser vulnerable to network-based downgrade attacks on websites you visit."
+   },
+   "cancel_he_blocking_network": {
+      "message": "hálózati bázisú lefokozó támadás"
+   },
+   "cancel_http_once": {
+      "message": "Open insecure page for this session only"
+   },
+   "cancel_open_page": {
+      "message": "Nem biztonságos oldalak megnyitása"
+   },
+   "chrome_add_new_rule": {
+      "message": "Új szabály az oldalhoz"
+   },
+   "chrome_add_rule": {
+      "message": "Szabály felvétel az oldalhoz"
+   },
+   "chrome_always_https_for_host": {
+      "message": "Mindig https-t használjon ehhez a kiszolgálóhoz"
+   },
+   "chrome_disable_on_this_site": {
+      "message": "HTTPS Everywhere kikapcsolása ezen oldalnál"
+   },
+   "chrome_enable_on_this_site": {
+      "message": "HTTPS Everywhere bekapcsolása ezen oldalnál"
+   },
+   "chrome_experimental_rules": {
+      "message": "Kísérleti szabályok"
+   },
+   "chrome_experimental_rules_description": {
+      "message": "Figyelmeztetéseket és megszakításokat okozhat. Alapértelmezésben letiltva."
+   },
+   "chrome_hide_advanced": {
+      "message": "Speciális beállítások elrejtése"
+   },
+   "chrome_host": {
+      "message": "Kiszolgáló:"
+   },
+   "chrome_redirect_to": {
+      "message": "Átirányítás ide:"
+   },
+   "chrome_regex": {
+      "message": "Illeszkedő regex"
+   },
+   "chrome_rule_name": {
+      "message": "Szabály neve"
+   },
+   "chrome_settings_for_this_site_explained": {
+      "message": "As you browse different websites, you can change your preferences for each website"
+   },
+   "chrome_settings_for_this_site_header": {
+      "message": "Settings for this site"
+   },
+   "chrome_settings_for_this_site_subheader": {
+      "message": "Change your preferences for encrypted connections"
+   },
+   "chrome_show_advanced": {
+      "message": "Speciális beállítások megjelenítése"
+   },
+   "chrome_stable_rules": {
+      "message": "Stabil szabályok"
+   },
+   "chrome_stable_rules_description": {
+      "message": "Titkosított kapcsolatok kényszerítése ezekhez a weboldalakhoz:"
+   },
+   "chrome_status_cancel_button": {
+      "message": "Mégsem"
+   },
+   "menu_donate_eff_imperative": {
+      "message": "Támogatás az EFF-nek"
+   },
+   "menu_encryptAllSitesEligibleOff": {
+      "message": "Encrypt All Sites Eligible is OFF"
+   },
+   "menu_encryptAllSitesEligibleOn": {
+      "message": "Encrypt All Sites Eligible is ON"
+   },
+   "menu_globalDisable": {
+      "message": "HTTPS Everywhere is OFF"
+   },
+   "menu_globalEnable": {
+      "message": "HTTPS Everywhere is ON"
+   },
+   "menu_httpNoWhereExplainedAllowed": {
+      "message": "Unencrypted requests are currently allowed"
+   },
+   "menu_httpNoWhereExplainedBlocked": {
+      "message": "Unencrypted requests are currently blocked"
+   },
+   "menu_httpNoWhereMore": {
+      "message": "This mode blocks unencrypted content and requests"
+   },
+   "menu_observatory": {
+      "message": "SSL Observatory Preferenciák"
+   },
+   "menu_seeLess": {
+      "message": "See less"
+   },
+   "menu_seeMore": {
+      "message": "See more"
+   },
+   "menu_showCounter": {
+      "message": "Mutassa a számlálót"
+   },
+   "menu_viewAllRules": {
+      "message": "Összes szabály megtekintése"
+   },
+   "options_addUpdateChannel": {
+      "message": "Frissítő csatorna hozzáadása"
+   },
+   "options_advancedSettings": {
+      "message": "Speciális beállítások"
+   },
+   "options_autoUpdateRulesets": {
+      "message": "Automata frissítés szabályok"
+   },
+   "options_debuggingRulesets": {
+      "message": "Debugging Rulesets (advanced)"
+   },
+   "options_delete": {
+      "message": "Törlés"
+   },
+   "options_disabledUrlsListed": {
+      "message": "HTTPS Everywhere Sites kikapcsolva"
+   },
+   "options_enableMixedRulesets": {
+      "message": "Kevert tartalom beállításszabályok engedélyezése"
+   },
+   "options_enterUpdateChannelName": {
+      "message": "Adja meg a Frissítő csatorna nevét"
+   },
+   "options_generalSettings": {
+      "message": "Általános beállítások"
+   },
+   "options_settings": {
+      "message": "Beállítások"
+   },
+   "options_showDevtoolsTab": {
+      "message": "Fejlesztőeszközük fül megjelenítése"
+   },
+   "options_storedRulesetsVersion": {
+      "message": "Tárolt szabálykészletek verziója:"
+   },
+   "options_update": {
+      "message": "Frissítés"
+   },
+   "options_updateChannels": {
+      "message": "Csatornák frissítése"
+   },
+   "options_updateChannelsWarning": {
+      "message": "Figyelem: A frissítési csatornák hozzáadásával a támadók eltéríthetik a böngészőjét. Csak akkor szerkessze ezt a beállítást, ha tudja mit csinál!"
+   },
+   "options_updatesLastChecked": {
+      "message": "Frissítések utolsó ellenőrzése:"
+   },
+   "options_updatesLastCheckedNever": {
+      "message": "soha"
+   },
+   "options_userRulesListed": {
+      "message": "HTTPS Everywhere felhasználói szabályok"
+   },
+   "prefs_export_settings": {
+      "message": "Beállítások exportálása"
+   },
+   "prefs_reset_defaults": {
+      "message": "Visszaállítás alaphelyzetre"
+   },
+   "prefs_reset_defaults_message": {
+      "message": "Ez minden szabálybeállítást visszaállít az alapértelmezett értékre. Folytatja?"
+   }
+}

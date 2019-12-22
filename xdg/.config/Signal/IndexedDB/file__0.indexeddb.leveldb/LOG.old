@@ -1,0 +1,18 @@
+2019/06/23-14:11:22.538 2102 Reusing MANIFEST /home/zonotope/.config/Signal/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2019/06/23-14:11:22.538 2102 Recovering log #256
+2019/06/23-14:11:22.538 2102 Reusing old log /home/zonotope/.config/Signal/IndexedDB/file__0.indexeddb.leveldb/000256.log 
+2019/06/23-14:11:22.936 2142 Current memtable full; waiting...
+2019/06/23-14:11:22.946 2147 Level-0 table #261: started
+2019/06/23-14:11:22.976 2147 Level-0 table #261: 312 bytes OK
+2019/06/23-14:11:22.999 2147 Delete type=0 #256
+2019/06/23-14:11:23.000 2147 Level-0 table #263: started
+2019/06/23-14:11:23.000 2147 Level-0 table #263: 0 bytes OK
+2019/06/23-14:11:23.035 2147 Delete type=0 #260
+2019/06/23-14:11:23.035 2147 Manual compaction at level-0 from '\x00,\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00-\x00\x00\x00' @ 0 : 0; will stop at '\x00,\x00\x00\x05' @ 436 : 1
+2019/06/23-14:11:23.035 2147 Compacting 1@0 + 1@1 files
+2019/06/23-14:11:23.062 2147 Generated table #264@0: 3 keys, 272 bytes
+2019/06/23-14:11:23.062 2147 Compacted 1@0 + 1@1 files => 272 bytes
+2019/06/23-14:11:23.078 2147 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/06/23-14:11:23.078 2147 Delete type=2 #258
+2019/06/23-14:11:23.079 2147 Delete type=2 #261
+2019/06/23-14:11:23.079 2147 Manual compaction at level-0 from '\x00,\x00\x00\x05' @ 436 : 1 .. '\x00-\x00\x00\x00' @ 0 : 0; will stop at (end)

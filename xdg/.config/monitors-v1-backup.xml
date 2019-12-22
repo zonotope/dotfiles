@@ -1,0 +1,39 @@
+<monitors version="1">
+  <configuration>
+      <clone>no</clone>
+      <output name="eDP-1">
+          <vendor>LGD</vendor>
+          <product>0x049a</product>
+          <serial>0x00000000</serial>
+          <width>2560</width>
+          <height>1440</height>
+          <rate>60</rate>
+          <x>0</x>
+          <y>0</y>
+          <rotation>normal</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>yes</primary>
+      </output>
+      <output name="DP-1">
+      </output>
+      <output name="HDMI-1">
+      </output>
+      <output name="DP-2">
+      </output>
+      <output name="HDMI-2">
+          <vendor>SAM</vendor>
+          <product>0x0bcb</product>
+          <serial>0x304c3341</serial>
+          <width>2560</width>
+          <height>1440</height>
+          <rate>60</rate>
+          <x>2560</x>
+          <y>0</y>
+          <rotation>normal</rotation>
+          <reflect_x>no</reflect_x>
+          <reflect_y>no</reflect_y>
+          <primary>no</primary>
+      </output>
+  </configuration>
+</monitors>

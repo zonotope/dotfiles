@@ -1,0 +1,191 @@
+{
+   "about_add_new_rule": {
+      "message": "Жаңа Ережені Қосыңыз"
+   },
+   "about_ext_description": {
+      "message": "Вебті шифрлау! Көптеген сайттарда HTTPS қауіпсіздігін автоматты түрде пайдаланыңыз."
+   },
+   "about_ext_name": {
+      "message": "Барлық жерде HTTPS"
+   },
+   "about_rulesets_version": {
+      "message": "Ереже нұсқасы үшін"
+   },
+   "about_title": {
+      "message": "Барлық жерде HTTPS туралы"
+   },
+   "about_version": {
+      "message": "Нұсқа"
+   },
+   "cancel_he_blocking_explainer": {
+      "message": "HTTPS Барлық жерде сіз HTTPS емес бетке шарлауды байқап, оның орнына HTTPS нұсқасына жіберуге тырыстық. HTTPS нұсқасы қол жетімді емес. Бұл сайт HTTPS-ды қолдамайды, бірақ шабуылдаушы HTTPS нұсқасын блоктайды. Егер осы беттің шифрланбаған нұсқасын көргіңіз келсе, HTTPS барлық кеңейтіміндегі 'Барлық сайттарды қолайлы шифрлау' (EASE) опциясын өшіру арқылы оны орындауға болады. Бұл параметрді өшіру браузеріңіз сіз кірген веб-сайттарға желіге негізделген төмендету шабуылдарына осал етуі мүмкін екенін ескереміз."
+   },
+   "cancel_he_blocking_network": {
+      "message": "желіге негізделген төмендету шабуылдары"
+   },
+   "cancel_http_once": {
+      "message": "Open insecure page for this session only"
+   },
+   "cancel_open_page": {
+      "message": "Қауіпсіз бетті ашыңыз"
+   },
+   "chrome_add_new_rule": {
+      "message": "Осы сайт үшін жаңа ереже қосыңыз"
+   },
+   "chrome_add_rule": {
+      "message": "Осы сайт үшін ереже қосыңыз"
+   },
+   "chrome_always_https_for_host": {
+      "message": "Бұл хост үшін әрдайым https пайдаланыңыз"
+   },
+   "chrome_disable_on_this_site": {
+      "message": "Бұл сайтта HTTPS-ті әр жерде өшіру"
+   },
+   "chrome_enable_on_this_site": {
+      "message": "Бұл сайтта HTTPS-тың барлығын қосыңыз"
+   },
+   "chrome_experimental_rules": {
+      "message": "Эксперименттік ережелер"
+   },
+   "chrome_experimental_rules_description": {
+      "message": "Ескерту немесе бұзылу тудыруы мүмкін. Әдепкі бойынша өшірілген."
+   },
+   "chrome_hide_advanced": {
+      "message": "Кішірейтілген көрсетілім"
+   },
+   "chrome_host": {
+      "message": "Хост:"
+   },
+   "chrome_redirect_to": {
+      "message": "Қайта бағыттау"
+   },
+   "chrome_regex": {
+      "message": "Регерсті сәйкестендіру"
+   },
+   "chrome_rule_name": {
+      "message": "Ереже аты"
+   },
+   "chrome_settings_for_this_site_explained": {
+      "message": "As you browse different websites, you can change your preferences for each website"
+   },
+   "chrome_settings_for_this_site_header": {
+      "message": "Settings for this site"
+   },
+   "chrome_settings_for_this_site_subheader": {
+      "message": "Change your preferences for encrypted connections"
+   },
+   "chrome_show_advanced": {
+      "message": "Кеңейтілген көрсетілім"
+   },
+   "chrome_stable_rules": {
+      "message": "Тұрақты ережелер"
+   },
+   "chrome_stable_rules_description": {
+      "message": "Осы веб-сайттарға шифрланған қосылымдарды қосыңыз:"
+   },
+   "chrome_status_cancel_button": {
+      "message": "Болдырмау"
+   },
+   "menu_donate_eff_imperative": {
+      "message": "EFF-Ге Көмек"
+   },
+   "menu_encryptAllSitesEligibleOff": {
+      "message": "Encrypt All Sites Eligible is OFF"
+   },
+   "menu_encryptAllSitesEligibleOn": {
+      "message": "Encrypt All Sites Eligible is ON"
+   },
+   "menu_globalDisable": {
+      "message": "HTTPS Everywhere is OFF"
+   },
+   "menu_globalEnable": {
+      "message": "HTTPS Everywhere is ON"
+   },
+   "menu_httpNoWhereExplainedAllowed": {
+      "message": "Unencrypted requests are currently allowed"
+   },
+   "menu_httpNoWhereExplainedBlocked": {
+      "message": "Unencrypted requests are currently blocked"
+   },
+   "menu_httpNoWhereMore": {
+      "message": "This mode blocks unencrypted content and requests"
+   },
+   "menu_observatory": {
+      "message": "SSL обсерваториясының артықшылықтары"
+   },
+   "menu_seeLess": {
+      "message": "See less"
+   },
+   "menu_seeMore": {
+      "message": "See more"
+   },
+   "menu_showCounter": {
+      "message": "Сандарды көрсету"
+   },
+   "menu_viewAllRules": {
+      "message": "Барлық ережелерді қараңыз"
+   },
+   "options_addUpdateChannel": {
+      "message": "Жаңарту Арнасын Қосу"
+   },
+   "options_advancedSettings": {
+      "message": "Қосымша параметрлер"
+   },
+   "options_autoUpdateRulesets": {
+      "message": "Ережелерді автоматты түрде жаңарту"
+   },
+   "options_debuggingRulesets": {
+      "message": "Debugging Rulesets (advanced)"
+   },
+   "options_delete": {
+      "message": "Жою"
+   },
+   "options_disabledUrlsListed": {
+      "message": "HTTPS-ты барлық сайттарда өшіру"
+   },
+   "options_enableMixedRulesets": {
+      "message": "Аралас мазмұн ережелерін қосу"
+   },
+   "options_enterUpdateChannelName": {
+      "message": "Жаңартылған арна атауын енгізіңіз"
+   },
+   "options_generalSettings": {
+      "message": "Жалпы параметрлер"
+   },
+   "options_settings": {
+      "message": "Параметрлер"
+   },
+   "options_showDevtoolsTab": {
+      "message": "Devtools қойындысын көрсету"
+   },
+   "options_storedRulesetsVersion": {
+      "message": "Сақталған ереже нұсқасы:"
+   },
+   "options_update": {
+      "message": "Жаңарту"
+   },
+   "options_updateChannels": {
+      "message": "Арналарды жаңарту"
+   },
+   "options_updateChannelsWarning": {
+      "message": "Ескерту: Жаңарту арналарын қосу шабуылдаушыларға браузеріңізді ұрлата алады. Сіз бұл әрекетті не екенін білсеңіз ғана осы бөлімді өңдеңіз!"
+   },
+   "options_updatesLastChecked": {
+      "message": "Соңғы тексерулер:"
+   },
+   "options_updatesLastCheckedNever": {
+      "message": "Ешқашан"
+   },
+   "options_userRulesListed": {
+      "message": "HTTPS барлық жерде пайдаланушы ережелері"
+   },
+   "prefs_export_settings": {
+      "message": "Параметрлерді экспорттау"
+   },
+   "prefs_reset_defaults": {
+      "message": "Әдепкі параметрлерге қалпына келтіру"
+   },
+   "prefs_reset_defaults_message": {
+      "message": "Бұл әрбір ережені әдепкі күйіне қайтарады. Жалғастыру керек пе?"
+   }
+}

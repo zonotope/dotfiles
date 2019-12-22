@@ -1,0 +1,24 @@
+2019/12/16-16:20:06.580 6bb Reusing MANIFEST /home/zonotope/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2019/12/16-16:20:06.580 6bb Recovering log #774
+2019/12/16-16:20:06.628 6bb Reusing old log /home/zonotope/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000774.log 
+2019/12/17-12:11:57.498 9a1 Level-0 table #778: started
+2019/12/17-12:11:57.639 9a1 Level-0 table #778: 3517586 bytes OK
+2019/12/17-12:11:57.665 9a1 Delete type=0 #774
+2019/12/17-12:11:57.669 9a1 Compacting 4@0 + 4@1 files
+2019/12/17-12:11:57.796 9a1 Generated table #779@0: 13 keys, 2141026 bytes
+2019/12/17-12:11:57.908 9a1 Generated table #780@0: 12 keys, 2174865 bytes
+2019/12/17-12:11:58.077 9a1 Generated table #781@0: 7 keys, 2678065 bytes
+2019/12/17-12:11:58.148 9a1 Generated table #782@0: 4 keys, 432407 bytes
+2019/12/17-12:11:58.148 9a1 Compacted 4@0 + 4@1 files => 7426363 bytes
+2019/12/17-12:11:58.170 9a1 compacted to: files[ 0 4 4 0 0 0 0 ]
+2019/12/17-12:11:58.172 9a1 Delete type=2 #767
+2019/12/17-12:11:58.172 9a1 Delete type=2 #775
+2019/12/17-12:11:58.172 9a1 Delete type=2 #768
+2019/12/17-12:11:58.172 9a1 Delete type=2 #769
+2019/12/17-12:11:58.172 9a1 Delete type=2 #773
+2019/12/17-12:11:58.172 9a1 Delete type=2 #771
+2019/12/17-12:11:58.172 9a1 Delete type=2 #778
+2019/12/17-12:11:58.172 9a1 Delete type=2 #757
+2019/12/17-14:57:22.447 9a1 Level-0 table #784: started
+2019/12/17-14:57:22.579 9a1 Level-0 table #784: 3511923 bytes OK
+2019/12/17-14:57:22.603 9a1 Delete type=0 #777

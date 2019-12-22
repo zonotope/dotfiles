@@ -1,0 +1,126 @@
+2019/12/17-17:33:52.451 9cb Reusing MANIFEST /home/zonotope/.config/chromium/Default/Session Storage/MANIFEST-000001
+2019/12/17-17:33:52.453 9cb Recovering log #4098
+2019/12/17-17:33:52.456 9cb Reusing old log /home/zonotope/.config/chromium/Default/Session Storage/004098.log 
+2019/12/17-17:35:13.616 c79 Level-0 table #4102: started
+2019/12/17-17:35:13.652 c79 Level-0 table #4102: 28454 bytes OK
+2019/12/17-17:35:13.672 c79 Delete type=0 #4098
+2019/12/18-01:27:22.911 c79 Level-0 table #4104: started
+2019/12/18-01:27:22.937 c79 Level-0 table #4104: 31458 bytes OK
+2019/12/18-01:27:22.953 c79 Delete type=0 #4101
+2019/12/18-01:27:22.953 c79 Compacting 4@0 + 1@1 files
+2019/12/18-01:27:23.042 c79 Generated table #4105@0: 30554 keys, 721211 bytes
+2019/12/18-01:27:23.042 c79 Compacted 4@0 + 1@1 files => 721211 bytes
+2019/12/18-01:27:23.056 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/18-01:27:23.056 c79 Delete type=2 #4095
+2019/12/18-01:27:23.056 c79 Delete type=2 #4102
+2019/12/18-01:27:23.056 c79 Delete type=2 #4104
+2019/12/18-01:27:23.056 c79 Delete type=2 #4099
+2019/12/18-01:27:23.056 c79 Delete type=2 #4097
+2019/12/18-01:36:22.912 c79 Level-0 table #4107: started
+2019/12/18-01:36:22.930 c79 Level-0 table #4107: 35790 bytes OK
+2019/12/18-01:36:22.944 c79 Delete type=0 #4103
+2019/12/18-01:44:47.817 c79 Level-0 table #4109: started
+2019/12/18-01:44:47.836 c79 Level-0 table #4109: 35782 bytes OK
+2019/12/18-01:44:47.851 c79 Delete type=0 #4106
+2019/12/18-01:54:22.911 c79 Level-0 table #4111: started
+2019/12/18-01:54:22.933 c79 Level-0 table #4111: 36200 bytes OK
+2019/12/18-01:54:22.950 c79 Delete type=0 #4108
+2019/12/18-02:03:22.912 c79 Level-0 table #4113: started
+2019/12/18-02:03:22.936 c79 Level-0 table #4113: 36161 bytes OK
+2019/12/18-02:03:22.953 c79 Delete type=0 #4110
+2019/12/18-02:03:22.953 c79 Compacting 4@0 + 1@1 files
+2019/12/18-02:03:23.008 c79 Generated table #4114@0: 30554 keys, 721238 bytes
+2019/12/18-02:03:23.008 c79 Compacted 4@0 + 1@1 files => 721238 bytes
+2019/12/18-02:03:23.022 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/18-02:03:23.023 c79 Delete type=2 #4107
+2019/12/18-02:03:23.023 c79 Delete type=2 #4105
+2019/12/18-02:03:23.023 c79 Delete type=2 #4111
+2019/12/18-02:03:23.023 c79 Delete type=2 #4109
+2019/12/18-02:03:23.023 c79 Delete type=2 #4113
+2019/12/18-02:12:22.911 c79 Level-0 table #4116: started
+2019/12/18-02:12:22.935 c79 Level-0 table #4116: 35911 bytes OK
+2019/12/18-02:12:22.951 c79 Delete type=0 #4112
+2019/12/18-02:20:28.839 c79 Level-0 table #4118: started
+2019/12/18-02:20:28.860 c79 Level-0 table #4118: 37411 bytes OK
+2019/12/18-02:20:28.877 c79 Delete type=0 #4115
+2019/12/18-05:00:10.411 c79 Level-0 table #4120: started
+2019/12/18-05:00:10.434 c79 Level-0 table #4120: 25910 bytes OK
+2019/12/18-05:00:10.448 c79 Delete type=0 #4117
+2019/12/18-18:51:57.882 c79 Level-0 table #4122: started
+2019/12/18-18:51:57.905 c79 Level-0 table #4122: 17924 bytes OK
+2019/12/18-18:51:57.918 c79 Delete type=0 #4119
+2019/12/18-18:51:57.918 c79 Compacting 4@0 + 1@1 files
+2019/12/18-18:51:57.988 c79 Generated table #4123@0: 30645 keys, 744686 bytes
+2019/12/18-18:51:57.988 c79 Compacted 4@0 + 1@1 files => 744686 bytes
+2019/12/18-18:51:58.012 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/18-18:51:58.012 c79 Delete type=2 #4116
+2019/12/18-18:51:58.012 c79 Delete type=2 #4118
+2019/12/18-18:51:58.012 c79 Delete type=2 #4120
+2019/12/18-18:51:58.012 c79 Delete type=2 #4114
+2019/12/18-18:51:58.012 c79 Delete type=2 #4122
+2019/12/18-19:18:09.085 c79 Level-0 table #4125: started
+2019/12/18-19:18:09.107 c79 Level-0 table #4125: 18128 bytes OK
+2019/12/18-19:18:09.130 c79 Delete type=0 #4121
+2019/12/18-20:55:39.230 c79 Level-0 table #4127: started
+2019/12/18-20:55:39.258 c79 Level-0 table #4127: 15555 bytes OK
+2019/12/18-20:55:39.285 c79 Delete type=0 #4124
+2019/12/18-21:02:31.914 c79 Level-0 table #4129: started
+2019/12/18-21:02:31.942 c79 Level-0 table #4129: 30849 bytes OK
+2019/12/18-21:02:31.958 c79 Delete type=0 #4126
+2019/12/18-21:03:04.789 c79 Level-0 table #4131: started
+2019/12/18-21:03:04.813 c79 Level-0 table #4131: 16162 bytes OK
+2019/12/18-21:03:04.830 c79 Delete type=0 #4128
+2019/12/18-21:03:04.830 c79 Compacting 4@0 + 1@1 files
+2019/12/18-21:03:04.901 c79 Generated table #4132@0: 30765 keys, 809386 bytes
+2019/12/18-21:03:04.901 c79 Compacted 4@0 + 1@1 files => 809386 bytes
+2019/12/18-21:03:04.920 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/18-21:03:04.920 c79 Delete type=2 #4125
+2019/12/18-21:03:04.920 c79 Delete type=2 #4129
+2019/12/18-21:03:04.920 c79 Delete type=2 #4123
+2019/12/18-21:03:04.920 c79 Delete type=2 #4127
+2019/12/18-21:03:04.920 c79 Delete type=2 #4131
+2019/12/19-00:03:26.533 c79 Level-0 table #4134: started
+2019/12/19-00:03:26.554 c79 Level-0 table #4134: 15996 bytes OK
+2019/12/19-00:03:26.568 c79 Delete type=0 #4130
+2019/12/19-02:32:40.572 c79 Level-0 table #4136: started
+2019/12/19-02:32:40.602 c79 Level-0 table #4136: 21019 bytes OK
+2019/12/19-02:32:40.622 c79 Delete type=0 #4133
+2019/12/19-03:51:00.142 c79 Level-0 table #4138: started
+2019/12/19-03:51:00.168 c79 Level-0 table #4138: 21624 bytes OK
+2019/12/19-03:51:00.200 c79 Delete type=0 #4135
+2019/12/19-04:23:33.013 c79 Level-0 table #4140: started
+2019/12/19-04:23:33.042 c79 Level-0 table #4140: 25094 bytes OK
+2019/12/19-04:23:33.063 c79 Delete type=0 #4137
+2019/12/19-04:23:33.063 c79 Compacting 4@0 + 1@1 files
+2019/12/19-04:23:33.148 c79 Generated table #4141@0: 30844 keys, 822031 bytes
+2019/12/19-04:23:33.148 c79 Compacted 4@0 + 1@1 files => 822031 bytes
+2019/12/19-04:23:33.165 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/19-04:23:33.165 c79 Delete type=2 #4132
+2019/12/19-04:23:33.165 c79 Delete type=2 #4134
+2019/12/19-04:23:33.165 c79 Delete type=2 #4136
+2019/12/19-04:23:33.166 c79 Delete type=2 #4138
+2019/12/19-04:23:33.166 c79 Delete type=2 #4140
+2019/12/19-14:38:30.420 c79 Level-0 table #4143: started
+2019/12/19-14:38:30.451 c79 Level-0 table #4143: 22685 bytes OK
+2019/12/19-14:38:30.470 c79 Delete type=0 #4139
+2019/12/19-21:24:22.643 c79 Level-0 table #4145: started
+2019/12/19-21:24:22.673 c79 Level-0 table #4145: 19823 bytes OK
+2019/12/19-21:24:22.687 c79 Delete type=0 #4142
+2019/12/20-11:05:19.253 c79 Level-0 table #4147: started
+2019/12/20-11:05:19.279 c79 Level-0 table #4147: 16110 bytes OK
+2019/12/20-11:05:19.296 c79 Delete type=0 #4144
+2019/12/20-15:49:10.209 c79 Level-0 table #4149: started
+2019/12/20-15:49:10.247 c79 Level-0 table #4149: 19215 bytes OK
+2019/12/20-15:49:10.270 c79 Delete type=0 #4146
+2019/12/20-15:49:10.271 c79 Compacting 4@0 + 1@1 files
+2019/12/20-15:49:10.418 c79 Generated table #4150@0: 30673 keys, 738920 bytes
+2019/12/20-15:49:10.418 c79 Compacted 4@0 + 1@1 files => 738920 bytes
+2019/12/20-15:49:10.438 c79 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/20-15:49:10.439 c79 Delete type=2 #4145
+2019/12/20-15:49:10.439 c79 Delete type=2 #4143
+2019/12/20-15:49:10.439 c79 Delete type=2 #4141
+2019/12/20-15:49:10.439 c79 Delete type=2 #4149
+2019/12/20-15:49:10.439 c79 Delete type=2 #4147
+2019/12/20-19:10:42.955 c79 Level-0 table #4152: started
+2019/12/20-19:10:42.980 c79 Level-0 table #4152: 17254 bytes OK
+2019/12/20-19:10:42.994 c79 Delete type=0 #4148

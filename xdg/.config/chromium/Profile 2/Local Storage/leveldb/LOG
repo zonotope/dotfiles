@@ -1,0 +1,78 @@
+2019/12/17-17:33:54.172 9cc Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/Local Storage/leveldb/MANIFEST-000001
+2019/12/17-17:33:54.174 9cc Recovering log #3564
+2019/12/17-17:33:54.198 9cc Level-0 table #3567: started
+2019/12/17-17:33:54.273 9cc Level-0 table #3567: 75755 bytes OK
+2019/12/17-17:33:54.313 9cc Delete type=0 #3564
+2019/12/17-17:34:04.232 c79 Level-0 table #3570: started
+2019/12/17-17:34:04.285 c79 Level-0 table #3570: 56537 bytes OK
+2019/12/17-17:34:04.321 c79 Delete type=0 #3568
+2019/12/17-22:42:10.151 c79 Level-0 table #3572: started
+2019/12/17-22:42:10.175 c79 Level-0 table #3572: 24869 bytes OK
+2019/12/17-22:42:10.189 c79 Delete type=0 #3569
+2019/12/17-22:42:10.189 c79 Compacting 4@0 + 3@1 files
+2019/12/17-22:42:10.339 c79 Generated table #3573@0: 6618 keys, 2149158 bytes
+2019/12/17-22:42:10.524 c79 Generated table #3574@0: 3696 keys, 2108308 bytes
+2019/12/17-22:42:10.577 c79 Generated table #3575@0: 81 keys, 301394 bytes
+2019/12/17-22:42:10.577 c79 Compacted 4@0 + 3@1 files => 4558860 bytes
+2019/12/17-22:42:10.591 c79 compacted to: files[ 0 3 1 0 0 0 0 ]
+2019/12/17-22:42:10.592 c79 Delete type=2 #3565
+2019/12/17-22:42:10.592 c79 Delete type=2 #3561
+2019/12/17-22:42:10.592 c79 Delete type=2 #3572
+2019/12/17-22:42:10.592 c79 Delete type=2 #3562
+2019/12/17-22:42:10.592 c79 Delete type=2 #3570
+2019/12/17-22:42:10.592 c79 Delete type=2 #3567
+2019/12/17-22:42:10.592 c79 Delete type=2 #3563
+2019/12/18-01:51:29.801 c79 Level-0 table #3577: started
+2019/12/18-01:51:29.818 c79 Level-0 table #3577: 19737 bytes OK
+2019/12/18-01:51:29.839 c79 Delete type=0 #3571
+2019/12/18-14:52:24.801 c79 Level-0 table #3579: started
+2019/12/18-14:52:24.826 c79 Level-0 table #3579: 23106 bytes OK
+2019/12/18-14:52:24.843 c79 Delete type=0 #3576
+2019/12/18-14:55:01.881 c79 Level-0 table #3581: started
+2019/12/18-14:55:01.952 c79 Level-0 table #3581: 434666 bytes OK
+2019/12/18-14:55:01.970 c79 Delete type=0 #3578
+2019/12/18-15:28:22.583 c79 Level-0 table #3583: started
+2019/12/18-15:28:22.614 c79 Level-0 table #3583: 22557 bytes OK
+2019/12/18-15:28:22.640 c79 Delete type=0 #3580
+2019/12/18-15:28:22.640 c79 Compacting 4@0 + 3@1 files
+2019/12/18-15:28:22.778 c79 Generated table #3584@0: 6681 keys, 2155143 bytes
+2019/12/18-15:28:22.857 c79 Generated table #3585@0: 3725 keys, 2108930 bytes
+2019/12/18-15:28:22.900 c79 Generated table #3586@0: 82 keys, 301449 bytes
+2019/12/18-15:28:22.900 c79 Compacted 4@0 + 3@1 files => 4565522 bytes
+2019/12/18-15:28:22.915 c79 compacted to: files[ 0 3 1 0 0 0 0 ]
+2019/12/18-15:28:22.916 c79 Delete type=2 #3574
+2019/12/18-15:28:22.916 c79 Delete type=2 #3573
+2019/12/18-15:28:22.916 c79 Delete type=2 #3575
+2019/12/18-15:28:22.916 c79 Delete type=2 #3579
+2019/12/18-15:28:22.916 c79 Delete type=2 #3583
+2019/12/18-15:28:22.916 c79 Delete type=2 #3581
+2019/12/18-15:28:22.916 c79 Delete type=2 #3577
+2019/12/18-16:01:20.688 c79 Level-0 table #3588: started
+2019/12/18-16:01:20.714 c79 Level-0 table #3588: 22435 bytes OK
+2019/12/18-16:01:20.731 c79 Delete type=0 #3582
+2019/12/19-02:51:54.690 c79 Level-0 table #3590: started
+2019/12/19-02:51:54.719 c79 Level-0 table #3590: 32984 bytes OK
+2019/12/19-02:51:54.740 c79 Delete type=0 #3587
+2019/12/19-13:31:03.030 c79 Level-0 table #3592: started
+2019/12/19-13:31:03.057 c79 Level-0 table #3592: 24371 bytes OK
+2019/12/19-13:31:03.075 c79 Delete type=0 #3589
+2019/12/19-16:56:48.234 c79 Level-0 table #3594: started
+2019/12/19-16:56:48.264 c79 Level-0 table #3594: 25919 bytes OK
+2019/12/19-16:56:48.283 c79 Delete type=0 #3591
+2019/12/19-16:56:48.283 c79 Compacting 4@0 + 2@1 files
+2019/12/19-16:56:48.374 c79 Generated table #3595@0: 6709 keys, 2159561 bytes
+2019/12/19-16:56:48.484 c79 Generated table #3596@0: 3742 keys, 2109278 bytes
+2019/12/19-16:56:48.484 c79 Compacted 4@0 + 2@1 files => 4268839 bytes
+2019/12/19-16:56:48.502 c79 compacted to: files[ 0 3 1 0 0 0 0 ]
+2019/12/19-16:56:48.503 c79 Delete type=2 #3594
+2019/12/19-16:56:48.503 c79 Delete type=2 #3590
+2019/12/19-16:56:48.503 c79 Delete type=2 #3592
+2019/12/19-16:56:48.503 c79 Delete type=2 #3588
+2019/12/19-16:56:48.503 c79 Delete type=2 #3584
+2019/12/19-16:56:48.503 c79 Delete type=2 #3585
+2019/12/20-05:25:13.973 c79 Level-0 table #3598: started
+2019/12/20-05:25:14.003 c79 Level-0 table #3598: 24460 bytes OK
+2019/12/20-05:25:14.020 c79 Delete type=0 #3593
+2019/12/20-09:33:32.106 c79 Level-0 table #3600: started
+2019/12/20-09:33:32.137 c79 Level-0 table #3600: 25682 bytes OK
+2019/12/20-09:33:32.155 c79 Delete type=0 #3597

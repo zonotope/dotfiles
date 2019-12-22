@@ -1,0 +1,30 @@
+[Data Source]
+DisplayName=zonotope@gmail.com
+Enabled=true
+Parent=d606371e0c108316715717e0396731f5f98abf46
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://365b4eb660f1d938465614e3f7abb9f5c5b7caac/%5bGmail%5d/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+
+Language=
+
+[Mail Identity]
+Address=zonotope@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=6c5faed84fc3aeab863caf1970c2c3426e8f8845
+RepliesToOriginFolder=false
+UseSentFolder=true

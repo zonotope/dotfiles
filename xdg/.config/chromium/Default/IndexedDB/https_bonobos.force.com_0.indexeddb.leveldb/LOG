@@ -1,0 +1,12 @@
+2018/12/05-00:59:23.440 27056 Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_bonobos.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2018/12/05-00:59:23.440 27056 Recovering log #16
+2018/12/05-00:59:23.454 27056 Reusing old log /home/zonotope/.config/chromium/Default/IndexedDB/https_bonobos.force.com_0.indexeddb.leveldb/000016.log 
+2018/12/05-00:59:23.455 27056 Delete type=2 #18
+2018/12/05-00:59:23.674 23938 Compacting 1@1 + 2@2 files
+2018/12/05-00:59:23.728 23938 Generated table #19@1: 34 keys, 2349754 bytes
+2018/12/05-00:59:23.794 23938 Generated table #20@1: 3274 keys, 2061107 bytes
+2018/12/05-00:59:23.794 23938 Compacted 1@1 + 2@2 files => 4410861 bytes
+2018/12/05-00:59:23.808 23938 compacted to: files[ 0 0 2 0 0 0 0 ]
+2018/12/05-00:59:23.808 23938 Delete type=2 #17
+2018/12/05-00:59:23.809 23938 Delete type=2 #15
+2018/12/05-00:59:23.809 23938 Delete type=2 #14

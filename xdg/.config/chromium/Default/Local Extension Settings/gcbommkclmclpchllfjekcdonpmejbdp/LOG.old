@@ -1,0 +1,15 @@
+2019/12/16-16:20:06.694 6bb Reusing MANIFEST /home/zonotope/.config/chromium/Default/Local Extension Settings/gcbommkclmclpchllfjekcdonpmejbdp/MANIFEST-000001
+2019/12/16-16:20:06.694 6bb Recovering log #42
+2019/12/16-16:20:06.712 6bb Reusing old log /home/zonotope/.config/chromium/Default/Local Extension Settings/gcbommkclmclpchllfjekcdonpmejbdp/000042.log 
+2019/12/16-16:20:14.122 9a1 Level-0 table #46: started
+2019/12/16-16:20:14.262 9a1 Level-0 table #46: 5422126 bytes OK
+2019/12/16-16:20:14.299 9a1 Delete type=0 #42
+2019/12/16-16:20:14.303 9a1 Compacting 4@0 + 1@1 files
+2019/12/16-16:20:14.398 9a1 Generated table #47@0: 5 keys, 1809970 bytes
+2019/12/16-16:20:14.398 9a1 Compacted 4@0 + 1@1 files => 1809970 bytes
+2019/12/16-16:20:14.424 9a1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/16-16:20:14.424 9a1 Delete type=2 #43
+2019/12/16-16:20:14.424 9a1 Delete type=2 #34
+2019/12/16-16:20:14.424 9a1 Delete type=2 #46
+2019/12/16-16:20:14.424 9a1 Delete type=2 #37
+2019/12/16-16:20:14.424 9a1 Delete type=2 #40

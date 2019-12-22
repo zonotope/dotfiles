@@ -1,0 +1,12 @@
+2019/02/21-18:49:00.873 79e Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_www.livenewsnow.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/02/21-18:49:00.873 79e Recovering log #7
+2019/02/21-18:49:00.878 79e Reusing old log /home/zonotope/.config/chromium/Default/IndexedDB/https_www.livenewsnow.com_0.indexeddb.leveldb/000007.log 
+2019/02/23-04:28:34.842 1171 Level-0 table #12: started
+2019/02/23-04:28:34.888 1171 Level-0 table #12: 580636 bytes OK
+2019/02/23-04:28:34.905 1171 Delete type=0 #7
+2019/02/23-04:46:55.877 1171 Compacting 1@1 + 1@2 files
+2019/02/23-04:46:55.925 1171 Generated table #13@1: 96 keys, 5391 bytes
+2019/02/23-04:46:55.925 1171 Compacted 1@1 + 1@2 files => 5391 bytes
+2019/02/23-04:46:55.946 1171 compacted to: files[ 0 0 1 0 0 0 0 ]
+2019/02/23-04:46:55.946 1171 Delete type=2 #9
+2019/02/23-04:46:55.947 1171 Delete type=2 #12

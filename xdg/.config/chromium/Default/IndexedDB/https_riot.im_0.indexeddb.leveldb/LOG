@@ -1,0 +1,19 @@
+2018/12/25-18:54:46.001 2a5b Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_riot.im_0.indexeddb.leveldb/MANIFEST-000001
+2018/12/25-18:54:46.002 2a5b Recovering log #170
+2018/12/25-18:54:46.014 2a5b Reusing old log /home/zonotope/.config/chromium/Default/IndexedDB/https_riot.im_0.indexeddb.leveldb/000170.log 
+2018/12/25-18:54:57.928 2a3a Current memtable full; waiting...
+2018/12/25-18:54:57.928 3268 Level-0 table #175: started
+2018/12/25-18:54:57.976 3268 Level-0 table #175: 1272291 bytes OK
+2018/12/25-18:54:57.991 3268 Delete type=0 #170
+2018/12/25-18:54:57.993 3268 Level-0 table #177: started
+2018/12/25-18:54:57.993 3268 Level-0 table #177: 0 bytes OK
+2018/12/25-18:54:58.014 3268 Delete type=0 #174
+2018/12/25-18:54:58.014 3268 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2018/12/25-18:54:58.015 3268 Manual compaction at level-1 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x04\x1f\x01\x1e\x00!\x00z\x00A\x00j\x00a\x00u\x00l\x00d\x00M\x00a\x00d\x00s\x00J\x00v\x00t\x00i\x00e\x00D\x00A\x00:\x00m\x00a\x00t\x00r\x00i\x00x\x00.\x00o\x00r\x00g\x00\x04\x02\x01\x1e\x00!\x00z\x00A\x00j\x00a\x00u\x00l\x00d\x00M\x00a\x00d\x00s\x00J\x00v\x00t\x00i\x00e\x00D\x00A\x00:\x00m\x00a\x00t\x00r\x00i\x00x\x00.\x00o\x00r\x00g\x03\x00\x00\x00\x00\x00\x00\x00\x00' @ 42655 : 1
+2018/12/25-18:54:58.015 3268 Compacting 1@1 + 1@2 files
+2018/12/25-18:54:58.096 3268 Generated table #178@1: 2421 keys, 373958 bytes
+2018/12/25-18:54:58.096 3268 Compacted 1@1 + 1@2 files => 373958 bytes
+2018/12/25-18:54:58.107 3268 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/12/25-18:54:58.108 3268 Delete type=2 #175
+2018/12/25-18:54:58.108 3268 Delete type=2 #172
+2018/12/25-18:54:58.109 3268 Manual compaction at level-1 from '\x00\x05\x04\x1f\x01\x1e\x00!\x00z\x00A\x00j\x00a\x00u\x00l\x00d\x00M\x00a\x00d\x00s\x00J\x00v\x00t\x00i\x00e\x00D\x00A\x00:\x00m\x00a\x00t\x00r\x00i\x00x\x00.\x00o\x00r\x00g\x00\x04\x02\x01\x1e\x00!\x00z\x00A\x00j\x00a\x00u\x00l\x00d\x00M\x00a\x00d\x00s\x00J\x00v\x00t\x00i\x00e\x00D\x00A\x00:\x00m\x00a\x00t\x00r\x00i\x00x\x00.\x00o\x00r\x00g\x03\x00\x00\x00\x00\x00\x00\x00\x00' @ 42655 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)

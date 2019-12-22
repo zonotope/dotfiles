@@ -1,0 +1,108 @@
+2019/12/17-17:33:54.037 b48 Reusing MANIFEST /home/zonotope/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2019/12/17-17:33:54.038 b48 Recovering log #783
+2019/12/17-17:33:54.052 b48 Reusing old log /home/zonotope/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000783.log 
+2019/12/18-03:02:11.043 152f Level-0 table #787: started
+2019/12/18-03:02:11.129 152f Level-0 table #787: 3581957 bytes OK
+2019/12/18-03:02:11.142 152f Delete type=0 #783
+2019/12/18-04:16:42.331 152f Level-0 table #789: started
+2019/12/18-04:16:42.424 152f Level-0 table #789: 3550196 bytes OK
+2019/12/18-04:16:42.438 152f Delete type=0 #786
+2019/12/18-17:43:19.253 152f Level-0 table #791: started
+2019/12/18-17:43:19.364 152f Level-0 table #791: 3512787 bytes OK
+2019/12/18-17:43:19.384 152f Delete type=0 #788
+2019/12/18-17:43:19.386 152f Compacting 4@0 + 3@1 files
+2019/12/18-17:43:19.480 152f Generated table #792@0: 13 keys, 2141001 bytes
+2019/12/18-17:43:19.568 152f Generated table #793@0: 12 keys, 2174865 bytes
+2019/12/18-17:43:19.704 152f Generated table #794@0: 7 keys, 2678272 bytes
+2019/12/18-17:43:19.746 152f Compacted 4@0 + 3@1 files => 6994138 bytes
+2019/12/18-17:43:19.775 152f compacted to: files[ 0 4 4 0 0 0 0 ]
+2019/12/18-17:43:19.775 152f Delete type=2 #781
+2019/12/18-17:43:19.775 152f Delete type=2 #780
+2019/12/18-17:43:19.775 152f Delete type=2 #789
+2019/12/18-17:43:19.775 152f Delete type=2 #779
+2019/12/18-17:43:19.775 152f Delete type=2 #791
+2019/12/18-17:43:19.775 152f Delete type=2 #784
+2019/12/18-17:43:19.775 152f Delete type=2 #787
+2019/12/18-18:57:50.774 152f Level-0 table #796: started
+2019/12/18-18:57:50.891 152f Level-0 table #796: 3510341 bytes OK
+2019/12/18-18:57:50.914 152f Delete type=0 #790
+2019/12/19-08:49:52.901 152f Level-0 table #798: started
+2019/12/19-08:49:52.989 152f Level-0 table #798: 2026571 bytes OK
+2019/12/19-08:49:53.004 152f Delete type=0 #795
+2019/12/19-08:51:54.198 152f Level-0 table #800: started
+2019/12/19-08:51:54.313 152f Level-0 table #800: 1726268 bytes OK
+2019/12/19-08:51:54.332 152f Delete type=0 #797
+2019/12/19-09:04:55.436 152f Level-0 table #802: started
+2019/12/19-09:04:55.505 152f Level-0 table #802: 1729375 bytes OK
+2019/12/19-09:04:55.518 152f Delete type=0 #799
+2019/12/19-09:04:55.519 152f Compacting 4@0 + 4@1 files
+2019/12/19-09:04:55.617 152f Generated table #803@0: 13 keys, 2133375 bytes
+2019/12/19-09:04:55.769 152f Generated table #804@0: 12 keys, 2173348 bytes
+2019/12/19-09:04:55.861 152f Generated table #805@0: 12 keys, 1434092 bytes
+2019/12/19-09:04:55.861 152f Compacted 4@0 + 4@1 files => 5740815 bytes
+2019/12/19-09:04:55.876 152f compacted to: files[ 0 3 4 0 0 0 0 ]
+2019/12/19-09:04:55.877 152f Delete type=2 #796
+2019/12/19-09:04:55.877 152f Delete type=2 #782
+2019/12/19-09:04:55.877 152f Delete type=2 #794
+2019/12/19-09:04:55.877 152f Delete type=2 #793
+2019/12/19-09:04:55.877 152f Delete type=2 #792
+2019/12/19-09:04:55.877 152f Delete type=2 #798
+2019/12/19-09:04:55.878 152f Delete type=2 #800
+2019/12/19-09:04:55.878 152f Delete type=2 #802
+2019/12/19-14:40:38.719 152f Level-0 table #807: started
+2019/12/19-14:40:38.830 152f Level-0 table #807: 3659610 bytes OK
+2019/12/19-14:40:38.844 152f Delete type=0 #801
+2019/12/19-14:46:39.776 152f Level-0 table #809: started
+2019/12/19-14:46:39.852 152f Level-0 table #809: 1787120 bytes OK
+2019/12/19-14:46:39.873 152f Delete type=0 #806
+2019/12/19-14:55:41.392 152f Level-0 table #811: started
+2019/12/19-14:55:41.469 152f Level-0 table #811: 3039147 bytes OK
+2019/12/19-14:55:41.482 152f Delete type=0 #808
+2019/12/19-21:57:41.706 152f Level-0 table #813: started
+2019/12/19-21:57:41.819 152f Level-0 table #813: 3507977 bytes OK
+2019/12/19-21:57:41.840 152f Delete type=0 #810
+2019/12/19-21:57:41.843 152f Compacting 4@0 + 3@1 files
+2019/12/19-21:57:41.958 152f Generated table #814@0: 13 keys, 2134079 bytes
+2019/12/19-21:57:42.068 152f Generated table #815@0: 12 keys, 2173922 bytes
+2019/12/19-21:57:42.217 152f Generated table #816@0: 7 keys, 2680600 bytes
+2019/12/19-21:57:42.276 152f Generated table #817@0: 6 keys, 443729 bytes
+2019/12/19-21:57:42.276 152f Compacted 4@0 + 3@1 files => 7432330 bytes
+2019/12/19-21:57:42.293 152f compacted to: files[ 0 4 4 0 0 0 0 ]
+2019/12/19-21:57:42.293 152f Delete type=2 #813
+2019/12/19-21:57:42.293 152f Delete type=2 #809
+2019/12/19-21:57:42.294 152f Delete type=2 #811
+2019/12/19-21:57:42.294 152f Delete type=2 #803
+2019/12/19-21:57:42.294 152f Delete type=2 #807
+2019/12/19-21:57:42.294 152f Delete type=2 #805
+2019/12/19-21:57:42.294 152f Delete type=2 #804
+2019/12/20-10:50:48.284 152f Level-0 table #819: started
+2019/12/20-10:50:48.403 152f Level-0 table #819: 2656438 bytes OK
+2019/12/20-10:50:48.429 152f Delete type=0 #812
+2019/12/20-11:58:43.149 152f Level-0 table #821: started
+2019/12/20-11:58:43.237 152f Level-0 table #821: 2698966 bytes OK
+2019/12/20-11:58:43.260 152f Delete type=0 #818
+2019/12/20-12:01:43.715 152f Level-0 table #823: started
+2019/12/20-12:01:43.804 152f Level-0 table #823: 2545183 bytes OK
+2019/12/20-12:01:43.834 152f Delete type=0 #820
+2019/12/20-17:52:47.115 152f Level-0 table #825: started
+2019/12/20-17:52:47.198 152f Level-0 table #825: 2017847 bytes OK
+2019/12/20-17:52:47.219 152f Delete type=0 #822
+2019/12/20-17:52:47.220 152f Compacting 4@0 + 3@1 files
+2019/12/20-17:52:47.304 152f Generated table #826@0: 13 keys, 2134408 bytes
+2019/12/20-17:52:47.417 152f Generated table #827@0: 12 keys, 2173917 bytes
+2019/12/20-17:52:47.544 152f Generated table #828@0: 7 keys, 992355 bytes
+2019/12/20-17:52:47.544 152f Compacted 4@0 + 3@1 files => 5300680 bytes
+2019/12/20-17:52:47.559 152f compacted to: files[ 0 4 4 0 0 0 0 ]
+2019/12/20-17:52:47.559 152f Delete type=2 #819
+2019/12/20-17:52:47.560 152f Delete type=2 #814
+2019/12/20-17:52:47.560 152f Delete type=2 #821
+2019/12/20-17:52:47.560 152f Delete type=2 #815
+2019/12/20-17:52:47.560 152f Delete type=2 #816
+2019/12/20-17:52:47.560 152f Delete type=2 #823
+2019/12/20-17:52:47.560 152f Delete type=2 #825
+2019/12/20-19:03:43.906 152f Level-0 table #830: started
+2019/12/20-19:03:44.000 152f Level-0 table #830: 2690502 bytes OK
+2019/12/20-19:03:44.020 152f Delete type=0 #824
+2019/12/20-19:03:44.101 152f Level-0 table #832: started
+2019/12/20-19:03:44.196 152f Level-0 table #832: 2605465 bytes OK
+2019/12/20-19:03:44.209 152f Delete type=0 #829

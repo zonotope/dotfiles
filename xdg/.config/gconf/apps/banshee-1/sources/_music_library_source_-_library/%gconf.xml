@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="library-location" mtime="1550946246" type="string">
+		<stringvalue>/home/zonotope/Music</stringvalue>
+	</entry>
+	<entry name="expanded" mtime="1550946043" type="bool" value="true"/>
+	<entry name="move-on-info-save" mtime="1550451391" type="bool" value="false"/>
+	<entry name="copy-on-import" mtime="1550451391" type="bool" value="false"/>
+</gconf>

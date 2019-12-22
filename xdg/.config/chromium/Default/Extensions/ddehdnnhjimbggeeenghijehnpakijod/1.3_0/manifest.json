@@ -1,0 +1,26 @@
+{
+   "background": {
+      "persistant": false,
+      "scripts": [ "js/jquery.js", "js/cssjson.js", "js/rescroller.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "appicons/icon19.png",
+      "default_title": "Rescroller Settings"
+   },
+   "description": "Decorate your scrollbars.",
+   "icons": {
+      "128": "appicons/icon128.png",
+      "16": "appicons/icon16.png",
+      "19": "appicons/icon19.png",
+      "48": "appicons/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDf7Pb6m0Y9FUeE/I1KlD8Tv7E7K1AZY8MIdLm9Cknitwldt+SpwROOnI30pPyCh66kZVtvtAcAqp1lP+BGorm5wEdf5pAaXFccXFSxQtN861hnwYY+/s+FseGmGZWVCpaRZd4mowojAesS1cI1siTULWoz0u9c8pQ2t0L3vA3VxwIDAQAB",
+   "manifest_version": 2,
+   "name": "Rescroller",
+   "options_page": "options.html",
+   "permissions": [ "\u003Call_urls>", "storage", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3",
+   "version_name": "1.3",
+   "web_accessible_resources": [ "images/defaults/up.png", "images/defaults/down.png", "images/defaults/left.png", "images/defaults/right.png" ]
+}

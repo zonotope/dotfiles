@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "autoconfirm.js" ],
+      "matches": [ "https://www.youtube.com/*", "https://music.youtube.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Kiss the annoying \"Video paused. Continue watching?\" confirmation goodbye!",
+   "icons": {
+      "128": "images/yns128.png",
+      "16": "images/yns16.png",
+      "32": "images/yns32.png",
+      "48": "images/yns48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiKGHwFXy8NW3ojS3THe8xN8MbN7LhhfoiOuydStO1r5tjI7VfI4BNw9E5L81pd9oqICCr1POSeY0ioWJMQeYG7XFPGCs85SXsiK8BLwjDWi67SpvCfymJjHdDDwGiRVn1kEigEM+3NnKk+BmOnArnsgJ4xeQwVoci8DED374dLZxt+0AsfTBIhVAB7Q6KE/8dJgsqYmQkZRv7FE21e8DgdTv+iwXjCZ570BiloM1W/dhGcSCCnjvacq2Uq8nJgNJBpCRqFwRmX+7N+Flvi9LYBjKJMBim9NDSdPD1KoQGTxfCh7Vu9KZyUivZgnPwrFYNfKzi+DPTHapUbieoQ236wIDAQAB",
+   "manifest_version": 2,
+   "name": "YouTube NonStop",
+   "page_action": {
+      "default_icon": {
+         "128": "images/yns128.png",
+         "16": "images/yns16.png",
+         "32": "images/yns32.png",
+         "48": "images/yns48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "permissions": [ "declarativeContent" ],
+   "short_name": "YT NonStop",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.7.1"
+}

@@ -1,0 +1,22 @@
+2019/11/01-12:54:38.261 b6a0 Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/11/01-12:54:38.261 b6a0 Recovering log #361
+2019/11/01-12:54:38.276 b6a0 Reusing old log /home/zonotope/.config/chromium/Profile 2/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000361.log 
+2019/11/01-12:54:45.219 23b6 Level-0 table #365: started
+2019/11/01-12:54:45.325 23b6 Level-0 table #365: 4306086 bytes OK
+2019/11/01-12:54:45.392 23b6 Delete type=0 #361
+2019/11/01-12:55:23.739 23b6 Level-0 table #367: started
+2019/11/01-12:55:23.865 23b6 Level-0 table #367: 4578363 bytes OK
+2019/11/01-12:55:23.895 23b6 Delete type=0 #364
+2019/11/01-15:34:24.742 23b6 Level-0 table #369: started
+2019/11/01-15:34:24.816 23b6 Level-0 table #369: 5063466 bytes OK
+2019/11/01-15:34:24.831 23b6 Delete type=0 #366
+2019/11/01-15:34:24.833 23b6 Compacting 4@0 + 1@1 files
+2019/11/01-15:34:24.916 23b6 Generated table #370@0: 164 keys, 2337332 bytes
+2019/11/01-15:34:24.946 23b6 Generated table #371@0: 54 keys, 4305 bytes
+2019/11/01-15:34:24.946 23b6 Compacted 4@0 + 1@1 files => 2341637 bytes
+2019/11/01-15:34:24.962 23b6 compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/11/01-15:34:24.963 23b6 Delete type=2 #362
+2019/11/01-15:34:24.963 23b6 Delete type=2 #360
+2019/11/01-15:34:24.963 23b6 Delete type=2 #365
+2019/11/01-15:34:24.963 23b6 Delete type=2 #367
+2019/11/01-15:34:24.963 23b6 Delete type=2 #369

@@ -1,0 +1,191 @@
+{
+   "about_add_new_rule": {
+      "message": "Προσθήκη νέου κανόνα"
+   },
+   "about_ext_description": {
+      "message": "Κρυπτογραφήστε τον Παγκόσμιο Ιστό! Χρησιμοποιήστε αυτόματα ασφάλεια HTTPS σε πολλούς δικτυακούς τόπους."
+   },
+   "about_ext_name": {
+      "message": "HTTPS Everywhere"
+   },
+   "about_rulesets_version": {
+      "message": "Σύνολα κανόνων έκδοσης για"
+   },
+   "about_title": {
+      "message": "Σχετικά με το HTTPS Everywhere"
+   },
+   "about_version": {
+      "message": "Έκδοση"
+   },
+   "cancel_he_blocking_explainer": {
+      "message": "HTTPS Everywhere noticed you were navigating to a non-HTTPS page, and tried to send you to the HTTPS version instead. The HTTPS version is unavailable. Most likely this site does not support HTTPS, but it is also possible that an attacker is blocking the HTTPS version. If you wish to view the unencrypted version of this page, you can still do so by disabling the 'Encrypt All Sites Eligible' (EASE) option in your HTTPS Everywhere extension. Be aware that disabling this option could make your browser vulnerable to network-based downgrade attacks on websites you visit."
+   },
+   "cancel_he_blocking_network": {
+      "message": "επιθέσεις υποβάθμισης βασισμένες στο δίκτυο"
+   },
+   "cancel_http_once": {
+      "message": "Open insecure page for this session only"
+   },
+   "cancel_open_page": {
+      "message": "Άνοιγμα μη ασφαλούς σελίδας"
+   },
+   "chrome_add_new_rule": {
+      "message": "Προσθήκη νέου κανόνα για αυτήν τη σελίδα"
+   },
+   "chrome_add_rule": {
+      "message": "Προσθήκη κανόνα για αυτήν τη σελίδα "
+   },
+   "chrome_always_https_for_host": {
+      "message": "Πάντα https για αυτόν τον host"
+   },
+   "chrome_disable_on_this_site": {
+      "message": "Απενεργοποίηση του HTTPS Everywhere σε αυτήν την ιστοσελίδα"
+   },
+   "chrome_enable_on_this_site": {
+      "message": "Ενεργοποίηση του HTTPS Everywhere σε αυτήν την ιστοσελίδα"
+   },
+   "chrome_experimental_rules": {
+      "message": "Πειραματικοί κανόνες "
+   },
+   "chrome_experimental_rules_description": {
+      "message": "Μπορεί να προκαλέσει προειδοποιήσεις ή  κατάρρευση. Απενεργοποιημένο από προεπιλογή."
+   },
+   "chrome_hide_advanced": {
+      "message": "Απόκρυψη προχωρημένων "
+   },
+   "chrome_host": {
+      "message": "Host:"
+   },
+   "chrome_redirect_to": {
+      "message": "Ανακατεύθυνση στο "
+   },
+   "chrome_regex": {
+      "message": "Ταιριαστές εκφράσεις "
+   },
+   "chrome_rule_name": {
+      "message": "Όνομα Κανόνα"
+   },
+   "chrome_settings_for_this_site_explained": {
+      "message": "Καθώς περιηγείστε σε διαφορετικές ιστοσελίδες, μπορείτε να αλλάξετε τις προτιμήσεις σας για κάθε ιστοσελίδα"
+   },
+   "chrome_settings_for_this_site_header": {
+      "message": "Ρυθμίσεις για αυτή την ιστοσελίδα"
+   },
+   "chrome_settings_for_this_site_subheader": {
+      "message": "Αλλάξτε τις προτιμήσεις σας για κρυπτογραφημένες συνδέσεις"
+   },
+   "chrome_show_advanced": {
+      "message": "Εμφάνιση προχωρημένων "
+   },
+   "chrome_stable_rules": {
+      "message": "Σταθεροί κανόνες "
+   },
+   "chrome_stable_rules_description": {
+      "message": "Εξαναγκασμένη κρυπτογραφημένη σύνδεση με αυτές τις σελίδες:"
+   },
+   "chrome_status_cancel_button": {
+      "message": "Ακύρωση "
+   },
+   "menu_donate_eff_imperative": {
+      "message": "Δωρίστε στο EFF"
+   },
+   "menu_encryptAllSitesEligibleOff": {
+      "message": "Encrypt All Sites Eligible is OFF"
+   },
+   "menu_encryptAllSitesEligibleOn": {
+      "message": "Encrypt All Sites Eligible is ON"
+   },
+   "menu_globalDisable": {
+      "message": "Το HTTPS Everywhere είναι ΑΠΕΝΕΡΓΟΠΟΙΗΜΕΝΟ"
+   },
+   "menu_globalEnable": {
+      "message": "Το HTTPS Everywhere είναι ΕΝΕΡΓΟΠΟΙΗΜΕΝΟ"
+   },
+   "menu_httpNoWhereExplainedAllowed": {
+      "message": "Τα μη κρυπτογραφημένα αιτήματα προς το παρόν επιτρέπονται "
+   },
+   "menu_httpNoWhereExplainedBlocked": {
+      "message": "Τα μη κρυπτογραφημένα αιτήματα προς το παρόν αποκλείονται "
+   },
+   "menu_httpNoWhereMore": {
+      "message": "Αυτή η λειτουργία αποκλείει μη κρυπτογραφημένο περιεχόμενο και αιτήματα"
+   },
+   "menu_observatory": {
+      "message": "Προτιμήσεις για το Παρατηρητήριο SSL"
+   },
+   "menu_seeLess": {
+      "message": "Δείτε λιγότερα"
+   },
+   "menu_seeMore": {
+      "message": "Δείτε περισσότερα"
+   },
+   "menu_showCounter": {
+      "message": "Εμφάνιση Μετρητή"
+   },
+   "menu_viewAllRules": {
+      "message": "Προβολή όλων των Κανόνων"
+   },
+   "options_addUpdateChannel": {
+      "message": "Προσθέστε κανάλι ενημέρωσης"
+   },
+   "options_advancedSettings": {
+      "message": "Ρυθμίσεις για προχωρημένους"
+   },
+   "options_autoUpdateRulesets": {
+      "message": "Αυτόματη ενημέρωση συνόλων κανόνων"
+   },
+   "options_debuggingRulesets": {
+      "message": "Debugging Rulesets (advanced)"
+   },
+   "options_delete": {
+      "message": "Διαγραφή"
+   },
+   "options_disabledUrlsListed": {
+      "message": "HTTPS Everywhere ιστοσελίδες απενεργοποιημένες"
+   },
+   "options_enableMixedRulesets": {
+      "message": "Ενεργοποίηση μεικτών συνόλων κανόνων"
+   },
+   "options_enterUpdateChannelName": {
+      "message": "Εισάγετε όνομα καναλιού ενημέρωσης"
+   },
+   "options_generalSettings": {
+      "message": "Γενικές Ρυθμίσεις"
+   },
+   "options_settings": {
+      "message": "Ρυθμίσεις"
+   },
+   "options_showDevtoolsTab": {
+      "message": "Εμφάνιση καρτέλας Devtools"
+   },
+   "options_storedRulesetsVersion": {
+      "message": "Αποθηκευμένη έκδοση συνόλων κανόνων:"
+   },
+   "options_update": {
+      "message": "Ενημέρωση"
+   },
+   "options_updateChannels": {
+      "message": "Κανάλια Ενημέρωσης"
+   },
+   "options_updateChannelsWarning": {
+      "message": "Προσοχή: Προσθέτοντας κανάλια ενημέρωσης μπορεί να προκληθούν επιθέσεις προς τον browser σας. Επεξεργαστείτε αυτήν την ενότητα μόνο αν γνωρίζετε τι κάνετε!"
+   },
+   "options_updatesLastChecked": {
+      "message": "Τελευταίος έλεγχος ενημερώσεων:"
+   },
+   "options_updatesLastCheckedNever": {
+      "message": "ποτέ"
+   },
+   "options_userRulesListed": {
+      "message": "HTTPS Everywhere Κανόνες χρήστη"
+   },
+   "prefs_export_settings": {
+      "message": "Ρυθμίσεις Εξαγωγής"
+   },
+   "prefs_reset_defaults": {
+      "message": "Επαναφορά προεπιλογών"
+   },
+   "prefs_reset_defaults_message": {
+      "message": "Αυτό θα επαναφέρει όλα τα σύνολα κανόνων στην αρχική τους κατάσταση. Συνεχίζουμε;"
+   }
+}

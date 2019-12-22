@@ -1,0 +1,9 @@
+2018/06/01-21:58:39.580 3867 Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_forumweb.hosting_0.indexeddb.leveldb/MANIFEST-000001
+2018/06/01-21:58:40.860 3867 Current memtable full; waiting...
+2018/06/01-21:58:40.860 3622 Level-0 table #5: started
+2018/06/01-21:58:40.873 3622 Level-0 table #5: 446 bytes OK
+2018/06/01-21:58:40.891 3622 Delete type=0 #3
+2018/06/01-21:58:40.892 3622 Level-0 table #7: started
+2018/06/01-21:58:40.892 3622 Level-0 table #7: 0 bytes OK
+2018/06/01-21:58:40.906 3622 Delete type=0 #4
+2018/06/01-21:58:40.907 3622 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

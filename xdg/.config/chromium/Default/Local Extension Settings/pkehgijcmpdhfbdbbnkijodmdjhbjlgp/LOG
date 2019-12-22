@@ -1,0 +1,17 @@
+2019/12/17-17:33:54.228 b48 Reusing MANIFEST /home/zonotope/.config/chromium/Default/Local Extension Settings/pkehgijcmpdhfbdbbnkijodmdjhbjlgp/MANIFEST-000001
+2019/12/17-17:33:54.229 b48 Recovering log #505
+2019/12/17-17:33:54.328 b48 Level-0 table #508: started
+2019/12/17-17:33:54.392 b48 Level-0 table #508: 900254 bytes OK
+2019/12/17-17:33:54.416 b48 Delete type=0 #505
+2019/12/19-21:19:07.132 152f Level-0 table #511: started
+2019/12/19-21:19:07.208 152f Level-0 table #511: 952479 bytes OK
+2019/12/19-21:19:07.231 152f Delete type=0 #509
+2019/12/19-21:19:07.233 152f Compacting 4@0 + 1@1 files
+2019/12/19-21:19:07.315 152f Generated table #512@0: 4 keys, 59213 bytes
+2019/12/19-21:19:07.315 152f Compacted 4@0 + 1@1 files => 59213 bytes
+2019/12/19-21:19:07.338 152f compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/19-21:19:07.339 152f Delete type=2 #501
+2019/12/19-21:19:07.340 152f Delete type=2 #511
+2019/12/19-21:19:07.340 152f Delete type=2 #503
+2019/12/19-21:19:07.340 152f Delete type=2 #506
+2019/12/19-21:19:07.340 152f Delete type=2 #508

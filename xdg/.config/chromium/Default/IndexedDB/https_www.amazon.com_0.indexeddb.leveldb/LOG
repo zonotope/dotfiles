@@ -1,0 +1,7 @@
+2019/12/15-13:02:35.957 31f09 Reusing MANIFEST /home/zonotope/.config/chromium/Default/IndexedDB/https_www.amazon.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/12/15-13:02:35.958 31f09 Recovering log #3
+2019/12/15-13:02:35.958 31f09 Reusing old log /home/zonotope/.config/chromium/Default/IndexedDB/https_www.amazon.com_0.indexeddb.leveldb/000003.log 
+2019/12/15-13:02:38.748 144ae Level-0 table #5: started
+2019/12/15-13:02:38.770 144ae Level-0 table #5: 1788 bytes OK
+2019/12/15-13:02:38.792 144ae Delete type=0 #3
+2019/12/15-13:02:38.793 144ae Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

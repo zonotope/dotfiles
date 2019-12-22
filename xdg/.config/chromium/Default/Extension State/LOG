@@ -1,0 +1,36 @@
+2019/12/17-17:33:53.302 9a4 Reusing MANIFEST /home/zonotope/.config/chromium/Default/Extension State/MANIFEST-000001
+2019/12/17-17:33:53.303 9a4 Recovering log #2509
+2019/12/17-17:33:53.324 9a4 Reusing old log /home/zonotope/.config/chromium/Default/Extension State/002509.log 
+2019/12/18-00:14:15.143 152f Level-0 table #2513: started
+2019/12/18-00:14:15.209 152f Level-0 table #2513: 1924834 bytes OK
+2019/12/18-00:14:15.243 152f Delete type=0 #2509
+2019/12/18-00:14:15.244 152f Compacting 4@0 + 1@1 files
+2019/12/18-00:14:15.302 152f Generated table #2514@0: 11 keys, 13967 bytes
+2019/12/18-00:14:15.302 152f Compacted 4@0 + 1@1 files => 13967 bytes
+2019/12/18-00:14:15.327 152f compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/18-00:14:15.328 152f Delete type=2 #2510
+2019/12/18-00:14:15.328 152f Delete type=2 #2505
+2019/12/18-00:14:15.328 152f Delete type=2 #2503
+2019/12/18-00:14:15.328 152f Delete type=2 #2508
+2019/12/18-00:14:15.328 152f Delete type=2 #2513
+2019/12/18-19:17:16.670 152f Level-0 table #2516: started
+2019/12/18-19:17:16.723 152f Level-0 table #2516: 1898589 bytes OK
+2019/12/18-19:17:16.742 152f Delete type=0 #2512
+2019/12/19-03:47:50.569 152f Level-0 table #2518: started
+2019/12/19-03:47:50.640 152f Level-0 table #2518: 1920932 bytes OK
+2019/12/19-03:47:50.659 152f Delete type=0 #2515
+2019/12/19-21:11:29.551 152f Level-0 table #2520: started
+2019/12/19-21:11:29.644 152f Level-0 table #2520: 1892920 bytes OK
+2019/12/19-21:11:29.673 152f Delete type=0 #2517
+2019/12/20-18:21:42.481 152f Level-0 table #2522: started
+2019/12/20-18:21:42.545 152f Level-0 table #2522: 1849625 bytes OK
+2019/12/20-18:21:42.577 152f Delete type=0 #2519
+2019/12/20-18:21:42.578 152f Compacting 4@0 + 1@1 files
+2019/12/20-18:21:42.683 152f Generated table #2523@0: 11 keys, 13967 bytes
+2019/12/20-18:21:42.683 152f Compacted 4@0 + 1@1 files => 13967 bytes
+2019/12/20-18:21:42.701 152f compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/12/20-18:21:42.701 152f Delete type=2 #2522
+2019/12/20-18:21:42.701 152f Delete type=2 #2516
+2019/12/20-18:21:42.701 152f Delete type=2 #2520
+2019/12/20-18:21:42.701 152f Delete type=2 #2514
+2019/12/20-18:21:42.701 152f Delete type=2 #2518

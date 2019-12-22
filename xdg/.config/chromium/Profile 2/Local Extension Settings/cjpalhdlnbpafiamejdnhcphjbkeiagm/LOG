@@ -1,0 +1,50 @@
+2019/12/17-17:33:55.047 9ac Reusing MANIFEST /home/zonotope/.config/chromium/Profile 2/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2019/12/17-17:33:55.048 9ac Recovering log #1275
+2019/12/17-17:33:55.080 9ac Reusing old log /home/zonotope/.config/chromium/Profile 2/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/001275.log 
+2019/12/19-00:34:17.691 152f Level-0 table #1279: started
+2019/12/19-00:34:17.765 152f Level-0 table #1279: 2744566 bytes OK
+2019/12/19-00:34:17.782 152f Delete type=0 #1275
+2019/12/19-00:34:17.785 152f Compacting 4@0 + 4@1 files
+2019/12/19-00:34:17.910 152f Generated table #1280@0: 13 keys, 2108050 bytes
+2019/12/19-00:34:17.979 152f Generated table #1281@0: 10 keys, 2102814 bytes
+2019/12/19-00:34:18.082 152f Generated table #1282@0: 7 keys, 2911385 bytes
+2019/12/19-00:34:18.157 152f Generated table #1283@0: 14 keys, 1122515 bytes
+2019/12/19-00:34:18.157 152f Compacted 4@0 + 4@1 files => 8244764 bytes
+2019/12/19-00:34:18.181 152f compacted to: files[ 0 4 1 0 0 0 0 ]
+2019/12/19-00:34:18.182 152f Delete type=2 #1279
+2019/12/19-00:34:18.182 152f Delete type=2 #1274
+2019/12/19-00:34:18.182 152f Delete type=2 #1270
+2019/12/19-00:34:18.182 152f Delete type=2 #1276
+2019/12/19-00:34:18.182 152f Delete type=2 #1268
+2019/12/19-00:34:18.182 152f Delete type=2 #1269
+2019/12/19-00:34:18.182 152f Delete type=2 #1272
+2019/12/19-00:34:18.182 152f Delete type=2 #1267
+2019/12/19-00:39:19.222 152f Level-0 table #1285: started
+2019/12/19-00:39:19.306 152f Level-0 table #1285: 2605521 bytes OK
+2019/12/19-00:39:19.323 152f Delete type=0 #1278
+2019/12/20-11:43:41.014 152f Level-0 table #1287: started
+2019/12/20-11:43:41.101 152f Level-0 table #1287: 2618145 bytes OK
+2019/12/20-11:43:41.124 152f Delete type=0 #1284
+2019/12/20-18:40:39.966 152f Level-0 table #1289: started
+2019/12/20-18:40:40.054 152f Level-0 table #1289: 3622379 bytes OK
+2019/12/20-18:40:40.066 152f Delete type=0 #1286
+2019/12/20-18:42:41.227 152f Level-0 table #1291: started
+2019/12/20-18:42:41.307 152f Level-0 table #1291: 1728017 bytes OK
+2019/12/20-18:42:41.324 152f Delete type=0 #1288
+2019/12/20-18:42:41.331 152f Compacting 4@0 + 4@1 files
+2019/12/20-18:42:41.471 152f Generated table #1292@0: 13 keys, 2102818 bytes
+2019/12/20-18:42:41.611 152f Generated table #1293@0: 10 keys, 2097702 bytes
+2019/12/20-18:42:41.705 152f Generated table #1294@0: 21 keys, 587244 bytes
+2019/12/20-18:42:41.705 152f Compacted 4@0 + 4@1 files => 4787764 bytes
+2019/12/20-18:42:41.724 152f compacted to: files[ 0 3 1 0 0 0 0 ]
+2019/12/20-18:42:41.724 152f Delete type=2 #1280
+2019/12/20-18:42:41.724 152f Delete type=2 #1287
+2019/12/20-18:42:41.724 152f Delete type=2 #1283
+2019/12/20-18:42:41.724 152f Delete type=2 #1281
+2019/12/20-18:42:41.724 152f Delete type=2 #1285
+2019/12/20-18:42:41.724 152f Delete type=2 #1289
+2019/12/20-18:42:41.724 152f Delete type=2 #1282
+2019/12/20-18:42:41.724 152f Delete type=2 #1291
+2019/12/20-18:57:42.526 152f Level-0 table #1296: started
+2019/12/20-18:57:42.597 152f Level-0 table #1296: 1707019 bytes OK
+2019/12/20-18:57:42.614 152f Delete type=0 #1290

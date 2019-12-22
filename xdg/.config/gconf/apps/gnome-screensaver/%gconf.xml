@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="idle_activation_enabled" mtime="1533916239" type="bool" value="false"/>
+</gconf>
