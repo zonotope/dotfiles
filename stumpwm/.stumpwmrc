@@ -8,7 +8,7 @@
 
 (setq *shell-program* (stumpwm::getenv "SHELL"))
 
-(setq *terminal* "kitty")
+(setq *terminal* "alacritty")
 (setq *browser* "chromium")
 (setq *editor* "emacsclient --create-frame")
 (setq *inline-editor* "~/.emacs_anywhere/bin/run")
